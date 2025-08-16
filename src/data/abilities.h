@@ -516,7 +516,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SWARM] =
     {
         .name = _("Swarm"),
-        .description = COMPOUND_STRING("Ups Bug moves in a pinch."),
+        .description = COMPOUND_STRING("Boosts ally's Atk."),
         .aiRating = 5,
     },
 
@@ -560,7 +560,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PURE_POWER] =
     {
         .name = _("Pure Power"),
-        .description = COMPOUND_STRING("Raises Attack."),
+        .description = COMPOUND_STRING("Raises Special Attack."),
         .aiRating = 10,
     },
 
