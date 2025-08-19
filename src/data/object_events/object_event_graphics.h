@@ -101,6 +101,7 @@ const u32 gObjectEventPic_BugCatcher[] = INCBIN_U32("graphics/object_events/pics
 const u32 gObjectEventPic_PsychicM[] = INCBIN_U32("graphics/object_events/pics/people/psychic_m.4bpp");
 const u32 gObjectEventPic_SchoolKidM[] = INCBIN_U32("graphics/object_events/pics/people/school_kid_m.4bpp");
 const u32 gObjectEventPic_Maniac[] = INCBIN_U32("graphics/object_events/pics/people/maniac.4bpp");
+const u16 gObjectEventPal_HexManiac[] = INCBIN_U16("graphics/object_events/pics/people/hex_maniac.gbapal");
 const u32 gObjectEventPic_HexManiac[] = INCBIN_U32("graphics/object_events/pics/people/hex_maniac.4bpp");
 const u32 gObjectEventPic_UnusedWoman[] = INCBIN_U32("graphics/object_events/pics/people/unused_woman.4bpp");
 const u32 gObjectEventPic_SwimmerM[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_m.4bpp");
@@ -361,6 +362,16 @@ const u32 gObjectEventPic_PokeBall[] = INCBIN_U32("graphics/object_events/pics/m
 
 const u16 gObjectEventPal_RuinManiac[] = INCBIN_U16("graphics/object_events/palettes/ruin_maniac.gbapal");
 const u32 gObjectEventPic_RuinManiac[] = INCBIN_U32("graphics/object_events/pics/people/ruin_maniac.4bpp");
+const u16 gObjectEventPal_Guitarist[] = INCBIN_U16("graphics/object_events/pics/people/guitarist.gbapal");
+const u32 gObjectEventPic_Guitarist[] = INCBIN_U32("graphics/object_events/pics/people/guitarist.4bpp");
+const u16 gObjectEventPal_Kindler[] = INCBIN_U16("graphics/object_events/pics/people/kindler.gbapal");
+const u32 gObjectEventPic_Kindler[] = INCBIN_U32("graphics/object_events/pics/people/kindler.4bpp");
+const u16 gObjectEventPal_ParasolLady[] = INCBIN_U16("graphics/object_events/pics/people/parasol_lady.gbapal");
+const u32 gObjectEventPic_ParasolLady[] = INCBIN_U32("graphics/object_events/pics/people/parasol_lady.4bpp");
+const u16 gObjectEventPal_Janine[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/janine.gbapal");
+const u32 gObjectEventPic_Janine[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/janine.4bpp");
+const u16 gObjectEventPal_Phoebe2[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/phoebe.gbapal");
+const u32 gObjectEventPic_Phoebe2[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/phoebe.4bpp");
 const u16 gObjectEventPal_Zinnia[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/zinnia.gbapal");
 const u32 gObjectEventPic_Zinnia[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/zinnia.4bpp");
 
