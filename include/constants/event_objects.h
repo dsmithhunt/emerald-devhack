@@ -247,11 +247,12 @@
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               241
 #define OBJ_EVENT_GFX_RUIN_MANIAC                242
+#define OBJ_EVENT_GFX_ZINNIA                     243
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        243
+#define NUM_OBJ_EVENT_GFX                        244
 
 
 // These are dynamic object gfx ids.
@@ -420,6 +421,7 @@
 // Custom Dynamic Overworld Palettes
 #define OBJ_EVENT_PAL_TAG_HIKER                   0x116B
 #define OBJ_EVENT_PAL_TAG_RUIN_MANIAC             0x116C
+#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x116D
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001

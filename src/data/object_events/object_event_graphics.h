@@ -361,6 +361,8 @@ const u32 gObjectEventPic_PokeBall[] = INCBIN_U32("graphics/object_events/pics/m
 
 const u16 gObjectEventPal_RuinManiac[] = INCBIN_U16("graphics/object_events/palettes/ruin_maniac.gbapal");
 const u32 gObjectEventPic_RuinManiac[] = INCBIN_U32("graphics/object_events/pics/people/ruin_maniac.4bpp");
+const u16 gObjectEventPal_Zinnia[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/zinnia.gbapal");
+const u32 gObjectEventPic_Zinnia[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/zinnia.4bpp");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/deoxys.4bpp");
 const u32 gObjectEventPic_MewOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/mew.4bpp");
