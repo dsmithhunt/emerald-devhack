@@ -116,6 +116,7 @@ const u32 gObjectEventPic_RunningTriathleteM[] = INCBIN_U32("graphics/object_eve
 const u32 gObjectEventPic_RunningTriathleteF[] = INCBIN_U32("graphics/object_events/pics/people/running_triathlete_f.4bpp");
 const u32 gObjectEventPic_TuberF[] = INCBIN_U32("graphics/object_events/pics/people/tuber_f.4bpp");
 const u32 gObjectEventPic_TuberM[] = INCBIN_U32("graphics/object_events/pics/people/tuber_m.4bpp");
+const u16 gObjectEventPal_Hiker[] = INCBIN_U16("graphics/object_events/palettes/hiker.gbapal");
 const u32 gObjectEventPic_Hiker[] = INCBIN_U32("graphics/object_events/pics/people/hiker.4bpp");
 const u32 gObjectEventPic_CyclingTriathleteM[] = INCBIN_U32("graphics/object_events/pics/people/cycling_triathlete_m.4bpp");
 const u32 gObjectEventPic_CyclingTriathleteF[] = INCBIN_U32("graphics/object_events/pics/people/cycling_triathlete_f.4bpp");
@@ -357,6 +358,9 @@ const u32 gObjectEventPic_Noland[] = INCBIN_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Lucy[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/lucy.4bpp");
 const u32 gObjectEventPic_Brandon[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/brandon.4bpp");
 const u32 gObjectEventPic_PokeBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_poke.4bpp");
+
+const u16 gObjectEventPal_RuinManiac[] = INCBIN_U16("graphics/object_events/palettes/ruin_maniac.gbapal");
+const u32 gObjectEventPic_RuinManiac[] = INCBIN_U32("graphics/object_events/pics/people/ruin_maniac.4bpp");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/deoxys.4bpp");
 const u32 gObjectEventPic_MewOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/mew.4bpp");
