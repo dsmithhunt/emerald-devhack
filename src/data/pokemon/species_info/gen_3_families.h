@@ -13018,7 +13018,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_STANCE_CHANGE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Deoxys"),
         .cryId = CRY_DEOXYS,
@@ -13068,7 +13068,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sDeoxysNormalLevelUpLearnset,
         .teachableLearnset = sDeoxysNormalTeachableLearnset,
         .formSpeciesIdTable = sDeoxysFormSpeciesIdTable,
-        .formChangeTable = sDeoxysNormalFormChangeTable,
+        .formChangeTable = sDeoxysFormChangeTable,
     },
 
     [SPECIES_DEOXYS_ATTACK] =
@@ -13089,7 +13089,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_STANCE_CHANGE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Deoxys"),
         .cryId = CRY_DEOXYS,
@@ -13138,7 +13138,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sDeoxysAttackLevelUpLearnset,
         .teachableLearnset = sDeoxysAttackTeachableLearnset,
         .formSpeciesIdTable = sDeoxysFormSpeciesIdTable,
-        .formChangeTable = sDeoxysAttackFormChangeTable,
+        .formChangeTable = sDeoxysFormChangeTable,
     },
 
     [SPECIES_DEOXYS_DEFENSE] =
@@ -13159,7 +13159,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_STANCE_CHANGE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Deoxys"),
         .cryId = CRY_DEOXYS,
@@ -13209,7 +13209,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sDeoxysDefenseLevelUpLearnset,
         .teachableLearnset = sDeoxysDefenseTeachableLearnset,
         .formSpeciesIdTable = sDeoxysFormSpeciesIdTable,
-        .formChangeTable = sDeoxysDefenseFormChangeTable,
+        .formChangeTable = sDeoxysFormChangeTable,
     },
 
     [SPECIES_DEOXYS_SPEED] =
@@ -13229,7 +13229,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_STANCE_CHANGE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .noFlip = TRUE,
         .speciesName = _("Deoxys"),
@@ -13280,7 +13280,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sDeoxysSpeedLevelUpLearnset,
         .teachableLearnset = sDeoxysSpeedTeachableLearnset,
         .formSpeciesIdTable = sDeoxysFormSpeciesIdTable,
-        .formChangeTable = sDeoxysSpeedFormChangeTable,
+        .formChangeTable = sDeoxysFormChangeTable,
     },
 #endif //P_FAMILY_DEOXYS
 

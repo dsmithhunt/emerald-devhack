@@ -129,6 +129,11 @@ enum FormChanges
     // param1: move category to check
     // param2: ability to check, optional
     FORM_CHANGE_BATTLE_BEFORE_MOVE_CATEGORY,
+    // Form change that activates before using a specific move category.
+    // param1: pokemon to check
+    // param2: ability to check
+    // param3: move to check
+    FORM_CHANGE_BATTLE_BEFORE_MOVE_PRIORITY,
     // Form change that activates when overworld weather changes.
     // param1: weather to check.
     FORM_CHANGE_OVERWORLD_WEATHER,

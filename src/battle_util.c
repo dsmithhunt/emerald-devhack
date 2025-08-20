@@ -1816,6 +1816,8 @@ static inline bool32 TryFormChangeBeforeMove(void)
 {
     bool32 result = TryBattleFormChange(gBattlerAttacker, FORM_CHANGE_BATTLE_BEFORE_MOVE);
     if (!result)
+        result = TryBattleFormChange(gBattlerAttacker, FORM_CHANGE_BATTLE_BEFORE_MOVE_PRIORITY);
+    if (!result)
         result = TryBattleFormChange(gBattlerAttacker, FORM_CHANGE_BATTLE_BEFORE_MOVE_CATEGORY);
     if (!result)
         return FALSE;
@@ -10214,6 +10216,12 @@ u16 GetBattleFormChangeTargetSpecies(u32 battler, enum FormChanges method)
                 break;
             case FORM_CHANGE_BATTLE_BEFORE_MOVE:
                 if (formChanges[i].param1 == gCurrentMove
+                    && (formChanges[i].param2 == ABILITY_NONE || formChanges[i].param2 == GetBattlerAbility(battler)))
+                    targetSpecies = formChanges[i].targetSpecies;
+                break;
+            case FORM_CHANGE_BATTLE_BEFORE_MOVE_PRIORITY:
+                int prio = GetBattleMovePriority(gBattlerAttacker, GetBattlerAbility(battler), gCurrentMove);
+                if (prio > 0
                     && (formChanges[i].param2 == ABILITY_NONE || formChanges[i].param2 == GetBattlerAbility(battler)))
                     targetSpecies = formChanges[i].targetSpecies;
                 break;
