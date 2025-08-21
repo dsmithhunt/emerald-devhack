@@ -4417,7 +4417,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_PorytilesPrimaryTest",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_MeteorFalls",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
     }

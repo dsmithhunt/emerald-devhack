@@ -23741,7 +23741,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9513
-            .species = SPECIES_TREECKO,
+            .species = SPECIES_CHESPIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9515
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -23795,7 +23795,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9534
-            .species = SPECIES_GROVYLE,
+            .species = SPECIES_QUILLADIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9536
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
@@ -23849,7 +23849,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9555
-            .species = SPECIES_GROVYLE,
+            .species = SPECIES_QUILLADIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9557
             .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
@@ -23881,7 +23881,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9568
-            .species = SPECIES_TORCHIC,
+            .species = SPECIES_TEPIG,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9570
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -23935,7 +23935,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9589
-            .species = SPECIES_COMBUSKEN,
+            .species = SPECIES_PIGNITE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9591
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
@@ -23989,7 +23989,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9610
-            .species = SPECIES_COMBUSKEN,
+            .species = SPECIES_PIGNITE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9612
             .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
@@ -24021,7 +24021,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9623
-            .species = SPECIES_MUDKIP,
+            .species = SPECIES_SOBBLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9625
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24075,7 +24075,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9644
-            .species = SPECIES_MARSHTOMP,
+            .species = SPECIES_DRIZZILE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9646
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
@@ -24129,7 +24129,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9665
-            .species = SPECIES_MARSHTOMP,
+            .species = SPECIES_DRIZZILE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9667
             .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
@@ -24163,7 +24163,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9678
-            .species = SPECIES_TREECKO,
+            .species = SPECIES_CHESPIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9680
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24219,7 +24219,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9699
-            .species = SPECIES_GROVYLE,
+            .species = SPECIES_QUILLADIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9701
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
@@ -24275,7 +24275,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9720
-            .species = SPECIES_GROVYLE,
+            .species = SPECIES_QUILLADIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9722
             .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
@@ -24309,7 +24309,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9733
-            .species = SPECIES_TORCHIC,
+            .species = SPECIES_TEPIG,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9735
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24365,7 +24365,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9754
-            .species = SPECIES_COMBUSKEN,
+            .species = SPECIES_PIGNITE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9756
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
@@ -24421,7 +24421,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9775
-            .species = SPECIES_COMBUSKEN,
+            .species = SPECIES_PIGNITE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9777
             .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
@@ -24455,7 +24455,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9788
-            .species = SPECIES_MUDKIP,
+            .species = SPECIES_SOBBLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9790
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24511,7 +24511,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9809
-            .species = SPECIES_MARSHTOMP,
+            .species = SPECIES_DRIZZILE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9811
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
@@ -24567,7 +24567,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 9830
-            .species = SPECIES_MARSHTOMP,
+            .species = SPECIES_DRIZZILE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9832
             .iv = TRAINER_PARTY_IVS(18, 18, 18, 18, 18, 18),
@@ -27209,7 +27209,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 10858
-            .species = SPECIES_TORCHIC,
+            .species = SPECIES_TEPIG,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 10860
             .iv = TRAINER_PARTY_IVS(6, 6, 6, 6, 6, 6),
@@ -27252,7 +27252,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 10875
-            .species = SPECIES_TREECKO,
+            .species = SPECIES_CHESPIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 10877
             .iv = TRAINER_PARTY_IVS(6, 6, 6, 6, 6, 6),
@@ -27527,7 +27527,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 10982
-            .species = SPECIES_MUDKIP,
+            .species = SPECIES_SOBBLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 10984
             .iv = TRAINER_PARTY_IVS(6, 6, 6, 6, 6, 6),
@@ -27572,7 +27572,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 10999
-            .species = SPECIES_TREECKO,
+            .species = SPECIES_CHESPIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 11001
             .iv = TRAINER_PARTY_IVS(6, 6, 6, 6, 6, 6),
@@ -30741,7 +30741,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 12269
-            .species = SPECIES_GROVYLE,
+            .species = SPECIES_QUILLADIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 12271
             .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
@@ -30806,7 +30806,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 12294
-            .species = SPECIES_COMBUSKEN,
+            .species = SPECIES_PIGNITE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 12296
             .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
@@ -30871,7 +30871,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 12319
-            .species = SPECIES_MARSHTOMP,
+            .species = SPECIES_DRIZZILE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 12321
             .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
@@ -30938,7 +30938,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 12344
-            .species = SPECIES_GROVYLE,
+            .species = SPECIES_QUILLADIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 12346
             .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
@@ -31005,7 +31005,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 12369
-            .species = SPECIES_COMBUSKEN,
+            .species = SPECIES_PIGNITE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 12371
             .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
@@ -31072,7 +31072,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 12394
-            .species = SPECIES_MARSHTOMP,
+            .species = SPECIES_DRIZZILE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 12396
             .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
@@ -35475,7 +35475,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 14135
-            .species = SPECIES_TORCHIC,
+            .species = SPECIES_TEPIG,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 14137
             .iv = TRAINER_PARTY_IVS(6, 6, 6, 6, 6, 6),
@@ -35520,7 +35520,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 14152
-            .species = SPECIES_MUDKIP,
+            .species = SPECIES_SOBBLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 14154
             .iv = TRAINER_PARTY_IVS(6, 6, 6, 6, 6, 6),
