@@ -841,3 +841,14 @@ const struct Tileset gTileset_PorytilesPrimaryTest =
     .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route104 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route104,
+    .palettes = gTilesetPalettes_Route104,
+    .metatiles = gMetatiles_Route104,
+    .metatileAttributes = gMetatileAttributes_Route104,
+    .callback = NULL,
+};

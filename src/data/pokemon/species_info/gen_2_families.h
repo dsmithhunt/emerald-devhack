@@ -1619,7 +1619,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sTogeticLevelUpLearnset,
         .teachableLearnset = sTogeticTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SHINY_STONE, SPECIES_TOGEKISS}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_DAY_STONE, SPECIES_TOGEKISS}),
     },
 
 #if P_GEN_4_CROSS_EVOS

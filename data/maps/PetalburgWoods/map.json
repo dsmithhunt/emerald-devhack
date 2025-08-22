@@ -191,14 +191,14 @@
       "x": 14,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE104",
+      "dest_map": "MAP_RUSTPETAL_PARK",
       "dest_warp_id": "2"
     },
     {
       "x": 15,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE104",
+      "dest_map": "MAP_RUSTPETAL_PARK",
       "dest_warp_id": "3"
     },
     {

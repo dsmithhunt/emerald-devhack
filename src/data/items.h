@@ -3928,9 +3928,9 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_MoonStone,
     },
 
-    [ITEM_SHINY_STONE] =
+    [ITEM_DAY_STONE] =
     {
-        .name = _("Shiny Stone"),
+        .name = _("Day Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
