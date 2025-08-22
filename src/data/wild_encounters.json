@@ -24,18 +24,22 @@
         {
           "type": "water_mons",
           "encounter_rates": [
-            30,
-            30,
+            25,
+            25,
             20,
-            19,
+            20,
+            5,
+            4,
             1
           ]
         },
         {
           "type": "rock_smash_mons",
           "encounter_rates": [
-            60,
-            30,
+            25,
+            25,
+            20,
+            20,
             5,
             4,
             1
