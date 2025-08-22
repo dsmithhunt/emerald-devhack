@@ -664,7 +664,7 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
                 tMenuType = HAS_SAVED_GAME;
                 if (IsMysteryGiftEnabled())
                     tMenuType++;
-                gTasks[taskId].func = Task_MainMenuCheckBattery;
+                gTasks[taskId].func = Task_DisplayMainMenu;
                 break;
             case SAVE_STATUS_CORRUPT:
                 CreateMainMenuErrorWindow(gText_SaveFileErased);
@@ -681,7 +681,7 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
             case SAVE_STATUS_EMPTY:
             default:
                 tMenuType = HAS_NO_SAVED_GAME;
-                gTasks[taskId].func = Task_MainMenuCheckBattery;
+                gTasks[taskId].func = Task_DisplayMainMenu;
                 break;
             case SAVE_STATUS_NO_FLASH:
                 CreateMainMenuErrorWindow(gJPText_No1MSubCircuit);
