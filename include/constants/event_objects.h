@@ -49,7 +49,7 @@
 #define OBJ_EVENT_GFX_SWIMMER_M                   42
 #define OBJ_EVENT_GFX_SWIMMER_F                   43
 #define OBJ_EVENT_GFX_BLACK_BELT                  44
-#define OBJ_EVENT_GFX_BEAUTY                      45
+#define OBJ_EVENT_GFX_SALES_REP                   45
 #define OBJ_EVENT_GFX_SCIENTIST_1                 46
 #define OBJ_EVENT_GFX_LASS                        47
 #define OBJ_EVENT_GFX_GENTLEMAN                   48
@@ -246,18 +246,21 @@
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               241
-#define OBJ_EVENT_GFX_RUIN_MANIAC                242
-#define OBJ_EVENT_GFX_GUITARIST                  243
-#define OBJ_EVENT_GFX_KINDLER                    244
-#define OBJ_EVENT_GFX_PARASOL_LADY               245
-#define OBJ_EVENT_GFX_JANINE                     246
-#define OBJ_EVENT_GFX_PHOEBE_2                   247
-#define OBJ_EVENT_GFX_ZINNIA                     248
+#define OBJ_EVENT_GFX_BEAUTY                     242
+#define OBJ_EVENT_GFX_BIRD_KEEPER                243
+#define OBJ_EVENT_GFX_BUG_MANIAC                 244
+#define OBJ_EVENT_GFX_RUIN_MANIAC                245
+#define OBJ_EVENT_GFX_GUITARIST                  246
+#define OBJ_EVENT_GFX_KINDLER                    247
+#define OBJ_EVENT_GFX_PARASOL_LADY               248
+#define OBJ_EVENT_GFX_DRAGON_TAMER               249
+#define OBJ_EVENT_GFX_JANINE                     250
+#define OBJ_EVENT_GFX_ZINNIA                     251
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        249
+#define NUM_OBJ_EVENT_GFX                        252
 
 
 // These are dynamic object gfx ids.
@@ -425,14 +428,21 @@
 #endif //OW_FOLLOWERS_POKEBALLS
 // Custom Dynamic Overworld Palettes
 #define OBJ_EVENT_PAL_TAG_HIKER                   0x116B
-#define OBJ_EVENT_PAL_TAG_RUIN_MANIAC             0x116C
-#define OBJ_EVENT_PAL_TAG_GUITARIST               0x116D
-#define OBJ_EVENT_PAL_TAG_KINDLER                 0x116E
-#define OBJ_EVENT_PAL_TAG_PARASOL_LADY            0x1170
-#define OBJ_EVENT_PAL_TAG_HEX_MANIAC              0x1171
-#define OBJ_EVENT_PAL_TAG_JANINE                  0x1172
-#define OBJ_EVENT_PAL_TAG_PHOEBE                  0x1173
-#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x1174
+#define OBJ_EVENT_PAL_TAG_RICH_BOY                0x116C
+#define OBJ_EVENT_PAL_TAG_BEAUTY                  0x116D
+#define OBJ_EVENT_PAL_TAG_BIRD_KEEPER             0x116E
+#define OBJ_EVENT_PAL_TAG_BUG_MANIAC              0x116F
+#define OBJ_EVENT_PAL_TAG_RUIN_MANIAC             0x1170
+#define OBJ_EVENT_PAL_TAG_GUITARIST               0x1171
+#define OBJ_EVENT_PAL_TAG_KINDLER                 0x1172
+#define OBJ_EVENT_PAL_TAG_PARASOL_LADY            0x1173
+#define OBJ_EVENT_PAL_TAG_DRAGON_TAMER            0x1174
+#define OBJ_EVENT_PAL_TAG_HEX_MANIAC              0x1175
+#define OBJ_EVENT_PAL_TAG_WALLY                   0x1176
+#define OBJ_EVENT_PAL_TAG_JANINE                  0x1177
+#define OBJ_EVENT_PAL_TAG_PHOEBE                  0x1178
+#define OBJ_EVENT_PAL_TAG_WALLACE                 0x1179
+#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x117A
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001

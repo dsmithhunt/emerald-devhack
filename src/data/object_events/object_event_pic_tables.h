@@ -217,8 +217,8 @@ static const struct SpriteFrameImage sPicTable_BlackBelt[] = {
     overworld_ascending_frames(gObjectEventPic_BlackBelt, 2, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_Beauty[] = {
-    overworld_ascending_frames(gObjectEventPic_Beauty, 2, 4),
+static const struct SpriteFrameImage sPicTable_SalesRep[] = {
+    overworld_ascending_frames(gObjectEventPic_SalesRep, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Scientist1[] = {
@@ -502,15 +502,7 @@ static const struct SpriteFrameImage sPicTable_Sidney[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Phoebe[] = {
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Phoebe, 2, 4, 2),
+    overworld_ascending_frames(gObjectEventPic_Phoebe, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Glacia[] = {
@@ -1119,6 +1111,18 @@ static const struct SpriteFrameImage sPicTable_PokeBall[] = {
 
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight[];
 
+static const struct SpriteFrameImage sPicTable_Beauty[] = {
+    overworld_ascending_frames(gObjectEventPic_Beauty, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BirdKeeper[] = {
+    overworld_ascending_frames(gObjectEventPic_BirdKeeper, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BugManiac[] = {
+    overworld_ascending_frames(gObjectEventPic_BugManiac, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_RuinManiac[] = {
     overworld_ascending_frames(gObjectEventPic_RuinManiac, 2, 4),
 };
@@ -1135,12 +1139,12 @@ static const struct SpriteFrameImage sPicTable_ParasolLady[] = {
     overworld_ascending_frames(gObjectEventPic_ParasolLady, 2, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_Janine[] = {
-    overworld_ascending_frames(gObjectEventPic_Janine, 2, 4),
+static const struct SpriteFrameImage sPicTable_DragonTamer[] = {
+    overworld_ascending_frames(gObjectEventPic_DragonTamer, 2, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_Phoebe2[] = {
-    overworld_ascending_frames(gObjectEventPic_Phoebe2, 2, 4),
+static const struct SpriteFrameImage sPicTable_Janine[] = {
+    overworld_ascending_frames(gObjectEventPic_Janine, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Zinnia[] = {

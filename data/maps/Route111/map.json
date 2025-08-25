@@ -153,8 +153,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUIN_MANIAC",
-      "x": 27,
-      "y": 69,
+      "x": 26,
+      "y": 68,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT",
       "movement_range_x": 2,
@@ -179,8 +179,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 32,
-      "y": 66,
+      "x": 27,
+      "y": 63,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
       "movement_range_x": 0,
@@ -676,6 +676,13 @@
       "elevation": 0,
       "dest_map": "MAP_TRAINER_HILL_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 70,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE111",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -1064,8 +1071,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 26,
-      "y": 70,
+      "x": 22,
+      "y": 69,
       "elevation": 0,
       "item": "ITEM_STARDUST",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST"
@@ -1109,8 +1116,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 35,
-      "y": 66,
+      "x": 25,
+      "y": 64,
       "elevation": 0,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_RARE_CANDY"

@@ -43,7 +43,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RayquazaSti
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBelt;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SalesRep;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lass;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman;
@@ -237,12 +237,15 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphir
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirdKeeper;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugManiac;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RuinManiac;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Guitarist;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kindler;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParasolLady;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DragonTamer;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Phoebe2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zinnia;
 
 // Begin pokemon event objects
@@ -304,7 +307,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SWIMMER_M] =                &gObjectEventGraphicsInfo_SwimmerM,
     [OBJ_EVENT_GFX_SWIMMER_F] =                &gObjectEventGraphicsInfo_SwimmerF,
     [OBJ_EVENT_GFX_BLACK_BELT] =               &gObjectEventGraphicsInfo_BlackBelt,
-    [OBJ_EVENT_GFX_BEAUTY] =                   &gObjectEventGraphicsInfo_Beauty,
+    [OBJ_EVENT_GFX_SALES_REP] =                &gObjectEventGraphicsInfo_SalesRep,
     [OBJ_EVENT_GFX_SCIENTIST_1] =              &gObjectEventGraphicsInfo_Scientist1,
     [OBJ_EVENT_GFX_LASS] =                     &gObjectEventGraphicsInfo_Lass,
     [OBJ_EVENT_GFX_GENTLEMAN] =                &gObjectEventGraphicsInfo_Gentleman,
@@ -502,12 +505,15 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     
+    [OBJ_EVENT_GFX_BEAUTY] =                   &gObjectEventGraphicsInfo_Beauty,
+    [OBJ_EVENT_GFX_BIRD_KEEPER] =              &gObjectEventGraphicsInfo_BirdKeeper,
+    [OBJ_EVENT_GFX_BUG_MANIAC] =               &gObjectEventGraphicsInfo_BugManiac,
     [OBJ_EVENT_GFX_RUIN_MANIAC] =              &gObjectEventGraphicsInfo_RuinManiac,
     [OBJ_EVENT_GFX_GUITARIST] =                &gObjectEventGraphicsInfo_Guitarist,
     [OBJ_EVENT_GFX_KINDLER] =                  &gObjectEventGraphicsInfo_Kindler,
     [OBJ_EVENT_GFX_PARASOL_LADY] =             &gObjectEventGraphicsInfo_ParasolLady,
+    [OBJ_EVENT_GFX_DRAGON_TAMER] =             &gObjectEventGraphicsInfo_DragonTamer,
     [OBJ_EVENT_GFX_JANINE] =                   &gObjectEventGraphicsInfo_Janine,
-    [OBJ_EVENT_GFX_PHOEBE_2] =                 &gObjectEventGraphicsInfo_Phoebe2,
     [OBJ_EVENT_GFX_ZINNIA] =                   &gObjectEventGraphicsInfo_Zinnia,
 };
 

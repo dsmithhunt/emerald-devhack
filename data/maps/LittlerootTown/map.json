@@ -5,7 +5,7 @@
   "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
-  "weather": "WEATHER_ABNORMAL",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -129,7 +129,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCH"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(STEELIX)",
+      "graphics_id": "OBJ_EVENT_GFX_PHOEBE",
       "x": 10,
       "y": 6,
       "elevation": 0,
@@ -142,13 +142,13 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DEOXYS)",
+      "graphics_id": "OBJ_EVENT_GFX_WALLY",
       "x": 9,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_EventScript_Deoxys",
