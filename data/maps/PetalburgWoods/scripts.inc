@@ -667,7 +667,7 @@ PetalburgWoods_Text_IWasGoingToAmbushYou:
 # 334 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_HandOverThosePapers:
 # 335 "data/maps/PetalburgWoods/scripts.pory"
-	.string "You! DEVON RESEARCHER!\p"
+	.string "You! DEVCO RESEARCHER!\p"
 # 336 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Hand over those papers!$"
 # 337 "data/maps/PetalburgWoods/scripts.pory"

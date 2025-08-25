@@ -1344,10 +1344,10 @@
     {
       "id": "LAYOUT_PETALBURG_WOODS",
       "name": "PetalburgWoods_Layout",
-      "width": 48,
-      "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "width": 58,
+      "height": 60,
+      "primary_tileset": "gTileset_PorytilesGeneral",
+      "secondary_tileset": "gTileset_PetalburgWoods",
       "border_filepath": "data/layouts/PetalburgWoods/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgWoods/map.bin"
     },
@@ -4416,7 +4416,7 @@
       "name": "PorytilesTestMap_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "primary_tileset": "gTileset_PorytilesGeneral",
       "secondary_tileset": "gTileset_MeteorFalls",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"

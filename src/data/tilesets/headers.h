@@ -831,17 +831,6 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_PorytilesPrimaryTest =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_PorytilesPrimaryTest,
-    .palettes = gTilesetPalettes_PorytilesPrimaryTest,
-    .metatiles = gMetatiles_PorytilesPrimaryTest,
-    .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Route104 =
 {
     .isCompressed = TRUE,
@@ -850,5 +839,27 @@ const struct Tileset gTileset_Route104 =
     .palettes = gTilesetPalettes_Route104,
     .metatiles = gMetatiles_Route104,
     .metatileAttributes = gMetatileAttributes_Route104,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PorytilesGeneral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesGeneral,
+    .palettes = gTilesetPalettes_PorytilesGeneral,
+    .metatiles = gMetatiles_PorytilesGeneral,
+    .metatileAttributes = gMetatileAttributes_PorytilesGeneral,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PetalburgWoods =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PetalburgWoods,
+    .palettes = gTilesetPalettes_PetalburgWoods,
+    .metatiles = gMetatiles_PetalburgWoods,
+    .metatileAttributes = gMetatileAttributes_PetalburgWoods,
     .callback = NULL,
 };
