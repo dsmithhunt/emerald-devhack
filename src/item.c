@@ -338,6 +338,24 @@ static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, u16 itemId, u1
         }
     }
 
+    if (TMCASE_ADD_TM_CASE_WITH_TMS)
+    {
+        if (pocket->id == POCKET_TM_HM)
+        {
+            if (!CheckBagHasItem(ITEM_TM_CASE, 1))
+                AddBagItem(ITEM_TM_CASE, 1);
+        }
+    }
+
+    if (BP_ADD_BERRY_POUCH_WITH_BERRIES)
+    {
+        if (pocket->id == POCKET_BERRIES)
+        {
+            if (!CheckBagHasItem(ITEM_BERRY_POUCH, 1))
+                AddBagItem(ITEM_BERRY_POUCH, 1);
+        }
+    }
+
     Free(tempPocketSlotQuantities);
     return count == 0;
 }
@@ -470,19 +488,11 @@ static void NONNULL BagPocket_CompactItems(struct BagPocket *pocket)
     }
 }
 
-void RemovePCItem(u8 index, u16 count)
+void RemovePCItem(u16 itemId, u16 count)
 {
     struct BagPocket dummyPocket = DUMMY_PC_BAG_POCKET;
 
-    // Get id, quantity at slot
-    struct ItemSlot tempItem = BagPocket_GetSlotData(&dummyPocket, index);
-
-    // Remove quantity
-    BagPocket_SetSlotItemIdAndCount(&dummyPocket, index, tempItem.itemId, tempItem.quantity - count);
-
-    // Compact if necessary
-    if (tempItem.quantity == 0)
-        BagPocket_CompactItems(&dummyPocket);
+    BagPocket_RemoveItem(&dummyPocket, itemId, count);
 }
 
 void CompactPCItems(void)

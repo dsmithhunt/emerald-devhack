@@ -10,6 +10,7 @@
 #include "item.h"
 #include "item_icon.h"
 #include "item_menu.h"
+#include "item_pc_rg.h"
 #include "constants/items.h"
 #include "list_menu.h"
 #include "mail.h"
@@ -42,7 +43,7 @@ enum {
 enum {
     MENU_WITHDRAW,
     MENU_DEPOSIT,
-    MENU_TOSS,
+    //MENU_TOSS,
     MENU_EXIT
 };
 
@@ -135,7 +136,7 @@ static void Mailbox_UpdateMailListAfterDeposit(void);
 
 static void ItemStorage_Withdraw(u8);
 static void ItemStorage_Deposit(u8);
-static void ItemStorage_Toss(u8);
+//static void ItemStorage_Toss(u8);
 static void ItemStorage_Exit(u8);
 static void ItemStorage_TossItemYes(u8);
 static void ItemStorage_TossItemNo(u8);
@@ -149,6 +150,9 @@ static void ItemStorage_Enter(u8, bool8);
 static void ItemStorage_CreateListMenu(u8);
 static void ItemStorage_ProcessInput(u8);
 static void Task_ItemStorage_Deposit(u8);
+static void Task_ItemStorage_Withdraw(u8);
+static void CB2_PlayerPCExitItemPcRGMenu(void);
+static void ItemStorage_ReshowAfterItemPcRGMenu(void);
 static void ItemStorage_ReshowAfterBagMenu(void);
 static void ItemStorage_DoItemWithdraw(u8);
 static void ItemStorage_DoItemToss(u8);
@@ -195,7 +199,7 @@ static const u8 *const sItemStorage_OptionDescriptions[] =
 {
     [MENU_WITHDRAW] = COMPOUND_STRING("Take out items from the PC."),
     [MENU_DEPOSIT]  = COMPOUND_STRING("Store items in the PC."),
-    [MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
+    //[MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
     [MENU_EXIT]     = gText_GoBackPrevMenu,
 };
 
@@ -228,7 +232,7 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 {
     [MENU_WITHDRAW] = { sText_WithdrawItem, {ItemStorage_Withdraw} },
     [MENU_DEPOSIT]  = { sText_DepositItem,  {ItemStorage_Deposit} },
-    [MENU_TOSS]     = { sText_TossItem,     {ItemStorage_Toss} },
+    //[MENU_TOSS]     = { sText_TossItem,     {ItemStorage_Toss} },
     [MENU_EXIT]     = { gText_Cancel,       {ItemStorage_Exit} }
 };
 
@@ -271,7 +275,7 @@ static const struct WindowTemplate sWindowTemplates_MainMenus[] =
         .tilemapLeft = 1,
         .tilemapTop = 1,
         .width = 10,
-        .height = 8,
+        .height = 6,
         .paletteNum = 15,
         .baseBlock = 1
     }
@@ -589,7 +593,21 @@ static void ItemStorage_ReshowAfterBagMenu(void)
 {
     LoadMessageBoxAndBorderGfx();
     DrawDialogueFrame(0, TRUE);
-    InitItemStorageMenu(CreateTask(ItemStorage_HandleReturnToProcessInput, 0), 1);
+    InitItemStorageMenu(CreateTask(ItemStorage_HandleReturnToProcessInput, 0), MENU_DEPOSIT);
+    FadeInFromBlack();
+}
+
+static void CB2_PlayerPCExitItemPcRGMenu(void)
+{
+    gFieldCallback = ItemStorage_ReshowAfterItemPcRGMenu;
+    SetMainCallback2(CB2_ReturnToField);
+}
+
+static void ItemStorage_ReshowAfterItemPcRGMenu(void)
+{
+    LoadMessageBoxAndBorderGfx();
+    DrawDialogueFrame(0, TRUE);
+    InitItemStorageMenu(CreateTask(ItemStorage_HandleReturnToProcessInput, 0), MENU_WITHDRAW);
     FadeInFromBlack();
 }
 
@@ -606,7 +624,9 @@ static void ItemStorage_Withdraw(u8 taskId)
     tUsedSlots = CountUsedPCItemSlots();
     if (tUsedSlots != 0)
     {
-        ItemStorage_Enter(taskId, FALSE);
+        //ItemStorage_Enter(taskId, FALSE);
+        gTasks[taskId].func = Task_ItemStorage_Withdraw;
+        FadeScreen(FADE_TO_BLACK, 0);
     }
     else
     {
@@ -617,7 +637,17 @@ static void ItemStorage_Withdraw(u8 taskId)
 
 }
 
-static void ItemStorage_Toss(u8 taskId)
+static void Task_ItemStorage_Withdraw(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        CleanupOverworldWindowsAndTilemaps();
+        ItemPc_RG_Init(FALSE, CB2_PlayerPCExitItemPcRGMenu);
+        DestroyTask(taskId);
+    }
+}
+
+static UNUSED void ItemStorage_Toss(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
@@ -1264,8 +1294,8 @@ static void ItemStorage_ReturnToMenuSelect(u8 taskId)
         // Select Withdraw/Toss by default depending on which was just exited
         if (!tInTossMenu)
             InitItemStorageMenu(taskId, MENU_WITHDRAW);
-        else
-            InitItemStorageMenu(taskId, MENU_TOSS);
+        //else
+            //InitItemStorageMenu(taskId, MENU_TOSS);
         gTasks[taskId].func = ItemStorageMenuProcessInput;
     }
 }
