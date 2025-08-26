@@ -788,7 +788,7 @@ static void PrintDescription(s32 itemIndex)
 {
     const u8 * str;
     if (itemIndex != LIST_CANCEL)
-        str = GetItemDescription(GetTMCaseItemIdByPosition(itemIndex));
+        str = GetItemLongDescription(GetTMCaseItemIdByPosition(itemIndex));
     else
         str = sText_TMCaseWillBePutAway;
     FillWindowPixelBuffer(WIN_DESCRIPTION, 0);

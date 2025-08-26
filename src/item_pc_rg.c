@@ -594,7 +594,7 @@ static void ItemPc_MoveCursorCallback(s32 itemIndex, bool8 onInit, struct ListMe
         {
             itemId = ItemPc_RG_GetItemIdBySlotId(itemIndex);
             ItemRG_DrawItemIcon(itemId, sItemPcRGResources->itemIconSlot);
-            desc = GetItemDescription(itemId);
+            desc = GetItemLongDescription(itemId);
         }
         else
         {

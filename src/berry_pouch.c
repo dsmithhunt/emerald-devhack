@@ -913,7 +913,7 @@ static void PrintSelectedBerryDescription(s32 itemIdx)
     const u8 * str;
     if (itemIdx != sBerryPouchDynamicResources->listMenuNumItems)
     {
-        str = GetItemDescription(GetBerryPouchItemIdByPosition(itemIdx));
+        str = GetItemLongDescription(GetBerryPouchItemIdByPosition(itemIdx));
     }
     else
     {
