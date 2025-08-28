@@ -1228,6 +1228,11 @@ static void Task_SelectedTMHM_Sell(u8 taskId)
         }
         else
         {
+            u32 maxQuantity = MAX_MONEY / GetItemSellPrice(gSpecialVar_ItemId);
+
+            if (tQuantity > maxQuantity)
+                tQuantity = maxQuantity;
+
             CopyItemName(gSpecialVar_ItemId, gStringVar2);
             StringExpandPlaceholders(gStringVar4, gText_HowManyToSell);
             PrintMessageWithFollowupTask(taskId, FONT_SHORT, gStringVar4, Task_InitQuantitySelectUI);
