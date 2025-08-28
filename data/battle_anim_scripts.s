@@ -31636,6 +31636,7 @@ TeraChargeParticles:
 	return
 
 gBattleAnimGeneral_TeraActivate::
+	createvisualtask AnimTask_SetOpponentShadowCallbacks, 2 @ Restore shadows hidden in the charge script
 	loadspritegfx ANIM_TAG_TERA_SYMBOL
 	loadspritegfx ANIM_TAG_SPARKLE_6
 	createvisualtask AnimTask_HideSwapSprite, 2, 1, 0
