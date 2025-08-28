@@ -1057,7 +1057,6 @@ static void SortAndCountBerries(void)
     u32 itemCount;
     struct BagPocket *pocket = &gBagPockets[POCKET_BERRIES];
     CompactItemsInBagPocket(POCKET_BERRIES);
-    //SortItemsInBag(pocket, SORT_BY_INDEX);
 
     sBerryPouchDynamicResources->listMenuNumItems = 0;
 
@@ -1259,7 +1258,7 @@ static void CreateSortContextMenu(u8 taskId)
     u8 windowId2;
 
     sContextMenuOptions = sOptions_NameAmountIndexExit;
-    sContextMenuNumOptions = 4;
+    sContextMenuNumOptions = ARRAY_COUNT(sOptions_NameAmountIndexExit);
 
     windowId = GetOrCreateVariableWindow(sContextMenuNumOptions + BP_VAR_WINDOW_THREW_AWAY);
     PrintMenuActionTexts(windowId, FONT_SHORT, GetMenuCursorDimensionByFont(FONT_SHORT, 0), 2, GetFontAttribute(FONT_SHORT, FONTATTR_LETTER_SPACING), GetFontAttribute(FONT_SHORT, FONTATTR_MAX_LETTER_HEIGHT) + 2, sContextMenuNumOptions, sContextMenuActions, sContextMenuOptions);

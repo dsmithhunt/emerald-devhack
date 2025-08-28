@@ -96,6 +96,8 @@ enum {
     ACTION_BY_TYPE,
     ACTION_BY_AMOUNT,
     ACTION_BY_INDEX,
+    ACTION_OPEN,
+    ACTION_BATTLE_OPEN,
     ACTION_DUMMY,
 };
 
@@ -312,6 +314,8 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_BY_TYPE]           = {COMPOUND_STRING("Type"),      {ItemMenu_SortByType}},
     [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("Amount"),    {ItemMenu_SortByAmount}},
     [ACTION_BY_INDEX]          = {COMPOUND_STRING("Index"),     {ItemMenu_SortByIndex}},
+    [ACTION_OPEN]              = {COMPOUND_STRING("Open"),      {ItemMenu_UseOutOfBattle}},
+    [ACTION_BATTLE_OPEN]       = {COMPOUND_STRING("Open"),      {ItemMenu_UseInBattle}},
     [ACTION_DUMMY]             = {gText_EmptyString2, {NULL}}
 };
 
@@ -370,6 +374,14 @@ static const u8 sContextMenuItems_FavorLady[] = {
 
 static const u8 sContextMenuItems_QuizLady[] = {
     ACTION_CONFIRM_QUIZ_LADY, ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_BerryPouchTMCaseOpen[] = {
+    ACTION_OPEN,        ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_BattleBerryPouch[] = {
+    ACTION_BATTLE_OPEN, ACTION_CANCEL
 };
 
 static const TaskFunc sContextMenuFuncs[] = {
@@ -1625,7 +1637,12 @@ static void OpenContextMenu(u8 taskId)
     {
     case ITEMMENULOCATION_BATTLE:
     case ITEMMENULOCATION_WALLY:
-        if (GetItemBattleUsage(gSpecialVar_ItemId))
+        if (gSpecialVar_ItemId == ITEM_BERRY_POUCH)
+        {
+            gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleBerryPouch;
+            gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleBerryPouch);
+        }
+        else if (GetItemBattleUsage(gSpecialVar_ItemId))
         {
             gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleUse;
             gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleUse);
@@ -1684,7 +1701,12 @@ static void OpenContextMenu(u8 taskId)
     default:
         if (MenuHelpers_IsLinkActive() == TRUE || InUnionRoom() == TRUE)
         {
-            if (gBagPosition.pocket == POCKET_KEY_ITEMS || !IsHoldingItemAllowed(gSpecialVar_ItemId))
+            if (gSpecialVar_ItemId == ITEM_TM_CASE || gSpecialVar_ItemId == ITEM_BERRY_POUCH)
+            {
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_BerryPouchTMCaseOpen;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerryPouchTMCaseOpen);
+            }
+            else if (gBagPosition.pocket == POCKET_KEY_ITEMS || !IsHoldingItemAllowed(gSpecialVar_ItemId))
             {
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_Cancel;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Cancel);
@@ -1716,6 +1738,10 @@ static void OpenContextMenu(u8 taskId)
                 {
                     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
                         gBagMenu->contextMenuItemsBuffer[0] = ACTION_WALK;
+                }
+                if (gSpecialVar_ItemId == ITEM_TM_CASE || gSpecialVar_ItemId == ITEM_BERRY_POUCH)
+                {
+                    gBagMenu->contextMenuItemsBuffer[0] = ACTION_OPEN;
                 }
                 break;
             case POCKET_POKE_BALLS:
