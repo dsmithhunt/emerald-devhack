@@ -620,7 +620,7 @@ void CB2_BagMenuFromBattle(void)
 // Choosing berry to plant
 void CB2_ChooseBerry(void)
 {
-    if (BP_ADD_BERRY_POUCH_WITH_BERRIES)
+    if (FRLG_I_ADD_BERRY_POUCH_WITH_BERRIES)
         InitBerryPouch(BERRYPOUCH_FROMBERRYTREE, CB2_ReturnToFieldContinueScript, FALSE);
     else
         GoToBagMenu(ITEMMENULOCATION_BERRY_TREE, POCKET_BERRIES, CB2_ReturnToFieldContinueScript);
@@ -3104,7 +3104,7 @@ static s32 CompareItemsByIndex(enum Pocket pocketId, struct ItemSlot item1, stru
     case POCKET_TM_HM:
         index1 = GetItemTMHMIndex(item1.itemId);
         index2 = GetItemTMHMIndex(item2.itemId);
-        if (TMCASE_HMS_FIRST)
+        if (FRLG_I_HMS_FIRST)
         {
             if (index1 > NUM_TECHNICAL_MACHINES)
                 index1 -= NUM_TECHNICAL_MACHINES;

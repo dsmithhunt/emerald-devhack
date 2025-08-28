@@ -1564,7 +1564,7 @@ static void SetDiscSpritePosition(struct Sprite *sprite, u8 tmIdx)
     }
     else
     {
-        if (TMCASE_HMS_FIRST)
+        if (FRLG_I_HMS_FIRST)
         {
             if (tmIdx > NUM_TECHNICAL_MACHINES)
                 tmIdx -= NUM_TECHNICAL_MACHINES;

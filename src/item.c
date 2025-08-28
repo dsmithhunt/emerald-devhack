@@ -339,7 +339,7 @@ static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, u16 itemId, u1
         }
     }
 
-    if (TMCASE_ADD_TM_CASE_WITH_TMS)
+    if (FRLG_I_ADD_TM_CASE_WITH_TMS)
     {
         if (pocket->id == POCKET_TM_HM)
         {
@@ -348,7 +348,7 @@ static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, u16 itemId, u1
         }
     }
 
-    if (BP_ADD_BERRY_POUCH_WITH_BERRIES)
+    if (FRLG_I_ADD_BERRY_POUCH_WITH_BERRIES)
     {
         if (pocket->id == POCKET_BERRIES)
         {
