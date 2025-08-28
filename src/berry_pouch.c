@@ -66,6 +66,7 @@ enum
     BP_ACTION_AMOUNT,
     BP_ACTION_INDEX,
     BP_ACTION_CHECK_TAG,
+    BP_ACTION_CONFIRM,
 };
 
 enum
@@ -154,6 +155,7 @@ static void Task_BerryPouch_Amount(u8 taskId);
 static void Task_BerryPouch_Index(u8 taskId);
 static void Task_BerryPouchSortItems(u8 taskId);
 static void Task_BerryPouch_CheckTag(u8 taskId);
+static void Task_BerryPouch_Confirm(u8 taskId);
 static void Task_ContextMenu_FromPartyGiveMenu(u8 taskId);
 static void Task_ContextMenu_FromPokemonPC(u8 taskId);
 static void Task_ContextMenu_Sell(u8 taskId);
@@ -216,7 +218,8 @@ static const TaskFunc sBerryPouchContextMenuTasks[] =
     [BERRYPOUCH_FROMPARTYGIVE] = Task_ContextMenu_FromPartyGiveMenu,
     [BERRYPOUCH_FROMMARTSELL] = Task_ContextMenu_Sell,
     [BERRYPOUCH_FROMPOKEMONSTORAGEPC] = Task_ContextMenu_FromPokemonPC,
-    [BERRYPOUCH_FROMBATTLE] = Task_NormalContextMenu
+    [BERRYPOUCH_FROMBATTLE] = Task_NormalContextMenu,
+    [BERRYPOUCH_FROMBERRYCRUSH] = Task_NormalContextMenu,
 };
 
 static const struct YesNoFuncTable sYesNoFuncs_Toss =
@@ -241,6 +244,7 @@ static const struct MenuAction sContextMenuActions[] =
     [BP_ACTION_AMOUNT]      = { COMPOUND_STRING("Amount"),    {Task_BerryPouch_Amount} },
     [BP_ACTION_INDEX]       = { COMPOUND_STRING("Index"),     {Task_BerryPouch_Index} },
     [BP_ACTION_CHECK_TAG]   = { COMPOUND_STRING("Check"),     {Task_BerryPouch_CheckTag} },
+    [BP_ACTION_CONFIRM]     = { COMPOUND_STRING("Confirm"),   {Task_BerryPouch_Confirm} },
 };
 
 static const u8 *const sSortTypeStrings[] =
@@ -282,6 +286,13 @@ static const u8 sOptions_NameAmountIndexExit[] =
     BP_ACTION_NAME,
     BP_ACTION_AMOUNT,
     BP_ACTION_INDEX,
+    BP_ACTION_EXIT
+};
+
+static const u8 sOptions_ConfirmCheckExit[] =
+{
+    BP_ACTION_CONFIRM,
+    BP_ACTION_CHECK_TAG,
     BP_ACTION_EXIT
 };
 
@@ -1164,7 +1175,7 @@ static void Task_BerryPouchMain(u8 taskId)
                 break;
             default:
                 PlaySE(SE_SELECT);
-                if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMBERRYCRUSH)
+                if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMBERRYTREE)
                 {
                     gSpecialVar_ItemId = GetBerryPouchItemIdByPosition(menuInput);
                     sIsInBerryPouch = FALSE;
@@ -1217,6 +1228,11 @@ static void CreateNormalContextMenu(u8 taskId)
             sContextMenuOptions = sOptions_Exit;
             sContextMenuNumOptions = ARRAY_COUNT(sOptions_Exit);
         }
+    }
+    else if (sBerryPouchStaticResources.type == BERRYPOUCH_FROMBERRYCRUSH)
+    {
+        sContextMenuOptions = sOptions_ConfirmCheckExit;
+        sContextMenuNumOptions = ARRAY_COUNT(sOptions_ConfirmCheckExit);
     }
     else if (MenuHelpers_IsLinkActive() == TRUE || InUnionRoom() == TRUE)
     {
@@ -1580,6 +1596,18 @@ static void Task_BerryPouch_CheckTag(u8 taskId)
     ScheduleBgCopyTilemapToVram(0);
     ScheduleBgCopyTilemapToVram(2);
     sBerryPouchDynamicResources->exitCallback = DoBerryTagScreenFromPouch;
+    gTasks[taskId].func = BerryPouch_StartFadeToExitCallback;
+}
+
+static void Task_BerryPouch_Confirm(u8 taskId)
+{
+    DestroyVariableWindow(sContextMenuNumOptions + BP_VAR_WINDOW_THREW_AWAY);
+    DestroyVariableWindow(BP_VAR_WINDOW_BERRY_SELECTED);
+    PutWindowTilemap(BP_WINDOW_BERRY_LIST);
+    PutWindowTilemap(BP_WINDOW_DESCRIPTION);
+    ScheduleBgCopyTilemapToVram(0);
+    ScheduleBgCopyTilemapToVram(2);
+    sIsInBerryPouch = FALSE;
     gTasks[taskId].func = BerryPouch_StartFadeToExitCallback;
 }
 
