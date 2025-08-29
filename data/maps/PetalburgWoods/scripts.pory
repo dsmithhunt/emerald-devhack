@@ -1,3 +1,23 @@
+script PetalburgWoods_EventScript_BugCatcher01{
+	trainerbattle_single(TRAINER_LYLE, BugCatcher01_Intro, BugCatcher01_Outro)
+	msgbox(BugCatcher01_PostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	end
+}
+
+text BugCatcher01_Intro{
+	"..."
+}
+
+text BugCatcher01_Outro{
+	"..."
+}
+
+text BugCatcher01_PostBattle{
+	"..."
+}
+	
+
 raw `
 PetalburgWoods_MapScripts::
 	.byte 0

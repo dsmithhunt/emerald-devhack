@@ -1,3 +1,20 @@
+
+script LittlerootTown_BrendansHouse_1F_GymBattle{
+	lock
+	fadenewbgm(MUS_VS_GYM_LEADER)
+	fadescreen(FADE_TO_WHITE)
+	special(SpawnCameraObject)
+	playse(SE_PC_LOGIN)
+	applymovement(LOCALID_CAMERA, moves(
+		walk_faster_down * 14
+	))
+	waitmovement(0)
+	fadescreen(FADE_FROM_WHITE)
+	waitstate()
+	playmoncry(SPECIES_SLAKING, CRY_MODE_ENCOUNTER)
+	waitmoncry()
+}
+
 raw `
 LittlerootTown_BrendansHouse_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_BrendansHouse_1F_OnLoad

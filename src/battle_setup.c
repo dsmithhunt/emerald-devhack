@@ -436,6 +436,7 @@ void StartWallyTutorialBattle(void)
     CreateBattleStartTask(B_TRANSITION_SLICE, 0);
 }
 
+
 void BattleSetup_StartScriptedWildBattle(void)
 {
     LockPlayerFieldControls();

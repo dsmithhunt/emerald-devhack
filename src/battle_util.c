@@ -3634,6 +3634,12 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_ANTICIPATION;
                     gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                     BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                    if (CompareStat(battler, STAT_EVASION, MAX_STAT_STAGE, CMP_LESS_THAN)){
+                         gBattleScripting.savedBattler = gBattlerAttacker;
+                         gBattlerAttacker = battler;
+                         SET_STATCHANGER(STAT_EVASION, 1, FALSE);
+                         BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
+                    }
                 }
             }
             break;

@@ -531,11 +531,11 @@ LittlerootTown_EventScript_GiveRunningShoesTrigger::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomApproachPlayerMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomApproachPlayerFemale
-	call LittlerootTown_EventScript_GiveRunningShoes
+	call LittlerootTown_EventScript_MomGoodbye
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomReturnHomeMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomReturnHomeFemale
-	goto LittlerootTown_EventScript_SetReceivedRunningShoes
+	removeobject LOCALID_LITTLEROOT_MOM
 	end
 
 LittlerootTown_EventScript_SetHomeDoorCoordsMale::
@@ -926,7 +926,7 @@ LittlerootTown_EventScript_Mom::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetHomeDoorCoordsMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetHomeDoorCoordsFemale
-	call LittlerootTown_EventScript_GiveRunningShoes
+	call LittlerootTown_EventScript_MomGoodbye
 	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	opendoor VAR_0x8009, VAR_0x800A
@@ -936,13 +936,7 @@ LittlerootTown_EventScript_Mom::
 	hideobjectat LOCALID_LITTLEROOT_MOM, MAP_LITTLEROOT_TOWN
 	closedoor VAR_0x8009, VAR_0x800A
 	waitdooranim
-	goto LittlerootTown_EventScript_SetReceivedRunningShoes
-	end
-
-LittlerootTown_EventScript_SetReceivedRunningShoes::
 	removeobject LOCALID_LITTLEROOT_MOM
-	setflag FLAG_SYS_B_DASH
-	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	release
 	end
 
@@ -951,10 +945,16 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_Text_SwitchShoesWithRunningShoes
 	waitfanfare
-	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
 	msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
-	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
 	closemessage
+	return
+
+LittlerootTown_EventScript_MomGoodbye::
+	msgbox LittlerootTown_Text_MomGoodbye, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	delay 30
 	return
 
@@ -974,14 +974,8 @@ LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
-	.string "introduce yourself to PROF. BIRCH?\p"
-	.string "Oh! What an adorable POKéMON!\n"
-	.string "You got it from PROF. BIRCH. How nice!\p"
-	.string "You're your father's child, all right.\n"
-	.string "You look good together with POKéMON!\p"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
+	.string "Here, honey! If you're going out,\n"
+	.string "wear these RUNNING SHOES.\p"
 	.string "They'll put a zip in your step!$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
@@ -992,11 +986,15 @@ LittlerootTown_Text_ExplainRunningShoes:
 	.string "MOM: {PLAYER}, those shoes came with\n"
 	.string "instructions.\p"
 	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
-	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+	.string "RUNNING SHOES to run extra-fast!”$"
 
-LittlerootTown_Text_ComeHomeIfAnythingHappens:
+LittlerootTown_Text_MomGoodbye:
+	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
+	.string "introduce yourself to PROF. BIRCH?\p"
+	.string "Oh! What an adorable POKéMON!\n"
+	.string "You got it from PROF. BIRCH. How nice!\p"
+	.string "You're your father's child, all right.\n"
+	.string "You look good together with POKéMON!\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "To think that you have your very own\n"

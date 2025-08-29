@@ -47,6 +47,7 @@ tools/compresSmol/compresSmolTilemap
 tools/poryscript/poryscript
 porytiles_primary
 porytiles_secondary
+decompiled-secondary-tileset
 *.Identifier
 *.smol
 *.fastSmol
