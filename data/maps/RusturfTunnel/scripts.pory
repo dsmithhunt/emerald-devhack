@@ -367,27 +367,27 @@ RusturfTunnel_Movement_GruntEscape:
 	step_end
 
 RusturfTunnel_Movement_BrineyApproachPeeko1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	walk_right
 	walk_right
 	step_end
 
 RusturfTunnel_Movement_BrineyExit:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 RusturfTunnel_Movement_PlayerWatchBrineyExit:
@@ -444,7 +444,7 @@ RusturfTunnel_Text_GruntTakePackage:
 	.string "The BOSS told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
 	.string "All I had to do was steal some package\n"
-	.string "from DEVON.\p"
+	.string "from DEVCO.\p"
 	.string "Tch!\n"
 	.string "You want it back that badly, take it!$"
 

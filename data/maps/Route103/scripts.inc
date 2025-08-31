@@ -123,7 +123,7 @@ Route103_EventScript_RivalBrendan::
 # 62 "data/maps/Route103/scripts.pory"
 Route103_EventScript_StartMayBattleTreecko::
 # 63 "data/maps/Route103/scripts.pory"
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_MAY_LAB_CHESPIN, Route103_Text_MayDefeated
 # 64 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_AfterMayBattle
 # 65 "data/maps/Route103/scripts.pory"
@@ -133,7 +133,7 @@ Route103_EventScript_StartMayBattleTreecko::
 # 67 "data/maps/Route103/scripts.pory"
 Route103_EventScript_StartMayBattleTorchic::
 # 68 "data/maps/Route103/scripts.pory"
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_MAY_LAB_TEPIG, Route103_Text_MayDefeated
 # 69 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_AfterMayBattle
 # 70 "data/maps/Route103/scripts.pory"
@@ -143,7 +143,7 @@ Route103_EventScript_StartMayBattleTorchic::
 # 72 "data/maps/Route103/scripts.pory"
 Route103_EventScript_StartMayBattleMudkip::
 # 73 "data/maps/Route103/scripts.pory"
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_MAY_LAB_SOBBLE, Route103_Text_MayDefeated
 # 74 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_AfterMayBattle
 # 75 "data/maps/Route103/scripts.pory"
@@ -153,7 +153,7 @@ Route103_EventScript_StartMayBattleMudkip::
 # 77 "data/maps/Route103/scripts.pory"
 Route103_EventScript_StartBrendanBattleTreecko::
 # 78 "data/maps/Route103/scripts.pory"
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
+	trainerbattle_no_intro TRAINER_BRENDAN_LAB_CHESPIN, Route103_Text_BrendanDefeated
 # 79 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_AfterBrendanBattle
 # 80 "data/maps/Route103/scripts.pory"
@@ -163,7 +163,7 @@ Route103_EventScript_StartBrendanBattleTreecko::
 # 82 "data/maps/Route103/scripts.pory"
 Route103_EventScript_StartBrendanBattleTorchic::
 # 83 "data/maps/Route103/scripts.pory"
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
+	trainerbattle_no_intro TRAINER_BRENDAN_LAB_TEPIG, Route103_Text_BrendanDefeated
 # 84 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_AfterBrendanBattle
 # 85 "data/maps/Route103/scripts.pory"
@@ -173,7 +173,7 @@ Route103_EventScript_StartBrendanBattleTorchic::
 # 87 "data/maps/Route103/scripts.pory"
 Route103_EventScript_StartBrendanBattleMudkip::
 # 88 "data/maps/Route103/scripts.pory"
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
+	trainerbattle_no_intro TRAINER_BRENDAN_LAB_SOBBLE, Route103_Text_BrendanDefeated
 # 89 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_AfterBrendanBattle
 # 90 "data/maps/Route103/scripts.pory"

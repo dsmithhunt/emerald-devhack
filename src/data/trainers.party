@@ -9501,7 +9501,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
 - Future Sight
 
-=== TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
+=== TRAINER_BRENDAN_LAB_SOBBLE ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9514,7 +9514,7 @@ Chespin
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
+=== TRAINER_BRENDAN_ROUTE_110_SOBBLE ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9535,7 +9535,7 @@ Quilladin
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
+=== TRAINER_BRENDAN_ROUTE_119_SOBBLE ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9556,7 +9556,7 @@ Quilladin
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BRENDAN_ROUTE_103_TREECKO ===
+=== TRAINER_BRENDAN_LAB_CHESPIN ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9569,7 +9569,7 @@ Tepig
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_ROUTE_110_TREECKO ===
+=== TRAINER_BRENDAN_ROUTE_110_CHESPIN ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9590,7 +9590,7 @@ Pignite
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_BRENDAN_ROUTE_119_TREECKO ===
+=== TRAINER_BRENDAN_ROUTE_119_CHESPIN ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9611,7 +9611,7 @@ Pignite
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
+=== TRAINER_BRENDAN_LAB_TEPIG ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9624,7 +9624,7 @@ Sobble
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
+=== TRAINER_BRENDAN_ROUTE_110_TEPIG ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9645,7 +9645,7 @@ Drizzile
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
+=== TRAINER_BRENDAN_ROUTE_119_TEPIG ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9666,7 +9666,7 @@ Drizzile
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_MUDKIP ===
+=== TRAINER_MAY_LAB_SOBBLE ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9680,7 +9680,7 @@ Chespin
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MAY_ROUTE_110_MUDKIP ===
+=== TRAINER_MAY_ROUTE_110_SOBBLE ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9701,7 +9701,7 @@ Quilladin
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MAY_ROUTE_119_MUDKIP ===
+=== TRAINER_MAY_ROUTE_119_SOBBLE ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9722,7 +9722,7 @@ Quilladin
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_TREECKO ===
+=== TRAINER_MAY_LAB_CHESPIN ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9736,7 +9736,7 @@ Tepig
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MAY_ROUTE_110_TREECKO ===
+=== TRAINER_MAY_ROUTE_110_CHESPIN ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9757,7 +9757,7 @@ Pignite
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MAY_ROUTE_119_TREECKO ===
+=== TRAINER_MAY_ROUTE_119_CHESPIN ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9778,7 +9778,7 @@ Pignite
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_TORCHIC ===
+=== TRAINER_MAY_LAB_TEPIG ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9792,7 +9792,7 @@ Sobble
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MAY_ROUTE_110_TORCHIC ===
+=== TRAINER_MAY_ROUTE_110_TEPIG ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9813,7 +9813,7 @@ Drizzile
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MAY_ROUTE_119_TORCHIC ===
+=== TRAINER_MAY_ROUTE_119_TEPIG ===
 Name: MAY
 Class: Rival
 Pic: May

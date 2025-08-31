@@ -1,18 +1,93 @@
 
 script LittlerootTown_BrendansHouse_1F_GymBattle{
-	lock
 	fadenewbgm(MUS_VS_GYM_LEADER)
 	fadescreen(FADE_TO_WHITE)
 	special(SpawnCameraObject)
-	playse(SE_PC_LOGIN)
+	playse(SE_CLICK)
 	applymovement(LOCALID_CAMERA, moves(
-		walk_faster_down * 14
+		walk_faster_down * 12
+		walk_diag_southeast
 	))
 	waitmovement(0)
 	fadescreen(FADE_FROM_WHITE)
-	waitstate()
+	msgbox(format("COMMENTATOR: Wow, the challenger has Norman down to his last POKéMON!\p""Will this be the first person to win the newly revamped Balance Badge?"))
+	playmoncry(SPECIES_HARIYAMA, CRY_MODE_ENCOUNTER)
+	applymovement(11, moves(
+		jump_in_place_right
+	))
+	playse(SE_M_COMET_PUNCH)
+	waitse()
+	playse(SE_EFFECTIVE)
+	msgbox(format("Hariyama used Bullet Punch!\l""and a Sucker Punch from Sableye!"))
+	playmoncry(SPECIES_SABLEYE, CRY_MODE_ENCOUNTER)
+	applymovement(10, moves(
+		jump_in_place_right
+	))
+	playse(SE_M_VITAL_THROW2)
+	waitse()
+	playse(SE_EFFECTIVE)
+	waitse()
+	playse(SE_LOW_HEALTH)
+	waitse()
+	delay(30)
+	msgbox(format("NORMAN: Slaking, NOW!"))
+	delay(40)
+	msgbox(format("Slaking used Brutal Swing."))
+	delay(20)
 	playmoncry(SPECIES_SLAKING, CRY_MODE_ENCOUNTER)
+	applymovement(9, moves(
+		jump_left
+		lock_facing_direction
+		walk_right
+		unlock_facing_direction
+	))
+	playse(SE_M_COMET_PUNCH)
+	waitse()
+	playse(SE_SUPER_EFFECTIVE)
+	waitse()
+	playmoncry(SPECIES_SABLEYE, CRY_MODE_ENCOUNTER)
 	waitmoncry()
+	setflag(FLAG_TEMP_2)
+	removeobject(10)
+	playse(SE_FAINT)
+	msgbox(format("The challenger's Sableye fainted."))
+	playmoncry(SPECIES_HARIYAMA, CRY_MODE_ENCOUNTER)
+	waitmoncry()
+	setflag(FLAG_TEMP_3)
+	removeobject(11)
+	playse(SE_FAINT)
+	msgbox(format("The challenger's Hariyama fainted."))
+	msgbox(format("The challenger has no POKéMON remaining!\p""It was close, but\n""Norman is the winner!"))
+	fadescreen(FADE_TO_BLACK)
+	playse(SE_PC_OFF)
+	closemessage
+	fadedefaultbgm()
+	applymovement(LOCALID_CAMERA, moves(
+		walk_diag_northwest
+		walk_faster_up * 12
+	))
+	waitmovement(0)
+	if (checkplayergender() == MALE){
+		applymovement(1, moves(
+			walk_faster_left
+			face_player
+		))
+	} else {
+		applymovement(1, moves(
+			walk_faster_right
+			face_player
+		))
+	}
+	clearflag(FLAG_TEMP_2)
+	clearflag(FLAG_TEMP_3)
+	setseenmon(SPECIES_SABLEYE)
+	setseenmon(SPECIES_HARIYAMA)
+	setseenmon(SPECIES_SLAKING)
+	setseenmon(SPECIES_ZIGZAGOON)
+	setseenmon(SPECIES_VIGOROTH)
+	fadescreen(FADE_FROM_BLACK)
+	special(RemoveCameraObject)
+	return
 }
 
 raw `
@@ -302,18 +377,15 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	step_end
 
 PlayersHouse_1F_Text_IsntItNiceInHere:
-	.string "MOM: See, {PLAYER}?\n"
-	.string "Isn't it nice in here, too?$"
+	.string "MOM: See, {PLAYER}? Isn't this nice?$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "The mover's POKéMON do all the work\n"
-	.string "of moving us in and cleaning up after.\l"
-	.string "This is so convenient!\p"
+	.string "The mover's POKéMON do the work of\n"
+	.string "moving us in and cleaning up after.\p"
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
-	.string "our move here.\l"
-	.string "Don't forget to set it!$"
+	.string "DAD bought you a new clock so\n"
+	.string "don't forget to set it!$"
 
 PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 	.string "MOM: Well, {PLAYER}?\p"
@@ -321,8 +393,7 @@ PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 	.string "very own room?$"
 
 PlayersHouse_1F_Text_GoSetTheClock:
-	.string "MOM: {PLAYER}.\p"
-	.string "Go set the clock in your room, honey.$"
+	.string "MOM: Go set the clock in your room, {PLAYER}.$"
 
 PlayersHouse_1F_Text_OhComeQuickly:
 	.string "MOM: Oh! {PLAYER}, {PLAYER}!\n"
@@ -333,16 +404,14 @@ PlayersHouse_1F_Text_MaybeDadWillBeOn:
 	.string "Maybe DAD will be on!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
+	.string "MOM: It's over…\n"
+	.string "At least we saw the ending!$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
-	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
-	.string "PROF. BIRCH is his name.\p"
-	.string "He lives right next door, so you should\n"
-	.string "go over and introduce yourself.$"
+	.string "Oh, yes. One of DAD's friends,\n"
+	.string "PROF. BIRCH, lives in town.\p"
+	.string "He lives right next door, so go\n"
+	.string "over and introduce yourself.$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
 	.string "MOM: See you, honey!$"

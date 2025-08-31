@@ -737,15 +737,15 @@ RusturfTunnel_Movement_GruntEscape:
 # 369 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_Movement_BrineyApproachPeeko1:
 # 370 "data/maps/RusturfTunnel/scripts.pory"
-	walk_right
+	walk_fast_right
 # 371 "data/maps/RusturfTunnel/scripts.pory"
-	walk_right
+	walk_fast_right
 # 372 "data/maps/RusturfTunnel/scripts.pory"
-	walk_right
+	walk_fast_right
 # 373 "data/maps/RusturfTunnel/scripts.pory"
-	walk_right
+	walk_fast_right
 # 374 "data/maps/RusturfTunnel/scripts.pory"
-	walk_right
+	walk_fast_right
 # 375 "data/maps/RusturfTunnel/scripts.pory"
 	walk_right
 # 376 "data/maps/RusturfTunnel/scripts.pory"
@@ -757,27 +757,27 @@ RusturfTunnel_Movement_BrineyApproachPeeko1:
 # 379 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_Movement_BrineyExit:
 # 380 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 381 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 382 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 383 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 384 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 385 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 386 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 387 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 388 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 389 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 390 "data/maps/RusturfTunnel/scripts.pory"
-	walk_left
+	walk_fast_left
 # 391 "data/maps/RusturfTunnel/scripts.pory"
 	step_end
 # 392 "data/maps/RusturfTunnel/scripts.pory"
@@ -891,7 +891,7 @@ RusturfTunnel_Text_GruntTakePackage:
 # 446 "data/maps/RusturfTunnel/scripts.pory"
 	.string "All I had to do was steal some package\n"
 # 447 "data/maps/RusturfTunnel/scripts.pory"
-	.string "from DEVON.\p"
+	.string "from DEVCO.\p"
 # 448 "data/maps/RusturfTunnel/scripts.pory"
 	.string "Tch!\n"
 # 449 "data/maps/RusturfTunnel/scripts.pory"

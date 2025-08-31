@@ -4126,7 +4126,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_DAY_STONE] =
     {
-        .name = _("Day Stone"),
+        .name = ITEM_NAME("Day Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,

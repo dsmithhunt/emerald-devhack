@@ -140,7 +140,7 @@ static void WallyHandleActions(u32 battler)
             PlaySE(SE_SELECT);
             BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_USE_MOVE, 0);
             BtlController_Complete(battler);
-            gBattleStruct->wallyBattleState++;
+            gBattleStruct->wallyBattleState += 2;
             gBattleStruct->wallyMovesState = 0;
             gBattleStruct->wallyWaitFrames = B_WAIT_TIME_LONG;
         }

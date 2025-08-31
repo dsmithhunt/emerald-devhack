@@ -4,6 +4,7 @@ PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet::
 
 PlayersHouse_1F_EventScript_EnterHouseMovingIn::
 	msgbox PlayersHouse_1F_Text_IsntItNiceInHere, MSGBOX_DEFAULT
+	setflag FLAG_SYS_B_DASH
 	applymovement VAR_0x8004, Common_Movement_FacePlayer
 	waitmovement 0
 	call_if_eq VAR_0x8005, MALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInMale
@@ -163,7 +164,7 @@ PlayersHouse_1F_EventScript_PetalburgGymReportMale::
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
 	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
-	call LittlerootTown_EventScript_GiveRunningShoes
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	setvar VAR_TEMP_1, 1
 	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatMale
 	waitmovement 0
@@ -189,7 +190,7 @@ PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
 	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
-	call LittlerootTown_EventScript_GiveRunningShoes
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	setvar VAR_TEMP_1, 1
 	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatFemale
 	waitmovement 0
@@ -209,8 +210,7 @@ PlayersHouse_1F_EventScript_MomNoticeGymBroadcast::
 PlayersHouse_1F_EventScript_WatchGymBroadcast::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox PlayersHouse_1F_Text_ReportFromPetalburgGym, MSGBOX_DEFAULT
-	fadedefaultbgm
+	call LittlerootTown_BrendansHouse_1F_GymBattle
 	special TurnOffTVScreen
 	setflag FLAG_SYS_TV_HOME
 	delay 35
@@ -390,10 +390,10 @@ PlayersHouse_1F_EventScript_Vigoroth2::
 	end
 
 PlayersHouse_1F_Movement_PlayerApproachTVForGymMale:
-	walk_down
-	walk_down
-	walk_left
-	walk_left
+	player_run_down
+	player_run_down
+	player_run_left
+	player_run_left
 	walk_left
 	step_end
 
@@ -402,10 +402,10 @@ PlayersHouse_1F_Movement_PlayerMoveToTVMale:
 	step_end
 
 PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale:
-	walk_down
-	walk_down
-	walk_right
-	walk_right
+	player_run_down
+	player_run_down
+	player_run_right
+	player_run_right
 	walk_right
 	step_end
 
