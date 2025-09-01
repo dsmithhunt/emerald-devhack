@@ -24,14 +24,14 @@
       "direction": "down"
     },
     {
-      "map": "MAP_EVER_GRANDE_CITY",
-      "offset": -40,
-      "direction": "right"
-    },
-    {
       "map": "MAP_UNDERWATER_ROUTE128",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_BATTLE_FRONTIER_OUTSIDE_WEST",
+      "offset": -30,
+      "direction": "right"
     }
   ],
   "object_events": [

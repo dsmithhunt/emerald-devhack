@@ -297,65 +297,65 @@ PetalburgCity_Movement_WallyTutorialPlayer:
 # 149 "data/maps/PetalburgCity/scripts.pory"
 	delay_8
 # 150 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 151 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 152 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 153 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 154 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 155 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 156 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 157 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 158 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 159 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 160 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 161 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 162 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 163 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 164 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 165 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 166 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 167 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 168 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 169 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 170 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 171 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 172 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 173 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 174 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 175 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 176 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 177 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 178 "data/maps/PetalburgCity/scripts.pory"
-	walk_up
+	walk_faster_up
 # 179 "data/maps/PetalburgCity/scripts.pory"
-	walk_up
+	walk_faster_up
 # 180 "data/maps/PetalburgCity/scripts.pory"
 	walk_in_place_faster_right
 # 181 "data/maps/PetalburgCity/scripts.pory"
@@ -367,65 +367,65 @@ PetalburgCity_Movement_WallyTutorialWally:
 # 184 "data/maps/PetalburgCity/scripts.pory"
 	delay_8
 # 185 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 186 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 187 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 188 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 189 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 190 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 191 "data/maps/PetalburgCity/scripts.pory"
-	walk_down
+	walk_faster_down
 # 192 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 193 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 194 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 195 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 196 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 197 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 198 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 199 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 200 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 201 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 202 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 203 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 204 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 205 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 206 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 207 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 208 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 209 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 210 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 211 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 212 "data/maps/PetalburgCity/scripts.pory"
-	walk_up
+	walk_faster_up
 # 213 "data/maps/PetalburgCity/scripts.pory"
-	walk_up
+	walk_faster_up
 # 214 "data/maps/PetalburgCity/scripts.pory"
-	walk_right
+	walk_faster_right
 # 215 "data/maps/PetalburgCity/scripts.pory"
 	delay_16
 # 216 "data/maps/PetalburgCity/scripts.pory"

@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE128",
-      "offset": 40,
-      "direction": "left"
+      "map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [],
