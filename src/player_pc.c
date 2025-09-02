@@ -43,10 +43,9 @@ enum {
 enum {
     MENU_WITHDRAW,
     MENU_DEPOSIT,
-#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
     MENU_TOSS,
-#endif
-    MENU_EXIT
+    MENU_EXIT,
+    MENU_EXIT_RG = MENU_TOSS
 };
 
 // Windows for the main menus (top level menu, and item storage menu)
@@ -202,10 +201,15 @@ static const u8 *const sItemStorage_OptionDescriptions[] =
 {
     [MENU_WITHDRAW] = COMPOUND_STRING("Take out items from the PC."),
     [MENU_DEPOSIT]  = COMPOUND_STRING("Store items in the PC."),
-#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
     [MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
-#endif
     [MENU_EXIT]     = gText_GoBackPrevMenu,
+};
+
+static const u8 *const sItemStorage_OptionDescriptionsRG[] =
+{
+    [MENU_WITHDRAW] = COMPOUND_STRING("Take out items from the PC."),
+    [MENU_DEPOSIT]  = COMPOUND_STRING("Store items in the PC."),
+    [MENU_EXIT_RG]  = gText_GoBackPrevMenu,
 };
 
 static const struct MenuAction sPlayerPCMenuActions[] =
@@ -237,10 +241,15 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 {
     [MENU_WITHDRAW] = { sText_WithdrawItem, {ItemStorage_Withdraw} },
     [MENU_DEPOSIT]  = { sText_DepositItem,  {ItemStorage_Deposit} },
-#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
     [MENU_TOSS]     = { sText_TossItem,     {ItemStorage_Toss} },
-#endif
     [MENU_EXIT]     = { gText_Cancel,       {ItemStorage_Exit} }
+};
+
+static const struct MenuAction sItemStorage_MenuActionsRG[] =
+{
+    [MENU_WITHDRAW] = { sText_WithdrawItem, {ItemStorage_Withdraw} },
+    [MENU_DEPOSIT]  = { sText_DepositItem,  {ItemStorage_Deposit} },
+    [MENU_EXIT_RG]  = { gText_Cancel,       {ItemStorage_Exit} }
 };
 
 static const u16 sNewGamePCItems[][2] =
@@ -539,20 +548,34 @@ static void PlayerPC_TurnOff(u8 taskId)
 static void InitItemStorageMenu(u8 taskId, u8 var)
 {
     s16 *data;
+    u8 itemCount;
     struct WindowTemplate windowTemplate;
+    const struct MenuAction *menuActions;
 
     data = gTasks[taskId].data;
     if (FRLG_I_ENABLE_ITEM_PC_UI)
+    {
+        menuActions = sItemStorage_MenuActionsRG;
+        itemCount = ARRAY_COUNT(sItemStorage_MenuActionsRG);
         windowTemplate = sWindowTemplates_MainMenus[WIN_ITEM_STORAGE_MENU_FRLG];
+    }
     else
+    {
+        menuActions = sItemStorage_MenuActions;
+        itemCount = ARRAY_COUNT(sItemStorage_MenuActions);
         windowTemplate = sWindowTemplates_MainMenus[WIN_ITEM_STORAGE_MENU];
-    windowTemplate.width = GetMaxWidthInMenuTable(sItemStorage_MenuActions, ARRAY_COUNT(sItemStorage_MenuActions));
+    }
+
+    windowTemplate.width = GetMaxWidthInMenuTable(menuActions, itemCount);
     tWindowId = AddWindow(&windowTemplate);
     SetStandardWindowBorderStyle(tWindowId, FALSE);
-    PrintMenuTable(tWindowId, ARRAY_COUNT(sItemStorage_MenuActions), sItemStorage_MenuActions);
-    InitMenuInUpperLeftCornerNormal(tWindowId, ARRAY_COUNT(sItemStorage_MenuActions), var);
+    PrintMenuTable(tWindowId, itemCount, menuActions);
+    InitMenuInUpperLeftCornerNormal(tWindowId, itemCount, var);
     ScheduleBgCopyTilemapToVram(0);
-    ItemStorageMenuPrint(sItemStorage_OptionDescriptions[var]);
+    if (FRLG_I_ENABLE_ITEM_PC_UI)
+        ItemStorageMenuPrint(sItemStorage_OptionDescriptionsRG[var]);
+    else
+        ItemStorageMenuPrint(sItemStorage_OptionDescriptions[var]);
 }
 
 static void ItemStorageMenuPrint(const u8 *textPtr)
@@ -573,7 +596,12 @@ static void ItemStorageMenuProcessInput(u8 taskId)
     {
     case MENU_NOTHING_CHOSEN:
         if (oldPos != newPos)
-            ItemStorageMenuPrint(sItemStorage_OptionDescriptions[newPos]);
+        {
+            if (FRLG_I_ENABLE_ITEM_PC_UI)
+                ItemStorageMenuPrint(sItemStorage_OptionDescriptionsRG[newPos]);
+            else
+                ItemStorageMenuPrint(sItemStorage_OptionDescriptions[newPos]);
+        }
         break;
     case MENU_B_PRESSED:
         PlaySE(SE_SELECT);
@@ -581,7 +609,10 @@ static void ItemStorageMenuProcessInput(u8 taskId)
         break;
     default:
         PlaySE(SE_SELECT);
-        sItemStorage_MenuActions[inputOptionId].func.void_u8(taskId);
+        if (FRLG_I_ENABLE_ITEM_PC_UI)
+            sItemStorage_MenuActionsRG[inputOptionId].func.void_u8(taskId);
+        else
+            sItemStorage_MenuActions[inputOptionId].func.void_u8(taskId);
         break;
     }
 }
@@ -672,7 +703,7 @@ static void Task_ItemStorage_Withdraw(u8 taskId)
     }
 }
 
-static UNUSED void ItemStorage_Toss(u8 taskId)
+static void ItemStorage_Toss(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
@@ -1317,14 +1348,10 @@ static void ItemStorage_ReturnToMenuSelect(u8 taskId)
         DrawDialogueFrame(0, FALSE);
 
         // Select Withdraw/Toss by default depending on which was just exited
-#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
         if (!tInTossMenu)
             InitItemStorageMenu(taskId, MENU_WITHDRAW);
         else
             InitItemStorageMenu(taskId, MENU_TOSS);
-#else
-        InitItemStorageMenu(taskId, MENU_WITHDRAW);
-#endif
         gTasks[taskId].func = ItemStorageMenuProcessInput;
     }
 }
