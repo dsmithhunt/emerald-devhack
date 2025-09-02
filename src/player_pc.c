@@ -43,7 +43,9 @@ enum {
 enum {
     MENU_WITHDRAW,
     MENU_DEPOSIT,
-    //MENU_TOSS,
+#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
+    MENU_TOSS,
+#endif
     MENU_EXIT
 };
 
@@ -199,7 +201,9 @@ static const u8 *const sItemStorage_OptionDescriptions[] =
 {
     [MENU_WITHDRAW] = COMPOUND_STRING("Take out items from the PC."),
     [MENU_DEPOSIT]  = COMPOUND_STRING("Store items in the PC."),
-    //[MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
+#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
+    [MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
+#endif
     [MENU_EXIT]     = gText_GoBackPrevMenu,
 };
 
@@ -232,7 +236,9 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 {
     [MENU_WITHDRAW] = { sText_WithdrawItem, {ItemStorage_Withdraw} },
     [MENU_DEPOSIT]  = { sText_DepositItem,  {ItemStorage_Deposit} },
-    //[MENU_TOSS]     = { sText_TossItem,     {ItemStorage_Toss} },
+#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
+    [MENU_TOSS]     = { sText_TossItem,     {ItemStorage_Toss} },
+#endif
     [MENU_EXIT]     = { gText_Cancel,       {ItemStorage_Exit} }
 };
 
@@ -624,9 +630,15 @@ static void ItemStorage_Withdraw(u8 taskId)
     tUsedSlots = CountUsedPCItemSlots();
     if (tUsedSlots != 0)
     {
-        //ItemStorage_Enter(taskId, FALSE);
-        gTasks[taskId].func = Task_ItemStorage_Withdraw;
-        FadeScreen(FADE_TO_BLACK, 0);
+        if (FRLG_I_ENABLE_ITEM_PC_UI)
+        {
+            gTasks[taskId].func = Task_ItemStorage_Withdraw;
+            FadeScreen(FADE_TO_BLACK, 0);
+        }
+        else
+        {
+            ItemStorage_Enter(taskId, FALSE);
+        }
     }
     else
     {
@@ -1292,10 +1304,14 @@ static void ItemStorage_ReturnToMenuSelect(u8 taskId)
         DrawDialogueFrame(0, FALSE);
 
         // Select Withdraw/Toss by default depending on which was just exited
+#if FRLG_I_ENABLE_ITEM_PC_UI == FALSE
         if (!tInTossMenu)
             InitItemStorageMenu(taskId, MENU_WITHDRAW);
-        //else
-            //InitItemStorageMenu(taskId, MENU_TOSS);
+        else
+            InitItemStorageMenu(taskId, MENU_TOSS);
+#else
+        InitItemStorageMenu(taskId, MENU_WITHDRAW);
+#endif
         gTasks[taskId].func = ItemStorageMenuProcessInput;
     }
 }
@@ -1528,7 +1544,7 @@ static void ItemStorage_HandleRemoveItem(u8 taskId)
     s16 *data = gTasks[taskId].data;
     if (JOY_NEW(A_BUTTON | B_BUTTON))
     {
-        RemovePCItem(gPlayerPCItemPageInfo.cursorPos + gPlayerPCItemPageInfo.itemsAbove, tQuantity);
+        RemovePCItemFromIndex(gPlayerPCItemPageInfo.cursorPos + gPlayerPCItemPageInfo.itemsAbove, tQuantity);
         DestroyListMenuTask(tListTaskId, &gPlayerPCItemPageInfo.itemsAbove, &gPlayerPCItemPageInfo.cursorPos);
         ItemStorage_CompactList();
         ItemStorage_CompactCursor();
