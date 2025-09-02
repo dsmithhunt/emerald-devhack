@@ -246,9 +246,7 @@ static const u8 sText_ClearTo18[] = _("{CLEAR_TO 18}");
 static const u8 sText_SingleSpace[] = _(" ");
 static const u8 sText_Close[] = _("Close");
 static const u8 sText_FontSmall[] = _("{FONT_SMALL}");
-static const u8 sText_FontFontSmall[] = _("{FONT_SHORT}");
-static const u8 sText_BerryPouch[] = _("BERRY POUCH");
-static const u8 sText_TheBerryPouchWillBePutAway[] = _("The Berry Pouch will be\nput away.");
+static const u8 sText_FontShort[] = _("{FONT_SHORT}");
 static const u8 sText_TMCase[] = _("TM CASE");
 static const u8 sText_TMCaseWillBePutAway[] = _("The TM Case will be\nput away.");
 
@@ -744,7 +742,7 @@ static void GetTMNumberAndMoveString(u8 * dest, u16 itemId)
         StringAppend(gStringVar4, gStringVar1);
     }
     StringAppend(gStringVar4, sText_SingleSpace);
-    StringAppend(gStringVar4, sText_FontFontSmall);
+    StringAppend(gStringVar4, sText_FontShort);
     StringAppend(gStringVar4, GetMoveName(ItemIdToBattleMoveId(itemId)));
     StringCopy(dest, gStringVar4);
 }

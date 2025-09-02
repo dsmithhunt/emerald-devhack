@@ -54,6 +54,7 @@ enum {
     WIN_MAIN_MENU,
     WIN_MAIN_MENU_BEDROOM,
     WIN_ITEM_STORAGE_MENU,
+    WIN_ITEM_STORAGE_MENU_FRLG,
 };
 
 // Windows for item storage (while viewing the PC's item inventory)
@@ -138,7 +139,7 @@ static void Mailbox_UpdateMailListAfterDeposit(void);
 
 static void ItemStorage_Withdraw(u8);
 static void ItemStorage_Deposit(u8);
-//static void ItemStorage_Toss(u8);
+static void ItemStorage_Toss(u8);
 static void ItemStorage_Exit(u8);
 static void ItemStorage_TossItemYes(u8);
 static void ItemStorage_TossItemNo(u8);
@@ -277,6 +278,15 @@ static const struct WindowTemplate sWindowTemplates_MainMenus[] =
         .baseBlock = 1
     },
     [WIN_ITEM_STORAGE_MENU] = {
+        .bg = 0,
+        .tilemapLeft = 1,
+        .tilemapTop = 1,
+        .width = 10,
+        .height = 8,
+        .paletteNum = 15,
+        .baseBlock = 1
+    },
+    [WIN_ITEM_STORAGE_MENU_FRLG] = {
         .bg = 0,
         .tilemapLeft = 1,
         .tilemapTop = 1,
@@ -532,7 +542,10 @@ static void InitItemStorageMenu(u8 taskId, u8 var)
     struct WindowTemplate windowTemplate;
 
     data = gTasks[taskId].data;
-    windowTemplate = sWindowTemplates_MainMenus[WIN_ITEM_STORAGE_MENU];
+    if (FRLG_I_ENABLE_ITEM_PC_UI)
+        windowTemplate = sWindowTemplates_MainMenus[WIN_ITEM_STORAGE_MENU_FRLG];
+    else
+        windowTemplate = sWindowTemplates_MainMenus[WIN_ITEM_STORAGE_MENU];
     windowTemplate.width = GetMaxWidthInMenuTable(sItemStorage_MenuActions, ARRAY_COUNT(sItemStorage_MenuActions));
     tWindowId = AddWindow(&windowTemplate);
     SetStandardWindowBorderStyle(tWindowId, FALSE);
