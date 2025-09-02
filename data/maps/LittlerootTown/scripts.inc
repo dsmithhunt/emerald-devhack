@@ -4,7 +4,7 @@ LittlerootTown_EventScript_Deoxys_Gift::
 # 3 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Deoxys_Gift_Text_0
 # 4 "data/maps/LittlerootTown/scripts.pory"
-	GiveMon SPECIES_DEOXYS, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT
+	GiveMon SPECIES_CHATOT, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT
 # 5 "data/maps/LittlerootTown/scripts.pory"
 	removeobject 9
 # 6 "data/maps/LittlerootTown/scripts.pory"
