@@ -1143,6 +1143,18 @@ static const struct SpriteFrameImage sPicTable_DragonTamer[] = {
     overworld_ascending_frames(gObjectEventPic_DragonTamer, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Lady[] = {
+    overworld_ascending_frames(gObjectEventPic_Lady, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AromaLady[] = {
+    overworld_ascending_frames(gObjectEventPic_AromaLady, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TriathleteF[] = {
+    overworld_ascending_frames(gObjectEventPic_TriathleteF, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Janine[] = {
     overworld_ascending_frames(gObjectEventPic_Janine, 2, 4),
 };

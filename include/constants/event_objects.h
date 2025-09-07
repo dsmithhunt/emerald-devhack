@@ -254,13 +254,16 @@
 #define OBJ_EVENT_GFX_KINDLER                    247
 #define OBJ_EVENT_GFX_PARASOL_LADY               248
 #define OBJ_EVENT_GFX_DRAGON_TAMER               249
-#define OBJ_EVENT_GFX_JANINE                     250
-#define OBJ_EVENT_GFX_ZINNIA                     251
+#define OBJ_EVENT_GFX_LADY                       250
+#define OBJ_EVENT_GFX_AROMA_LADY                 251
+#define OBJ_EVENT_GFX_TRIATHLETE_F               252
+#define OBJ_EVENT_GFX_JANINE                     253
+#define OBJ_EVENT_GFX_ZINNIA                     254
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        252
+#define NUM_OBJ_EVENT_GFX                        255
 
 
 // These are dynamic object gfx ids.
@@ -438,11 +441,14 @@
 #define OBJ_EVENT_PAL_TAG_PARASOL_LADY            0x1173
 #define OBJ_EVENT_PAL_TAG_DRAGON_TAMER            0x1174
 #define OBJ_EVENT_PAL_TAG_HEX_MANIAC              0x1175
-#define OBJ_EVENT_PAL_TAG_WALLY                   0x1176
-#define OBJ_EVENT_PAL_TAG_JANINE                  0x1177
-#define OBJ_EVENT_PAL_TAG_PHOEBE                  0x1178
-#define OBJ_EVENT_PAL_TAG_WALLACE                 0x1179
-#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x117A
+#define OBJ_EVENT_PAL_TAG_LADY                    0x1176
+#define OBJ_EVENT_PAL_TAG_AROMA_LADY              0x1177
+#define OBJ_EVENT_PAL_TAG_TRIATHLETE_F            0x1178
+#define OBJ_EVENT_PAL_TAG_WALLY                   0x1179
+#define OBJ_EVENT_PAL_TAG_JANINE                  0x117A
+#define OBJ_EVENT_PAL_TAG_PHOEBE                  0x117B
+#define OBJ_EVENT_PAL_TAG_WALLACE                 0x117C
+#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x117D
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001

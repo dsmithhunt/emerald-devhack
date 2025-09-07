@@ -4440,6 +4440,9 @@ static const struct SpriteFrameImage sPicTable_Hydreigon[] = {
 static const struct SpriteFrameImage sPicTable_Larvesta[] = {
     overworld_ascending_frames(gObjectEventPic_Larvesta, 4, 4),
 };
+static const struct SpriteFrameImage sPicTable_Moltin[] = {
+    overworld_ascending_frames(gObjectEventPic_Moltin, 4, 4),
+};
 static const struct SpriteFrameImage sPicTable_Volcarona[] = {
     overworld_ascending_frames(gObjectEventPic_Volcarona, 4, 4),
 };

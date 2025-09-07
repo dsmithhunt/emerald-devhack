@@ -18679,6 +18679,23 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 
+    // Moltin
+    const u32 gMonFrontPic_Moltin[] = INCBIN_U32("graphics/pokemon/moltin/anim_front.4bpp.smol");
+    const u16 gMonPalette_Moltin[] = INCBIN_U16("graphics/pokemon/moltin/normal.gbapal");
+    const u32 gMonBackPic_Moltin[] = INCBIN_U32("graphics/pokemon/moltin/back.4bpp.smol");
+    const u16 gMonShinyPalette_Moltin[] = INCBIN_U16("graphics/pokemon/moltin/shiny.gbapal");
+    const u8 gMonIcon_Moltin[] = INCBIN_U8("graphics/pokemon/moltin/icon.4bpp");
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_Moltin[] = INCBIN_U8("graphics/pokemon/moltin/footprint.1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_Moltin[] = INCBIN_COMP("graphics/pokemon/moltin/overworld.4bpp");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_Moltin[] = INCBIN_U16("graphics/pokemon/moltin/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_Moltin[] = INCBIN_U16("graphics/pokemon/moltin/overworld_shiny.gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+
     const u32 gMonFrontPic_Volcarona[] = INCBIN_U32("graphics/pokemon/volcarona/anim_front.4bpp.smol");
     const u16 gMonPalette_Volcarona[] = INCBIN_U16("graphics/pokemon/volcarona/normal.gbapal");
     const u32 gMonBackPic_Volcarona[] = INCBIN_U32("graphics/pokemon/volcarona/back.4bpp.smol");

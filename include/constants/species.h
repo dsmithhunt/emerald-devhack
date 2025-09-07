@@ -1638,7 +1638,24 @@
 #define SPECIES_MIMIKYU_BUSTED_TOTEM                    1523
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
 
-#define SPECIES_EGG                                     (SPECIES_MIMIKYU_BUSTED_TOTEM + 1)
+// New Fakemon
+#define SPECIES_MOLTIN                                  1524
+#define SPECIES_PIRROT                                  1525
+#define SPECIES_GEMLIN                                  1526
+#define SPECIES_DUAWILE                                 1527
+#define SPECIES_HOWLECTRIC                              1528
+#define SPECIES_VOODOLL                                 1529
+#define SPECIES_SERENIMBUS                              1530
+#define SPECIES_ZENLIGHTEN                              1531
+#define SPECIES_VOLCAMEL                                1532
+#define SPECIES_SUBMAWRINE                              1533
+#define SPECIES_FLATTATA                                1534
+#define SPECIES_FLATICATE                               1535
+#define SPECIES_MASTERMIME                              1536
+#define SPECIES_IDPHYRA                                 1537
+#define SPECIES_RAGNAROCTO                              1538
+
+#define SPECIES_EGG                                     (SPECIES_RAGNAROCTO + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

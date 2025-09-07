@@ -11961,13 +11961,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_LARVESTA] =
     {
         .baseHP        = 55,
-        .baseAttack    = 85,
-        .baseDefense   = 55,
-        .baseSpeed     = 60,
+        .baseAttack    = 65,
+        .baseDefense   = 50,
+        .baseSpeed     = 50,
         .baseSpAttack  = 50,
-        .baseSpDefense = 55,
+        .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_FIRE),
-        .catchRate = 45,
+        .catchRate = 120,
         .expYield = 72,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
@@ -11975,7 +11975,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_FLAME_BODY, ABILITY_NONE, ABILITY_SWARM },
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_SWARM, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Larvesta"),
         .cryId = CRY_LARVESTA,
@@ -11985,9 +11985,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 288,
         .description = COMPOUND_STRING(
             "This Pokémon was believed to have\n"
-            "been born from the sun. It spews fire from\n"
-            "its horns and encases itself in a cocoon\n"
-            "of fire when it evolves."),
+            "been born from the sun. It spews fire\n"
+            "from its horns which has been known\n"
+            "to cause forest fires."),
         .pokemonScale = 320,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -12032,6 +12032,83 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sLarvestaLevelUpLearnset,
         .teachableLearnset = sLarvestaTeachableLearnset,
         .eggMoveLearnset = sLarvestaEggMoveLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_MOLTIN}),
+    },
+
+    [SPECIES_MOLTIN] =
+    {
+        .baseHP        = 65,
+        .baseAttack    = 85,
+        .baseDefense   = 60,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 65,
+        .types = MON_TYPES(TYPE_FIRE),
+        .catchRate = 60,
+        .expYield = 120,
+        .evYield_Attack = 1,
+        .evYield_SpAttack = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 40,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_SWARM, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("Moltin"),
+        .cryId = CRY_SLITHER_WING,
+        .natDexNum = NATIONAL_DEX_MOLTIN,
+        .categoryName = _("Pyre"),
+        .height = 14,
+        .weight = 440,
+        .description = COMPOUND_STRING(
+            "It was once thought that if a\n"
+            "Moltin appeared, it would have to be\n"
+            "appeased with offerings so the sun\n"
+            "would have the strength to rise again."),
+        .pokemonScale = 320,
+        .pokemonOffset = 10,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Moltin,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 5),
+            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(0, 5),
+            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(0, 5),
+            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(0, 20),
+            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(0, 5),
+            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(0, 5),
+        ),
+        .frontAnimId = ANIM_GLOW_ORANGE,
+        .backPic = gMonBackPic_Moltin,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 5,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        .palette = gMonPalette_Moltin,
+        .shinyPalette = gMonShinyPalette_Moltin,
+        .iconSprite = gMonIcon_Moltin,
+        .iconPalIndex = 1,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-5, 13, SHADOW_SIZE_M)
+        FOOTPRINT(Moltin)
+        OVERWORLD(
+            sPicTable_Moltin,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Moltin,
+            gShinyOverworldPalette_Moltin
+        )
+        .levelUpLearnset = sMoltinLevelUpLearnset,
+        .teachableLearnset = sLarvestaTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 59, SPECIES_VOLCARONA}),
     },
 
@@ -12054,7 +12131,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_FLAME_BODY, ABILITY_NONE, ABILITY_SWARM },
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_SWARM, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Volcarona"),
         .cryId = CRY_VOLCARONA,
