@@ -12205,9 +12205,9 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("HM01"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Attacks the foe\n"
-            "with sharp blades\n"
-            "or claws."),
+            "Cuts the foe\n"
+            "super effective\n"
+            "on grass."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13015,7 +13015,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A letter to Steven\n"
             "from the President\n"
-            "of the Devon Corp."),
+            "of DevCo."),
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -13026,12 +13026,12 @@ const struct Item gItemsInfo[] =
 
     [ITEM_DEVON_PARTS] =
     {
-        .name = ITEM_NAME("Devon Parts"),
-        .pluralName = ITEM_PLURAL_NAME("Devon Parts"),
+        .name = ITEM_NAME("DevCo Parts"),
+        .pluralName = ITEM_PLURAL_NAME("DevCo Parts"),
         .price = 0,
         .description = COMPOUND_STRING(
             "A package that\n"
-            "contains Devon's\n"
+            "contains DevCo's\n"
             "machine parts."),
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
@@ -13060,10 +13060,10 @@ const struct Item gItemsInfo[] =
 
     [ITEM_DEVON_SCOPE] =
     {
-        .name = ITEM_NAME("Devon Scope"),
+        .name = ITEM_NAME("DevCo Scope"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A device by Devon\n"
+            "A device by DevCo\n"
             "that signals any\n"
             "unseeable Pokémon."),
         .importance = 1,

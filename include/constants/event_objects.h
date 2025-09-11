@@ -257,13 +257,14 @@
 #define OBJ_EVENT_GFX_LADY                       250
 #define OBJ_EVENT_GFX_AROMA_LADY                 251
 #define OBJ_EVENT_GFX_TRIATHLETE_F               252
-#define OBJ_EVENT_GFX_JANINE                     253
-#define OBJ_EVENT_GFX_ZINNIA                     254
+#define OBJ_EVENT_GFX_SIERRA                     253
+#define OBJ_EVENT_GFX_JANINE                     254
+#define OBJ_EVENT_GFX_ZINNIA                     255
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        255
+#define NUM_OBJ_EVENT_GFX                        256
 
 
 // These are dynamic object gfx ids.
@@ -445,10 +446,11 @@
 #define OBJ_EVENT_PAL_TAG_AROMA_LADY              0x1177
 #define OBJ_EVENT_PAL_TAG_TRIATHLETE_F            0x1178
 #define OBJ_EVENT_PAL_TAG_WALLY                   0x1179
-#define OBJ_EVENT_PAL_TAG_JANINE                  0x117A
-#define OBJ_EVENT_PAL_TAG_PHOEBE                  0x117B
-#define OBJ_EVENT_PAL_TAG_WALLACE                 0x117C
-#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x117D
+#define OBJ_EVENT_PAL_TAG_SIERRA                  0x117A
+#define OBJ_EVENT_PAL_TAG_JANINE                  0x117B
+#define OBJ_EVENT_PAL_TAG_PHOEBE                  0x117C
+#define OBJ_EVENT_PAL_TAG_WALLACE                 0x117D
+#define OBJ_EVENT_PAL_TAG_ZINNIA                  0x117E
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001

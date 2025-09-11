@@ -6,6 +6,46 @@ Gender: Male
 Music: Male
 Back Pic: Brendan
 
+=== PARTNER_SIERRA ===
+Name: SIERRA
+Class: Leader
+Pic: May
+Gender: Female
+Music: Female
+Back Pic: Leaf
+AI: Basic Trainer
+
+Minun
+Hardy Nature
+Level: 14
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 56 HP / 48 Def / 4 Spe
+- Thunder Shock
+- Quick Attack
+- Growl
+- Helping Hand
+
+Kirlia
+Bold Nature
+Level: 15
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 80 HP / 76 Def / 64 Spe
+- Charge Beam
+- Confusion
+- Disarming Voice
+- Flash
+
+Rotom
+Quirky Nature
+Level: 15
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 80 HP / 76 Def / 64 Spe
+- Charge Beam
+- Hex
+- Flash Cannon
+- Flash
+
+
 === PARTNER_STEVEN ===
 Name: STEVEN
 Class: Rival

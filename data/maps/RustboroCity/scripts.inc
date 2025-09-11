@@ -761,9 +761,9 @@ RustboroCity_Movement_GruntEscape:
 # 381 "data/maps/RustboroCity/scripts.pory"
 	walk_faster_right
 # 382 "data/maps/RustboroCity/scripts.pory"
-	walk_fast_right
+	walk_faster_right
 # 383 "data/maps/RustboroCity/scripts.pory"
-	walk_fast_right
+	walk_faster_right
 # 384 "data/maps/RustboroCity/scripts.pory"
 	walk_fast_right
 # 385 "data/maps/RustboroCity/scripts.pory"
@@ -795,17 +795,17 @@ RustboroCity_Movement_GruntEscape:
 # 398 "data/maps/RustboroCity/scripts.pory"
 RustboroCity_Movement_EmployeeChaseGrunt1:
 # 399 "data/maps/RustboroCity/scripts.pory"
-	walk_right
+	walk_fast_right
 # 400 "data/maps/RustboroCity/scripts.pory"
-	walk_right
+	walk_fast_right
 # 401 "data/maps/RustboroCity/scripts.pory"
-	walk_right
+	walk_fast_right
 # 402 "data/maps/RustboroCity/scripts.pory"
-	walk_right
+	walk_fast_right
 # 403 "data/maps/RustboroCity/scripts.pory"
-	walk_right
+	walk_fast_right
 # 404 "data/maps/RustboroCity/scripts.pory"
-	walk_right
+	walk_fast_right
 # 405 "data/maps/RustboroCity/scripts.pory"
 	walk_in_place_faster_up
 # 406 "data/maps/RustboroCity/scripts.pory"
@@ -815,19 +815,19 @@ RustboroCity_Movement_EmployeeChaseGrunt1:
 # 408 "data/maps/RustboroCity/scripts.pory"
 RustboroCity_Movement_EmployeeChaseGrunt2:
 # 409 "data/maps/RustboroCity/scripts.pory"
-	walk_up
+	walk_fast_up
 # 410 "data/maps/RustboroCity/scripts.pory"
-	walk_up
+	walk_fast_up
 # 411 "data/maps/RustboroCity/scripts.pory"
-	walk_up
+	walk_fast_up
 # 412 "data/maps/RustboroCity/scripts.pory"
-	walk_up
+	walk_fast_up
 # 413 "data/maps/RustboroCity/scripts.pory"
-	walk_up
+	walk_fast_up
 # 414 "data/maps/RustboroCity/scripts.pory"
-	walk_up
+	walk_fast_up
 # 415 "data/maps/RustboroCity/scripts.pory"
-	walk_up
+	walk_fast_up
 # 416 "data/maps/RustboroCity/scripts.pory"
 	step_end
 # 417 "data/maps/RustboroCity/scripts.pory"

@@ -379,8 +379,8 @@ RustboroCity_Movement_GruntEscapeExtended:
 RustboroCity_Movement_GruntEscape:
 	walk_faster_right
 	walk_faster_right
-	walk_fast_right
-	walk_fast_right
+	walk_faster_right
+	walk_faster_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
@@ -396,23 +396,23 @@ RustboroCity_Movement_GruntEscape:
 	step_end
 
 RustboroCity_Movement_EmployeeChaseGrunt1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	walk_in_place_faster_up
 	step_end
 
 RustboroCity_Movement_EmployeeChaseGrunt2:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 @ Functionally unused
