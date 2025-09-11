@@ -51,6 +51,80 @@ script RanAway {
 	return
 }
 
+script LittlerootTownTest_EventScript_Trader {
+	lock
+	faceplayer
+	goto_if_set(FLAG_RUSTBORO_NPC_TRADE_COMPLETED, LittlerootTownTest_EventScript_TradeCompleted)
+	setvar(VAR_0x8008, INGAME_TRADE_SANDILE)
+	copyvar(VAR_0x8004, VAR_0x8008)
+	specialvar(VAR_RESULT, GetInGameTradeSpeciesInfo)
+	copyvar(VAR_0x8009, VAR_RESULT)
+	msgbox(LittlerootTownTest_Text_IllTradeIfYouWant, MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, NO, LittlerootTownTest_EventScript_DeclineTrade)
+	special(ChoosePartyMon)
+	waitstate
+	copyvar(VAR_0x800A, VAR_0x8004)
+	goto_if_eq(VAR_0x8004, PARTY_NOTHING_CHOSEN, LittlerootTownTest_EventScript_DeclineTrade)
+	copyvar(VAR_0x8005, VAR_0x800A)
+	specialvar(VAR_RESULT, GetTradeSpecies)
+	copyvar(VAR_0x800B, VAR_RESULT)
+	goto_if_ne(VAR_RESULT, VAR_0x8009, LittlerootTownTest_EventScript_NotRequestedMon)
+	copyvar(VAR_0x8004, VAR_0x8008)
+	copyvar(VAR_0x8005, VAR_0x800A)
+	special(CreateInGameTradePokemon)
+	special(DoInGameTradeScene)
+	waitstate
+	msgbox(LittlerootTownTest_Text_PleaseBeGoodToMyPokemon, MSGBOX_DEFAULT)
+	setflag(FLAG_RUSTBORO_NPC_TRADE_COMPLETED)
+	release
+}
+
+script LittlerootTownTest_EventScript_DeclineTrade {
+	msgbox(LittlerootTownTest_Text_YouDontWantToThatsOkay, MSGBOX_DEFAULT)
+	release
+}
+
+script LittlerootTownTest_EventScript_NotRequestedMon {
+	bufferspeciesname(STR_VAR_1, VAR_0x8009)
+	msgbox(LittlerootTownTest_Text_DoesntLookLikeMonToMe, MSGBOX_DEFAULT)
+	release
+}
+
+script LittlerootTownTest_EventScript_TradeCompleted {
+	msgbox(LittlerootTownTest_Text_AnyPokemonCanBeCute, MSGBOX_DEFAULT)
+	release
+}
+
+text LittlerootTownTest_Text_IllTradeIfYouWant {
+	"Huh? My POKéMON is cute?\n"
+	"Sure, I knew that.\p"
+	"But if you really want, I'm willing\n"
+	"to trade it to you.\p"
+	"I'll trade you my {STR_VAR_2} for\n"
+	"a {STR_VAR_1} if you want.$"
+}
+
+text LittlerootTownTest_Text_PleaseBeGoodToMyPokemon {
+	"Eheheh…\n"
+	"Please be good to my POKéMON.$"
+}
+
+text LittlerootTownTest_Text_DoesntLookLikeMonToMe {
+	"Huh? That doesn't look anything like\n"
+	"a {STR_VAR_1} to me.$"
+}
+
+text LittlerootTownTest_Text_YouDontWantToThatsOkay {
+	"Oh, if you don't want to, that's okay.\n"
+	"But my POKéMON is cute, you know…$"
+}
+
+text LittlerootTownTest_Text_AnyPokemonCanBeCute {
+	"Any POKéMON can be cute if you raise\n"
+	"it with care and kindness.$"
+}
+
+
 raw `
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
