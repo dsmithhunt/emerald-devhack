@@ -6036,7 +6036,7 @@ static enum ItemEffect TrySetEnigmaBerry(u32 battler)
      && (B_HEAL_BLOCKING < GEN_5 || !gBattleMons[battler].volatiles.healBlock))
     {
         gBattleScripting.battler = battler;
-        gBattleStruct->moveDamage[battler] = (gBattleMons[battler].maxHP * 25 / 100) * -1;
+        gBattleStruct->moveDamage[battler] = (gBattleMons[battler].maxHP * 50 / 100) * -1;
         if (GetBattlerAbility(battler) == ABILITY_RIPEN)
             gBattleStruct->moveDamage[battler] *= 2;
 
@@ -6803,7 +6803,17 @@ u32 ItemBattleEffects(enum ItemCaseId caseID, u32 battler)
             case HOLD_EFFECT_BLACK_SLUDGE:
                 if (IS_BATTLER_OF_TYPE(battler, TYPE_POISON))
                 {
-                    goto LEFTOVERS;
+                    if (gBattleMons[battler].hp < gBattleMons[battler].maxHP
+                     && (B_HEAL_BLOCKING < GEN_5 || !gBattleMons[battler].volatiles.healBlock))
+                    {
+                        gBattleStruct->moveDamage[battler] = GetNonDynamaxMaxHP(battler) / 12;
+                        if (gBattleStruct->moveDamage[battler] == 0)
+                            gBattleStruct->moveDamage[battler] = 1;
+                        gBattleStruct->moveDamage[battler] *= -1;
+                        BattleScriptExecute(BattleScript_ItemHealHP_End2);
+                        effect = ITEM_HP_CHANGE;
+                        RecordItemEffectBattle(battler, battlerHoldEffect);
+                    }
                 }
                 else if (!IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MAGIC_GUARD))
                 {
@@ -6817,7 +6827,6 @@ u32 ItemBattleEffects(enum ItemCaseId caseID, u32 battler)
                 }
                 break;
             case HOLD_EFFECT_LEFTOVERS:
-            LEFTOVERS:
                 if (gBattleMons[battler].hp < gBattleMons[battler].maxHP
                   && (B_HEAL_BLOCKING < GEN_5 || !gBattleMons[battler].volatiles.healBlock))
                 {

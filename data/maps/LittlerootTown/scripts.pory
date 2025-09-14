@@ -124,6 +124,21 @@ text LittlerootTownTest_Text_AnyPokemonCanBeCute {
 	"it with care and kindness.$"
 }
 
+script TestBattleDeltaTwins {
+	lock
+	faceplayer
+	trainerbattle_two_trainers(TRAINER_LYLE, RusturfTunnel_Text_GruntDefeat, TRAINER_IVAN, RusturfTunnel_Text_GruntDefeat)
+	release
+}
+
+script ZooGirafarig {
+	lockall
+	showmonpic(SPECIES_GIRAFARIG, 10, 3)
+	setseenmon(SPECIES_GIRAFARIG)
+	msgbox(format("There is a Giarafarig."))
+	hidemonpic
+	releaseall
+}
 
 raw `
 LittlerootTown_MapScripts::

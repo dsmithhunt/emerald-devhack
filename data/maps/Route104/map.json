@@ -22,6 +22,11 @@
       "map": "MAP_PETALBURG_CITY",
       "offset": 50,
       "direction": "right"
+    },
+    {
+      "map": "MAP_RUSTPETAL_PARK",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [

@@ -4789,38 +4789,67 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Crunch
 
 === TRAINER_ROXANNE_1 ===
-Name: ROXANNE
+Name: SIERRA
 Class: Leader
-Pic: Leader Roxanne
+Pic: Leader Sierra
 Gender: Female
 Music: Female
 Items: Potion / Potion
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer
 
-Geodude
-Level: 2
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+Plusle (F)  
+Ability: Plus  
+Level: 14 
+IVs: 0 Atk  
+- Charge Beam  
+- Swift  
+- Thunder Wave  
+- Protect  
 
-Geodude
-Level: 2
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+Minun (M)  
+Ability: Minus  
+Level: 14
+- Thunder Shock  
+- Quick Attack  
+- Growl  
+- Helping Hand  
 
-Nosepass @ Oran Berry
-Level: 5
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
-- Rock Tomb
+Smoochum  
+Ability: Oblivious  
+Level: 14
+IVs: 0 Atk  
+- Powder Snow  
+- Confusion  
+- Reflect  
+- Sweet Kiss  
+
+Piplup (F)  
+Ability: Torrent  
+Level: 14
+- Peck  
+- Bubble  
+- Sing  
+- Protect  
+
+Kirlia (F)  
+Ability: Synchronize  
+Level: 15
+EVs: 80 HP / 76 Def / 24 SpA / 24 SpD / 64 Spe  
+IVs: 0 Atk  
+- Charge Beam  
+- Confusion  
+- Disarming Voice  
+- Flash  
+
+Rotom  
+Ability: Levitate  
+Level: 16
+IVs: 0 Atk  
+- Charge Beam  
+- Hex  
+- Flash Cannon  
+- Flash 
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -6336,6 +6365,14 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Magikarp
 Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Magikarp

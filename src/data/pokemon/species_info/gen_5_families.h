@@ -12066,7 +12066,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "It was once thought that if a\n"
             "Moltin appeared, it would have to be\n"
             "appeased with offerings so the sun\n"
-            "would have the strength to rise again."),
+            "would rise again."),
         .pokemonScale = 320,
         .pokemonOffset = 10,
         .trainerScale = 256,

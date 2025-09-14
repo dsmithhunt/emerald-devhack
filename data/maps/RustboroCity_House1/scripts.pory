@@ -1,3 +1,85 @@
+script SandileTrade {
+	lock
+	faceplayer
+	goto_if_set(FLAG_RUSTBORO_NPC_TRADE_COMPLETED, SandileTrade_TradeCompleted)
+	setvar(VAR_0x8008, INGAME_TRADE_SANDILE)
+	copyvar(VAR_0x8004, VAR_0x8008)
+	specialvar(VAR_RESULT, GetInGameTradeSpeciesInfo)
+	copyvar(VAR_0x8009, VAR_RESULT)
+	msgbox(format(
+		"My mom says I have to get rid of my POKéMON because he bites people,\l""but I still want a POKéMON.\p"
+		"If you get a {STR_VAR_1} for me, you can have my {STR_VAR_2} if you want.\l"
+		"He's really cool, I promise."
+	), MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, NO, SandileTrade_DeclineTrade)
+	special(ChoosePartyMon)
+	waitstate
+	copyvar(VAR_0x800A, VAR_0x8004)
+	goto_if_eq(VAR_0x8004, PARTY_NOTHING_CHOSEN, SandileTrade_DeclineTrade)
+	copyvar(VAR_0x8005, VAR_0x800A)
+	specialvar(VAR_RESULT, GetTradeSpecies)
+	copyvar(VAR_0x800B, VAR_RESULT)
+	goto_if_ne(VAR_RESULT, VAR_0x8009, SandileTrade_NotRequestedMon)
+	copyvar(VAR_0x8004, VAR_0x8008)
+	copyvar(VAR_0x8005, VAR_0x800A)
+	special(CreateInGameTradePokemon)
+	special(DoInGameTradeScene)
+	waitstate
+	msgbox(format(
+		"This is such a cute POKéMON!\p""I'll miss Chomper, but now, he can\n""bite as much as he wants."
+	))
+	setflag(FLAG_RUSTBORO_NPC_TRADE_COMPLETED)
+	release
+}
+
+script SandileTrade_DeclineTrade {
+	msgbox(format(
+		"Oh, that's okay. I guess I could\n"
+		"let him go in the park…"
+	))
+	release
+}
+
+script SandileTrade_NotRequestedMon {
+	bufferspeciesname(STR_VAR_1, VAR_0x8009)
+	msgbox(format(
+		"Huh? I don't know if my mom will like that one…\p"
+		"I want a {STR_VAR_1}."
+	))
+	release
+}
+
+script SandileTrade_TradeCompleted {
+	msgbox(format(
+		"I love my new Skitty! My mom doesn't get mad when it bites."
+	))
+	release
+}
+
+script SandileMom {
+	lock
+	faceplayer
+	if (flag(FLAG_RUSTBORO_NPC_TRADE_COMPLETED)) {
+		if (flag(FLAG_UNUSED_0x020)) {
+			msgbox(format(
+				"I'm so glad we can have guests without having to worry."
+				))
+			release
+		} else {
+			msgbox(format(
+				"Thank you for trading with my son. I didn't have the heart to take away his POKéMON.\p"
+				"Here, hopefully this helps you take care of him."
+				))
+			giveitem(ITEM_PROTEIN)
+			setflag(FLAG_UNUSED_0x020)
+			release
+		}
+	} else {
+		msgbox(format("My son wants to bring his POKéMON to school, but he'll be suspended… again…"))
+		release
+	}
+}
+
 raw `
 RustboroCity_House1_MapScripts::
 	.byte 0

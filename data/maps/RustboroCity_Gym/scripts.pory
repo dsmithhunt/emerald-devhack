@@ -1,3 +1,10 @@
+script RustboroCity_Gym_Sierra {
+	lock
+	trainerbattle_double(TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC)
+	msgbox(RustboroCity_Gym_Text_RoxannePostBattle)
+	release
+}
+
 raw `
 RustboroCity_Gym_MapScripts::
 	.byte 0

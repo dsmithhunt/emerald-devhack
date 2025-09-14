@@ -10,7 +10,7 @@ script RusturfTunnel_AquaGruntsChat{
 	))
 	msgbox(format(
 		"FEMALE GRUNT: What do you mean you got a hostage?!\p"
-		"MALE GRUNT: Some geezer had this Wingull at the park. I grabbed it so no one would chase us.\p"
+		"MALE GRUNT: Some geezer had this Wingull at the park. I grabbed it\l""so no one would chase us.\p"
 		"FEMALE GRUNT: What if they chase us because you took it? These are just parts; that's someone's POKéMON!"
 		))
 	playse(SE_PIN)
@@ -35,8 +35,18 @@ script RusturfTunnel_AquaGruntsChat{
 	copyobjectxytoperm(6)
 	copyobjectxytoperm(7)
 	copyobjectxytoperm(11)
-	setvar(VAR_RUSTURF_TUNNEL_STATE, 3)
+	setvar(VAR_RUSTURF_TUNNEL_STATE, 6)
 	releaseall
+}
+
+script RusturfTunnel_AquaTrigger0 {
+	setvar(VAR_TEMP_1, 0)
+	call(RusturfTunnel_SierraArrive)
+}
+
+script RusturfTunnel_AquaTrigger1 {
+	setvar(VAR_TEMP_1, 1)
+	call(RusturfTunnel_SierraArrive)
 }
 
 script RusturfTunnel_SierraArrive {
@@ -52,7 +62,17 @@ script RusturfTunnel_SierraArrive {
 	msgbox(format("???: Stop!"))
 	addobject(12)
 	applymovement(12, moves(
-		walk_fast_right*9
+		walk_fast_right*7
+	))
+	waitmovement(0)
+	if (var(VAR_TEMP_1) == 0){
+	applymovement(LOCALID_PLAYER, moves(
+		walk_fast_down
+		face_right
+	))
+	}
+	applymovement(12, moves(
+		walk_right*2
 	))
 	waitmovement(0)
 	msgbox(format(
@@ -152,6 +172,7 @@ script RusturfTunnel_GruntsBattle{
 	delay(50)
 	clearflag(FLAG_DEVON_GOODS_STOLEN)
 	setflag(FLAG_RECOVERED_DEVON_GOODS)
+	setvar(VAR_RUSTURF_TUNNEL_STATE, 3)
 	setvar(VAR_RUSTBORO_CITY_STATE, 4)
 	setvar(VAR_BRINEY_HOUSE_STATE, 1)
 	setflag(FLAG_HIDE_ROUTE_116_MR_BRINEY)

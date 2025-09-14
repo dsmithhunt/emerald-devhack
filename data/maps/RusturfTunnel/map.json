@@ -251,8 +251,8 @@
       "y": 5,
       "elevation": 0,
       "var": "VAR_RUSTURF_TUNNEL_STATE",
-      "var_value": "3",
-      "script": "RusturfTunnel_SierraArrive"
+      "var_value": "6",
+      "script": "RusturfTunnel_AquaTrigger1"
     },
     {
       "type": "trigger",
@@ -260,8 +260,8 @@
       "y": 4,
       "elevation": 0,
       "var": "VAR_RUSTURF_TUNNEL_STATE",
-      "var_value": "3",
-      "script": "RusturfTunnel_SierraArrive"
+      "var_value": "6",
+      "script": "RusturfTunnel_AquaTrigger0"
     }
   ],
   "bg_events": []

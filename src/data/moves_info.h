@@ -19167,22 +19167,18 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Psyshield Bash"),
         .description = COMPOUND_STRING(
-            "Hits a foe with psychic\n"
-            "energy. May raise Defense."),
-        .effect = EFFECT_HIT,
+            "Does more damage the\n"
+            "higher the user's Sp.Def."),
+        .effect = EFFECT_BODY_PRESS,
         .power = 70,
         .type = TYPE_PSYCHIC,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .makesContact = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_DEF_PLUS_1,
-            .self = TRUE,
-            .chance = 100,
-        }),
+        .metronomeBanned = TRUE,
         .battleAnimScript = gBattleAnimMove_PsyshieldBash,
     },
 

@@ -283,6 +283,9 @@ const u16 gTrainerPalette_RubySapphireMay[] = INCBIN_U16("graphics/trainers/pale
 const u32 gTrainerFrontPic_Cameraman[] = INCBIN_U32("graphics/trainers/front_pics/cameraman.4bpp.smol");
 const u16 gTrainerPalette_Cameraman[] = INCBIN_U16("graphics/trainers/front_pics/cameraman.gbapal");
 
+const u32 gTrainerFrontPic_LeaderSierra[] = INCBIN_U32("graphics/trainers/front_pics/leader_sierra.4bpp.smol");
+const u16 gTrainerPalette_LeaderSierra[] = INCBIN_U16("graphics/trainers/front_pics/leader_sierra.gbapal");
+
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
 const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
@@ -405,6 +408,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
     TRAINER_SPRITE(TRAINER_PIC_CAMERAMAN, gTrainerFrontPic_Cameraman, gTrainerPalette_Cameraman),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_SIERRA, gTrainerFrontPic_LeaderSierra, gTrainerPalette_LeaderSierra),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
