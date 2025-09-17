@@ -61,6 +61,7 @@ script LittlerootTown_ProfessorBirchsLab_RivalBattleOver{
 	applymovement(LOCALID_PLAYER, moves(
 		face_up
 	))
+	call(Common_EventScript_OutOfCenterPartyHeal)
 	msgbox(format("PROF. BIRCH: Oh, wow, {PLAYER}{KUN}!\p""You beat {RIVAL} on your first try;\n""that's excellent!\p""{RIVAL}'s been helping with my research for a long time."))
 	setvar(VAR_BIRCH_LAB_STATE, 5)
 	setflag(FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL)

@@ -535,7 +535,7 @@
 #define P_FAMILY_QUAXLY                  FALSE
 #define P_FAMILY_LECHONK                 FALSE
 #define P_FAMILY_TAROUNTULA              FALSE
-#define P_FAMILY_NYMBLE                  FALSE
+#define P_FAMILY_NYMBLE                  P_GEN_9_POKEMON
 #define P_FAMILY_PAWMI                   FALSE
 #define P_FAMILY_TANDEMAUS               FALSE
 #define P_FAMILY_FIDOUGH                 FALSE

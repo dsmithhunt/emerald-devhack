@@ -1,3 +1,144 @@
+mapscripts RustboroCity_Gym_MapScripts {
+	MAP_SCRIPT_ON_LOAD: RustboroCity_Gym_OnLoad
+	}
+
+script RustboroCity_Gym_OnLoad {
+	goto_if_set(FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_DeactivatePuzzle)
+	switch(var(VAR_RUSTBORO_GYM_STATE)){
+		case 0:
+			goto(RustboroCity_Gym_EventScript_UpdateBarriers)
+		case 1:
+			goto(RustboroCity_Gym_EventScript_Switch1Pressed)
+		case 2:
+			goto(RustboroCity_Gym_EventScript_Switch2Pressed)
+		case 3:
+			goto(RustboroCity_Gym_EventScript_Switch3Pressed)
+		case 4:
+			goto(RustboroCity_Gym_EventScript_Switch4Pressed)
+	}
+}
+
+script RustboroCity_Gym_EventScript_UpdateBarriers {
+	goto_if_set(FLAG_RUSTBORO_GYM_BARRIERS_STATE, RustboroCity_Gym_EventScript_SetAltBarriers)
+}
+
+script RustboroCity_Gym_EventScript_SetAltBarriers {
+	setmetatile(3, 11, METATILE_RustboroGym_RedBeamV1_On, TRUE)
+	setmetatile(3, 12, METATILE_RustboroGym_RedBeamV2_On, TRUE)
+	setmetatile(3, 13, METATILE_RustboroGym_PoleTop_On, TRUE)
+	setmetatile(4, 10, METATILE_RustboroGym_RedBeamH1_On, FALSE)
+	setmetatile(5, 10, METATILE_RustboroGym_RedBeamH2_On, FALSE)
+	setmetatile(4, 11, METATILE_RustboroGym_RedBeamH3_On, TRUE)
+	setmetatile(5, 11, METATILE_RustboroGym_RedBeamH4_On, TRUE)
+	setmetatile(7, 10, METATILE_RustboroGym_RedBeamH1_On, FALSE)
+	setmetatile(8, 10, METATILE_RustboroGym_RedBeamH2_On, FALSE)
+	setmetatile(7, 11, METATILE_RustboroGym_RedBeamH3_On, TRUE)
+	setmetatile(8, 11, METATILE_RustboroGym_RedBeamH4_On, TRUE)
+	setmetatile(4, 13, METATILE_RustboroGym_GreenBeamH1_Off, FALSE)
+	setmetatile(5, 13, METATILE_RustboroGym_GreenBeamH2_Off, FALSE)
+	setmetatile(4, 14, METATILE_RustboroGym_GreenBeamH3_Off, FALSE)
+	setmetatile(5, 14, METATILE_RustboroGym_GreenBeamH4_Off, FALSE)
+	setmetatile(1, 10, METATILE_RustboroGym_GreenBeamH1_Off, FALSE)
+	setmetatile(2, 10, METATILE_RustboroGym_GreenBeamH2_Off, FALSE)
+	setmetatile(1, 11, METATILE_RustboroGym_GreenBeamH3_Off, FALSE)
+	setmetatile(2, 11, METATILE_RustboroGym_GreenBeamH4_Off, FALSE)
+	setmetatile(6, 8, METATILE_RustboroGym_PoleBottom_On, TRUE)
+	setmetatile(6, 9, METATILE_RustboroGym_FloorTile, FALSE)
+	setmetatile(6, 10, METATILE_RustboroGym_PoleTop_Off, FALSE)
+	setmetatile(4, 6, METATILE_RustboroGym_GreenBeamH1_Off, FALSE)
+	setmetatile(5, 6, METATILE_RustboroGym_GreenBeamH2_Off, FALSE)
+	setmetatile(4, 7, METATILE_RustboroGym_GreenBeamH3_Off, FALSE)
+	setmetatile(5, 7, METATILE_RustboroGym_GreenBeamH4_Off, FALSE)
+}
+
+script RustboroCity_Gym_EventScript_Switch1Pressed {
+	setvar(VAR_0x8004, 0)
+	special(RustboroGymPressSwitch)
+	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
+}
+
+script RustboroCity_Gym_EventScript_Switch2Pressed {
+	setvar(VAR_0x8004, 1)
+	special(RustboroGymPressSwitch)
+	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
+}
+
+script RustboroCity_Gym_EventScript_Switch3Pressed {
+	setvar(VAR_0x8004, 2)
+	special(RustboroGymPressSwitch)
+	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
+}
+
+script RustboroCity_Gym_EventScript_Switch4Pressed {
+	setvar(VAR_0x8004, 3)
+	special(RustboroGymPressSwitch)
+	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
+}
+
+script RustboroCity_Gym_EventScript_DeactivatePuzzle {
+	special(RustboroGymDeactivatePuzzle)
+}
+
+script RustboroCity_Gym_EventScript_Switch1 {
+	lockall
+	goto_if_set(FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	goto_if_eq(VAR_RUSTBORO_GYM_STATE, 1, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	setvar(VAR_RUSTBORO_GYM_STATE, 1)
+	setvar(VAR_0x8004, 0)
+	goto(RustboroCity_Gym_EventScript_PressFloorSwitch)
+}
+
+script RustboroCity_Gym_EventScript_Switch2 {
+	lockall
+	goto_if_set(FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	goto_if_eq(VAR_RUSTBORO_GYM_STATE, 2, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	setvar(VAR_RUSTBORO_GYM_STATE, 2)
+	setvar(VAR_0x8004, 1)
+	goto(RustboroCity_Gym_EventScript_PressFloorSwitch)
+}
+
+script RustboroCity_Gym_EventScript_Switch3 {
+	lockall
+	goto_if_set(FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	goto_if_eq(VAR_RUSTBORO_GYM_STATE, 3, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	setvar(VAR_RUSTBORO_GYM_STATE, 3)
+	setvar(VAR_0x8004, 2)
+	goto(RustboroCity_Gym_EventScript_PressFloorSwitch)
+}
+
+script RustboroCity_Gym_EventScript_Switch4 {
+	lockall
+	goto_if_set (FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	goto_if_eq(VAR_RUSTBORO_GYM_STATE, 4, RustboroCity_Gym_EventScript_SwitchDoNothing)
+	setvar(VAR_RUSTBORO_GYM_STATE, 4)
+	setvar(VAR_0x8004, 3)
+	goto(RustboroCity_Gym_EventScript_PressFloorSwitch)
+}
+
+script RustboroCity_Gym_EventScript_PressFloorSwitch {
+	special(RustboroGymSetDefaultBarriers)
+	special(RustboroGymPressSwitch)
+	special(DrawWholeMapView)
+	playse(SE_UNLOCK)
+	goto_if_set(FLAG_RUSTBORO_GYM_BARRIERS_STATE, RustboroCity_Gym_EventScript_ClearBarriersAltState)
+	goto_if_unset(FLAG_RUSTBORO_GYM_BARRIERS_STATE, RustboroCity_Gym_EventScript_SetBarriersAltState)
+	releaseall
+}
+
+script RustboroCity_Gym_EventScript_SwitchDoNothing {
+	releaseall
+}
+
+script RustboroCity_Gym_EventScript_SetBarriersAltState {
+	setflag(FLAG_RUSTBORO_GYM_BARRIERS_STATE)
+	releaseall
+}
+
+script RustboroCity_Gym_EventScript_ClearBarriersAltState {
+	clearflag(FLAG_RUSTBORO_GYM_BARRIERS_STATE)
+	releaseall
+}
+
 script RustboroCity_Gym_Sierra {
 	lock
 	trainerbattle_double(TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC)
@@ -6,9 +147,6 @@ script RustboroCity_Gym_Sierra {
 }
 
 raw `
-RustboroCity_Gym_MapScripts::
-	.byte 0
-
 RustboroCity_Gym_EventScript_Roxanne::
 	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle

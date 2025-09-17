@@ -5062,7 +5062,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Aerial Ace
 
 === TRAINER_TATE_AND_LIZA_1 ===
-Name: TATE&LIZA
+Name: DELTATWIN
 Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
@@ -5070,8 +5070,9 @@ Music: Female
 Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Basic Trainer
+Mugshot: Purple
 
-Claydol
+Latias
 Level: 41
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Earthquake
@@ -5079,7 +5080,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
 - Light Screen
 
-Xatu
+Latios
 Level: 41
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic

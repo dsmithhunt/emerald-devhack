@@ -127,6 +127,13 @@ text LittlerootTownTest_Text_AnyPokemonCanBeCute {
 script TestBattleDeltaTwins {
 	lock
 	faceplayer
+	trainerbattle_double(TRAINER_TATE_AND_LIZA_1, RusturfTunnel_Text_GruntDefeat, RusturfTunnel_Text_GruntDefeat, RusturfTunnel_Text_GruntDefeat)
+	release
+}
+
+script BattleAgainstTwoTrainers {
+	lock
+	faceplayer
 	trainerbattle_two_trainers(TRAINER_LYLE, RusturfTunnel_Text_GruntDefeat, TRAINER_IVAN, RusturfTunnel_Text_GruntDefeat)
 	release
 }
@@ -609,6 +616,7 @@ LittlerootTown_EventScript_GiveRunningShoesTrigger5::
 	end
 
 LittlerootTown_EventScript_GiveRunningShoesTrigger::
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomNoticePlayerMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomNoticePlayerFemale
@@ -1011,6 +1019,7 @@ LittlerootTown_Movement_MomExitThroughDoor:
 
 LittlerootTown_EventScript_Mom::
 	lock
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	faceplayer
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetHomeDoorCoordsMale
