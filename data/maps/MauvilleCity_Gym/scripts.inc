@@ -13,7 +13,7 @@ MauvilleCity_Gym_OnLoad:
 # 7 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_DeactivatePuzzle
 # 8 "data/maps/MauvilleCity_Gym/scripts.pory"
-	switch VAR_MAUVILLE_GYM_STATE
+	switch VAR_RUSTBORO_GYM_STATE
 # 9 "data/maps/MauvilleCity_Gym/scripts.pory"
 	case 0, MauvilleCity_Gym_EventScript_UpdateBarriers
 # 10 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -31,7 +31,7 @@ MauvilleCity_Gym_OnLoad:
 # 16 "data/maps/MauvilleCity_Gym/scripts.pory"
 MauvilleCity_Gym_EventScript_UpdateBarriers::
 # 17 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_set FLAG_MAUVILLE_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_SetAltBarriers
+	goto_if_set FLAG_RUSTBORO_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_SetAltBarriers
 # 18 "data/maps/MauvilleCity_Gym/scripts.pory"
 	end
 # 19 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -283,9 +283,9 @@ MauvilleCity_Gym_EventScript_Switch1::
 # 142 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 143 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 1, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_RUSTBORO_GYM_STATE, 1, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 144 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 1
+	setvar VAR_RUSTBORO_GYM_STATE, 1
 # 145 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 0
 # 146 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -301,9 +301,9 @@ MauvilleCity_Gym_EventScript_Switch2::
 # 151 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 152 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 2, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_RUSTBORO_GYM_STATE, 2, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 153 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 2
+	setvar VAR_RUSTBORO_GYM_STATE, 2
 # 154 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 1
 # 155 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -319,9 +319,9 @@ MauvilleCity_Gym_EventScript_Switch3::
 # 160 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 161 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 3, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_RUSTBORO_GYM_STATE, 3, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 162 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 3
+	setvar VAR_RUSTBORO_GYM_STATE, 3
 # 163 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 2
 # 164 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -337,9 +337,9 @@ MauvilleCity_Gym_EventScript_Switch4::
 # 169 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 170 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 4, MauvilleCity_Gym_EventScript_SwitchDoNothing
+	goto_if_eq VAR_RUSTBORO_GYM_STATE, 4, MauvilleCity_Gym_EventScript_SwitchDoNothing
 # 171 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setvar VAR_MAUVILLE_GYM_STATE, 4
+	setvar VAR_RUSTBORO_GYM_STATE, 4
 # 172 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setvar VAR_0x8004, 3
 # 173 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -359,9 +359,9 @@ MauvilleCity_Gym_EventScript_PressFloorSwitch::
 # 180 "data/maps/MauvilleCity_Gym/scripts.pory"
 	playse SE_UNLOCK
 # 181 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_set FLAG_MAUVILLE_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_ClearBarriersAltState
+	goto_if_set FLAG_RUSTBORO_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_ClearBarriersAltState
 # 182 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_unset FLAG_MAUVILLE_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_SetBarriersAltState
+	goto_if_unset FLAG_RUSTBORO_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_SetBarriersAltState
 # 183 "data/maps/MauvilleCity_Gym/scripts.pory"
 	releaseall
 # 184 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -379,7 +379,7 @@ MauvilleCity_Gym_EventScript_SwitchDoNothing::
 # 190 "data/maps/MauvilleCity_Gym/scripts.pory"
 MauvilleCity_Gym_EventScript_SetBarriersAltState::
 # 191 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
+	setflag FLAG_RUSTBORO_GYM_BARRIERS_STATE
 # 192 "data/maps/MauvilleCity_Gym/scripts.pory"
 	releaseall
 # 193 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -389,7 +389,7 @@ MauvilleCity_Gym_EventScript_SetBarriersAltState::
 # 195 "data/maps/MauvilleCity_Gym/scripts.pory"
 MauvilleCity_Gym_EventScript_ClearBarriersAltState::
 # 196 "data/maps/MauvilleCity_Gym/scripts.pory"
-	clearflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
+	clearflag FLAG_RUSTBORO_GYM_BARRIERS_STATE
 # 197 "data/maps/MauvilleCity_Gym/scripts.pory"
 	releaseall
 # 198 "data/maps/MauvilleCity_Gym/scripts.pory"

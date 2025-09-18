@@ -4796,60 +4796,72 @@ Gender: Female
 Music: Female
 Items: Potion / Potion
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Sequence Switching
+Mugshot: Pink
 
-Plusle (F)  
+Plusle (F)
+Ball: Premier Ball  
 Ability: Plus  
-Level: 14 
-IVs: 0 Atk  
+Level: 13 
+Tera Type: Electric 
+EVs: 4 Spe  
+Jolly Nature  
+IVs: 0 HP / 15 Atk / 13 Def / 2 SpA / 0 SpD / 2 Spe  
 - Charge Beam  
 - Swift  
 - Thunder Wave  
-- Protect  
+- Protect
 
 Minun (M)  
 Ability: Minus  
-Level: 14
+Level: 13
+Tera Type: Electric
+Impish Nature  
+IVs: 2 HP / 13 Atk / 8 Def / 0 SpA / 2 SpD / 0 Spe  
 - Thunder Shock  
 - Quick Attack  
 - Growl  
-- Helping Hand  
+- Helping Hand
 
 Smoochum  
 Ability: Oblivious  
 Level: 14
-IVs: 0 Atk  
+Sassy Nature  
+IVs: 8 HP / 0 Atk / 13 Def / 9 SpA / 13 SpD / 0 Spe  
 - Powder Snow  
 - Confusion  
 - Reflect  
-- Sweet Kiss  
+- Sweet Kiss
 
 Piplup (F)  
 Ability: Torrent  
-Level: 14
+Level: 14   
+IVs: 4 HP / 20 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe  
 - Peck  
 - Bubble  
 - Sing  
-- Protect  
+- Protect
 
 Kirlia (F)  
 Ability: Synchronize  
-Level: 15
-EVs: 80 HP / 76 Def / 24 SpA / 24 SpD / 64 Spe  
-IVs: 0 Atk  
+Level: 14
+EVs: 4 HP / 24 Def / 24 SpA / 44 Spe  
+Gentle Nature  
+IVs: 10 HP / 0 Atk / 24 Def / 18 SpA / 4 SpD / 16 Spe  
 - Charge Beam  
 - Confusion  
 - Disarming Voice  
-- Flash  
+- Flash
 
 Rotom  
 Ability: Levitate  
-Level: 16
-IVs: 0 Atk  
+Level: 15
+Quirky Nature  
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe  
 - Charge Beam  
 - Hex  
 - Flash Cannon  
-- Flash 
+- Flash
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY

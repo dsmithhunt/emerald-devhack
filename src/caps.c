@@ -9,7 +9,7 @@ u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
     {
-        {FLAG_BADGE01_GET, 15},
+        {FLAG_BADGE01_GET, 14},
         {FLAG_BADGE02_GET, 19},
         {FLAG_BADGE03_GET, 24},
         {FLAG_BADGE04_GET, 29},
@@ -41,7 +41,7 @@ u32 GetCurrentLevelCap(void)
 u32 GetSoftLevelCapExpValue(u32 level, u32 expValue)
 {
     static const u32 sExpScalingDown[5] = { 4, 8, 16, 32, 64 };
-    static const u32 sExpScalingUp[5]   = { 16, 8, 4, 2, 1 };
+    static const u32 sExpScalingUp[5]   = { 1, 2, 4, 6, 8 };
 
     u32 levelDifference;
     u32 currentLevelCap = GetCurrentLevelCap();
@@ -55,9 +55,9 @@ u32 GetSoftLevelCapExpValue(u32 level, u32 expValue)
         {
             levelDifference = currentLevelCap - level;
             if (levelDifference > ARRAY_COUNT(sExpScalingUp) - 1)
-                return expValue + (expValue / sExpScalingUp[ARRAY_COUNT(sExpScalingUp) - 1]);
+                return expValue * (sExpScalingUp[ARRAY_COUNT(sExpScalingUp) - 1]);
             else
-                return expValue + (expValue / sExpScalingUp[levelDifference]);
+                return expValue * (sExpScalingUp[levelDifference]);
         }
         else
         {

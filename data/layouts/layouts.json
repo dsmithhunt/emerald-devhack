@@ -937,7 +937,7 @@
       "width": 32,
       "height": 21,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_RustboroGym",
+      "secondary_tileset": "gTileset_MauvilleGym",
       "border_filepath": "data/layouts/RustboroCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/RustboroCity_Gym/map.bin"
     },

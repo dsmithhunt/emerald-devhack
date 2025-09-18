@@ -23,60 +23,60 @@ script RustboroCity_Gym_EventScript_UpdateBarriers {
 }
 
 script RustboroCity_Gym_EventScript_SetAltBarriers {
-	setmetatile(3, 11, METATILE_RustboroGym_RedBeamV1_On, TRUE)
-	setmetatile(3, 12, METATILE_RustboroGym_RedBeamV2_On, TRUE)
-	setmetatile(3, 13, METATILE_RustboroGym_PoleTop_On, TRUE)
-	setmetatile(4, 10, METATILE_RustboroGym_RedBeamH1_On, FALSE)
-	setmetatile(5, 10, METATILE_RustboroGym_RedBeamH2_On, FALSE)
-	setmetatile(4, 11, METATILE_RustboroGym_RedBeamH3_On, TRUE)
-	setmetatile(5, 11, METATILE_RustboroGym_RedBeamH4_On, TRUE)
-	setmetatile(7, 10, METATILE_RustboroGym_RedBeamH1_On, FALSE)
-	setmetatile(8, 10, METATILE_RustboroGym_RedBeamH2_On, FALSE)
-	setmetatile(7, 11, METATILE_RustboroGym_RedBeamH3_On, TRUE)
-	setmetatile(8, 11, METATILE_RustboroGym_RedBeamH4_On, TRUE)
-	setmetatile(4, 13, METATILE_RustboroGym_GreenBeamH1_Off, FALSE)
-	setmetatile(5, 13, METATILE_RustboroGym_GreenBeamH2_Off, FALSE)
-	setmetatile(4, 14, METATILE_RustboroGym_GreenBeamH3_Off, FALSE)
-	setmetatile(5, 14, METATILE_RustboroGym_GreenBeamH4_Off, FALSE)
-	setmetatile(1, 10, METATILE_RustboroGym_GreenBeamH1_Off, FALSE)
-	setmetatile(2, 10, METATILE_RustboroGym_GreenBeamH2_Off, FALSE)
-	setmetatile(1, 11, METATILE_RustboroGym_GreenBeamH3_Off, FALSE)
-	setmetatile(2, 11, METATILE_RustboroGym_GreenBeamH4_Off, FALSE)
-	setmetatile(6, 8, METATILE_RustboroGym_PoleBottom_On, TRUE)
-	setmetatile(6, 9, METATILE_RustboroGym_FloorTile, FALSE)
-	setmetatile(6, 10, METATILE_RustboroGym_PoleTop_Off, FALSE)
-	setmetatile(4, 6, METATILE_RustboroGym_GreenBeamH1_Off, FALSE)
-	setmetatile(5, 6, METATILE_RustboroGym_GreenBeamH2_Off, FALSE)
-	setmetatile(4, 7, METATILE_RustboroGym_GreenBeamH3_Off, FALSE)
-	setmetatile(5, 7, METATILE_RustboroGym_GreenBeamH4_Off, FALSE)
+	setmetatile(3, 11, METATILE_MauvilleGym_RedBeamV1_On, TRUE)
+	setmetatile(3, 12, METATILE_MauvilleGym_RedBeamV2_On, TRUE)
+	setmetatile(3, 13, METATILE_MauvilleGym_PoleTop_On, TRUE)
+	setmetatile(4, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE)
+	setmetatile(5, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE)
+	setmetatile(4, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE)
+	setmetatile(5, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE)
+	setmetatile(7, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE)
+	setmetatile(8, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE)
+	setmetatile(7, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE)
+	setmetatile(8, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE)
+	setmetatile(4, 13, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE)
+	setmetatile(5, 13, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE)
+	setmetatile(4, 14, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE)
+	setmetatile(5, 14, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE)
+	setmetatile(1, 10, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE)
+	setmetatile(2, 10, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE)
+	setmetatile(1, 11, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE)
+	setmetatile(2, 11, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE)
+	setmetatile(6, 8, METATILE_MauvilleGym_PoleBottom_On, TRUE)
+	setmetatile(6, 9, METATILE_MauvilleGym_FloorTile, FALSE)
+	setmetatile(6, 10, METATILE_MauvilleGym_PoleTop_Off, FALSE)
+	setmetatile(4, 6, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE)
+	setmetatile(5, 6, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE)
+	setmetatile(4, 7, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE)
+	setmetatile(5, 7, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE)
 }
 
 script RustboroCity_Gym_EventScript_Switch1Pressed {
 	setvar(VAR_0x8004, 0)
-	special(RustboroGymPressSwitch)
+	special(MauvilleGymPressSwitch)
 	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
 }
 
 script RustboroCity_Gym_EventScript_Switch2Pressed {
 	setvar(VAR_0x8004, 1)
-	special(RustboroGymPressSwitch)
+	special(MauvilleGymPressSwitch)
 	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
 }
 
 script RustboroCity_Gym_EventScript_Switch3Pressed {
 	setvar(VAR_0x8004, 2)
-	special(RustboroGymPressSwitch)
+	special(MauvilleGymPressSwitch)
 	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
 }
 
 script RustboroCity_Gym_EventScript_Switch4Pressed {
 	setvar(VAR_0x8004, 3)
-	special(RustboroGymPressSwitch)
+	special(MauvilleGymPressSwitch)
 	goto(RustboroCity_Gym_EventScript_UpdateBarriers)
 }
 
 script RustboroCity_Gym_EventScript_DeactivatePuzzle {
-	special(RustboroGymDeactivatePuzzle)
+	special(MauvilleGymDeactivatePuzzle)
 }
 
 script RustboroCity_Gym_EventScript_Switch1 {
@@ -116,8 +116,8 @@ script RustboroCity_Gym_EventScript_Switch4 {
 }
 
 script RustboroCity_Gym_EventScript_PressFloorSwitch {
-	special(RustboroGymSetDefaultBarriers)
-	special(RustboroGymPressSwitch)
+	special(MauvilleGymSetDefaultBarriers)
+	special(MauvilleGymPressSwitch)
 	special(DrawWholeMapView)
 	playse(SE_UNLOCK)
 	goto_if_set(FLAG_RUSTBORO_GYM_BARRIERS_STATE, RustboroCity_Gym_EventScript_ClearBarriersAltState)
@@ -139,9 +139,112 @@ script RustboroCity_Gym_EventScript_ClearBarriersAltState {
 	releaseall
 }
 
+script RustboroCity_Gym_CheckBadge {
+	if(flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
+		end
+	}
+	else {
+		call(RustboroCity_Gym_ChallengeSierra)
+	}
+}
+
+script RustboroCity_Gym_ChallengeSierra {
+	lock
+	special(SpawnCameraObject)
+	special(HealPlayerParty)
+	applymovement(LOCALID_CAMERA, moves(
+		walk_up * 2
+	))
+	waitmovement(0)
+	getpartysize
+	delay(20)
+	msgbox(format(
+		"SIERRA: I knew I'd see you again.\p"
+		"I'm Sierra, the gym leader of Rustboro City.\p"
+		"If you can win against me, you'll earn the Shutter Badge and be on the path to the POKéMON CHAMPIONSHIP."
+	))
+	waitmessage
+	closemessage
+	if(var(VAR_RESULT) < 2) {
+		msgbox(format("Oh… I'm sorry, all official gym challenges are double battles. You don't have enough POKéMON for that right now."))
+		waitmessage
+		applymovement(LOCALID_CAMERA, moves(
+			walk_down * 2
+		))
+		waitmovement(0)
+		special(RemoveCameraObject)
+		release
+	}
+	else {
+	applymovement(LOCALID_PLAYER, moves(
+		walk_left * 4
+		walk_up * 2
+	))
+	applymovement(1, moves(
+		walk_right * 4
+		walk_down * 2
+	))
+	waitmovement(0)
+	turnobject(LOCALID_PLAYER, DIR_EAST)
+	applymovement(1, moves(
+		walk_in_place_fast_left
+	))
+	waitmovement(0)
+	special(RemoveCameraObject)
+	trainerbattle_double(
+		TRAINER_ROXANNE_1, 
+		format("Let's see if you can win against my shockingly cute POKéMON!"), 
+		format(
+			"Wow! You did it! By defeating a gym leader, you earn a gym badge!\p"
+			"Please accept the official POKéMON\n"
+			"LEAGUE Shutter Badge."), 
+		format("N/A"), 
+		RustboroCity_Gym_SierraDefeated, 
+		NO_MUSIC
+	)
+	}
+}
+
+script RustboroCity_Gym_SierraDefeated {
+	special(SpawnCameraObject)
+	message(format("{PLAYER} received the Shutter Badge from Sierra."))
+	waitmessage
+	call(Common_EventScript_PlayGymBadgeFanfare)
+	applymovement(1, moves(
+		walk_left * 3
+	))
+	applymovement(LOCALID_PLAYER, moves(
+		walk_right * 3
+		unlock_facing_direction
+	))
+	waitmovement(0)
+	applymovement(LOCALID_CAMERA, moves(
+		walk_left
+	))
+	waitmovement(0)
+	special(RemoveCameraObject)
+	msgbox(format("That badge gives you the ability to use the HM move, FLASH, outside of battle.\p""Also, defeated gym leaders give successful challengers a TM to help them on their journeys. Here…"))
+	setflag(FLAG_DEFEATED_RUSTBORO_GYM)
+	setflag(FLAG_BADGE01_GET)
+	setvar(VAR_RUSTBORO_CITY_STATE, 1)
+	addvar(VAR_PETALBURG_GYM_STATE, 1)
+	setvar(VAR_0x8008, 1)
+	call(Common_EventScript_SetGymTrainers)
+	call_if_eq(VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle)
+	goto(RustboroCity_Gym_GiveTM)
+}
+
+script RustboroCity_Gym_GiveTM {
+	giveitem(ITEM_TM_ROCK_TOMB)
+	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+	setflag(FLAG_RECEIVED_TM_ROCK_TOMB)
+	msgbox(format("That TECHNICAL MACHINE, TM 39, contains CHARGE BEAM.\p""It not only inflicts damage, it can also raise Sp. Atk.\p""If you use a TM, it instantly teaches the move to a POKéMON."))
+	release
+}
+
 script RustboroCity_Gym_Sierra {
 	lock
-	trainerbattle_double(TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC)
+	trainerbattle_double(TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_SierraDefeated, NO_MUSIC)
 	msgbox(RustboroCity_Gym_Text_RoxannePostBattle)
 	release
 }
