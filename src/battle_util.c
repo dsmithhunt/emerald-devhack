@@ -3168,6 +3168,13 @@ bool32 CanAbilityAbsorbMove(u32 battlerAtk, u32 battlerDef, u32 abilityDef, u32 
             statId = STAT_DEF;
         }
         break;
+    case ABILITY_WATER_COMPACTION:
+        if (moveType == TYPE_WATER)
+        {
+            effect = MOVE_ABSORBED_BY_STAT_INCREASE_ABILITY;
+            statId = STAT_DEF;
+        }
+        break;
     case ABILITY_WIND_RIDER:
         if (IsWindMove(move) && !(GetBattlerMoveTargetType(battlerAtk, move) & MOVE_TARGET_USER))
         {
@@ -4472,18 +4479,6 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             {
                 gEffectBattler = battler;
                 SET_STATCHANGER(STAT_SPEED, 1, FALSE);
-                BattleScriptCall(BattleScript_TargetAbilityStatRaiseRet);
-                effect++;
-            }
-            break;
-        case ABILITY_WATER_COMPACTION:
-            if (IsBattlerTurnDamaged(battler)
-             && IsBattlerAlive(battler)
-             && moveType == TYPE_WATER
-             && CompareStat(battler, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN))
-            {
-                gEffectBattler = battler;
-                SET_STATCHANGER(STAT_DEF, 2, FALSE);
                 BattleScriptCall(BattleScript_TargetAbilityStatRaiseRet);
                 effect++;
             }

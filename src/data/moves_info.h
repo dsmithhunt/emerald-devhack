@@ -494,9 +494,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Cuts the foe.\n"
             "Super effective on Grass."),
         .effect = EFFECT_SUPER_EFFECTIVE_ON_ARG,
-        .power = 70,
+        .power = 60,
         .type = TYPE_STEEL,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
