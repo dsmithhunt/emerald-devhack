@@ -6,6 +6,7 @@ BattleFrontier_ReceptionGate_MapScripts::
 
 BattleFrontier_ReceptionGate_OnTransition:
 	setflag FLAG_LANDMARK_BATTLE_FRONTIER
+	setflag FLAG_VISITED_EVER_GRANDE_CITY
 	end
 
 BattleFrontier_ReceptionGate_OnFrame:

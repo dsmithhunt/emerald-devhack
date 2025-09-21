@@ -863,7 +863,7 @@ LilycoveCity_Harbor_EventScript_Sailor::
 # 432 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	faceplayer
 # 433 "data/maps/LilycoveCity_Harbor/scripts.pory"
-	goto_if_set FLAG_SYS_GAME_CLEAR, LilycoveCity_Harbor_EventScript_SailorFerryAvailable
+	goto_if_set FLAG_RECEIVED_SS_TICKET, LilycoveCity_Harbor_EventScript_SailorFerryAvailable
 # 434 "data/maps/LilycoveCity_Harbor/scripts.pory"
 	msgbox LilycoveCity_Harbor_Text_SailorFerryUnavailable, MSGBOX_DEFAULT
 # 435 "data/maps/LilycoveCity_Harbor/scripts.pory"

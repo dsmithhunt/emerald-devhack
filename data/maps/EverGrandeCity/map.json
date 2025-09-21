@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST",
-      "offset": 0,
+      "offset": 5,
       "direction": "down"
     }
   ],
