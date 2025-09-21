@@ -11688,13 +11688,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Judgment,
     },
 
-    [MOVE_BUG_BITE] =
+    [MOVE_MUNCH] =
     {
-        .name = COMPOUND_STRING("Bug Bite"),
+        .name = COMPOUND_STRING("Munch"),
         .description = sPluckDescription,
         .effect = EFFECT_HIT,
         .power = 60,
-        .type = TYPE_BUG,
+        .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,

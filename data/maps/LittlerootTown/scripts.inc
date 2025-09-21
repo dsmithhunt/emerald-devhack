@@ -222,7 +222,7 @@ BattleAgainstTwoTrainers::
 # 153 "data/maps/LittlerootTown/scripts.pory"
 	faceplayer
 # 154 "data/maps/LittlerootTown/scripts.pory"
-	trainerbattle_two_trainers TRAINER_LYLE, RusturfTunnel_Text_GruntDefeat, TRAINER_IVAN, RusturfTunnel_Text_GruntDefeat
+	trainerbattle_two_trainers TRAINER_PETALBURG_LYLE, RusturfTunnel_Text_GruntDefeat, TRAINER_IVAN, RusturfTunnel_Text_GruntDefeat
 # 155 "data/maps/LittlerootTown/scripts.pory"
 	release
 	return

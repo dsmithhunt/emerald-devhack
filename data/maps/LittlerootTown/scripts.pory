@@ -151,7 +151,7 @@ script TestBattleDeltaTwins {
 script BattleAgainstTwoTrainers {
 	lock
 	faceplayer
-	trainerbattle_two_trainers(TRAINER_LYLE, RusturfTunnel_Text_GruntDefeat, TRAINER_IVAN, RusturfTunnel_Text_GruntDefeat)
+	trainerbattle_two_trainers(TRAINER_PETALBURG_LYLE, RusturfTunnel_Text_GruntDefeat, TRAINER_IVAN, RusturfTunnel_Text_GruntDefeat)
 	release
 }
 

@@ -1075,7 +1075,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_SWITCHING: AI won't switch in ace mon after
         PLAYER(SPECIES_WOBBUFFET) { Moves(MOVE_SURF); }
         OPPONENT(SPECIES_WOBBUFFET) { Moves(MOVE_U_TURN); }
         OPPONENT(SPECIES_NUMEL) { Level(5); Moves(MOVE_SPLASH); }
-        OPPONENT(SPECIES_SCIZOR) { Moves(MOVE_BUG_BITE); }
+        OPPONENT(SPECIES_SCIZOR) { Moves(MOVE_MUNCH); }
     } WHEN {
         if (aceFlag)
             TURN { EXPECT_MOVE(opponent, MOVE_U_TURN); EXPECT_SEND_OUT(opponent, 1); MOVE(player, MOVE_SURF); }
@@ -1094,7 +1094,7 @@ AI_SINGLE_BATTLE_TEST("Switch AI: AI won't switch in ace mon after U-Turn if oth
         PLAYER(SPECIES_WOBBUFFET) { Moves(MOVE_SURF); }
         OPPONENT(SPECIES_WOBBUFFET) { Moves(MOVE_U_TURN); }
         OPPONENT(SPECIES_NUMEL) { Level(5); Moves(MOVE_SPLASH); }
-        OPPONENT(SPECIES_SCIZOR) { Moves(MOVE_BUG_BITE); }
+        OPPONENT(SPECIES_SCIZOR) { Moves(MOVE_MUNCH); }
     } WHEN {
         if (aceFlag)
             TURN { EXPECT_MOVE(opponent, MOVE_U_TURN); EXPECT_SEND_OUT(opponent, 1); MOVE(player, MOVE_SURF); }

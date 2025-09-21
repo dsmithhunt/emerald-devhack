@@ -1,22 +1,85 @@
-script PetalburgWoods_EventScript_BugCatcher01{
-	trainerbattle_single(TRAINER_LYLE, BugCatcher01_Intro, BugCatcher01_Outro)
-	msgbox(BugCatcher01_PostBattle, MSGBOX_AUTOCLOSE)
+
+script PetalburgWoods_BugCatcherJames{
+	trainerbattle_single(
+		TRAINER_PETALBURG_JAMES, 
+		format("If you take bug POKéMON to school,\n""you get to be instantly popular!"), 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("If you have a big bug POKéMON,\n""people respect you for it."), MSGBOX_AUTOCLOSE)
 	waitmessage
-	end
 }
 
-text BugCatcher01_Intro{
-	"..."
+script PetalburgWoods_BugCatcherLyle{
+	trainerbattle_single(
+		TRAINER_PETALBURG_LYLE, 
+		format("I caught a whole bunch of POKéMON!\p""Go, go, go!\n""My bug POKéMON team!"), 
+		format("I have all these POKéMON,\n""but I couldn't win…")
+		)
+	msgbox(format("I caught a bunch of POKéMON.\n""Now I'm out of POKé BALLS."), MSGBOX_AUTOCLOSE)
+	waitmessage
 }
 
-text BugCatcher01_Outro{
-	"..."
+script PetalburgWoods_BugCatcherEli{
+	trainerbattle_single(
+		TRAINER_PETALBURG_ELI, 
+		format("My big brother takes me with him to catch bugs!"), 
+		format("There's no way you beat my big brother…")
+		)
+	msgbox(format("I'm so lucky to have a cool big brother."), MSGBOX_AUTOCLOSE)
+	waitmessage
 }
 
-text BugCatcher01_PostBattle{
-	"..."
+script PetalburgWoods_BugManiacNoah{
+	trainerbattle_single(
+		TRAINER_PETALBURG_NOAH, 
+		format("I love seeing my little brother's reactions to POKéMON!"), 
+		format("I can't believe you embarrassed me in front of my brother.")
+		)
+	msgbox(format("I think my little brother is going to be a great trainer."), MSGBOX_AUTOCLOSE)
+	waitmessage
 }
-	
+
+script PetalburgWoods_BugCatcherCody{
+	trainerbattle_single(
+		TRAINER_PETALBURG_CODY, 
+		format("There's a rare bug POKéMON in this forest.\p""I need to see if you have one!"), 
+		format("I have all these POKéMON,\n""but I couldn't win…")
+		)
+	msgbox(format("I caught bug POKéMON from across Hoenn, but the bugs here always get away."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script PetalburgWoods_BugManiacAiden{
+	trainerbattle_single(
+		TRAINER_PETALBURG_AIDEN, 
+		format("You're too weak to explore the Petalburg Mansion!"), 
+		format("I have all these POKéMON,\n""but I couldn't win…")
+		)
+	msgbox(format("I wish I was brave enough to explore the haunted mansion."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script PetalburgWoods_BugManiacNeil{
+	trainerbattle_single(
+		TRAINER_PETALBURG_LYLE, 
+		format("I knew someone would come looking for this item!\p""You've been caught in my trap!"), 
+		format("You beat me in spite of my trap…")
+		)
+	msgbox(format("I'm the only person I know with such a rare bug."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script PetalburgWoods_Sign1 {
+	msgbox(PetalburgWoods_Text_TrainerTipsExperience, MSGBOX_SIGN)
+}
+
+script PetalburgWoods_Sign2 {
+	msgbox(PetalburgWoods_Text_TrainerTipsPP, MSGBOX_SIGN)
+}
+
+script PetalburgWoods_Sign3 {
+	msgbox(PetalburgWoods_Text_TrainerTipsPP, MSGBOX_SIGN)
+}
 
 raw `
 PetalburgWoods_MapScripts::
@@ -291,15 +354,15 @@ PetalburgWoods_EventScript_Sign2::
 	end
 
 PetalburgWoods_EventScript_Lyle::
-	trainerbattle_single TRAINER_LYLE, PetalburgWoods_Text_GoBugPokemonTeam, PetalburgWoods_Text_ICouldntWin
+	trainerbattle_single TRAINER_PETALBURG_LYLE, PetalburgWoods_Text_GoBugPokemonTeam, PetalburgWoods_Text_ICouldntWin
 	msgbox PetalburgWoods_Text_ImOutOfPokeBalls, MSGBOX_AUTOCLOSE
 	end
 
 PetalburgWoods_EventScript_James::
-	trainerbattle_single TRAINER_JAMES_1, PetalburgWoods_Text_InstantlyPopularWithBugPokemon, PetalburgWoods_Text_CantBePopularIfILose, PetalburgWoods_EventScript_TryRegisterJames
+	trainerbattle_single TRAINER_PETALBURG_JAMES, PetalburgWoods_Text_InstantlyPopularWithBugPokemon, PetalburgWoods_Text_CantBePopularIfILose, PetalburgWoods_EventScript_TryRegisterJames
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, PetalburgWoods_EventScript_JamesRematch
-	setvar VAR_0x8004, TRAINER_JAMES_1
+	setvar VAR_0x8004, TRAINER_PETALBURG_JAMES
 	specialvar VAR_RESULT, IsTrainerRegistered
 	goto_if_eq VAR_RESULT, FALSE, PetalburgWoods_EventScript_TryRegisterJames2
 	msgbox PetalburgWoods_Text_PeopleRespectYou, MSGBOX_DEFAULT
@@ -315,7 +378,7 @@ PetalburgWoods_EventScript_TryRegisterJames::
 
 PetalburgWoods_EventScript_RegisterJames::
 	msgbox PetalburgWoods_Text_IWantRematch1, MSGBOX_DEFAULT
-	register_matchcall TRAINER_JAMES_1
+	register_matchcall TRAINER_PETALBURG_JAMES
 	release
 	end
 
@@ -327,12 +390,12 @@ PetalburgWoods_EventScript_TryRegisterJames2::
 
 PetalburgWoods_EventScript_RegisterJames2::
 	msgbox PetalburgWoods_Text_IWantRematch2, MSGBOX_DEFAULT
-	register_matchcall TRAINER_JAMES_1
+	register_matchcall TRAINER_PETALBURG_JAMES
 	release
 	end
 
 PetalburgWoods_EventScript_JamesRematch::
-	trainerbattle_rematch TRAINER_JAMES_1, PetalburgWoods_Text_MyPokemonHaveGrown, PetalburgWoods_Text_CantBePopularIfLose
+	trainerbattle_rematch TRAINER_PETALBURG_JAMES, PetalburgWoods_Text_MyPokemonHaveGrown, PetalburgWoods_Text_CantBePopularIfLose
 	msgbox PetalburgWoods_Text_IveBeenTrainingHard, MSGBOX_AUTOCLOSE
 	end
 

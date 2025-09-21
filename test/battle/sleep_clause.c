@@ -531,7 +531,7 @@ DOUBLE_BATTLE_TEST("Sleep Clause: G-Max Befuddle can only sleep one opposing mon
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_BUG_BITE, target: opponentLeft, gimmick: GIMMICK_DYNAMAX,
+        TURN { MOVE(playerLeft, MOVE_MUNCH, target: opponentLeft, gimmick: GIMMICK_DYNAMAX,
                WITH_RNG(RNG_G_MAX_BEFUDDLE, STATUS1_SLEEP)); }
     } SCENE {
         MESSAGE("Butterfree used G-Max Befuddle!");

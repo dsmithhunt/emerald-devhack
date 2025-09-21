@@ -3387,17 +3387,16 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 }
                 break;
             case ABILITY_WATER_COMPACTION:
-                if (moveType == TYPE_WATER && isFriendlyFireOK
-                    && ShouldTriggerAbility(battlerAtk, battlerAtkPartner, atkPartnerAbility))
+                
+                if (moveType == TYPE_WATER)
                 {
                     if (moveTarget == MOVE_TARGET_FOES_AND_ALLY)
                     {
                         ADJUST_SCORE(DECENT_EFFECT);
                     }
-
-                    if (GetMoveStrikeCount(move) > 1 && effect != EFFECT_DRAGON_DARTS)
+                    if (ShouldTriggerAbility(battlerAtk, battlerAtkPartner, atkPartnerAbility))
                     {
-                        ADJUST_SCORE(DECENT_EFFECT);
+                        RETURN_SCORE_PLUS(WEAK_EFFECT);
                     }
                 }
                 else

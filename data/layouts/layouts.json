@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Rustpetal_Park/border.bin",
       "blockdata_filepath": "data/layouts/Rustpetal_Park/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_MANSION_1F",
+      "name": "PetalburgMansion_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/PetalburgMansion_1F/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgMansion_1F/map.bin"
     }
   ]
 }

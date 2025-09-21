@@ -4788,7 +4788,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rock Slide
 - Crunch
 
-=== TRAINER_ROXANNE_1 ===
+=== TRAINER_SIERRA ===
 Name: SIERRA
 Class: Leader
 Pic: Leader Sierra
@@ -9194,7 +9194,7 @@ Tentacruel
 Level: 45
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_ELI ===
+=== TRAINER_PETALBURG_ELI ===
 Name: ELI
 Class: Hiker
 Pic: Hiker
@@ -11319,7 +11319,7 @@ Wurmple
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LYLE ===
+=== TRAINER_PETALBURG_LYLE ===
 Name: LYLE
 Class: Bug Catcher
 Pic: Bug Catcher
@@ -11408,7 +11408,7 @@ Ninjask
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_JAMES_1 ===
+=== TRAINER_PETALBURG_JAMES ===
 Name: JAMES
 Class: Bug Catcher
 Pic: Bug Catcher
@@ -11417,16 +11417,21 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wurmple  
+Ability: Shield Dust
+Level: 6  
+Tera Type: Bug  
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe  
 
-Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nincada  
+Ability: Compound Eyes  
+Level: 7  
+Tera Type: Bug  
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe  
 
-=== TRAINER_JAMES_2 ===
-Name: JAMES
+
+=== TRAINER_PETALBURG_ELI ===
+Name: ELI
 Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
@@ -11434,12 +11439,55 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Ninjask
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Cascoon  
+Ability: Shed Skin  
+Level: 9  
+Tera Type: Bug  
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe  
+- String Shot  
+- Tackle  
+- Poison Sting  
+- Harden  
 
-=== TRAINER_JAMES_3 ===
-Name: JAMES
+Surskit  
+Ability: Swift Swim  
+Level: 9  
+Tera Type: Bug  
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe  
+
+
+=== TRAINER_PETALBURG_NOAH ===
+Name: NOAH
+Class: Bug Maniac
+Pic: Bug Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Silcoon  
+Ability: Shed Skin  
+Level: 9  
+Tera Type: Bug  
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe  
+- String Shot  
+- Tackle  
+- Poison Sting  
+- Harden  
+
+Beautifly  
+Ability: Swarm  
+Level: 12  
+Tera Type: Bug  
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe  
+- Gust  
+- Munch  
+- Poison Sting  
+- Absorb 
+
+
+=== TRAINER_PETALBURG_CODY ===
+Name: CODY
 Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
@@ -11447,59 +11495,53 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Dustox
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Blipbug  
+Ability: Swarm  
+Level: 9  
+Tera Type: Bug  
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe  
 
-Ninjask
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Grubbin  
+Ability: Swarm  
+Level: 10  
+Tera Type: Bug  
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe 
 
-=== TRAINER_JAMES_4 ===
-Name: JAMES
-Class: Bug Catcher
-Pic: Bug Catcher
+
+=== TRAINER_PETALBURG_AIDEN ===
+Name: AIDEN
+Class: Bug Maniac
+Pic: Bug Maniac
 Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Surskit
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Wurmple  
+Ability: Shield Dust  
+Level: 8  
+Tera Type: Bug  
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe  
 
-Dustox
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Cascoon  
+Ability: Shed Skin  
+Level: 9  
+Tera Type: Bug  
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe  
+- String Shot  
+- Tackle  
+- Poison Sting  
+- Harden  
 
-Ninjask
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_JAMES_5 ===
-Name: JAMES
-Class: Bug Catcher
-Pic: Bug Catcher
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Surskit
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Ninjask
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Dustox
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Ninjask
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Dustox  
+Ability: Shield Dust  
+Level: 11  
+Tera Type: Bug  
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe  
+- Munch  
+- Gust  
+- Poison Sting  
+- Tackle 
 
 === TRAINER_BRICE ===
 Name: BRICE

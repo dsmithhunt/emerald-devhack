@@ -183,13 +183,13 @@ SINGLE_BATTLE_TEST("Pickup doesn't grant an item if it knocked off that item")
 SINGLE_BATTLE_TEST("Pickup doesn't grant an item if the user eats it with Bug Bite/Pluck")
 {
     GIVEN {
-        ASSUME(MoveHasAdditionalEffect(MOVE_BUG_BITE, MOVE_EFFECT_BUG_BITE));
+        ASSUME(MoveHasAdditionalEffect(MOVE_MUNCH, MOVE_EFFECT_BUG_BITE));
         PLAYER(SPECIES_ZIGZAGOON) { Ability(ABILITY_PICKUP); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_SITRUS_BERRY); }
     } WHEN {
-        TURN { MOVE(player, MOVE_BUG_BITE); }
+        TURN { MOVE(player, MOVE_MUNCH); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BUG_BITE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MUNCH, player);
         NONE_OF {
             ABILITY_POPUP(player, ABILITY_PICKUP);
             MESSAGE("Zigzagoon found one Sitrus Berry!");

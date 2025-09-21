@@ -1162,3 +1162,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PorytilesTestMap/scripts.inc"
 
 	.include "data/maps/Rustpetal_Park/scripts.inc"
+
+	.include "data/maps/PetalburgMansion_1F/scripts.inc"

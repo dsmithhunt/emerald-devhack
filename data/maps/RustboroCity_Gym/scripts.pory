@@ -139,6 +139,67 @@ script RustboroCity_Gym_EventScript_ClearBarriersAltState {
 	releaseall
 }
 
+script RustboroCity_Gym_Band {
+	trainerbattle_two_trainers(
+		TRAINER_JERRY_2, 
+		format("If you take bug POKéMON to school,\n""you get to be instantly popular!"),
+		TRAINER_JERRY_3, 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("If you have a big bug POKéMON,\n""people respect you for it."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script RustboroCity_Gym_RichBoy {
+	trainerbattle_single(
+		TRAINER_TOMMY, 
+		format("If you take bug POKéMON to school,\n""you get to be instantly popular!"), 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("If you have a big bug POKéMON,\n""people respect you for it."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script RustboroCity_Gym_BattleGirl {
+	trainerbattle_single(
+		TRAINER_JERRY_4, 
+		format("If you take bug POKéMON to school,\n""you get to be instantly popular!"), 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("If you have a big bug POKéMON,\n""people respect you for it."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script RustboroCity_Gym_Beauty {
+	trainerbattle_single(
+		TRAINER_JERRY_5, 
+		format("If you take bug POKéMON to school,\n""you get to be instantly popular!"), 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("If you have a big bug POKéMON,\n""people respect you for it."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script RustboroCity_Gym_Cameraman {
+	trainerbattle_single(
+		TRAINER_MARC, 
+		format("If you take bug POKéMON to school,\n""you get to be instantly popular!"), 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("If you have a big bug POKéMON,\n""people respect you for it."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script RustboroCity_Gym_Damien {
+	trainerbattle_single(
+		TRAINER_KAREN_2, 
+		format("If you take bug POKéMON to school,\n""you get to be instantly popular!"), 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("If you have a big bug POKéMON,\n""people respect you for it."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
 script RustboroCity_Gym_CheckBadge {
 	if(flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
 		end
@@ -192,7 +253,7 @@ script RustboroCity_Gym_ChallengeSierra {
 	waitmovement(0)
 	special(RemoveCameraObject)
 	trainerbattle_double(
-		TRAINER_ROXANNE_1, 
+		TRAINER_SIERRA, 
 		format("Let's see if you can win against my shockingly cute POKéMON!"), 
 		format(
 			"Wow! You did it! By defeating a gym leader, you earn a gym badge!\p"
@@ -244,14 +305,14 @@ script RustboroCity_Gym_GiveTM {
 
 script RustboroCity_Gym_Sierra {
 	lock
-	trainerbattle_double(TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_SierraDefeated, NO_MUSIC)
+	trainerbattle_double(TRAINER_SIERRA, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_SierraDefeated, NO_MUSIC)
 	msgbox(RustboroCity_Gym_Text_RoxannePostBattle)
 	release
 }
 
 raw `
 RustboroCity_Gym_EventScript_Roxanne::
-	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_SIERRA, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
 	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
@@ -283,7 +344,7 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 	end
 
 RustboroCity_Gym_EventScript_RoxanneRematch::
-	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+	trainerbattle_rematch_double TRAINER_SIERRA, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
 	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
 	end
 

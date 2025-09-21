@@ -49,7 +49,7 @@ LavaridgeTown_Gym_B1F_EventScript_SetJeffTempVar::
 # 25 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"
 LavaridgeTown_Gym_B1F_EventScript_SetEliTempVar::
 # 26 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"
-	goto_if_defeated TRAINER_ELI, LavaridgeTown_Gym_B1F_EventScript_EndSetTrainerTempVars
+	goto_if_defeated TRAINER_PETALBURG_ELI, LavaridgeTown_Gym_B1F_EventScript_EndSetTrainerTempVars
 # 27 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"
 	setvar VAR_TEMP_A, 1
 # 28 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"
@@ -79,7 +79,7 @@ LavaridgeTown_Gym_B1F_EventScript_CheckBuryJeff::
 # 40 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"
 LavaridgeTown_Gym_B1F_EventScript_CheckBuryEli::
 # 41 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"
-	goto_if_defeated TRAINER_ELI, LavaridgeTown_Gym_B1F_EventScript_EndCheckBuryTrainers
+	goto_if_defeated TRAINER_PETALBURG_ELI, LavaridgeTown_Gym_B1F_EventScript_EndCheckBuryTrainers
 # 42 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"
 	setobjectmovementtype LOCALID_ELI, MOVEMENT_TYPE_BURIED
 # 43 "data/maps/LavaridgeTown_Gym_B1F/scripts.pory"

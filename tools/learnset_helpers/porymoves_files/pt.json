@@ -1151,7 +1151,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       }
     ],
     "PreEvoMoves": [],
@@ -1173,7 +1173,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_STRING_SHOT",
       "MOVE_TACKLE",
       "MOVE_SNORE"
@@ -1244,7 +1244,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_HARDEN",
       "MOVE_STRING_SHOT",
       "MOVE_TACKLE",
@@ -1310,7 +1310,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       }
     ],
     "PreEvoMoves": [],
@@ -1330,7 +1330,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_POISON_STING",
       "MOVE_STRING_SHOT"
     ],
@@ -1392,7 +1392,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_HARDEN",
       "MOVE_POISON_STING",
       "MOVE_STRING_SHOT",
@@ -4983,7 +4983,7 @@
       "MOVE_ROCK_SMASH"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_COUNTER",
       "MOVE_CROSS_POISON",
       "MOVE_FALSE_SWIPE",
@@ -5101,7 +5101,7 @@
       "MOVE_ROCK_SMASH"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_COUNTER",
       "MOVE_CROSS_POISON",
       "MOVE_FALSE_SWIPE",
@@ -5210,7 +5210,7 @@
     "EggMoves": [
       "MOVE_AGILITY",
       "MOVE_BATON_PASS",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_GIGA_DRAIN",
       "MOVE_MORNING_SUN",
       "MOVE_SCREECH",
@@ -5337,7 +5337,7 @@
     "EggMoves": [
       "MOVE_AGILITY",
       "MOVE_BATON_PASS",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_GIGA_DRAIN",
       "MOVE_MORNING_SUN",
       "MOVE_SCREECH",
@@ -19340,7 +19340,7 @@
     ],
     "EggMoves": [
       "MOVE_BIDE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_BUG_BUZZ",
       "MOVE_ENCORE",
       "MOVE_KNOCK_OFF",
@@ -19467,7 +19467,7 @@
     ],
     "EggMoves": [
       "MOVE_BIDE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_BUG_BUZZ",
       "MOVE_ENCORE",
       "MOVE_KNOCK_OFF",
@@ -19594,7 +19594,7 @@
     "LevelMoves": [
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -23688,7 +23688,7 @@
       },
       {
         "Level": 9,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 17,
@@ -23799,7 +23799,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 6,
@@ -23811,7 +23811,7 @@
       },
       {
         "Level": 9,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 17,
@@ -24911,7 +24911,7 @@
       },
       {
         "Level": 40,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 48,
@@ -31171,7 +31171,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       }
     ],
     "PreEvoMoves": [],
@@ -31193,7 +31193,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_POISON_STING",
       "MOVE_STRING_SHOT",
       "MOVE_TACKLE",
@@ -31253,7 +31253,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_HARDEN",
       "MOVE_POISON_STING",
       "MOVE_STRING_SHOT",
@@ -31316,7 +31316,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_POISON_STING",
       "MOVE_STRING_SHOT",
       "MOVE_TACKLE",
@@ -31376,7 +31376,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_HARDEN",
       "MOVE_POISON_STING",
       "MOVE_STRING_SHOT",
@@ -32971,7 +32971,7 @@
       "MOVE_SUBSTITUTE"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FORESIGHT",
       "MOVE_HYDRO_PUMP",
       "MOVE_MIND_READER",
@@ -33095,7 +33095,7 @@
       "MOVE_DEFOG"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FORESIGHT",
       "MOVE_HYDRO_PUMP",
       "MOVE_MIND_READER",
@@ -33801,7 +33801,7 @@
       "MOVE_CUT"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_BUG_BUZZ",
       "MOVE_ENDURE",
       "MOVE_FAINT_ATTACK",
@@ -33820,7 +33820,7 @@
     "LevelMoves": [
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -33931,7 +33931,7 @@
       "MOVE_DEFOG"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_BUG_BUZZ",
       "MOVE_ENDURE",
       "MOVE_FAINT_ATTACK",
@@ -34041,7 +34041,7 @@
       "MOVE_CUT"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_BUG_BUZZ",
       "MOVE_ENDURE",
       "MOVE_FAINT_ATTACK",
@@ -46986,7 +46986,7 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       }
     ],
     "PreEvoMoves": [],
@@ -47055,7 +47055,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE"
+      "MOVE_MUNCH"
     ],
     "TMMoves": [
       "MOVE_TOXIC",
@@ -48071,7 +48071,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 20,
@@ -48097,7 +48097,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 20,
@@ -48199,7 +48199,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 20,
@@ -48304,7 +48304,7 @@
       },
       {
         "Level": 13,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       }
     ],
     "PreEvoMoves": [],
@@ -48387,7 +48387,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE"
+      "MOVE_MUNCH"
     ],
     "TMMoves": [
       "MOVE_TOXIC",
@@ -52346,7 +52346,7 @@
       },
       {
         "Level": 34,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 39,
@@ -52474,7 +52474,7 @@
       },
       {
         "Level": 34,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 39,
@@ -54628,7 +54628,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -58158,7 +58158,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 20,
@@ -58260,7 +58260,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 20,

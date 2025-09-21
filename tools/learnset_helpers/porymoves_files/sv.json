@@ -3413,7 +3413,7 @@
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_TOXIC",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ENDEAVOR",
       "MOVE_SKITTER_SMACK",
@@ -3422,7 +3422,7 @@
     "EggMoves": [
       "MOVE_AGILITY",
       "MOVE_BATON_PASS",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_MORNING_SUN",
       "MOVE_RAGE_POWDER",
       "MOVE_SCREECH",
@@ -3533,7 +3533,7 @@
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_TOXIC",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_DOUBLE_EDGE",
       "MOVE_ENDEAVOR",
@@ -3544,7 +3544,7 @@
     "EggMoves": [
       "MOVE_AGILITY",
       "MOVE_BATON_PASS",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_MORNING_SUN",
       "MOVE_RAGE_POWDER",
       "MOVE_SCREECH",
@@ -5413,7 +5413,7 @@
       "MOVE_TERA_BLAST",
       "MOVE_TOXIC",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_WEATHER_BALL",
       "MOVE_GRASSY_GLIDE",
@@ -5520,7 +5520,7 @@
       "MOVE_TERA_BLAST",
       "MOVE_TOXIC",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_WEATHER_BALL",
       "MOVE_GRASSY_GLIDE",
@@ -10036,7 +10036,7 @@
       "MOVE_HYPER_BEAM",
       "MOVE_CLOSE_COMBAT",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_VACUUM_WAVE",
       "MOVE_LUNGE",
       "MOVE_DUAL_WINGBEAT",
@@ -12748,7 +12748,7 @@
       "MOVE_SMACK_DOWN",
       "MOVE_GYRO_BALL",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_SUPER_FANG",
       "MOVE_VACUUM_WAVE",
       "MOVE_LUNGE",
@@ -14474,7 +14474,7 @@
       "MOVE_TOXIC",
       "MOVE_SPITE",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ELECTROWEB",
       "MOVE_SLUDGE_WAVE",
@@ -14513,7 +14513,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -14611,7 +14611,7 @@
       "MOVE_TOXIC",
       "MOVE_SPITE",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ELECTROWEB",
       "MOVE_SLUDGE_WAVE",
@@ -16957,7 +16957,7 @@
       },
       {
         "Level": 30,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 33,
@@ -17016,7 +17016,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_UPROAR",
       "MOVE_PSYCH_UP",
@@ -18196,7 +18196,7 @@
       },
       {
         "Level": 9,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 12,
@@ -18280,7 +18280,7 @@
       "MOVE_SAND_TOMB",
       "MOVE_GRAVITY",
       "MOVE_GYRO_BALL",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_PAIN_SPLIT",
       "MOVE_DOUBLE_EDGE",
@@ -18313,7 +18313,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -18426,7 +18426,7 @@
       "MOVE_SAND_TOMB",
       "MOVE_GRAVITY",
       "MOVE_GYRO_BALL",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_PAIN_SPLIT",
       "MOVE_DOUBLE_EDGE",
@@ -19273,7 +19273,7 @@
       "MOVE_STEEL_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_VACUUM_WAVE",
       "MOVE_LUNGE",
       "MOVE_DUAL_WINGBEAT",
@@ -19406,7 +19406,7 @@
       "MOVE_TERA_BLAST",
       "MOVE_SMACK_DOWN",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_VACUUM_WAVE",
       "MOVE_LUNGE",
       "MOVE_HIGH_HORSEPOWER",
@@ -26125,14 +26125,14 @@
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_HAZE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_PSYCH_UP",
       "MOVE_SKITTER_SMACK"
     ],
     "EggMoves": [
       "MOVE_AQUA_JET",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FELL_STINGER",
       "MOVE_HYDRO_PUMP",
       "MOVE_LUNGE",
@@ -26246,7 +26246,7 @@
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_HAZE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_WEATHER_BALL",
       "MOVE_DUAL_WINGBEAT",
@@ -26255,7 +26255,7 @@
     ],
     "EggMoves": [
       "MOVE_AQUA_JET",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FELL_STINGER",
       "MOVE_HYDRO_PUMP",
       "MOVE_LUNGE",
@@ -28301,7 +28301,7 @@
       "MOVE_THUNDER",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DOUBLE_EDGE",
@@ -28430,7 +28430,7 @@
       "MOVE_THUNDER",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FOCUS_PUNCH",
       "MOVE_PSYCH_UP",
       "MOVE_DOUBLE_EDGE",
@@ -29499,7 +29499,7 @@
       "MOVE_HYPER_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_SAND_TOMB",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_SCORCHING_SANDS"
     ],
     "EggMoves": [
@@ -29508,7 +29508,7 @@
       "MOVE_FLAIL",
       "MOVE_FURY_CUTTER",
       "MOVE_FEINT",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FIRST_IMPRESSION"
     ],
     "TutorMoves": []
@@ -29644,7 +29644,7 @@
       "MOVE_DRACO_METEOR",
       "MOVE_TERA_BLAST",
       "MOVE_SAND_TOMB",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_UPROAR",
       "MOVE_DUAL_WINGBEAT",
       "MOVE_SCORCHING_SANDS",
@@ -29804,7 +29804,7 @@
       "MOVE_DRACO_METEOR",
       "MOVE_TERA_BLAST",
       "MOVE_SAND_TOMB",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_VACUUM_WAVE",
       "MOVE_UPROAR",
       "MOVE_DUAL_WINGBEAT",
@@ -35895,14 +35895,14 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       }
     ],
     "PreEvoMoves": [],
     "TMMoves": [
       "MOVE_STRUGGLE_BUG",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ENDEAVOR",
       "MOVE_SKITTER_SMACK"
@@ -36003,7 +36003,7 @@
       "MOVE_HYPER_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_UPROAR",
       "MOVE_ENDEAVOR",
@@ -36864,7 +36864,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -36877,7 +36877,7 @@
       "MOVE_SLEEP_TALK",
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ENDEAVOR",
       "MOVE_SKITTER_SMACK"
@@ -36901,7 +36901,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -37005,7 +37005,7 @@
       "MOVE_TERA_BLAST",
       "MOVE_TOXIC",
       "MOVE_SPITE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_DUAL_WINGBEAT",
       "MOVE_ENDEAVOR",
@@ -41641,7 +41641,7 @@
       },
       {
         "Level": 30,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 33,
@@ -41696,7 +41696,7 @@
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_UPROAR",
       "MOVE_DUAL_WINGBEAT",
@@ -47059,7 +47059,7 @@
       },
       {
         "Level": 8,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 15,
@@ -47112,7 +47112,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_GRASSY_GLIDE",
       "MOVE_ELECTROWEB",
@@ -47147,7 +47147,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 22,
@@ -47197,7 +47197,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_GRASSY_GLIDE",
       "MOVE_ELECTROWEB",
@@ -47220,7 +47220,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -47272,7 +47272,7 @@
       }
     ],
     "PreEvoMoves": [
-      "MOVE_BUG_BITE"
+      "MOVE_MUNCH"
     ],
     "TMMoves": [
       "MOVE_TAKE_DOWN",
@@ -47317,7 +47317,7 @@
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_GRASSY_GLIDE",
       "MOVE_ELECTROWEB",
@@ -50689,7 +50689,7 @@
       },
       {
         "Level": 8,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 12,
@@ -50762,7 +50762,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_THUNDER",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ELECTROWEB",
       "MOVE_SKITTER_SMACK"
@@ -50792,7 +50792,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -50872,7 +50872,7 @@
       "MOVE_THUNDER",
       "MOVE_TERA_BLAST",
       "MOVE_CHARGE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ELECTROWEB",
       "MOVE_SKITTER_SMACK",
@@ -54062,7 +54062,7 @@
       "MOVE_FLARE_BLITZ",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_DOUBLE_EDGE",
       "MOVE_SKITTER_SMACK"
@@ -54131,7 +54131,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 30,
@@ -54210,7 +54210,7 @@
       "MOVE_FLARE_BLITZ",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_DUAL_WINGBEAT",
       "MOVE_DOUBLE_EDGE",
@@ -57094,7 +57094,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       }
     ],
     "PreEvoMoves": [],
@@ -57102,7 +57102,7 @@
       "MOVE_STRUGGLE_BUG",
       "MOVE_POUNCE",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE"
+      "MOVE_MUNCH"
     ],
     "EggMoves": [
       "MOVE_POISON_POWDER",
@@ -57128,7 +57128,7 @@
       "MOVE_POUNCE",
       "MOVE_IRON_DEFENSE",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE"
+      "MOVE_MUNCH"
     ],
     "EggMoves": [
       "MOVE_POISON_POWDER",
@@ -57225,7 +57225,7 @@
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_WEATHER_BALL",
       "MOVE_SKITTER_SMACK"
     ],
@@ -62759,7 +62759,7 @@
       },
       {
         "Level": 10,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 15,
@@ -62814,7 +62814,7 @@
       "MOVE_WILD_CHARGE",
       "MOVE_TERA_BLAST",
       "MOVE_CHARGE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ELECTROWEB",
       "MOVE_SKITTER_SMACK"
@@ -62845,7 +62845,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 15,
@@ -62912,7 +62912,7 @@
       "MOVE_THUNDER",
       "MOVE_TERA_BLAST",
       "MOVE_CHARGE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ELECTROWEB",
       "MOVE_SKITTER_SMACK"
@@ -62951,7 +62951,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -63008,7 +63008,7 @@
       "MOVE_MUD_SLAP",
       "MOVE_IRON_DEFENSE",
       "MOVE_X_SCISSOR",
-      "MOVE_BUG_BITE"
+      "MOVE_MUNCH"
     ],
     "TMMoves": [
       "MOVE_TAKE_DOWN",
@@ -63053,7 +63053,7 @@
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_CHARGE",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_SUPERCELL_SLAM",
       "MOVE_ELECTROWEB",
@@ -63488,7 +63488,7 @@
       "MOVE_BATON_PASS",
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_PSYCH_UP",
       "MOVE_SKITTER_SMACK"
     ],
@@ -63594,7 +63594,7 @@
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_DUAL_WINGBEAT",
       "MOVE_PSYCH_UP",
@@ -64275,7 +64275,7 @@
       },
       {
         "Level": 4,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 8,
@@ -64350,7 +64350,7 @@
       "MOVE_BLIZZARD",
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ENDEAVOR",
       "MOVE_SKITTER_SMACK"
@@ -64375,7 +64375,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 1,
@@ -64459,7 +64459,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_HYPER_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ENDEAVOR",
       "MOVE_SKITTER_SMACK"
@@ -64544,7 +64544,7 @@
       "MOVE_LEAF_STORM",
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_WEATHER_BALL",
       "MOVE_GRASSY_GLIDE",
       "MOVE_PETAL_BLIZZARD",
@@ -64655,7 +64655,7 @@
       "MOVE_SOLAR_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_SOLAR_BLADE",
       "MOVE_WEATHER_BALL",
       "MOVE_GRASSY_GLIDE",
@@ -71828,13 +71828,13 @@
       "MOVE_SUBSTITUTE",
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ICICLE_SPEAR",
       "MOVE_SKITTER_SMACK"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FAIRY_WIND",
       "MOVE_MIRROR_COAT"
     ],
@@ -71951,7 +71951,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_HYPER_BEAM",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_ICICLE_SPEAR",
       "MOVE_WEATHER_BALL",
@@ -71960,7 +71960,7 @@
       "MOVE_SKITTER_SMACK"
     ],
     "EggMoves": [
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_FAIRY_WIND",
       "MOVE_MIRROR_COAT"
     ],
@@ -74517,7 +74517,7 @@
       "MOVE_CLOSE_COMBAT",
       "MOVE_TERA_BLAST",
       "MOVE_SMACK_DOWN",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_VACUUM_WAVE",
       "MOVE_LUNGE",
       "MOVE_DUAL_WINGBEAT",
@@ -76450,7 +76450,7 @@
       },
       {
         "Level": 14,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 18,
@@ -76514,7 +76514,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_SKITTER_SMACK",
       "MOVE_THROAT_CHOP"
@@ -76555,7 +76555,7 @@
       },
       {
         "Level": 14,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 19,
@@ -76629,7 +76629,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_PAIN_SPLIT",
       "MOVE_ELECTROWEB",
@@ -76681,7 +76681,7 @@
       },
       {
         "Level": 22,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 26,
@@ -76721,7 +76721,7 @@
       "MOVE_X_SCISSOR",
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_SKITTER_SMACK"
     ],
     "EggMoves": [
@@ -76778,7 +76778,7 @@
       },
       {
         "Level": 22,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 28,
@@ -76843,7 +76843,7 @@
       "MOVE_TERA_BLAST",
       "MOVE_SPITE",
       "MOVE_KNOCK_OFF",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_LASH_OUT",
       "MOVE_DOUBLE_EDGE",
@@ -80509,7 +80509,7 @@
       },
       {
         "Level": 20,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 24,
@@ -80548,7 +80548,7 @@
       "MOVE_SLUDGE_BOMB",
       "MOVE_BUG_BUZZ",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_WEATHER_BALL",
       "MOVE_SKITTER_SMACK"
@@ -80605,7 +80605,7 @@
       },
       {
         "Level": 20,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 24,
@@ -80693,7 +80693,7 @@
       "MOVE_HYPER_BEAM",
       "MOVE_TERA_BLAST",
       "MOVE_GRAVITY",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_WEATHER_BALL",
       "MOVE_POLTERGEIST",
@@ -84620,7 +84620,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUG_BITE"
+        "Move": "MOVE_MUNCH"
       },
       {
         "Level": 7,
@@ -84721,7 +84721,7 @@
       "MOVE_FLARE_BLITZ",
       "MOVE_CLOSE_COMBAT",
       "MOVE_TERA_BLAST",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_LUNGE",
       "MOVE_HIGH_HORSEPOWER",
       "MOVE_HEAT_CRASH",
@@ -87473,7 +87473,7 @@
       "MOVE_DRACO_METEOR",
       "MOVE_TERA_BLAST",
       "MOVE_GYRO_BALL",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_GRASSY_GLIDE",
       "MOVE_DRAGON_CHEER"
     ],
@@ -88380,7 +88380,7 @@
       "MOVE_DRACO_METEOR",
       "MOVE_TERA_BLAST",
       "MOVE_GYRO_BALL",
-      "MOVE_BUG_BITE",
+      "MOVE_MUNCH",
       "MOVE_UPROAR",
       "MOVE_GRASSY_GLIDE",
       "MOVE_DOUBLE_EDGE",

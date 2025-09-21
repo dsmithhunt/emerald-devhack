@@ -1,6 +1,6 @@
 PetalburgWoods_EventScript_BugCatcher01::
 # 2 "data/maps/PetalburgWoods/scripts.pory"
-	trainerbattle_single TRAINER_LYLE, BugCatcher01_Intro, BugCatcher01_Outro
+	trainerbattle_single TRAINER_PETALBURG_LYLE, BugCatcher01_Intro, BugCatcher01_Outro
 # 3 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox BugCatcher01_PostBattle, MSGBOX_AUTOCLOSE
 # 4 "data/maps/PetalburgWoods/scripts.pory"
@@ -555,7 +555,7 @@ PetalburgWoods_EventScript_Sign2::
 # 293 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_EventScript_Lyle::
 # 294 "data/maps/PetalburgWoods/scripts.pory"
-	trainerbattle_single TRAINER_LYLE, PetalburgWoods_Text_GoBugPokemonTeam, PetalburgWoods_Text_ICouldntWin
+	trainerbattle_single TRAINER_PETALBURG_LYLE, PetalburgWoods_Text_GoBugPokemonTeam, PetalburgWoods_Text_ICouldntWin
 # 295 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox PetalburgWoods_Text_ImOutOfPokeBalls, MSGBOX_AUTOCLOSE
 # 296 "data/maps/PetalburgWoods/scripts.pory"
@@ -565,13 +565,13 @@ PetalburgWoods_EventScript_Lyle::
 # 298 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_EventScript_James::
 # 299 "data/maps/PetalburgWoods/scripts.pory"
-	trainerbattle_single TRAINER_JAMES_1, PetalburgWoods_Text_InstantlyPopularWithBugPokemon, PetalburgWoods_Text_CantBePopularIfILose, PetalburgWoods_EventScript_TryRegisterJames
+	trainerbattle_single TRAINER_PETALBURG_JAMES, PetalburgWoods_Text_InstantlyPopularWithBugPokemon, PetalburgWoods_Text_CantBePopularIfILose, PetalburgWoods_EventScript_TryRegisterJames
 # 300 "data/maps/PetalburgWoods/scripts.pory"
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 # 301 "data/maps/PetalburgWoods/scripts.pory"
 	goto_if_eq VAR_RESULT, TRUE, PetalburgWoods_EventScript_JamesRematch
 # 302 "data/maps/PetalburgWoods/scripts.pory"
-	setvar VAR_0x8004, TRAINER_JAMES_1
+	setvar VAR_0x8004, TRAINER_PETALBURG_JAMES
 # 303 "data/maps/PetalburgWoods/scripts.pory"
 	specialvar VAR_RESULT, IsTrainerRegistered
 # 304 "data/maps/PetalburgWoods/scripts.pory"
@@ -603,7 +603,7 @@ PetalburgWoods_EventScript_RegisterJames::
 # 317 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox PetalburgWoods_Text_IWantRematch1, MSGBOX_DEFAULT
 # 318 "data/maps/PetalburgWoods/scripts.pory"
-	register_matchcall TRAINER_JAMES_1
+	register_matchcall TRAINER_PETALBURG_JAMES
 # 319 "data/maps/PetalburgWoods/scripts.pory"
 	release
 # 320 "data/maps/PetalburgWoods/scripts.pory"
@@ -627,7 +627,7 @@ PetalburgWoods_EventScript_RegisterJames2::
 # 329 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox PetalburgWoods_Text_IWantRematch2, MSGBOX_DEFAULT
 # 330 "data/maps/PetalburgWoods/scripts.pory"
-	register_matchcall TRAINER_JAMES_1
+	register_matchcall TRAINER_PETALBURG_JAMES
 # 331 "data/maps/PetalburgWoods/scripts.pory"
 	release
 # 332 "data/maps/PetalburgWoods/scripts.pory"
@@ -637,7 +637,7 @@ PetalburgWoods_EventScript_RegisterJames2::
 # 334 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_EventScript_JamesRematch::
 # 335 "data/maps/PetalburgWoods/scripts.pory"
-	trainerbattle_rematch TRAINER_JAMES_1, PetalburgWoods_Text_MyPokemonHaveGrown, PetalburgWoods_Text_CantBePopularIfLose
+	trainerbattle_rematch TRAINER_PETALBURG_JAMES, PetalburgWoods_Text_MyPokemonHaveGrown, PetalburgWoods_Text_CantBePopularIfLose
 # 336 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox PetalburgWoods_Text_IveBeenTrainingHard, MSGBOX_AUTOCLOSE
 # 337 "data/maps/PetalburgWoods/scripts.pory"

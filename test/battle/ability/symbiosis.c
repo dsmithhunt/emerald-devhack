@@ -38,10 +38,10 @@ DOUBLE_BATTLE_TEST("Symbiosis triggers after partners berry eaten from bug bite"
         OPPONENT(SPECIES_STARAVIA);
         OPPONENT(SPECIES_SHUCKLE);
     } WHEN {
-        TURN { MOVE(opponentLeft, MOVE_BUG_BITE, target: playerLeft); }
+        TURN { MOVE(opponentLeft, MOVE_MUNCH, target: playerLeft); }
     } SCENE {
         MESSAGE("The opposing Staravia used Bug Bite!");
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BUG_BITE, opponentLeft);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MUNCH, opponentLeft);
         HP_BAR(playerLeft);
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, opponentLeft);
         MESSAGE("Using Liechi Berry, the Attack of the opposing Staravia rose!");

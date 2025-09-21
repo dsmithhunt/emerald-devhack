@@ -3,8 +3,8 @@
 
 ASSUMPTIONS
 {
-    ASSUME(MoveHasAdditionalEffect(MOVE_BUG_BITE, MOVE_EFFECT_BUG_BITE));
-    ASSUME(GetMovePP(MOVE_BUG_BITE) == 20);
+    ASSUME(MoveHasAdditionalEffect(MOVE_MUNCH, MOVE_EFFECT_BUG_BITE));
+    ASSUME(GetMovePP(MOVE_MUNCH) == 20);
 }
 
 // Pretty much copy/paste of the Berry Fling Test.
@@ -33,14 +33,14 @@ SINGLE_BATTLE_TEST("Bug Bite eats the target's berry and immediately gains its e
     PARAMETRIZE { item = ITEM_SALAC_BERRY; effect = HOLD_EFFECT_SPEED_UP; statId = STAT_SPEED; }
 
     GIVEN {
-        PLAYER(SPECIES_WOBBUFFET) { HP(399); MaxHP(400); Status1(status1); Moves(MOVE_SLEEP_TALK, MOVE_BUG_BITE); }
+        PLAYER(SPECIES_WOBBUFFET) { HP(399); MaxHP(400); Status1(status1); Moves(MOVE_SLEEP_TALK, MOVE_MUNCH); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(item); }
     } WHEN {
         // Chesto Berry can only be applied if the Pokémon is asleep and uses Sleep Talk.
         if (item == ITEM_CHESTO_BERRY) {
             TURN { MOVE(player, MOVE_SLEEP_TALK); }
         } else {
-            TURN { MOVE(player, MOVE_BUG_BITE); }
+            TURN { MOVE(player, MOVE_MUNCH); }
         }
 
     } SCENE {
@@ -48,7 +48,7 @@ SINGLE_BATTLE_TEST("Bug Bite eats the target's berry and immediately gains its e
             MESSAGE("Wobbuffet used Sleep Talk!");
         }
         MESSAGE("Wobbuffet used Bug Bite!");
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BUG_BITE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MUNCH, player);
         HP_BAR(opponent);
         if (effect == HOLD_EFFECT_RESTORE_HP || effect == HOLD_EFFECT_ENIGMA_BERRY) {
             if (item == ITEM_ORAN_BERRY) {
@@ -122,12 +122,12 @@ SINGLE_BATTLE_TEST("Tanga Berry activates before Bug Bite")
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET) {Item(ITEM_TANGA_BERRY); }
     } WHEN {
-        TURN { MOVE(player, MOVE_BUG_BITE); }
+        TURN { MOVE(player, MOVE_MUNCH); }
     } SCENE {
         MESSAGE("Wobbuffet used Bug Bite!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, opponent);
         MESSAGE("The Tanga Berry weakened the damage to the opposing Wobbuffet!");
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BUG_BITE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MUNCH, player);
         HP_BAR(opponent);
     } THEN {
         EXPECT_EQ(player->item, ITEM_NONE);
@@ -140,9 +140,9 @@ SINGLE_BATTLE_TEST("Bug Bite ignores Unnerve")
         PLAYER(SPECIES_WOBBUFFET) { HP(1); }
         OPPONENT(SPECIES_TYRANITAR) { Ability(ABILITY_UNNERVE); Item(ITEM_ORAN_BERRY); }
     } WHEN {
-        TURN { MOVE(player, MOVE_BUG_BITE); }
+        TURN { MOVE(player, MOVE_MUNCH); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BUG_BITE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MUNCH, player);
         HP_BAR(player);
     } THEN {
         EXPECT_EQ(opponent->item, ITEM_NONE);

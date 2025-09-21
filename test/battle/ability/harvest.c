@@ -153,13 +153,13 @@ SINGLE_BATTLE_TEST("Harvest doesn't restore a Berry when eaten by Bug Bite/Pluck
 {
     PASSES_RANDOMLY(1, 1, RNG_HARVEST);
     GIVEN {
-        ASSUME(MoveHasAdditionalEffect(MOVE_BUG_BITE, MOVE_EFFECT_BUG_BITE));
+        ASSUME(MoveHasAdditionalEffect(MOVE_MUNCH, MOVE_EFFECT_BUG_BITE));
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_EXEGGUTOR) { Ability(ABILITY_HARVEST); Item(ITEM_SITRUS_BERRY); }
     } WHEN {
-        TURN { MOVE(player, MOVE_BUG_BITE); MOVE(opponent, MOVE_SUNNY_DAY); }
+        TURN { MOVE(player, MOVE_MUNCH); MOVE(opponent, MOVE_SUNNY_DAY); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_BUG_BITE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_MUNCH, player);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_SUNNY_DAY, opponent);
         NOT ABILITY_POPUP(opponent, ABILITY_HARVEST);
     } THEN {

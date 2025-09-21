@@ -309,7 +309,7 @@ RustboroCity_Gym_ChallengeSierra::
 # 193 "data/maps/RustboroCity_Gym/scripts.pory"
 	special RemoveCameraObject
 # 194 "data/maps/RustboroCity_Gym/scripts.pory"
-	trainerbattle_double TRAINER_ROXANNE_1, RustboroCity_Gym_ChallengeSierra_Text_2, RustboroCity_Gym_ChallengeSierra_Text_3, RustboroCity_Gym_ChallengeSierra_Text_4, RustboroCity_Gym_SierraDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_SIERRA, RustboroCity_Gym_ChallengeSierra_Text_2, RustboroCity_Gym_ChallengeSierra_Text_3, RustboroCity_Gym_ChallengeSierra_Text_4, RustboroCity_Gym_SierraDefeated, NO_MUSIC
 	return
 
 RustboroCity_Gym_ChallengeSierra_1:
@@ -388,7 +388,7 @@ RustboroCity_Gym_Sierra::
 # 246 "data/maps/RustboroCity_Gym/scripts.pory"
 	lock
 # 247 "data/maps/RustboroCity_Gym/scripts.pory"
-	trainerbattle_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_SierraDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_SIERRA, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons, RustboroCity_Gym_SierraDefeated, NO_MUSIC
 # 248 "data/maps/RustboroCity_Gym/scripts.pory"
 	msgbox RustboroCity_Gym_Text_RoxannePostBattle
 # 249 "data/maps/RustboroCity_Gym/scripts.pory"
@@ -401,7 +401,7 @@ RustboroCity_Gym_Sierra::
 # 253 "data/maps/RustboroCity_Gym/scripts.pory"
 RustboroCity_Gym_EventScript_Roxanne::
 # 254 "data/maps/RustboroCity_Gym/scripts.pory"
-	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_SIERRA, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
 # 255 "data/maps/RustboroCity_Gym/scripts.pory"
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 # 256 "data/maps/RustboroCity_Gym/scripts.pory"
@@ -465,7 +465,7 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 # 285 "data/maps/RustboroCity_Gym/scripts.pory"
 RustboroCity_Gym_EventScript_RoxanneRematch::
 # 286 "data/maps/RustboroCity_Gym/scripts.pory"
-	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+	trainerbattle_rematch_double TRAINER_SIERRA, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
 # 287 "data/maps/RustboroCity_Gym/scripts.pory"
 	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
 # 288 "data/maps/RustboroCity_Gym/scripts.pory"

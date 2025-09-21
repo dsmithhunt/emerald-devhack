@@ -12265,6 +12265,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_PETALBURG_MANSION_1F",
+          "base_label": "gPetalburgMansion_1F",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_MISDREAVUS"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_MIME_JR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
         }
       ]
     },

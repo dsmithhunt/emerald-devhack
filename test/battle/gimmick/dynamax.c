@@ -1111,7 +1111,7 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Befuddle paralyzes, poisons, or sleeps both o
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_BUG_BITE, target: opponentLeft, gimmick: GIMMICK_DYNAMAX,
+        TURN { MOVE(playerLeft, MOVE_MUNCH, target: opponentLeft, gimmick: GIMMICK_DYNAMAX,
                WITH_RNG(RNG_G_MAX_BEFUDDLE, rng)); }
     } SCENE {
         MESSAGE("Butterfree used G-Max Befuddle!");
