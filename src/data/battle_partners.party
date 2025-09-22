@@ -45,6 +45,137 @@ EVs: 80 HP / 76 Def / 64 Spe
 - Flash Cannon
 - Flash
 
+=== PARTNER_MAY_CHESPIN ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+Back Pic: May
+AI: Basic Trainer
+
+Emboar
+Hardy Nature
+Level: 36
+
+Swellow
+Bold Nature
+Level: 36
+
+Grumpig
+Quirky Nature
+Level: 36
+
+
+=== PARTNER_MAY_TEPIG ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+Back Pic: May
+AI: Basic Trainer
+
+Inteleon
+Hardy Nature
+Level: 36
+
+Swellow
+Bold Nature
+Level: 36
+
+Grumpig
+Quirky Nature
+Level: 36
+
+
+=== PARTNER_MAY_SOBBLE ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+Back Pic: May
+AI: Basic Trainer
+
+Chesnaught
+Hardy Nature
+Level: 36
+
+Swellow
+Bold Nature
+Level: 36
+
+Grumpig
+Quirky Nature
+Level: 36
+
+
+=== PARTNER_BRENDAN_CHESPIN ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+Back Pic: Brendan
+AI: Basic Trainer
+
+Emboar
+Hardy Nature
+Level: 36
+
+Swellow
+Bold Nature
+Level: 36
+
+Grumpig
+Quirky Nature
+Level: 36
+
+
+=== PARTNER_BRENDAN_TEPIG ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+Back Pic: Brendan
+AI: Basic Trainer
+
+Inteleon
+Hardy Nature
+Level: 36
+
+Swellow
+Bold Nature
+Level: 36
+
+Grumpig
+Quirky Nature
+Level: 36
+
+
+=== PARTNER_BRENDAN_SOBBLE ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+Back Pic: Brendan
+AI: Basic Trainer
+
+Chesnaught
+Hardy Nature
+Level: 36
+
+Swellow
+Bold Nature
+Level: 36
+
+Grumpig
+Quirky Nature
+Level: 36
+
 
 === PARTNER_STEVEN ===
 Name: STEVEN

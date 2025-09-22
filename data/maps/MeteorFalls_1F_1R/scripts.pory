@@ -1,10 +1,279 @@
+script MeteorFalls_PartySelect {
+	lockall
+	playse(SE_PIN)
+	applymovement(LOCALID_RIVAL, moves(
+		emote_exclamation_mark
+		face_up
+		))
+	applymovement(LOCALID_PLAYER, moves(
+		face_down
+		))
+	if (checkplayergender() == MALE){
+		msgbox(format(
+			"MAY: Good, you're here.\n"
+			"I hear Prof. Cozmo up ahead.\p"
+			"Do you have POKéMON ready in case we have to battle?"
+			))
+	} else {
+		msgbox(format(
+			"BRENDAN: Good, you're here.\n"
+			"I hear Prof. Cozmo up ahead.\p"
+			"Do you have POKéMON ready in case we have to battle?"
+			))
+	}
+	special(SavePlayerParty)
+	fadescreen(FADE_TO_BLACK)
+	special(ChooseHalfPartyForBattle)
+	waitstate
+	goto_if_ne(VAR_RESULT, 0, MeteorFalls_MeteoriteScene)
+	special(LoadPlayerParty)
+	call(MeteorFalls_DeclineMulti)
+}
+
+script MeteorFalls_DeclineMulti {
+	if (checkplayergender() == MALE){
+		msgbox(format("MAY: Get ready, quick!"))
+	} else {
+		msgbox(format("BRENDAN: Get ready, quick!"))
+	}
+	closemessage
+	applymovement(LOCALID_PLAYER, moves(
+		walk_right
+	))
+	waitmovement(0)
+	releaseall
+}
+
+script MeteorFalls_MeteoriteScene {
+	addobject(LOCALID_AQUA_ADMIN)
+	addobject(LOCALID_AQUA_GRUNT)
+	applymovement(LOCALID_PLAYER, moves(
+		player_run_left * 6
+		player_run_left * 3
+		player_run_down * 3
+		walk_in_place_down
+	))
+	applymovement(LOCALID_RIVAL, moves(
+		player_run_left * 6
+		player_run_up
+		player_run_left * 3
+		player_run_down * 2
+		player_run_left
+		player_run_down
+		walk_in_place_down
+	))
+	waitmovement(0)
+	playbgm (MUS_ENCOUNTER_MAGMA, TRUE)
+	msgbox(format("ADMIN MATT: Ha! We've got you Magma fools dead to rights.\p""When the leader gets here, he'll make short work of you."))
+	closemessage
+	playse(SE_PIN)
+	applymovement(LOCALID_AQUA_ADMIN, moves(
+		emote_exclamation_mark
+		walk_in_place_fast_up
+	))
+	applymovement(LOCALID_MAGMA_ADMIN, moves(
+		emote_exclamation_mark
+		walk_in_place_fast_up
+	))
+	waitmovement(0)
+	msgbox(format(
+		"ADMIN MATT: So, Courtney…\n"
+		"You got reinforcements…\p"
+		"Gah! It doesn't matter!\n"
+		"I'll take you all on!"))
+	call(MeteorFalls_GetPartner)
+}
+
+script MeteorFalls_GetPartner {
+	if (checkplayergender() == MALE){
+		switch(var(VAR_STARTER_MON)){
+		case 0: // Chose Chespin
+			multi_2_vs_1(TRAINER_MATT, MeteorFalls_Text_AdminLose, PARTNER_MAY_CHESPIN)
+			call(MeteorFalls_AdminDefeated)
+		case 1: // Chose Tepig
+			multi_2_vs_1(TRAINER_MATT, MeteorFalls_Text_AdminLose, PARTNER_MAY_TEPIG)
+			call(MeteorFalls_AdminDefeated)
+		case 2: // Chose Sobble
+			multi_2_vs_1(TRAINER_MATT, MeteorFalls_Text_AdminLose, PARTNER_MAY_SOBBLE)
+			call(MeteorFalls_AdminDefeated)
+	}
+	} else {
+		switch(var(VAR_STARTER_MON)){
+		case 0: // Chose Chespin
+			multi_2_vs_1(TRAINER_MATT, MeteorFalls_Text_AdminLose, PARTNER_BRENDAN_CHESPIN)
+			call(MeteorFalls_AdminDefeated)
+		case 1: // Chose Tepig
+			multi_2_vs_1(TRAINER_MATT, MeteorFalls_Text_AdminLose, PARTNER_BRENDAN_TEPIG)
+			call(MeteorFalls_AdminDefeated)
+		case 2: // Chose Sobble
+			multi_2_vs_1(TRAINER_MATT, MeteorFalls_Text_AdminLose, PARTNER_BRENDAN_SOBBLE)
+			call(MeteorFalls_AdminDefeated)
+	}
+	}
+}
+
+text MeteorFalls_Text_AdminLose {
+	format("How'd I lose to some kids?")
+}
+
+script MeteorFalls_AdminDefeated {
+	applymovement(LOCALID_PLAYER, moves(
+		walk_in_place_up
+	))
+	applymovement(LOCALID_RIVAL, moves(
+		walk_in_place_up
+	))
+	applymovement(LOCALID_AQUA_GRUNT, moves(
+		walk_fast_up * 1
+		walk_fast_right * 2
+	))
+	applymovement(LOCALID_MAGMA_ADMIN, moves(
+		walk_fast_up * 2
+		walk_fast_right * 2
+		walk_fast_up * 2
+		walk_fast_right
+		walk_in_place_fast_down
+	))
+	applymovement(LOCALID_MAGMA_GRUNT, moves(
+		walk_fast_up * 2
+		walk_fast_right * 4
+		walk_fast_up * 2
+		walk_in_place_fast_down
+	))
+	waitmovement(0)
+	msgbox(format(
+		"ADMIN COURTNEY: I don't know who you are, but you distracted that oaf for us so I kinda like you.\p"
+		"Now, with this meteorite, we can awaken the volcanic beast of Mt. Chimney!\p"
+		"Maybe, I'll be lucky enough to see you there…"
+		))
+	closemessage
+	applymovement(LOCALID_RIVAL, moves(
+		player_run_down
+		player_run_left
+		walk_in_place_left
+	))
+	applymovement(LOCALID_MAGMA_ADMIN, moves(
+		walk_fast_right * 8
+	))
+	applymovement(LOCALID_MAGMA_GRUNT, moves(
+		walk_fast_right * 8
+	))
+	waitmovement(0)
+	removeobject(LOCALID_MAGMA_ADMIN)
+	removeobject(LOCALID_MAGMA_GRUNT)
+	applymovement(10, moves(face_right))
+	if (checkplayergender() == MALE){
+		msgbox(format("MAY: Prof. Cozmo, are you okay?"))
+	} else {
+		msgbox(format("BRENDAN: Prof. Cozmo, are you okay?"))
+	}
+	closemessage
+	addobject(LOCALID_METEOR_FALLS_ARCHIE)
+	applymovement(LOCALID_METEOR_FALLS_ARCHIE, moves(
+		walk_right * 6
+	))
+	waitmovement(0)
+	applymovement(LOCALID_METEOR_FALLS_ARCHIE, moves(
+		walk_right
+		walk_in_place_down
+	))
+	applymovement(LOCALID_AQUA_ADMIN, moves(
+		walk_fast_left
+		walk_fast_up
+	))
+	applymovement(LOCALID_AQUA_GRUNT, moves(
+		walk_fast_up
+		walk_fast_right * 2
+	))
+	waitmovement(0)
+	msgbox(format(
+		"ADMIN MATT: Boss! They got away…\p"
+		"ARCHIE: Aye, we'll have to stop them atop Mt. Chimney."))
+	applymovement(LOCALID_METEOR_FALLS_ARCHIE, moves(
+		walk_right
+		emote_exclamation_mark
+		walk_in_place_down
+	))
+	playse(SE_PIN)
+	waitse
+	applymovement(LOCALID_PLAYER, moves(
+		walk_in_place_up
+	))
+	msgbox(format(
+		"ARCHIE: Haven't I seen you before?\p"
+		"Ah, SLATEPORT's MUSEUM?\n"
+		"So your name is {PLAYER}.\p"
+		"You're one brave kid to put yourself in the middle of all this.\p"
+		"TEAM MAGMA is a greedy bunch of fanatics who would destabalize the world for their misguided solutions."))
+	closemessage
+	applymovement(LOCALID_METEOR_FALLS_ARCHIE, moves(
+		face_left
+	))
+	applymovement(LOCALID_AQUA_ADMIN, moves(
+		walk_up
+		face_right
+	))
+	waitmovement(0)
+	msgbox(format(
+		"ADMIN MATT: Sir, shouldn't we go after TEAM MAGMA?\p"
+		"ARCHIE: Aye. Sorry, I got distracted.\n""I saw a bit of myself in that kid.\p""After them!"
+	))
+	closemessage
+	applymovement(LOCALID_METEOR_FALLS_ARCHIE, moves(
+		walk_fast_up * 2
+		walk_fast_right * 11
+	))
+	applymovement(LOCALID_AQUA_ADMIN, moves(
+		walk_fast_right * 1
+		walk_fast_up * 2
+		walk_fast_right * 10
+	))
+	applymovement(LOCALID_AQUA_GRUNT, moves(
+		walk_fast_right * 2
+		walk_fast_up * 2
+		walk_fast_right * 9
+	))
+	waitmovement(0)
+	savebgm(MUS_CAVE_OF_ORIGIN)
+	fadedefaultbgm
+	removeobject (LOCALID_METEOR_FALLS_ARCHIE)
+	removeobject (LOCALID_AQUA_ADMIN)
+	removeobject (LOCALID_AQUA_GRUNT)
+	setflag (FLAG_HIDE_ROUTE_112_TEAM_MAGMA)
+	setflag (FLAG_MET_ARCHIE_METEOR_FALLS)
+	setflag (FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT)
+	setvar (VAR_METEOR_FALLS_STATE, 1)
+	setobjectxyperm (LOCALID_RIVAL, 12, 22)
+	releaseall
+}
+
+script MeteorFalls_Rival {
+	lock
+	faceplayer
+	if (checkplayergender() == MALE){
+		msgbox(format("MAY: I'll take care of Prof. Cozmo! You go to Mt. Chimney!"))
+	} else {
+		msgbox(format("BRENDAN: I'll take care of Prof. Cozmo! You go to Mt. Chimney!"))
+	}
+	release
+}
+
+script MeteorFalls_1F_1R_EventScript_SetRivalPos {
+	setobjectxyperm (LOCALID_RIVAL, 12, 22)
+}
+
 raw `
 MeteorFalls_1F_1R_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MeteorFalls_1F_1R_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, MeteorFalls_1F_1R_OnTransition
 	.byte 0
 
 MeteorFalls_1F_1R_OnLoad:
 	call_if_set FLAG_SYS_GAME_CLEAR, MeteorFalls_1F_1R_EventScript_OpenStevensCave
+	end
+
+MeteorFalls_1F_1R_OnTransition:
+	call_if_eq VAR_METEOR_FALLS_STATE, 1, MeteorFalls_1F_1R_EventScript_SetRivalPos
 	end
 
 MeteorFalls_1F_1R_EventScript_OpenStevensCave::
@@ -13,210 +282,6 @@ MeteorFalls_1F_1R_EventScript_OpenStevensCave::
 	setmetatile 4, 2, METATILE_MeteorFalls_CaveEntrance_Bottom, FALSE
 	setmetatile 5, 2, METATILE_MeteorFalls_CaveEntrance_Right, TRUE
 	return
-
-MeteorFalls_1F_1R_EventScript_MagmaStealsMeteoriteScene::
-	lockall
-	playbgm MUS_ENCOUNTER_MAGMA, FALSE
-	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
-	delay 30
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, Common_Movement_WalkInPlaceDown
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_WithThisMeteorite, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, Common_Movement_WalkInPlaceFasterUp
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_2, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	playse SE_PIN
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, Common_Movement_Delay48
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_DontExpectMercyFromMagma, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, MeteorFalls_1F_1R_Movement_MagmaGruntApproachPlayer
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_HoldItRightThereMagma, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, Common_Movement_WalkInPlaceFasterLeft
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_2, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	addobject LOCALID_METEOR_FALLS_ARCHIE
-	addobject LOCALID_METEOR_FALLS_AQUA_GRUNT_1
-	addobject LOCALID_METEOR_FALLS_AQUA_GRUNT_2
-	playbgm MUS_ENCOUNTER_AQUA, FALSE
-	applymovement LOCALID_METEOR_FALLS_ARCHIE, MeteorFalls_1F_1R_Movement_ArchieArrive
-	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT_1, MeteorFalls_1F_1R_Movement_AquaGrunt1Arrive
-	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT_2, MeteorFalls_1F_1R_Movement_AquaGrunt2Arrive
-	waitmovement 0
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, Common_Movement_WalkInPlaceFasterLeft
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_2, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, MeteorFalls_1F_1R_Movement_PushPlayerOutOfWay
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_1, MeteorFalls_1F_1R_Movement_MagmaGrunt1Exit
-	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT_2, MeteorFalls_1F_1R_Movement_MagmaGrunt2Exit
-	waitmovement 0
-	removeobject LOCALID_METEOR_FALLS_MAGMA_GRUNT_1
-	removeobject LOCALID_METEOR_FALLS_MAGMA_GRUNT_2
-	applymovement LOCALID_METEOR_FALLS_ARCHIE, MeteorFalls_1F_1R_Movement_ArchieApproachPlayer
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_ArchieSeenYouBefore, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT_1, MeteorFalls_1F_1R_Movement_AquaGrunt1ApproachArchie
-	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT_2, MeteorFalls_1F_1R_Movement_AquaGrunt2ApproachArchie
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma, MSGBOX_DEFAULT
-	applymovement LOCALID_METEOR_FALLS_ARCHIE, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo, MSGBOX_DEFAULT
-	applymovement LOCALID_METEOR_FALLS_ARCHIE, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	msgbox MeteorFalls_1F_1R_Text_ArchieFarewell, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_METEOR_FALLS_ARCHIE, MeteorFalls_1F_1R_Movement_ArchieExit
-	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT_1, MeteorFalls_1F_1R_Movement_AquaGrunt1Exit
-	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT_2, MeteorFalls_1F_1R_Movement_AquaGrunt2Exit
-	waitmovement 0
-	fadedefaultbgm
-	removeobject LOCALID_METEOR_FALLS_ARCHIE
-	removeobject LOCALID_METEOR_FALLS_AQUA_GRUNT_1
-	removeobject LOCALID_METEOR_FALLS_AQUA_GRUNT_2
-	setflag FLAG_HIDE_ROUTE_112_TEAM_MAGMA
-	setflag FLAG_MET_ARCHIE_METEOR_FALLS
-	setflag FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT
-	setvar VAR_METEOR_FALLS_STATE, 1
-	releaseall
-	end
-
-MeteorFalls_1F_1R_Movement_MagmaGruntApproachPlayer:
-	walk_right
-	walk_right
-	walk_in_place_faster_up
-	step_end
-
-MeteorFalls_1F_1R_Movement_MagmaGrunt1Exit:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_MagmaGrunt2Exit:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_ArchieArrive:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_AquaGrunt1Arrive:
-	delay_16
-	delay_16
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_AquaGrunt2Arrive:
-	delay_16
-	delay_16
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_ArchieExit:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_ArchieApproachPlayer:
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_in_place_faster_left
-	step_end
-
-MeteorFalls_1F_1R_Movement_AquaGrunt1Exit:
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_AquaGrunt1ApproachArchie:
-	walk_right
-	walk_right
-	walk_right
-	walk_in_place_faster_up
-	step_end
-
-MeteorFalls_1F_1R_Movement_AquaGrunt2Exit:
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-MeteorFalls_1F_1R_Movement_AquaGrunt2ApproachArchie:
-	walk_right
-	walk_right
-	walk_right
-	walk_in_place_faster_up
-	step_end
-
-MeteorFalls_1F_1R_Movement_PushPlayerOutOfWay:
-	walk_in_place_faster_down
-	delay_4
-	walk_in_place_faster_right
-	lock_facing_direction
-	walk_left
-	unlock_facing_direction
-	face_right
-	step_end
 
 MeteorFalls_1F_1R_EventScript_ProfCozmo::
 	lock
@@ -231,63 +296,6 @@ MeteorFalls_1F_1R_EventScript_MetCozmo::
 	msgbox MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney, MSGBOX_DEFAULT
 	release
 	end
-
-MeteorFalls_1F_1R_Text_WithThisMeteorite:
-	.string "Hehehe!\p"
-	.string "With this METEORITE, that thing in\n"
-	.string "MT. CHIMNEY will…$"
-
-MeteorFalls_1F_1R_Text_DontExpectMercyFromMagma:
-	.string "Heh?\p"
-	.string "I don't know who you are, but if you get\n"
-	.string "in the way of TEAM MAGMA, don't\l"
-	.string "expect any mercy!$"
-
-MeteorFalls_1F_1R_Text_HoldItRightThereMagma:
-	.string "Hold it right there, TEAM MAGMA!\p"
-	.string "You're badly mistaken if you think you\n"
-	.string "can have your way with the world!$"
-
-MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua:
-	.string "Hehehe!\n"
-	.string "Even TEAM AQUA joins us!\p"
-	.string "But it's too much trouble to deal with\n"
-	.string "you all…\p"
-	.string "Heh, it doesn't matter!\p"
-	.string "We've got the METEORITE, so off to\n"
-	.string "MT. CHIMNEY we go!\p"
-	.string "Hehehe! Be seeing you, you TEAM\n"
-	.string "AQUA dingbats!$"
-
-MeteorFalls_1F_1R_Text_ArchieSeenYouBefore:
-	.string "ARCHIE: Didn't I see you before?\n"
-	.string "At SLATEPORT's MUSEUM?\p"
-	.string "Ah, so your name is {PLAYER}.\p"
-	.string "At the time, I thought you were one\n"
-	.string "of TEAM MAGMA's goons.\p"
-	.string "Humph…\n"
-	.string "You're one odd kid.\p"
-	.string "TEAM MAGMA is a dangerous group of\n"
-	.string "total fanatics.\p"
-	.string "They engage in destruction, claiming\n"
-	.string "to expand the land mass.\p"
-	.string "They are the rivals to us,\n"
-	.string "the sea-loving TEAM AQUA!$"
-
-MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma:
-	.string "BOSS, we should give chase to\n"
-	.string "TEAM MAGMA…$"
-
-MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo:
-	.string "ARCHIE: Yes, yes, we must!\n"
-	.string "We've got to hurry.\p"
-	.string "There's no telling what TEAM MAGMA\n"
-	.string "will do at MT. CHIMNEY!$"
-
-MeteorFalls_1F_1R_Text_ArchieFarewell:
-	.string "ARCHIE: {PLAYER}, you should keep\n"
-	.string "an eye out for TEAM MAGMA, too.\p"
-	.string "Farewell!$"
 
 MeteorFalls_1F_1R_Text_MeetProfCozmo:
 	.string "I… I'm COZMO…\n"
