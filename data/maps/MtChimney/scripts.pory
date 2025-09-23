@@ -441,10 +441,12 @@ MtChimney_EventScript_BusyMagmaGrunt6::
 	end
 
 MtChimney_EventScript_MagmaPoochyena::
+	playmoncry SPECIES_HOUNDOUR, 0
 	msgbox MtChimney_Text_Bufoh, MSGBOX_SIGN
 	end
 
 MtChimney_EventScript_AquaPoochyena::
+	playmoncry SPECIES_POOCHYENA, 0
 	msgbox MtChimney_Text_Bushaa, MSGBOX_SIGN
 	end
 

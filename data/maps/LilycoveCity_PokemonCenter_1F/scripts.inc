@@ -59,74 +59,72 @@ LilycoveCity_PokemonCenter_1F_EventScript_Nurse::
 # 30 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	waitmessage
 # 31 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	waitbuttonpress
+	call PokemonCenter_Turn
 # 32 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	release
+	end
 # 33 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 34 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-
-# 35 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_EventScript_Boy::
-# 36 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 35 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon, MSGBOX_NPC
+# 36 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+	end
 # 37 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 38 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-
-# 39 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_EventScript_Maniac::
-# 40 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 39 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	lock
-# 41 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 40 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	faceplayer
-# 42 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 41 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	goto_if_set FLAG_BADGE07_GET, LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone
-# 43 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 42 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels, MSGBOX_DEFAULT
+# 43 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+	release
 # 44 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	release
+	end
 # 45 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 46 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-
-# 47 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone::
-# 48 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 47 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels, MSGBOX_DEFAULT
-# 49 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 48 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	release
-# 50 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 49 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	end
+# 50 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+
 # 51 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-
-# 52 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon:
-# 53 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 52 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "I wonder how many kinds of POKéMON\n"
-# 54 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 53 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "there are in the world.\p"
-# 55 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 54 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "It'd be great to cross seas and\n"
-# 56 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 55 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "trade POKéMON with people far away.$"
+# 56 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+
 # 57 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-
-# 58 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels:
-# 59 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 58 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "I've been hearing about some rotten\n"
-# 60 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 59 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "scoundrels who steal POKéMON and rip\l"
-# 61 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 60 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "off METEORITES.$"
-# 62 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 61 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 
-# 63 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 62 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels:
-# 64 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 63 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "Those rotten scoundrels who steal\n"
-# 65 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 64 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "POKéMON and rip off METEORITES…\p"
-# 66 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+# 65 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.string "I haven't seen them around recently.$"

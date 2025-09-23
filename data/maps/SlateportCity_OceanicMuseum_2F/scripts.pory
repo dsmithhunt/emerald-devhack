@@ -1,3 +1,67 @@
+script SlateportMuseum_GruntBattle {
+	msgbox (SlateportCity_OceanicMuseum_2F_Text_WereTeamAqua, MSGBOX_DEFAULT)
+	closemessage
+	applymovement(LOCALID_OCEANIC_MUSEUM_2F_GRUNT_1, SlateportCity_OceanicMuseum_2F_Movement_GruntApproachToBattle)
+	applymovement(LOCALID_OCEANIC_MUSEUM_2F_GRUNT_2, SlateportCity_OceanicMuseum_2F_Movement_GruntApproachToBattle)
+	waitmovement(0)
+	trainerbattle_two_trainers(TRAINER_GRUNT_MUSEUM_1, SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat, TRAINER_GRUNT_MUSEUM_2, SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat)
+	applymovement (LOCALID_OCEANIC_MUSEUM_2F_GRUNT_1, SlateportCity_OceanicMuseum_2F_Movement_GruntDefeated)
+	applymovement (LOCALID_OCEANIC_MUSEUM_2F_GRUNT_2, SlateportCity_OceanicMuseum_2F_Movement_GruntDefeated)
+	waitmovement (0)
+	msgbox (SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious, MSGBOX_DEFAULT)
+	closemessage
+	call (SlateportMuseum_GruntsDefeated)
+}
+
+script SlateportMuseum_Archie {
+	msgbox(format(
+		"ARCHIE: So, you're the one getting in the way?\p"
+		""
+		"I'm sorry, but I'll be taking those parts now, whippersnapper."
+		))
+	closemessage
+	addobject(LOCALID_ELITE)
+	playbgm (MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+	msgbox(format(
+		"ROSHI: Don't think that will be so simple Archie…"
+		))
+	applymovement(LOCALID_OCEANIC_MUSEUM_2F_ARCHIE, moves(face_left))
+	applymovement(LOCALID_ELITE, moves(
+		walk_down * 5
+		walk_right * 2
+	))
+	waitmovement(0)
+	msgbox(format(
+		"ARCHIE: Arr, Roshi!\n"
+		"Aye, your being here complicates things.\p"
+		"… … … … … …\n"
+		"… … … … … …\p"
+		"Well, seeing as our battle could\n"
+		"sink this city I hold so dearly,\l"
+		"I'll concede those parts."
+	))
+	applymovement(LOCALID_ELITE, moves(
+		walk_right
+	))
+	msgbox(format(
+		"ROSHI: Bold to think I'd even give your POKéMON a chance to splash.\p"
+		"ARCHIE: Ha! I wish I could still be so reckless…"
+		))
+	applymovement(LOCALID_OCEANIC_MUSEUM_2F_ARCHIE, moves(face_right))
+	msgbox(format("ARCHIE: Those parts are yours. Team Aqua will find another way.\p""Let's go!"))
+	closemessage
+	call(SlateportMuseum_PostArchie)
+}
+
+script SlateportMuseum_Roshi {
+	lock
+	faceplayer
+	msgbox(format(
+		"ROSHI: You did good keeping those grunts occupied until I could arrive.\p"
+		"Remember, knowing your opponent is as important to victory as knowing their POKéMON."))
+	release
+}
+
 raw `
 SlateportCity_OceanicMuseum_2F_MapScripts::
 	.byte 0
@@ -22,23 +86,12 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	msgbox SlateportCity_OceanicMuseum_2F_Text_WellTakeThoseParts, MSGBOX_DEFAULT
 	call_if_ne VAR_FACING, DIR_EAST, SlateportCity_OceanicMuseum_2F_EventScript_SternFaceGrunts
 	msgbox SlateportCity_OceanicMuseum_2F_Text_SternWhoAreYou, MSGBOX_DEFAULT
-	msgbox SlateportCity_OceanicMuseum_2F_Text_WereTeamAqua, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_OCEANIC_MUSEUM_2F_GRUNT_2, SlateportCity_OceanicMuseum_2F_Movement_GruntApproachToBattle
-	waitmovement 0
 	call_if_eq VAR_FACING, DIR_SOUTH, SlateportCity_OceanicMuseum_2F_EventScript_PlayerApproachGruntSouth
 	call_if_eq VAR_FACING, DIR_WEST, SlateportCity_OceanicMuseum_2F_EventScript_PlayerApproachGruntWest
-	trainerbattle_no_intro TRAINER_GRUNT_MUSEUM_1, SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat
-	msgbox SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_OCEANIC_MUSEUM_2F_GRUNT_2, SlateportCity_OceanicMuseum_2F_Movement_GruntDefeated
-	waitmovement 0
-	applymovement LOCALID_OCEANIC_MUSEUM_2F_GRUNT_1, SlateportCity_OceanicMuseum_2F_Movement_GruntApproachToBattle
-	waitmovement 0
-	msgbox SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_MUSEUM_2, SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat
-	applymovement LOCALID_OCEANIC_MUSEUM_2F_GRUNT_1, SlateportCity_OceanicMuseum_2F_Movement_GruntDefeated
-	waitmovement 0
+	goto SlateportMuseum_GruntBattle
+	
+SlateportMuseum_GruntsDefeated::
 	applymovement LOCALID_OCEANIC_MUSEUM_2F_GRUNT_1, Common_Movement_WalkInPlaceFasterDown
 	applymovement LOCALID_OCEANIC_MUSEUM_2F_GRUNT_2, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -53,8 +106,9 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	closemessage
 	applymovement LOCALID_OCEANIC_MUSEUM_2F_ARCHIE, SlateportCity_OceanicMuseum_2F_Movement_ArchieApproachPlayer
 	waitmovement 0
-	msgbox SlateportCity_OceanicMuseum_2F_Text_ArchieWarning, MSGBOX_DEFAULT
-	closemessage
+	call SlateportMuseum_Archie
+	
+SlateportMuseum_PostArchie::
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	fadescreen FADE_TO_BLACK
@@ -77,6 +131,7 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	special HealPlayerParty
 	callnative UpdateFollowingPokemon
 	removeobject LOCALID_OCEANIC_MUSEUM_2F_CAPT_STERN
+	removeobject LOCALID_ELITE
 	setflag FLAG_HIDE_ROUTE_110_TEAM_AQUA
 	call_if_eq VAR_REGISTER_BIRCH_STATE, 0, SlateportCity_OceanicMuseum_2F_EventScript_ReadyRegisterBirch
 	setflag FLAG_DELIVERED_DEVON_GOODS
@@ -273,7 +328,7 @@ SlateportCity_OceanicMuseum_2F_Text_ThankYouForTheParts:
 	.string "Yes? If you're looking for STERN,\n"
 	.string "that would be me.\p"
 	.string "Ah! Those must be the parts I ordered\n"
-	.string "from MR. STONE of DEVON.\p"
+	.string "from MR. STONE of DevCo.\p"
 	.string "Thank you! That's great!\n"
 	.string "We can prepare for our expedition now.$"
 
@@ -315,7 +370,7 @@ SlateportCity_OceanicMuseum_2F_Text_MeddlingKid:
 SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong:
 	.string "I came to see what was taking so\n"
 	.string "long to snatch some parts, and you\l"
-	.string "simps are held up by a mere child?$"
+	.string "scurvy dogs are held up by a mere child?$"
 
 SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "We are TEAM AQUA,\n"
@@ -350,7 +405,7 @@ SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs:
 	.string "Anyway, that was a tense situation!\n"
 	.string "Thank you for saving us!\p"
 	.string "Oh, yes, I almost forgot that you\n"
-	.string "even brought the parts from DEVON!$"
+	.string "even brought the parts from DevCo!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo:
 	.string "CAPT. STERN: Whoops!\n"

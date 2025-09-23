@@ -248,24 +248,26 @@ MeteorFalls_AdminDefeated_1:
 # 236 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 237 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	playbgm MUS_CAVE_OF_ORIGIN, TRUE
+	savebgm MUS_CAVE_OF_ORIGIN
 # 238 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	removeobject LOCALID_METEOR_FALLS_ARCHIE
+	fadedefaultbgm
 # 239 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	removeobject LOCALID_AQUA_ADMIN
+	removeobject LOCALID_METEOR_FALLS_ARCHIE
 # 240 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	removeobject LOCALID_AQUA_GRUNT
+	removeobject LOCALID_AQUA_ADMIN
 # 241 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setflag FLAG_HIDE_ROUTE_112_TEAM_MAGMA
+	removeobject LOCALID_AQUA_GRUNT
 # 242 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setflag FLAG_MET_ARCHIE_METEOR_FALLS
+	setflag FLAG_HIDE_ROUTE_112_TEAM_MAGMA
 # 243 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setflag FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT
+	setflag FLAG_MET_ARCHIE_METEOR_FALLS
 # 244 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setvar VAR_METEOR_FALLS_STATE, 1
+	setflag FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT
 # 245 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL, 12, 22
+	setvar VAR_METEOR_FALLS_STATE, 1
 # 246 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	setobjectxyperm LOCALID_RIVAL, 12, 22
+# 247 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	releaseall
 	return
 
@@ -276,140 +278,140 @@ MeteorFalls_AdminDefeated_2:
 
 
 MeteorFalls_Rival::
-# 250 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	lock
 # 251 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	lock
+# 252 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	faceplayer
 	checkplayergender
 # 0 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq MeteorFalls_Rival_2
-# 255 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 256 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	msgbox MeteorFalls_Rival_Text_1
 MeteorFalls_Rival_1:
-# 257 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 258 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	release
 	return
 
 MeteorFalls_Rival_2:
-# 253 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 254 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	msgbox MeteorFalls_Rival_Text_0
 	goto MeteorFalls_Rival_1
 
 
 MeteorFalls_1F_1R_EventScript_SetRivalPos::
-# 261 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 262 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	setobjectxyperm LOCALID_RIVAL, 12, 22
 	return
 
 
-# 264 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-
 # 265 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_MapScripts::
+
 # 266 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	map_script MAP_SCRIPT_ON_LOAD, MeteorFalls_1F_1R_OnLoad
+MeteorFalls_1F_1R_MapScripts::
 # 267 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, MeteorFalls_1F_1R_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, MeteorFalls_1F_1R_OnLoad
 # 268 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.byte 0
+	map_script MAP_SCRIPT_ON_TRANSITION, MeteorFalls_1F_1R_OnTransition
 # 269 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-
+	.byte 0
 # 270 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_OnLoad:
+
 # 271 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	call_if_set FLAG_SYS_GAME_CLEAR, MeteorFalls_1F_1R_EventScript_OpenStevensCave
+MeteorFalls_1F_1R_OnLoad:
 # 272 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	end
+	call_if_set FLAG_SYS_GAME_CLEAR, MeteorFalls_1F_1R_EventScript_OpenStevensCave
 # 273 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-
+	end
 # 274 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_OnTransition:
+
 # 275 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	call_if_eq VAR_METEOR_FALLS_STATE, 1, MeteorFalls_1F_1R_EventScript_SetRivalPos
+MeteorFalls_1F_1R_OnTransition:
 # 276 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	end
+	call_if_eq VAR_METEOR_FALLS_STATE, 1, MeteorFalls_1F_1R_EventScript_SetRivalPos
 # 277 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-
+	end
 # 278 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_EventScript_OpenStevensCave::
+
 # 279 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setmetatile 4, 1, METATILE_MeteorFalls_CaveEntrance_Top, TRUE
+MeteorFalls_1F_1R_EventScript_OpenStevensCave::
 # 280 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setmetatile 3, 2, METATILE_MeteorFalls_CaveEntrance_Left, TRUE
+	setmetatile 4, 1, METATILE_MeteorFalls_CaveEntrance_Top, TRUE
 # 281 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setmetatile 4, 2, METATILE_MeteorFalls_CaveEntrance_Bottom, FALSE
+	setmetatile 3, 2, METATILE_MeteorFalls_CaveEntrance_Left, TRUE
 # 282 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setmetatile 5, 2, METATILE_MeteorFalls_CaveEntrance_Right, TRUE
+	setmetatile 4, 2, METATILE_MeteorFalls_CaveEntrance_Bottom, FALSE
 # 283 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	return
+	setmetatile 5, 2, METATILE_MeteorFalls_CaveEntrance_Right, TRUE
 # 284 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-
+	return
 # 285 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_EventScript_ProfCozmo::
+
 # 286 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	lock
+MeteorFalls_1F_1R_EventScript_ProfCozmo::
 # 287 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	faceplayer
+	lock
 # 288 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	goto_if_set FLAG_MET_PROF_COZMO, MeteorFalls_1F_1R_EventScript_MetCozmo
+	faceplayer
 # 289 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setflag FLAG_MET_PROF_COZMO
+	goto_if_set FLAG_MET_PROF_COZMO, MeteorFalls_1F_1R_EventScript_MetCozmo
 # 290 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	msgbox MeteorFalls_1F_1R_Text_MeetProfCozmo, MSGBOX_DEFAULT
+	setflag FLAG_MET_PROF_COZMO
 # 291 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	release
+	msgbox MeteorFalls_1F_1R_Text_MeetProfCozmo, MSGBOX_DEFAULT
 # 292 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	end
-# 293 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-
-# 294 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_EventScript_MetCozmo::
-# 295 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	msgbox MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney, MSGBOX_DEFAULT
-# 296 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	release
-# 297 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 293 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	end
+# 294 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+
+# 295 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+MeteorFalls_1F_1R_EventScript_MetCozmo::
+# 296 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	msgbox MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney, MSGBOX_DEFAULT
+# 297 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	release
 # 298 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-
+	end
 # 299 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_Text_MeetProfCozmo:
-# 300 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "I… I'm COZMO…\n"
-# 301 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "I'm a PROFESSOR…\p"
-# 302 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "TEAM MAGMA asked me to guide them\n"
-# 303 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "to METEOR FALLS…\p"
-# 304 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "But they tricked me.\n"
-# 305 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "They even took my METEORITE away…\p"
-# 306 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "And then another similar bunch,\n"
-# 307 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "TEAM AQUA showed up.\p"
-# 308 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "After that…\n"
-# 309 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "I don't understand any of it.\p"
-# 310 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "But that TEAM MAGMA…\p"
-# 311 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "What are they going to do with that\n"
-# 312 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "METEORITE at MT. CHIMNEY?$"
-# 313 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 
-# 314 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney:
-# 315 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	.string "PROF. COZMO: But that TEAM MAGMA…\p"
-# 316 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 300 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+MeteorFalls_1F_1R_Text_MeetProfCozmo:
+# 301 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "I… I'm COZMO…\n"
+# 302 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "I'm a PROFESSOR…\p"
+# 303 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "TEAM MAGMA asked me to guide them\n"
+# 304 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "to METEOR FALLS…\p"
+# 305 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "But they tricked me.\n"
+# 306 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "They even took my METEORITE away…\p"
+# 307 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "And then another similar bunch,\n"
+# 308 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "TEAM AQUA showed up.\p"
+# 309 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "After that…\n"
+# 310 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "I don't understand any of it.\p"
+# 311 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "But that TEAM MAGMA…\p"
+# 312 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	.string "What are they going to do with that\n"
+# 313 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "METEORITE at MT. CHIMNEY?$"
+# 314 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+
+# 315 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney:
+# 316 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "PROF. COZMO: But that TEAM MAGMA…\p"
 # 317 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+	.string "What are they going to do with that\n"
+# 318 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	.string "METEORITE at MT. CHIMNEY?$"
 
 # 4 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -824,12 +826,12 @@ MeteorFalls_AdminDefeated_Text_5:
 	.string "After them!$"
 
 MeteorFalls_Rival_Text_0:
-# 253 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 254 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	.string "MAY: I'll take care of Prof. Cozmo! You\n"
 	.string "go to Mt. Chimney!$"
 
 MeteorFalls_Rival_Text_1:
-# 255 "data/maps/MeteorFalls_1F_1R/scripts.pory"
+# 256 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	.string "BRENDAN: I'll take care of Prof. Cozmo!\n"
 	.string "You go to Mt. Chimney!$"
 

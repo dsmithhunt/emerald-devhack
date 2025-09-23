@@ -29,56 +29,54 @@ VerdanturfTown_PokemonCenter_1F_EventScript_Nurse::
 # 15 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	waitmessage
 # 16 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
-	waitbuttonpress
+	call PokemonCenter_Turn
 # 17 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
-	release
+	end
 # 18 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
-	end
+
 # 19 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
-
-# 20 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman::
-# 21 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 20 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	msgbox VerdanturfTown_PokemonCenter_1F_Text_FaithInYourPokemon, MSGBOX_NPC
+# 21 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+	end
 # 22 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
-	end
+
 # 23 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
-
-# 24 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 VerdanturfTown_PokemonCenter_1F_EventScript_ExpertM::
-# 25 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 24 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	msgbox VerdanturfTown_PokemonCenter_1F_Text_VisitForBattleTent, MSGBOX_NPC
-# 26 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 25 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	end
+# 26 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+
 # 27 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
-
-# 28 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 VerdanturfTown_PokemonCenter_1F_Text_FaithInYourPokemon:
-# 29 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 28 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "You can't consider yourself a real\n"
-# 30 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 29 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "TRAINER if you don't have faith\l"
-# 31 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 30 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "in your POKéMON.\p"
-# 32 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 31 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "Only those people who can believe\n"
-# 33 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 32 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "in their battling POKéMON can win\l"
-# 34 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 33 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "through to the very end.$"
-# 35 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 34 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 
-# 36 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 35 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 VerdanturfTown_PokemonCenter_1F_Text_VisitForBattleTent:
-# 37 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 36 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "The reason why anyone would visit\n"
-# 38 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 37 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "VERDANTURF…\p"
-# 39 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 38 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "It's the BATTLE TENT. It goes without\n"
-# 40 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 39 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "saying.\p"
-# 41 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 40 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "Or is there somebody here that you\n"
-# 42 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
+# 41 "data/maps/VerdanturfTown_PokemonCenter_1F/scripts.pory"
 	.string "came to see?$"

@@ -27,46 +27,44 @@ MossdeepCity_PokemonCenter_1F_EventScript_Nurse::
 # 14 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	waitmessage
 # 15 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	waitbuttonpress
+	call PokemonCenter_Turn
 # 16 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	release
+	end
 # 17 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 18 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-
-# 19 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 MossdeepCity_PokemonCenter_1F_EventScript_Woman::
-# 20 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 19 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	msgbox MossdeepCity_PokemonCenter_1F_Text_GymLeaderDuoFormidable, MSGBOX_NPC
+# 20 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+	end
 # 21 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 22 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-
-# 23 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 MossdeepCity_PokemonCenter_1F_EventScript_Girl::
-# 24 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 23 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	msgbox MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves, MSGBOX_NPC
-# 25 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 24 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	end
+# 25 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+
 # 26 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-
-# 27 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 MossdeepCity_PokemonCenter_1F_Text_GymLeaderDuoFormidable:
-# 28 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 27 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "The GYM LEADERS in this town are\n"
-# 29 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 28 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "a formidable duo.\p"
-# 30 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 29 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "Their combination attacks are, like,\n"
-# 31 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 30 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "excellent and wow!$"
-# 32 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 31 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 
-# 33 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 32 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves:
-# 34 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 33 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "Depending on the special abilities of\n"
-# 35 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 34 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "POKéMON, some moves might change\l"
-# 36 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 35 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "or not work at all.$"

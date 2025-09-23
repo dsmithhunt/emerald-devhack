@@ -29,66 +29,64 @@ RustboroCity_PokemonCenter_1F_EventScript_Nurse::
 # 15 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	waitmessage
 # 16 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-	waitbuttonpress
+	call PokemonCenter_Turn
 # 17 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-	release
+	end
 # 18 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 19 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-
-# 20 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 RustboroCity_PokemonCenter_1F_EventScript_Man::
-# 21 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 20 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	msgbox RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities, MSGBOX_NPC
+# 21 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+	end
 # 22 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 23 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-
-# 24 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 RustboroCity_PokemonCenter_1F_EventScript_Boy::
-# 25 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 24 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	msgbox RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon, MSGBOX_NPC
+# 25 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+	end
 # 26 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-	end
+
 # 27 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-
-# 28 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 RustboroCity_PokemonCenter_1F_EventScript_Girl::
-# 29 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 28 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	msgbox RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor, MSGBOX_NPC
-# 30 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 29 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	end
+# 30 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+
 # 31 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-
-# 32 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities:
-# 33 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 32 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "My POKéMON has a NAIVE nature, and my\n"
-# 34 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 33 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "friend's has a JOLLY nature.\p"
-# 35 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 34 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "It's fascinating how POKéMON have\n"
-# 36 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 35 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "personalities!$"
+# 36 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+
 # 37 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
-
-# 38 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon:
-# 39 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 38 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "Just like people, there are male and\n"
-# 40 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 39 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "female POKéMON.\p"
-# 41 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 40 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "But no one seems to have any idea how\n"
-# 42 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 41 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "they're different.$"
-# 43 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 42 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 
-# 44 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 43 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor:
-# 45 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 44 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "The man next door gave me an HM!\p"
-# 46 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 45 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "I used it to teach my POKéMON how to\n"
-# 47 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
+# 46 "data/maps/RustboroCity_PokemonCenter_1F/scripts.pory"
 	.string "CUT down skinny trees.$"

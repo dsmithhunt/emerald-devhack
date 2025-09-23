@@ -29,46 +29,44 @@ DewfordTown_PokemonCenter_1F_EventScript_Nurse::
 # 15 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	waitmessage
 # 16 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
-	waitbuttonpress
+	call PokemonCenter_Turn
 # 17 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
-	release
+	end
 # 18 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
-	end
+
 # 19 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
-
-# 20 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 DewfordTown_PokemonCenter_1F_EventScript_PokefanF::
-# 21 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 20 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	msgbox DewfordTown_PokemonCenter_1F_Text_StoneCavern, MSGBOX_NPC
+# 21 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+	end
 # 22 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
-	end
+
 # 23 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
-
-# 24 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 DewfordTown_PokemonCenter_1F_EventScript_Man::
-# 25 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 24 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	msgbox DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM, MSGBOX_NPC
-# 26 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 25 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	end
+# 26 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+
 # 27 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
-
-# 28 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 DewfordTown_PokemonCenter_1F_Text_StoneCavern:
-# 29 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 28 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	.string "There's a stone cavern at the edge\n"
-# 30 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 29 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	.string "of town.\p"
-# 31 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 30 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	.string "I've heard you can find rare stones\n"
-# 32 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 31 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	.string "there.$"
-# 33 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 32 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 
-# 34 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 33 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM:
-# 35 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 34 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	.string "Even if a POKéMON faints and can't\n"
-# 36 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 35 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	.string "battle, it can still use a move learned\l"
-# 37 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
+# 36 "data/maps/DewfordTown_PokemonCenter_1F/scripts.pory"
 	.string "from a HIDDEN MACHINE (HM).$"
