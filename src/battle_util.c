@@ -4495,6 +4495,16 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_STRESS_EATING:
+            if (gBattlerAttacker != gBattlerTarget
+             && IsBattlerTurnDamaged(gBattlerTarget)
+             && IsBattlerAlive(battler))
+            {
+                gEffectBattler = battler;
+                BattleScriptCall(BattleScript_TargetAbilityStressEating);
+                effect++;
+            }
+            break;
         case ABILITY_BERSERK:
             if (IsBattlerTurnDamaged(battler)
              && IsBattlerAlive(battler)

@@ -1,3 +1,51 @@
+script SkyPillar_Top_Zinnia {
+	lockall
+	special(IsJirachiInParty)
+	if (var(VAR_RESULT) == TRUE) {
+		call (SkyPillar_Top_JirachiAwaken)
+	} elif (flag(FLAG_TEMP_2)) {
+		msgbox(format(
+			"ZINNIA: Without Rayquaza, we have no hope of stopping the LEGENDARY POKéMON…"
+			))
+		applymovement(LOCAL_ID_ZINNIA, moves(walk_in_place_down))
+		waitmovement(0)
+		msgbox(format(
+			"{PLAYER}{KUN}, you need to find the WISH POKéMON!"
+			))
+		applymovement(LOCAL_ID_ZINNIA, moves(walk_in_place_up))
+		waitmovement(0)
+	} else {
+		msgbox(format(
+			"ZINNIA: RAYQUAZA is still dormant…"
+			))
+		applymovement(LOCAL_ID_ZINNIA, moves(walk_in_place_down))
+		waitmovement(0)
+		msgbox(format(
+			"{PLAYER}{KUN}, there is another part to Rayquaza's legend. I thought it was metaphorical, but I must now reconsider.\p"
+			"When the people are at their most desperate, their wishes will coalesce into a comet that will awaken the WISH POKéMON.\p"
+			"If we can find this WISH POKéMON, we may be able to awaken Rayquaza."
+			))
+		setflag(FLAG_TEMP_2)
+		applymovement(LOCAL_ID_ZINNIA, moves(walk_in_place_up))
+		waitmovement(0)
+	}
+}
+
+script SkyPillar_Top_JirachiAwaken {
+	applymovement(LOCAL_ID_ZINNIA, moves(
+		walk_in_place_down
+		emote_exclamation_mark))
+	waitmovement(0)
+	msgbox(format(
+		"{PLAYER}{KUN}, you have Jirachi!\n"
+		"Use its power to awaken Rayquaza!"
+		))
+	applymovement(LOCAL_ID_ZINNIA, moves(
+		walk_right
+		face_left))
+	waitmovement(0)
+}
+
 raw `
 SkyPillar_Top_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SkyPillar_Top_OnResume

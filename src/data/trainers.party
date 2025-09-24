@@ -11064,16 +11064,28 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
-Level: 37
+Houndoom
+Level: 67
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Crobat
-Level: 38
+Aggron
+Level: 68
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Camerupt
-Level: 39
+Weezing
+Level: 68
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Coalossal
+Level: 69
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Salamence
+Level: 69
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Typhlosion
+Level: 70
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAXIE_MT_CHIMNEY ===
@@ -13580,28 +13592,36 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MAGMA_HIDEOUT ===
-Name: TABITHA
+Name: Sidney
 Class: Magma Admin
-Pic: Magma Admin
+Pic: Elite Four Sidney
 Gender: Male
 Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Numel
-Level: 26
+Gigalith
+Level: 65
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Mightyena
-Level: 28
+Gliscor
+Level: 66
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Zubat
-Level: 30
+Cacturne
+Level: 66
+IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+
+Zangoose
+Level: 67
+IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+
+Krookodile
+Level: 67
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
 Camerupt
-Level: 33
+Level: 68
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
 === TRAINER_DARCY ===

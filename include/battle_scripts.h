@@ -866,4 +866,7 @@ extern const u8 BattleScript_QuestionForfeitBattle[];
 extern const u8 BattleScript_ForfeitBattleGaveMoney[];
 extern const u8 BattleScript_AbilityPopUp[];
 
+// Custom
+extern const u8 BattleScript_TargetAbilityStressEating[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H

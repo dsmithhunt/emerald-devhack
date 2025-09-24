@@ -1,7 +1,7 @@
 script MeteorFalls_PartySelect {
 	lockall
 	playse(SE_PIN)
-	applymovement(LOCALID_RIVAL, moves(
+	applymovement(LOCALID_METEOR_FALLS_RIVAL, moves(
 		emote_exclamation_mark
 		face_up
 		))
@@ -45,15 +45,15 @@ script MeteorFalls_DeclineMulti {
 }
 
 script MeteorFalls_MeteoriteScene {
-	addobject(LOCALID_AQUA_ADMIN)
-	addobject(LOCALID_AQUA_GRUNT)
+	addobject(LOCALID_METEOR_FALLS_AQUA_ADMIN)
+	addobject(LOCALID_METEOR_FALLS_AQUA_GRUNT)
 	applymovement(LOCALID_PLAYER, moves(
 		player_run_left * 6
 		player_run_left * 3
 		player_run_down * 3
 		walk_in_place_down
 	))
-	applymovement(LOCALID_RIVAL, moves(
+	applymovement(LOCALID_METEOR_FALLS_RIVAL, moves(
 		player_run_left * 6
 		player_run_up
 		player_run_left * 3
@@ -67,11 +67,11 @@ script MeteorFalls_MeteoriteScene {
 	msgbox(format("ADMIN MATT: Ha! We've got you Magma fools dead to rights.\p""When the leader gets here, he'll make short work of you."))
 	closemessage
 	playse(SE_PIN)
-	applymovement(LOCALID_AQUA_ADMIN, moves(
+	applymovement(LOCALID_METEOR_FALLS_AQUA_ADMIN, moves(
 		emote_exclamation_mark
 		walk_in_place_fast_up
 	))
-	applymovement(LOCALID_MAGMA_ADMIN, moves(
+	applymovement(LOCALID_METEOR_FALLS_MAGMA_ADMIN, moves(
 		emote_exclamation_mark
 		walk_in_place_fast_up
 	))
@@ -120,21 +120,21 @@ script MeteorFalls_AdminDefeated {
 	applymovement(LOCALID_PLAYER, moves(
 		walk_in_place_up
 	))
-	applymovement(LOCALID_RIVAL, moves(
+	applymovement(LOCALID_METEOR_FALLS_RIVAL, moves(
 		walk_in_place_up
 	))
-	applymovement(LOCALID_AQUA_GRUNT, moves(
+	applymovement(LOCALID_METEOR_FALLS_AQUA_GRUNT, moves(
 		walk_fast_up * 1
 		walk_fast_right * 2
 	))
-	applymovement(LOCALID_MAGMA_ADMIN, moves(
+	applymovement(LOCALID_METEOR_FALLS_MAGMA_ADMIN, moves(
 		walk_fast_up * 2
 		walk_fast_right * 2
 		walk_fast_up * 2
 		walk_fast_right
 		walk_in_place_fast_down
 	))
-	applymovement(LOCALID_MAGMA_GRUNT, moves(
+	applymovement(LOCALID_METEOR_FALLS_MAGMA_GRUNT, moves(
 		walk_fast_up * 2
 		walk_fast_right * 4
 		walk_fast_up * 2
@@ -147,20 +147,20 @@ script MeteorFalls_AdminDefeated {
 		"Maybe, I'll be lucky enough to see you there…"
 		))
 	closemessage
-	applymovement(LOCALID_RIVAL, moves(
+	applymovement(LOCALID_METEOR_FALLS_RIVAL, moves(
 		player_run_down
 		player_run_left
 		walk_in_place_left
 	))
-	applymovement(LOCALID_MAGMA_ADMIN, moves(
+	applymovement(LOCALID_METEOR_FALLS_MAGMA_ADMIN, moves(
 		walk_fast_right * 8
 	))
-	applymovement(LOCALID_MAGMA_GRUNT, moves(
+	applymovement(LOCALID_METEOR_FALLS_MAGMA_GRUNT, moves(
 		walk_fast_right * 8
 	))
 	waitmovement(0)
-	removeobject(LOCALID_MAGMA_ADMIN)
-	removeobject(LOCALID_MAGMA_GRUNT)
+	removeobject(LOCALID_METEOR_FALLS_MAGMA_ADMIN)
+	removeobject(LOCALID_METEOR_FALLS_MAGMA_GRUNT)
 	applymovement(10, moves(face_right))
 	if (checkplayergender() == MALE){
 		msgbox(format("MAY: Prof. Cozmo, are you okay?"))
@@ -177,11 +177,11 @@ script MeteorFalls_AdminDefeated {
 		walk_right
 		walk_in_place_down
 	))
-	applymovement(LOCALID_AQUA_ADMIN, moves(
+	applymovement(LOCALID_METEOR_FALLS_AQUA_ADMIN, moves(
 		walk_fast_left
 		walk_fast_up
 	))
-	applymovement(LOCALID_AQUA_GRUNT, moves(
+	applymovement(LOCALID_METEOR_FALLS_AQUA_GRUNT, moves(
 		walk_fast_up
 		walk_fast_right * 2
 	))
@@ -209,7 +209,7 @@ script MeteorFalls_AdminDefeated {
 	applymovement(LOCALID_METEOR_FALLS_ARCHIE, moves(
 		face_left
 	))
-	applymovement(LOCALID_AQUA_ADMIN, moves(
+	applymovement(LOCALID_METEOR_FALLS_AQUA_ADMIN, moves(
 		walk_up
 		face_right
 	))
@@ -223,12 +223,12 @@ script MeteorFalls_AdminDefeated {
 		walk_fast_up * 2
 		walk_fast_right * 11
 	))
-	applymovement(LOCALID_AQUA_ADMIN, moves(
+	applymovement(LOCALID_METEOR_FALLS_AQUA_ADMIN, moves(
 		walk_fast_right * 1
 		walk_fast_up * 2
 		walk_fast_right * 10
 	))
-	applymovement(LOCALID_AQUA_GRUNT, moves(
+	applymovement(LOCALID_METEOR_FALLS_AQUA_GRUNT, moves(
 		walk_fast_right * 2
 		walk_fast_up * 2
 		walk_fast_right * 9
@@ -237,13 +237,13 @@ script MeteorFalls_AdminDefeated {
 	savebgm(MUS_CAVE_OF_ORIGIN)
 	fadedefaultbgm
 	removeobject (LOCALID_METEOR_FALLS_ARCHIE)
-	removeobject (LOCALID_AQUA_ADMIN)
-	removeobject (LOCALID_AQUA_GRUNT)
+	removeobject (LOCALID_METEOR_FALLS_AQUA_ADMIN)
+	removeobject (LOCALID_METEOR_FALLS_AQUA_GRUNT)
 	setflag (FLAG_HIDE_ROUTE_112_TEAM_MAGMA)
 	setflag (FLAG_MET_ARCHIE_METEOR_FALLS)
 	setflag (FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT)
 	setvar (VAR_METEOR_FALLS_STATE, 1)
-	setobjectxyperm (LOCALID_RIVAL, 12, 22)
+	setobjectxyperm (LOCALID_METEOR_FALLS_RIVAL, 12, 22)
 	releaseall
 }
 
@@ -259,7 +259,7 @@ script MeteorFalls_Rival {
 }
 
 script MeteorFalls_1F_1R_EventScript_SetRivalPos {
-	setobjectxyperm (LOCALID_RIVAL, 12, 22)
+	setobjectxyperm (LOCALID_METEOR_FALLS_RIVAL, 12, 22)
 }
 
 raw `

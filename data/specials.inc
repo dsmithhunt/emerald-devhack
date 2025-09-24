@@ -446,6 +446,7 @@ gSpecials::
 	def_special IsPokemonJumpSpeciesInParty
 	def_special ShowPokemonJumpRecords
 	def_special IsDodrioInParty
+	def_special IsJirachiInParty
 	def_special ShowDodrioBerryPickingRecords
 	def_special OffsetCameraForBattle
 	def_special GetDeptStoreDefaultFloorChoice

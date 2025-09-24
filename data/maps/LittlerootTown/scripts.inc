@@ -54,7 +54,7 @@ LittlerootTown_EventScript_Deoxys::
 # 31 "data/maps/LittlerootTown/scripts.pory"
 	waitmoncry
 # 32 "data/maps/LittlerootTown/scripts.pory"
-	setwildbattle SPECIES_DEOXYS, 12, ITEM_NONE
+	setwildbattle SPECIES_SWALOT, 12, ITEM_NONE
 # 34 "data/maps/LittlerootTown/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
 # 37 "data/maps/LittlerootTown/scripts.pory"

@@ -4,7 +4,7 @@ MeteorFalls_PartySelect::
 # 3 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	playse SE_PIN
 # 4 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_RIVAL, MeteorFalls_PartySelect_Movement_0
+	applymovement LOCALID_METEOR_FALLS_RIVAL, MeteorFalls_PartySelect_Movement_0
 # 8 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	applymovement LOCALID_PLAYER, MeteorFalls_PartySelect_Movement_1
 	checkplayergender
@@ -62,13 +62,13 @@ MeteorFalls_DeclineMulti_2:
 
 MeteorFalls_MeteoriteScene::
 # 48 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	addobject LOCALID_AQUA_ADMIN
+	addobject LOCALID_METEOR_FALLS_AQUA_ADMIN
 # 49 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	addobject LOCALID_AQUA_GRUNT
+	addobject LOCALID_METEOR_FALLS_AQUA_GRUNT
 # 50 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	applymovement LOCALID_PLAYER, MeteorFalls_MeteoriteScene_Movement_0
 # 56 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_RIVAL, MeteorFalls_MeteoriteScene_Movement_1
+	applymovement LOCALID_METEOR_FALLS_RIVAL, MeteorFalls_MeteoriteScene_Movement_1
 # 65 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 66 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -80,9 +80,9 @@ MeteorFalls_MeteoriteScene::
 # 69 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	playse SE_PIN
 # 70 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_AQUA_ADMIN, MeteorFalls_MeteoriteScene_Movement_2
+	applymovement LOCALID_METEOR_FALLS_AQUA_ADMIN, MeteorFalls_MeteoriteScene_Movement_2
 # 74 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_MAGMA_ADMIN, MeteorFalls_MeteoriteScene_Movement_2
+	applymovement LOCALID_METEOR_FALLS_MAGMA_ADMIN, MeteorFalls_MeteoriteScene_Movement_2
 # 78 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 79 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -165,13 +165,13 @@ MeteorFalls_AdminDefeated::
 # 120 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	applymovement LOCALID_PLAYER, MeteorFalls_AdminDefeated_Movement_0
 # 123 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_RIVAL, MeteorFalls_AdminDefeated_Movement_0
+	applymovement LOCALID_METEOR_FALLS_RIVAL, MeteorFalls_AdminDefeated_Movement_0
 # 126 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_AQUA_GRUNT, MeteorFalls_AdminDefeated_Movement_1
+	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT, MeteorFalls_AdminDefeated_Movement_1
 # 130 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_MAGMA_ADMIN, MeteorFalls_AdminDefeated_Movement_2
+	applymovement LOCALID_METEOR_FALLS_MAGMA_ADMIN, MeteorFalls_AdminDefeated_Movement_2
 # 137 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_MAGMA_GRUNT, MeteorFalls_AdminDefeated_Movement_3
+	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT, MeteorFalls_AdminDefeated_Movement_3
 # 143 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 144 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -179,17 +179,17 @@ MeteorFalls_AdminDefeated::
 # 149 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	closemessage
 # 150 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_RIVAL, MeteorFalls_AdminDefeated_Movement_4
+	applymovement LOCALID_METEOR_FALLS_RIVAL, MeteorFalls_AdminDefeated_Movement_4
 # 155 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_MAGMA_ADMIN, MeteorFalls_AdminDefeated_Movement_5
+	applymovement LOCALID_METEOR_FALLS_MAGMA_ADMIN, MeteorFalls_AdminDefeated_Movement_5
 # 158 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_MAGMA_GRUNT, MeteorFalls_AdminDefeated_Movement_5
+	applymovement LOCALID_METEOR_FALLS_MAGMA_GRUNT, MeteorFalls_AdminDefeated_Movement_5
 # 161 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 162 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	removeobject LOCALID_MAGMA_ADMIN
+	removeobject LOCALID_METEOR_FALLS_MAGMA_ADMIN
 # 163 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	removeobject LOCALID_MAGMA_GRUNT
+	removeobject LOCALID_METEOR_FALLS_MAGMA_GRUNT
 # 164 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	applymovement 10, MeteorFalls_AdminDefeated_Movement_6
 	checkplayergender
@@ -210,9 +210,9 @@ MeteorFalls_AdminDefeated_1:
 # 176 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	applymovement LOCALID_METEOR_FALLS_ARCHIE, MeteorFalls_AdminDefeated_Movement_8
 # 180 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_AQUA_ADMIN, MeteorFalls_AdminDefeated_Movement_9
+	applymovement LOCALID_METEOR_FALLS_AQUA_ADMIN, MeteorFalls_AdminDefeated_Movement_9
 # 184 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_AQUA_GRUNT, MeteorFalls_AdminDefeated_Movement_1
+	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT, MeteorFalls_AdminDefeated_Movement_1
 # 188 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 189 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -232,7 +232,7 @@ MeteorFalls_AdminDefeated_1:
 # 209 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	applymovement LOCALID_METEOR_FALLS_ARCHIE, MeteorFalls_AdminDefeated_Movement_11
 # 212 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_AQUA_ADMIN, MeteorFalls_AdminDefeated_Movement_12
+	applymovement LOCALID_METEOR_FALLS_AQUA_ADMIN, MeteorFalls_AdminDefeated_Movement_12
 # 216 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 217 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -242,9 +242,9 @@ MeteorFalls_AdminDefeated_1:
 # 222 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	applymovement LOCALID_METEOR_FALLS_ARCHIE, MeteorFalls_AdminDefeated_Movement_13
 # 226 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_AQUA_ADMIN, MeteorFalls_AdminDefeated_Movement_14
+	applymovement LOCALID_METEOR_FALLS_AQUA_ADMIN, MeteorFalls_AdminDefeated_Movement_14
 # 231 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	applymovement LOCALID_AQUA_GRUNT, MeteorFalls_AdminDefeated_Movement_15
+	applymovement LOCALID_METEOR_FALLS_AQUA_GRUNT, MeteorFalls_AdminDefeated_Movement_15
 # 236 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	waitmovement 0
 # 237 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -254,9 +254,9 @@ MeteorFalls_AdminDefeated_1:
 # 239 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	removeobject LOCALID_METEOR_FALLS_ARCHIE
 # 240 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	removeobject LOCALID_AQUA_ADMIN
+	removeobject LOCALID_METEOR_FALLS_AQUA_ADMIN
 # 241 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	removeobject LOCALID_AQUA_GRUNT
+	removeobject LOCALID_METEOR_FALLS_AQUA_GRUNT
 # 242 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	setflag FLAG_HIDE_ROUTE_112_TEAM_MAGMA
 # 243 "data/maps/MeteorFalls_1F_1R/scripts.pory"
@@ -266,7 +266,7 @@ MeteorFalls_AdminDefeated_1:
 # 245 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	setvar VAR_METEOR_FALLS_STATE, 1
 # 246 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL, 12, 22
+	setobjectxyperm LOCALID_METEOR_FALLS_RIVAL, 12, 22
 # 247 "data/maps/MeteorFalls_1F_1R/scripts.pory"
 	releaseall
 	return
@@ -301,7 +301,7 @@ MeteorFalls_Rival_2:
 
 MeteorFalls_1F_1R_EventScript_SetRivalPos::
 # 262 "data/maps/MeteorFalls_1F_1R/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL, 12, 22
+	setobjectxyperm LOCALID_METEOR_FALLS_RIVAL, 12, 22
 	return
 
 

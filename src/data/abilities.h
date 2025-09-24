@@ -2408,4 +2408,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_STRESS_EATING] =
+    {
+        .name = _("Stress Eating"),
+        .description = COMPOUND_STRING("Stockpiles when hit."),
+        .aiRating = 8,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+    },
 };

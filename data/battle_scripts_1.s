@@ -4366,6 +4366,47 @@ BattleScript_EffectUproar::
 BattleScript_UproarHit::
 	goto BattleScript_HitFromCritCalc
 
+BattleScript_TargetAbilityStressEating::
+    @ Save the true attacker, then treat the target as the "attacker" for these effects
+    copybyte sSAVED_BATTLER, gBattlerAttacker
+    copybyte gBattlerAttacker, gBattlerTarget
+
+    @ Correctly show the defender's ability popup
+    copybyte gBattlerAbility, gEffectBattler
+    call BattleScript_AbilityPopUp
+
+    @ Optional: show Stockpile text preamble (remove if you don't want the text)
+    stockpile 0
+    printfromtable gStockpileUsedStringIds
+    waitmessage B_WAIT_TIME_LONG
+
+    @ If the move ultimately had no effect, skip all effects
+    jumpifmovehadnoeffect BattleScript_StressEating_Return
+
+    .if B_STOCKPILE_RAISES_DEFS >= GEN_4
+        jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF,   MAX_STAT_STAGE, BattleScript_EffectStressEatingDef
+        jumpifstat BS_ATTACKER, CMP_EQUAL,     STAT_SPDEF, MAX_STAT_STAGE, BattleScript_EffectStressEatingSpDef
+BattleScript_EffectStressEatingDef:
+        setstatchanger STAT_DEF, 1, FALSE
+        statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_EffectStressEatingSpDef, BIT_SPDEF
+        jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_EffectStressEatingSpDef
+        printfromtable gStatUpStringIds
+        waitmessage B_WAIT_TIME_LONG
+BattleScript_EffectStressEatingSpDef:
+        setstatchanger STAT_SPDEF, 1, FALSE
+        statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_EffectStressEatingDoStockpile
+        jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_EffectStressEatingDoStockpile
+        printfromtable gStatUpStringIds
+        waitmessage B_WAIT_TIME_LONG
+    .endif
+
+BattleScript_EffectStressEatingDoStockpile:
+    stockpile 1
+
+BattleScript_StressEating_Return:
+    copybyte gBattlerAttacker, sSAVED_BATTLER
+    return
+
 BattleScript_EffectStockpile::
 	attackcanceler
 	attackstring
