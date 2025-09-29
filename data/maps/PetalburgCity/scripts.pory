@@ -1,14 +1,7 @@
-script PetalburgAnthony {
-	msgbox(format(
-		"ANTHONY: Hello, hello, wazzup, wazzup!\n""Good to see ya! Huhuhuhu\p"
-		))
-}
-
 text PetalburgCity_Text_AreYouATrainer {
 	format(
-	"Excuse me!\p"
-	"Let me guess, from the way you're\n"
-	"dressed, are you a POKéMON TRAINER?"
+	"ANTHONY: Hello, hello, wazzup, wazzup!\n""Good to see ya! Huhuhuhu\p"
+	"Are you a POKéMON TRAINER?"
 	)
 }
 
