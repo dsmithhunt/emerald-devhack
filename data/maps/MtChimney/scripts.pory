@@ -1,3 +1,129 @@
+script MtChimney_Courtney {
+	trainerbattle_single (
+		TRAINER_COURTNEY_MT_CHIMNEY, 
+		format(
+			"COURTNEY: Anticipated factor… Did you come all the way up here to see me again?\p"
+			"Your timing is once again opportune; the METEORITE has already been delivered!\p"
+			"Target acquired…\n"
+			"Interest levels peaking… ♪\l"
+			"Commencing… experiment…"), 
+		format("Result: unexpected…"))
+	msgbox (
+		format("COURTNEY: I knew it. You…\n""are interesting! …Haha. ♪"), 
+		MSGBOX_AUTOCLOSE)
+	end
+}
+
+text MtChimney_Text_CourtneyExamples {
+	"Ahahahaha! You're going to meddle in Team Magma's affairs? You're either absolutely fearless, simply ignorant, or both! You're so cute, you're disgusting! I'll put you down, kiddy!"
+	"Ahahahaha! Ouch!"
+	"Ahahahaha! You're so darn strong. It's terribly disappointing that you're not a Team Magma member. You could have enjoyed the fabulous world our Boss has promised to one of our own…"
+
+	"As anticipated. Unanticipated. You. Target lock…completed. Commencing…experiment. You. Forever. Aha… ♪"
+	"Returning home."
+	"…Again? That's unanticipated. …I knew it. You…are interesting! …Haha. ♪"
+	"I'm looking forward to… I'm looking forward to… When we…can meet again."
+	"… …There's still more…work for me to do. …I must…stop you. …Until Leader Maxie…departs… …But… …Now…I just…want to… …With you… …I want to…engage… …You… …I want to…analyze. Ahahaha. ♪"
+
+	"…Leader Maxie… … …Mission… …Complete. …Leader Maxie…has departed. …For the development…of humanity. …For our…dreams… …To you…whom I had not foreseen. …I will give a hint. …So that you…may dream…the same dream as us. …Leader Maxie…is headed for…the sea stretching out from Lilycove. …In the depths of the sea…lies the Seafloor Cavern. …What are you…going to do? …Looking around…in seaside towns. …That might work. …Ahaha. ♪"
+}
+
+script MtChimney_Maxie {
+	lockall
+	playbgm (MUS_ENCOUNTER_MAGMA, FALSE)
+	msgbox (MtChimney_MaxieMeteorite)
+	applymovement (LOCALID_MT_CHIMNEY_MAXIE, Common_Movement_FacePlayer)
+	waitmovement (0)
+	playse (SE_PIN)
+	applymovement (LOCALID_MT_CHIMNEY_MAXIE, Common_Movement_ExclamationMark)
+	waitmovement (0)
+	applymovement (LOCALID_MT_CHIMNEY_MAXIE, Common_Movement_Delay48)
+	waitmovement (0)
+	// Custom scene starts here
+	msgbox (MtChimney_MaxieExplanation)
+	closemessage
+	applymovement (LOCALID_MT_CHIMNEY_MAXIE, moves(
+		walk_fast_right
+	))
+	playse(SE_PC_LOGIN)
+	waitse
+	playse (SE_M_DETECT)
+	dofieldeffectsparkle (14, 6, 0)
+	waitfieldeffect (FLDEFF_SPARKLE)
+	playse(SE_PC_OFF)
+	waitse
+	msgbox (MtChimney_MaxieFailure)
+	closemessage
+	// Maxie turns around and says you're beneath him
+	applymovement (LOCALID_MT_CHIMNEY_MAXIE, Common_Movement_FacePlayer)
+	waitmovement (0)
+	playse (SE_PIN)
+	applymovement (LOCALID_MT_CHIMNEY_MAXIE, Common_Movement_ExclamationMark)
+	waitmovement (0)
+	delay (12)
+	msgbox(MtChimney_MaxieLeave)
+	// Custom scene ends here
+	delay (30)
+	fadescreenswapbuffers (FADE_TO_BLACK)
+	removeobject (LOCALID_MT_CHIMNEY_MAXIE)
+	removeobject (LOCALID_MT_CHIMNEY_MAGMA_GRUNT_1)
+	removeobject (LOCALID_MT_CHIMNEY_TABITHA)
+	removeobject (LOCALID_MT_CHIMNEY_MAGMA_GRUNT_2)
+	setflag (FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA)
+	fadescreenswapbuffers (FADE_FROM_BLACK)
+	setobjectxyperm (LOCALID_MT_CHIMNEY_ARCHIE, 10, 12)
+	addobject (LOCALID_MT_CHIMNEY_ARCHIE)
+	call_if_eq (VAR_FACING, DIR_EAST, MtChimney_EventScript_ArchieApproachPlayerEast)
+	call_if_eq (VAR_FACING, DIR_NORTH, MtChimney_EventScript_ArchieApproachPlayerNorth)
+	applymovement (LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
+	waitmovement (0)
+	msgbox (MtChimney_Text_ArchieThankYou, MSGBOX_DEFAULT)
+	closemessage
+	call_if_eq (VAR_FACING, DIR_EAST, MtChimney_EventScript_ArchieExitEast)
+	call_if_eq (VAR_FACING, DIR_NORTH, MtChimney_EventScript_ArchieExitNorth)
+	removeobject (LOCALID_MT_CHIMNEY_ARCHIE)
+	setflag (FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA)
+	setflag (FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY)
+	clearflag (FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO)
+	setflag (FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO)
+	clearflag (FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY)
+	releaseall
+	end
+}
+
+text MtChimney_MaxieMeteorite {
+	"MAXIE: Ah! The METEORITE…\n"
+	"Humanity's hopes made manifest…\l"
+	"At last, it is in my hands!\p"
+	"With this, the power of GROUDON\n"
+	"will be mine to command!"
+}
+
+text MtChimney_MaxieExplanation {
+	"MAXIE: Of coure… you've been misled by Archie's limited intellect…\p"
+	"While the power to create land will have its uses, our true goal is far greater.\p"
+	"The energy of GROUDON is near infinite. By harnessing it, we can push humanity to new heights!\p"
+	"Energy will be abundant and conflicts can be left in the past!\l"
+	"Technology will flourish, and we will create a utopia for both humans and POKéMON!\p"
+	"Our research suggests that humanity's wishes have formed this METEORITE which will awaken the savior POKéMON.\p"
+	"Now, bear witness to the dawn of a new era!"
+}
+
+text MtChimney_MaxieFailure {
+	"MAXIE: Impossible…\n"
+	"The METEORITE's energy…\l"
+	"It was supposed to be enough!\p"
+	"Perhaps I had taken the\n"
+	"ancient tales too literally…\p"
+	"No matter. It seems we'll simply have to acquire that ORB…"
+}
+
+text MtChimney_MaxieLeave {
+	"MAXIE: Oh, I'd forgotten about you…\p"
+	"I really don't have time for you right now. I need to plan the next phase of our operation.\p"
+	"You should give up your futile interruptions and plan for the new future."
+}
+
 raw `
 MtChimney_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, MtChimney_OnResume
@@ -407,7 +533,7 @@ MtChimney_EventScript_BusyAquaGrunt3::
 	end
 
 MtChimney_EventScript_Tabitha::
-	trainerbattle_single TRAINER_TABITHA_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat
+	trainerbattle_single TRAINER_COURTNEY_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat
 	msgbox MtChimney_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

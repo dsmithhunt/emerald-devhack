@@ -1,3 +1,18 @@
+text MauvilleCity_Text_ScottYouDidntHoldBack {
+	format(
+	"ANTHONY: Hello, hello, wazzup, wazzup!\n"
+	"Good to see ya! Huhuhuhu\p"
+	"I was watching that match!\n"
+	"It's good you didn't hold back.\p"
+	"Wally is a step behind you, but not taking him seriously would be a disservice to you both.\p"
+	"Even though he lost, you can see Wally is inspired to become stronger.\p"
+	"Yeah! That's what a real POKéMON\n"
+	"battle is all about!\p"
+	"… … … … … …\n"
+	"I'll be cheering for you two!"
+	)
+}
+
 raw `
 MauvilleCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_OnTransition
@@ -558,19 +573,6 @@ MauvilleCity_Text_WallyPokenavCall:
 MauvilleCity_Text_RegisteredWally:
 	.string "Registered WALLY\n"
 	.string "in the POKéNAV.$"
-
-MauvilleCity_Text_ScottYouDidntHoldBack:
-	.string "SCOTT: Hehe…\n"
-	.string "I was watching that match!\p"
-	.string "You're friends with that boy WALLY,\n"
-	.string "aren't you?\p"
-	.string "But you didn't hold anything back\n"
-	.string "and beat him impressively.\p"
-	.string "Yeah! That's what a real POKéMON\n"
-	.string "battle is all about!\p"
-	.string "I idolize TRAINERS like that!\p"
-	.string "… … … … … …\n"
-	.string "I'll be cheering for you!$"
 
 MauvilleCity_Text_WattsonNeedFavorTakeKey:
 	.string "WATTSON: Oh, {PLAYER}{KUN}!\n"

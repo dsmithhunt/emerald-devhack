@@ -1,3 +1,37 @@
+script AncientTomb_EventScript_CaveEntranceMiddle{
+	lockall
+	goto_if_set (FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, AncientTomb_EventScript_BigHoleInWall)
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"THOSE WHO INHERIT OUR WILL, SHINE IN THE MIDDLE."
+		))
+	} else {
+		braillemsgbox (AncientTomb_Braille_ShineInTheMiddle)
+	}
+	releaseall
+}
+
+script AncientTomb_EventScript_BigHoleInWall {
+	msgbox (gText_BigHoleInTheWall, MSGBOX_DEFAULT)
+	releaseall
+}
+
+script AncientTomb_EventScript_CaveEntranceSide {
+	lockall
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"THOSE WHO INHERIT OUR WILL, SHINE IN THE MIDDLE."
+		))
+	} else {
+		braillemsgbox (AncientTomb_Braille_ShineInTheMiddle)
+	}
+	releaseall
+}
+
 raw `
 AncientTomb_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, AncientTomb_OnResume
@@ -36,24 +70,6 @@ AncientTomb_EventScript_HideRegiEntrance::
 	setmetatile 8, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
 	setmetatile 9, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
 	return
-
-AncientTomb_EventScript_CaveEntranceMiddle::
-	lockall
-	goto_if_set FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, AncientTomb_EventScript_BigHoleInWall
-	braillemsgbox AncientTomb_Braille_ShineInTheMiddle
-	releaseall
-	end
-
-AncientTomb_EventScript_BigHoleInWall::
-	msgbox gText_BigHoleInTheWall, MSGBOX_DEFAULT
-	releaseall
-	end
-
-AncientTomb_EventScript_CaveEntranceSide::
-	lockall
-	braillemsgbox AncientTomb_Braille_ShineInTheMiddle
-	releaseall
-	end
 
 AncientTomb_EventScript_Registeel::
 	lock

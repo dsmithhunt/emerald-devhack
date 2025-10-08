@@ -142,8 +142,10 @@ script MeteorFalls_AdminDefeated {
 	))
 	waitmovement(0)
 	msgbox(format(
-		"ADMIN COURTNEY: I don't know who you are, but you distracted that oaf for us so I kinda like you.\p"
-		"Now, with this meteorite, we can awaken the volcanic beast of Mt. Chimney!\p"
+		"ADMIN COURTNEY: Unanticipated factor… I don't know who you are, but you distracted that oaf for us so I kinda like you.\p"
+		"Meteorite acquired…\n"
+		"Mission complete…\l"
+		"Mt. Chimney rendezvous commencing.\l"
 		"Maybe, I'll be lucky enough to see you there…"
 		))
 	closemessage

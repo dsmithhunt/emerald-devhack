@@ -1,3 +1,23 @@
+text MossdeepCity_Text_ScottSomethingWrongWithTown {
+	format (
+		"ANTHONY: Hello, hello, wazzup, wazzup!\n"
+		"Good to see ya! Huhuhuhu\p"
+		"I'd heard MOSSDEEP's GYM LEADER is\n"
+		"pretty strong, so I decided to come\l"
+		"take a look-see for myself.\p"
+		"But there's something wrong about\n"
+		"this town.\p"
+		"People are going on about a warning\n"
+		"letter and the SPACE CENTER…\p"
+		"I don't think it concerns me in any\n"
+		"way, though."
+	)
+}
+
+
+		"SCOTT: {PLAYER}{KUN}, feeling good?\n"
+		"I'm doing great!\p"
+
 raw `
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
@@ -403,19 +423,6 @@ MossdeepCity_Text_CitySign:
 MossdeepCity_Text_SpaceCenterSign:
 	.string "MOSSDEEP SPACE CENTER\n"
 	.string "“The closest place to space.”$"
-
-MossdeepCity_Text_ScottSomethingWrongWithTown:
-	.string "SCOTT: {PLAYER}{KUN}, feeling good?\n"
-	.string "I'm doing great!\p"
-	.string "I'd heard MOSSDEEP's GYM LEADER is\n"
-	.string "pretty strong, so I decided to come\l"
-	.string "take a look-see for myself.\p"
-	.string "But there's something wrong about\n"
-	.string "this town.\p"
-	.string "People are going on about a warning\n"
-	.string "letter and the SPACE CENTER…\p"
-	.string "I don't think it concerns me in any\n"
-	.string "way, though.$"
 
 MossdeepCity_Text_SootopolisNewGymLeader:
 	.string "Ahh… It feels great letting the waves\n"

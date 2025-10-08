@@ -247,7 +247,7 @@ MagmaHideout_4F_EventScript_Grunt13::
 # 124 "data/maps/MagmaHideout_4F/scripts.pory"
 MagmaHideout_4F_EventScript_Tabitha::
 # 125 "data/maps/MagmaHideout_4F/scripts.pory"
-	trainerbattle_single TRAINER_TABITHA_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat
+	trainerbattle_single TRAINER_SIDNEY_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat
 # 126 "data/maps/MagmaHideout_4F/scripts.pory"
 	msgbox MagmaHideout_4F_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 # 127 "data/maps/MagmaHideout_4F/scripts.pory"

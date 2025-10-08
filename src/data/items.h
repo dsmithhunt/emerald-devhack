@@ -13423,6 +13423,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Sapphire,
     },
 
+    [ITEM_ANCIENT_CYPHER] =
+    {
+        .name = ITEM_NAME("Ancient Cypher"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A series of documents\n"
+            "which can translate\n"
+            "an ancient language."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TownMap,
+        .iconPalette = gItemIconPalette_TownMap,
+    },
+
     [ITEM_ABILITY_SHIELD] =
     {
         .name = ITEM_NAME("Ability Shield"),

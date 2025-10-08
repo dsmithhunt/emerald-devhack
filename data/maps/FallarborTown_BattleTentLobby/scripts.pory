@@ -1,3 +1,23 @@
+text FallarborTown_BattleTentLobby_Text_ScottLookingForSomeone {
+	"ANTHONY: Hello, hello, wazzup, wazzup!\n"
+	"Good to see ya! Huhuhuhu\p"
+	"The people in these parts tend to be\n"
+	"easygoing and laid-back.\p"
+	"But, you see, what I'm looking for are\n"
+	"people with…\p"
+	"How should I say this?\p"
+	"Someone bursting with the desire\n"
+	"and the drive to win.\p"
+	"A TRAINER like that…\n"
+	"Whoops! Never mind!\l"
+	"Keep working at it!"
+}
+
+text FallarborTown_BattleTentLobby_Text_ScottMakeChallenge {
+	"ANTHONY: Hello, hello, wazzup, wazzup!\n"
+	"Good to see ya! Huhuhuhu"
+}
+
 raw `
 FallarborTown_BattleTentLobby_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, FallarborTown_BattleTentLobby_OnFrame
@@ -324,25 +344,5 @@ FallarborTown_BattleTentLobby_Text_CameToCampOut:
 	.string "are so luxurious!\p"
 	.string "Since I'm here, I may as well try\n"
 	.string "my hand at battling!$"
-
-FallarborTown_BattleTentLobby_Text_ScottLookingForSomeone:
-	.string "SCOTT: Hi, {PLAYER}{KUN}!\n"
-	.string "So you came out to this BATTLE TENT!\p"
-	.string "The people in these parts tend to be\n"
-	.string "easygoing and laid-back.\p"
-	.string "But, you see, what I'm looking for are\n"
-	.string "people with…\p"
-	.string "How should I say this?\p"
-	.string "Someone bursting with the desire\n"
-	.string "and the drive to win.\p"
-	.string "If there were a TRAINER like that,\n"
-	.string "I'd immediately…\p"
-	.string "Whoops! Never mind!\n"
-	.string "Keep working at it!$"
-
-FallarborTown_BattleTentLobby_Text_ScottMakeChallenge:
-	.string "SCOTT: Instead of wasting your\n"
-	.string "time with the likes of me, why not\l"
-	.string "make a challenge?$"
 
 `

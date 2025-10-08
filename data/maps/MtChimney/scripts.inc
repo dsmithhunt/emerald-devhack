@@ -817,7 +817,7 @@ MtChimney_EventScript_BusyAquaGrunt3::
 # 409 "data/maps/MtChimney/scripts.pory"
 MtChimney_EventScript_Tabitha::
 # 410 "data/maps/MtChimney/scripts.pory"
-	trainerbattle_single TRAINER_TABITHA_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat
+	trainerbattle_single TRAINER_COURTNEY_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat
 # 411 "data/maps/MtChimney/scripts.pory"
 	msgbox MtChimney_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 # 412 "data/maps/MtChimney/scripts.pory"

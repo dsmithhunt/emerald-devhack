@@ -1,3 +1,27 @@
+script Route134_RuinManiacHint {
+	lock
+	faceplayer
+	msgbox(format(
+		"It's here, I know it is…\n"
+		"Directly west of here are the ancient ruins. They say they're older than even the Sky Pillar."
+	))
+	msgbox(format(
+		"I've spent years researching ancient languages, 
+		and I've created a cypher to decode the inscriptions on the walls of those ruins.
+		Would you like a copy?"),
+		MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES) {
+		giveitem(ITEM_ANCIENT_CYPHER)
+		msgbox(format("Here you go! Take good care of it."))
+	} else {
+		msgbox(format("No? You must be confident in your talents. If you change your mind, just come back and ask."))
+	}
+	closemessage
+	applymovement(ROUTE_134_RUIN_MANIAC, Common_Movement_FaceOriginalDirection)
+	waitmovement(0)
+	release
+}
+
 raw `
 Route134_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route134_OnResume

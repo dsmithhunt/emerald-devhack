@@ -1,3 +1,19 @@
+script CaveOfOrigin_Entrance_Zinnia {
+	lock
+	faceplayer
+	msgbox(format(
+		"ZINNIA: I am going to tell you a story.\p"
+		"In the super-ancient past, two POKéMON shaped the world in relative harmony.\p"
+		"They were rivals, but they were also friends.\l"
+		"They balanced each other, and their competition made the various natural wonders of the world."
+	))
+	applymovement(1, moves(walk_up))
+	waitmovement(0)
+	removeobject (1)
+	playse (SE_EXIT)
+	release
+}
+
 raw `
 CaveOfOrigin_Entrance_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, CaveOfOrigin_Entrance_OnResume
