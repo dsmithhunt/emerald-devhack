@@ -43,6 +43,39 @@ script SealedChamber_InnerRoom_EventScript_NoEffect {
 	releaseall
 }
 
+script AwakenRegigigas {
+	lockall
+	checkspecies(SPECIES_REGIROCK)
+	if(var(VAR_RESULT) == TRUE) {
+		addvar(VAR_TEMP_1, 1)
+	}
+	checkspecies(SPECIES_REGICE)
+	if(var(VAR_RESULT) == TRUE) {
+		addvar(VAR_TEMP_1, 1)
+	}
+	checkspecies(SPECIES_REGISTEEL)
+	if(var(VAR_RESULT) == TRUE) {
+		addvar(VAR_TEMP_1, 1)
+	}
+	checkspecies(SPECIES_REGIELEKI)
+	if(var(VAR_RESULT) == TRUE) {
+		addvar(VAR_TEMP_1, 1)
+	}
+	checkspecies(SPECIES_REGIDRAGO)
+	if(var(VAR_RESULT) == TRUE) {
+		addvar(VAR_TEMP_1, 1)
+	}
+	if(var(VAR_TEMP_1) >= 3) {
+		msgbox(format("You awaken Regigigas!"))
+		closemessage
+		releaseall
+	} else {
+		setvar(VAR_TEMP_1, 0)
+		msgbox(format("You don't awaken Regigigas!"))
+		releaseall
+	}
+}
+
 script SealedChamber_InnerRoom_EventScript_BrailleStoryPart1 {
 	lockall
 	checkitem(ITEM_ANCIENT_CYPHER)
