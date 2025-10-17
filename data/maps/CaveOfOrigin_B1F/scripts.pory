@@ -1,3 +1,50 @@
+script CaveOfOrigin_ZinniaStory {
+	lock
+	msgbox(format(
+		"ZINNIA: So, this is the CAVE OF ORIGIN.\p"
+		"This is where the SUPER-ANCIENT POKéMON were born and from where their eggs, the RED and BLUE ORBS were taken…"
+	))
+	closemessage
+	applymovement(LOCALID_CAVE_OF_ORIGIN_ZINNIA, Common_Movement_FacePlayer)
+	waitmovement(0)
+	msgbox(format(
+		"This story, however, does not end with mutual destruction…\p"
+		"Eventually, the people realized the error of their ways and regretted what they had done,\l"
+		"but when they tried to come to a truce,\l"
+		"it was too late…\p"
+		"KYOGRE and GROUDON had been driven to madness by their endless fighting and would not stop.\p"
+		"In their desperation, these people, my ancestors, shared a wish to stop the war.\p"
+		"Their wish shot across the sky like a comet and the DRAGON LORD, the planet's protector, descended from the heavens and quelled the fighting.\p"
+		"The people were shaken by what they had done, but they would recover…\n"
+		"Together, the two sides would inter the ORBS on MT. PYRE, which would serve as a memorial to the people and POKéMON who perished in the conflict."
+	))
+	msgbox(format(
+		"ZINNIA: This mighty POKéMON, RAYQUAZA, stopped the fighting and restored peace to the world.\p"
+		"After that, the ancient people built a sealed monument to the DRAGON LORD, SKY PILLAR.\p"
+		"Atop this tower, RAYQUAZA could rest and watch over the world, aloof from petty requests."
+		"{PLAYER}{KUN}, it is my ancestral duty to unseal the SKY PILLAR when things are at their most dire.\p"
+		"There's not a moment to lose!\n"
+		"Meet me at SKY PILLAR right away!"
+	))
+	closemessage
+	playse (SE_EXIT)
+	fadescreenspeed (FADE_TO_BLACK, 4)
+	setflag (FLAG_WALLACE_GOES_TO_SKY_PILLAR)
+	setvar (VAR_SOOTOPOLIS_CITY_STATE, 3)
+	removeobject (LOCALID_CAVE_OF_ORIGIN_WALLACE)
+	clearflag (FLAG_HIDE_SKY_PILLAR_WALLACE)
+	fadescreen (FADE_FROM_BLACK)
+	release
+}
+
+// Zinnia explains story:
+// Kyogre and Groudon shaped the world in relative harmony.
+// People came about and had a civil war.
+// In this conflict, they grabbed the ORBS (eggs) of Kyogre and Groudon and used them to force the two to fight for them.
+// The two fought so fiercely that they nearly destroyed the world.
+// Rayquaza came down from the sky and stopped them, restoring peace.
+// The ORBS were then interred on Mt. Pyre, a memorial to the people and POKéMON who perished in the conflict.
+
 raw `
 CaveOfOrigin_B1F_MapScripts::
 	.byte 0

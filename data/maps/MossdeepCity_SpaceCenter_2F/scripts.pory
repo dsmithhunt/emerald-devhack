@@ -1,3 +1,129 @@
+script Mossdeep_SpaceCenter_NewMaxie {
+	lockall
+	msgbox(format(
+		"MAXIE: It's almost complete! It will take too long to explain. We are on the verge of something critical.\p"
+		"DEVAN: You're crazy… I can't just let you have control of the rocket facility!"
+	))
+}
+
+script Mossdeep_SpaceCenter_NewMaxie {
+	lockall
+	msgbox(format(
+		"MAXIE: We were using this facility's sensors to track the location of the stolen submarine…\p"
+		"Whether you believe in our vision or not, it is imperative that Archie and his TEAM AQUA be stopped!\p"
+		"If they succeed in awakening KYOGRE, each of the superancient Pokémon will be sent into a frenzied rage!\p"
+		"Their apocalyptic feud will destroy the world as we know it!"
+	))
+}
+
+script MossdeepCity_SpaceCenter_2F_EventScript_Steven {
+	lockall
+	goto_if_set (FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER, MossdeepCity_SpaceCenter_2F_EventScript_ReadyForBattlePrompt)
+	setflag (FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER)
+	msgbox (MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel)
+	msgbox (MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano)
+	closemessage
+	delay (30)
+	playse (SE_NOT_EFFECTIVE)
+	switch (var(VAR_FACING))
+	case (DIR_SOUTH, MossdeepCity_SpaceCenter_2F_EventScript_StevenFightMovementSouth)
+	applymovement (LOCALID_SPACE_CENTER_2F_STEVEN, MossdeepCity_SpaceCenter_2F_Movement_StevenFight)
+	waitmovement (0)
+	releaseall
+	end
+}
+
+MossdeepCity_SpaceCenter_2F_EventScript_ReadyForBattlePrompt::
+	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
+	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	releaseall
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle::
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	waitstate
+	goto_if_ne VAR_RESULT, 0, MossdeepCity_SpaceCenter_2F_EventScript_DoStevenMultiBattle
+	special LoadPlayerParty
+	goto MossdeepCity_SpaceCenter_2F_EventScript_ReadyForBattlePrompt
+
+MossdeepCity_SpaceCenter_2F_EventScript_DoStevenMultiBattle::
+	multi_2_vs_2(
+		TRAINER_MAXIE_MOSSDEEP, 
+		format("I think we bought enough time."), 
+		TRAINER_COURTNEY_MOSSDEEP, 
+		format("I think we bought enough time."), 
+		PARTNER_STEVEN
+	)
+	switch VAR_RESULT
+	case 1, MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+
+MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
+	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided, MSGBOX_DEFAULT
+	closemessage
+	delay 20
+	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_SPACE_CENTER_TABITHA, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	delay 60
+	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_SPACE_CENTER_TABITHA, Common_Movement_WalkInPlaceFasterRight
+	waitmovement 0
+	delay 20
+	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_MOSSDEEP_CITY_STATE, 3
+	fadedefaultbgm
+	fadescreen FADE_TO_BLACK
+	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 3
+	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA
+	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA
+	setflag FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA
+	removeobject LOCALID_SPACE_CENTER_GRUNT_6
+	removeobject LOCALID_SPACE_CENTER_GRUNT_7
+	removeobject LOCALID_SPACE_CENTER_GRUNT_5
+	removeobject LOCALID_SPACE_CENTER_TABITHA
+	removeobject LOCALID_SPACE_CENTER_MAXIE
+	setobjectxy LOCALID_SPACE_CENTER_2F_SCIENTIST, 5, 6
+	turnobject LOCALID_SPACE_CENTER_2F_SCIENTIST, DIR_SOUTH
+	setobjectxy LOCALID_SPACE_CENTER_2F_GENTLEMAN, 11, 8
+	turnobject LOCALID_SPACE_CENTER_2F_GENTLEMAN, DIR_NORTH
+	setobjectxy LOCALID_SPACE_CENTER_2F_RICH_BOY, 6, 2
+	turnobject LOCALID_SPACE_CENTER_2F_RICH_BOY, DIR_NORTH
+	call MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayer
+	fadescreen FADE_FROM_BLACK
+	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_DEFEATED_MAGMA_SPACE_CENTER
+	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
+	removeobject LOCALID_SPACE_CENTER_2F_STEVEN
+	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
+	setvar VAR_STEVENS_HOUSE_STATE, 1
+	setflag FLAG_HIDE_MOSSDEEP_CITY_SCOTT
+	removeobject LOCALID_SPACE_CENTER_2F_SCIENTIST
+	setobjectxyperm LOCALID_SPACE_CENTER_2F_SCIENTIST, 5, 6
+	setobjectmovementtype LOCALID_SPACE_CENTER_2F_SCIENTIST, MOVEMENT_TYPE_WANDER_AROUND
+	addobject LOCALID_SPACE_CENTER_2F_SCIENTIST
+	fadescreen FADE_FROM_BLACK
+#ifdef BUGFIX
+	releaseall
+#endif
+	end
+
 raw `
 MossdeepCity_SpaceCenter_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_SpaceCenter_2F_OnTransition
@@ -247,7 +373,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle::
 	goto MossdeepCity_SpaceCenter_2F_EventScript_ReadyForBattlePrompt
 
 MossdeepCity_SpaceCenter_2F_EventScript_DoStevenMultiBattle::
-	multi_2_vs_2 TRAINER_MAXIE_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, TRAINER_TABITHA_MOSSDEEP, MossdeepCity_SpaceCenter_Text_TabithaDefeat, PARTNER_STEVEN
+	multi_2_vs_2 TRAINER_MAXIE_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, TRAINER_COURTNEY_MOSSDEEP, MossdeepCity_SpaceCenter_Text_TabithaDefeat, PARTNER_STEVEN
 	switch VAR_RESULT
 	case 1, MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha
 	fadescreen FADE_TO_BLACK

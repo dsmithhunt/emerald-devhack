@@ -1,25 +1,27 @@
 text PetalburgCity_Text_AreYouATrainer {
 	format(
-	"ANTHONY: Hello, hello, wazzup, wazzup!\n""Good to see ya! Huhuhuhu\p"
-	"Are you a POKéMON TRAINER?"
+		"ANTHONY: Hello, hello, wazzup, wazzup!\n"
+		"Good to see ya! Huhuhuhu\p"
+		"Let me guess, from the way you're\n"
+		"dressed, are you a POKéMON TRAINER?"
 	)
 }
 
 text PetalburgCity_Text_WellMaybeNot {
 	format(
-	"… … … … … …\p"
-	"Well, maybe not.\n"
-	"Your clothes aren't all that dirty.\p"
-	"You're either a rookie TRAINER,\n"
-	"or maybe you're just an ordinary kid."
+		"… … … … … …\p"
+		"Well, maybe not.\n"
+		"Your clothes aren't all that dirty.\p"
+		"You're either a rookie TRAINER,\n"
+		"or maybe you're just an ordinary kid."
 	)
 }
 
 text PetalburgCity_Text_ImLookingForTalentedTrainers {
 	format(
-	"I'm roaming the land in search of\n"
-	"talented TRAINERS.\p"
-	"I'm sorry to have taken your time."
+		"I'm roaming the land in search of\n"
+		"talented TRAINERS.\p"
+		"I'm sorry to have taken your time."
 	)
 }
 

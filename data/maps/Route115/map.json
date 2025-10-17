@@ -323,6 +323,34 @@
       "trainer_sight_or_berry_tree_id": "ITEM_HEAL_POWDER",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_115_HEAL_POWDER"
+    },
+    {
+      "local_id": "ROUTE_115_MATT",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 27,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route115_MattBlockMeteorFalls",
+      "flag": "FLAG_MET_ARCHIE_METEOR_FALLS"
+    },
+    {
+      "local_id": "ROUTE_115_AQUA_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 26,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route115_GruntBlockMeteorFalls",
+      "flag": "FLAG_MET_ARCHIE_METEOR_FALLS"
     }
   ],
   "warp_events": [

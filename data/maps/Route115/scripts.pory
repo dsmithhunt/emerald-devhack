@@ -1,3 +1,29 @@
+script Route115_GruntBlockMeteorFalls {
+	lock
+	faceplayer
+	msgbox(format(
+		"AQUA GRUNT: We can't let you pass.\n"
+		"You might blow our cover…"
+	))
+	closemessage
+	applymovement(ROUTE_115_AQUA_GRUNT, Common_Movement_WalkInPlaceFasterRight)
+	waitmovement(0)
+	release
+}
+
+script Route115_MattBlockMeteorFalls {
+	lock
+	faceplayer
+	msgbox(format(
+		"MATT: Beat it kid!\n"
+		"We're preparing an ambush!"
+	))
+	closemessage
+	applymovement(ROUTE_115_MATT, Common_Movement_WalkInPlaceFasterUp)
+	waitmovement(0)
+	release
+}
+
 raw `
 Route115_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, Route115_OnLoad

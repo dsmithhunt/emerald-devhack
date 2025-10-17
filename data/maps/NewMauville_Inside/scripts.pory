@@ -1,3 +1,8 @@
+script NewMauvillle_DeepWarp {
+	warp (MAP_NEW_MAUVILLE_INSIDE, 28, 6)
+	waitstate
+}
+
 raw `
 NewMauville_Inside_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, NewMauville_Inside_OnResume
@@ -144,12 +149,14 @@ NewMauville_Inside_EventScript_SetBarrierStateGreenButton::
 NewMauville_Inside_EventScript_RedButton::
 	lockall
 	msgbox NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped, MSGBOX_DEFAULT
+	playse SE_SWITCH
 	call NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
 	setvar VAR_NEW_MAUVILLE_STATE, 2
 	releaseall
 	end
 
 NewMauville_Inside_EventScript_SetGeneratorOffMetatiles::
+	setmetatile 31, 2, 0x23D, FALSE
 	setmetatile 33, 6, METATILE_BikeShop_Button_Pressed, FALSE
 	setmetatile 32, 2, METATILE_BikeShop_Generator_Off_Tile0, TRUE
 	setmetatile 33, 2, METATILE_BikeShop_Generator_Off_Tile1, TRUE

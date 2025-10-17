@@ -1,3 +1,33 @@
+script Route134_RuinManiacHint {
+	lock
+	faceplayer
+	msgbox(format(
+		"It's here, I know it is…\n"
+		"Directly west of here are ancient, sunken ruins, older than even the Sky Pillar."
+	))
+	// Consider moving this to Sootopolis or the new town so it doesn't feel too easy
+	// "but I forgot to bring my Ancient Cypher with me…"
+	// "There is a researcher in Sootopolis City who translated that ancient language."
+	// "Wow, you have a copy of the Ancient Cypher! Well, in that case, you should be able to read the inscriptions on the walls of those ruins."
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == FALSE) {
+		msgbox(format(
+			"I've spent years researching ancient languages, 
+			and I've created a cypher to decode the inscriptions on the walls of those ruins.
+			Would you like a copy?"),
+			MSGBOX_YESNO)
+		if(var(VAR_RESULT) == YES) {
+			giveitem(ITEM_ANCIENT_CYPHER)
+			msgbox(format("Here you go! Take good care of it."))
+		} else {
+			msgbox(format("No? You must be confident in your talents. If you change your mind, just come back and ask."))
+	}}
+	closemessage
+	applymovement(ROUTE_134_RUIN_MANIAC, Common_Movement_FaceOriginalDirection)
+	waitmovement(0)
+	release
+}
+
 raw `
 Route134_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route134_OnResume

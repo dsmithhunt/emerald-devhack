@@ -1,3 +1,9 @@
+script NewMauville_EventScript_CloseRuins {
+	setmetatile (28, 11, METATILE_General_RockWall_RockBase, TRUE)
+	setmetatile (28, 12, METATILE_General_RockWall_SandBase, TRUE)
+	return
+}
+
 raw `
 NewMauville_Entrance_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, NewMauville_Entrance_OnLoad
@@ -5,6 +11,7 @@ NewMauville_Entrance_MapScripts::
 	.byte 0
 
 NewMauville_Entrance_OnLoad:
+	call_if_unset FLAG_REGI_DOORS_OPENED, NewMauville_EventScript_CloseRuins
 	call_if_eq VAR_NEW_MAUVILLE_STATE, 0, NewMauville_Entrance_EventScript_CloseDoor
 	end
 

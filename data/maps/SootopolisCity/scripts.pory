@@ -1,3 +1,99 @@
+script SootopolisCity_EventScript_Steven {
+	lockall
+	applymovement (LOCALID_SOOTOPOLIS_STEVEN, Common_Movement_FacePlayer)
+	waitmovement (0)
+	call_if_unset (FLAG_STEVEN_GUIDES_TO_CAVE_OF_ORIGIN, SootopolisCity_EventScript_StevenLeadPlayerCaveOfOrigin)
+	goto_if_eq (VAR_SOOTOPOLIS_CITY_STATE, 2, SootopolisCity_EventScript_StevenHelpZinnia)
+	goto_if_eq (VAR_SOOTOPOLIS_CITY_STATE, 3, SootopolisCity_EventScript_StevenHelpedZinnia)
+	goto_if_eq (VAR_SOOTOPOLIS_CITY_STATE, 4, SootopolisCity_EventScript_StevenHelpedZinnia)
+	goto_if_set (FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, SootopolisCity_EventScript_StevenMaxieArchieLeft)
+	msgbox (
+		"DEVAN: So that's RAYQUAZA…\p"
+		"It's incredible how the two rampaging\n"
+		"POKéMON would flee from it in fear…")
+	releaseall
+}
+
+script SootopolisCity_EventScript_StevenHelpZinnia {
+	msgbox (
+		"DEVAN: I think you have what's\n"
+		"needed to help her…")
+	releaseall
+}
+
+script SootopolisCity_EventScript_StevenMaxieArchieLeft {
+	msgbox (
+		"DEVAN: It looks like both MAXIE and\n"
+		"ARCHIE have gone away somewhere.\p"
+		"Perhaps they've gone to MT. PYRE to\n"
+		"return those ORBS…")
+	releaseall
+}
+
+script SootopolisCity_EventScript_StevenHelpedZinnia {
+	msgbox (
+		"DEVAN: The SKY PILLAR…\p"
+		"I've seen it from Route 131,\n"
+		"but I've never been there.\l"
+		"I wonder where it's like…")
+	releaseall
+}
+
+script SootopolisCity_EventScript_StevenLeadPlayerCaveOfOrigin {
+	msgbox (
+		"DEVAN: Those POKéMON fighting…\n"
+		"GROUDON… And KYOGRE…\p"
+		"The two super-ancient POKéMON\n"
+		"were awakened from a long sleep…\p"
+		"And now they are smashing each other\n"
+		"with their uncontrollable energy…\p"
+		"…{PLAYER}{KUN}.\p"
+		"You being here now I'll take to mean\n"
+		"that you're prepared to become\l"
+		"involved in this crisis.\p"
+		"Well, then, there's someone that\n"
+		"I'd like you to meet.\p"
+		"Come with me, please.")
+	closemessage
+	call_if_eq (VAR_FACING, DIR_WEST, SootopolisCity_EventScript_StartWalkToCaveOfOriginWest)
+	call_if_eq (VAR_FACING, DIR_NORTH, SootopolisCity_EventScript_StartWalkToCaveOfOriginNorth)
+	msgbox (
+		"DEVAN: Listen, {PLAYER}{KUN}.\p"
+		"Does seeing GROUDON and KYOGRE make\n"
+		"you think POKéMON are to be feared?\p"
+		"But that's not true.\n"
+		"POKéMON are really more…\p"
+		"…Why am I asking you this?\n"
+		"You already know.")
+	closemessage
+	applymovement (LOCALID_SOOTOPOLIS_STEVEN, SootopolisCity_Movement_StevenWalkToCaveOfOrigin)
+	applymovement (LOCALID_PLAYER, SootopolisCity_Movement_PlayerWalkToCaveOfOrigin)
+	waitmovement (0)
+	delay (120)
+	applymovement (LOCALID_SOOTOPOLIS_EXPERT, SootopolisCity_Movement_ExpertMoveAside)
+	waitmovement (0)
+	applymovement (LOCALID_SOOTOPOLIS_STEVEN, SootopolisCity_Movement_StevenArriveCaveEntrance)
+	applymovement (LOCALID_PLAYER, SootopolisCity_Movement_PlayerArriveCaveEntrance)
+	waitmovement (0)
+	msgbox (
+		"DEVAN: Okay, here we are!\p"
+		"Inside here you'll find someone named\n"
+		"Zinnia. She's the LOREKEEPER.\p"
+		"I think you have what's needed to\n"
+		"help her…")
+	closemessage
+	setflag (FLAG_STEVEN_GUIDES_TO_CAVE_OF_ORIGIN)
+	applymovement (LOCALID_PLAYER, SootopolisCity_Movement_PlayerEnterCaveOfOrigin)
+	waitmovement (0)
+	warp (MAP_CAVE_OF_ORIGIN_ENTRANCE, 9, 20)
+	waitstate
+}
+
+script SootopolisCity_Defense_AlolanNinetales {
+	playmoncry (SPECIES_NINETALES_ALOLA, 0)
+	msgbox (format("Ninetales is using Aurora Veil to protect the city."), MSGBOX_SIGN)
+}
+
 raw `
 SootopolisCity_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SootopolisCity_OnLoad
@@ -877,59 +973,6 @@ EventScript_ClosedSootopolisDoor::
 	msgbox SootopolisCity_Text_DoorIsClosed, MSGBOX_SIGN
 	end
 
-SootopolisCity_EventScript_Steven::
-	lockall
-	applymovement LOCALID_SOOTOPOLIS_STEVEN, Common_Movement_FacePlayer
-	waitmovement 0
-	call_if_unset FLAG_STEVEN_GUIDES_TO_CAVE_OF_ORIGIN, SootopolisCity_EventScript_StevenLeadPlayerCaveOfOrigin
-	goto_if_eq VAR_SOOTOPOLIS_CITY_STATE, 2, SootopolisCity_EventScript_StevenHelpWallace
-	goto_if_eq VAR_SOOTOPOLIS_CITY_STATE, 3, SootopolisCity_EventScript_StevenHelpedWallace
-	goto_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SootopolisCity_EventScript_StevenHelpedWallace
-	goto_if_set FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, SootopolisCity_EventScript_StevenMaxieArchieLeft
-	msgbox SootopolisCity_Text_SoThatsRayquaza, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SootopolisCity_EventScript_StevenHelpWallace::
-	msgbox SootopolisCity_Text_KnowWhatsNeededToHelpHim, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SootopolisCity_EventScript_StevenMaxieArchieLeft::
-	msgbox SootopolisCity_Text_MaxieArchieLeft, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SootopolisCity_EventScript_StevenHelpedWallace::
-	msgbox SootopolisCity_Text_NeverBeenToSkyPillar, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SootopolisCity_EventScript_StevenLeadPlayerCaveOfOrigin::
-	msgbox SootopolisCity_Text_InvolvedWithCrisisComeWithMe, MSGBOX_DEFAULT
-	closemessage
-	call_if_eq VAR_FACING, DIR_WEST, SootopolisCity_EventScript_StartWalkToCaveOfOriginWest
-	call_if_eq VAR_FACING, DIR_NORTH, SootopolisCity_EventScript_StartWalkToCaveOfOriginNorth
-	msgbox SootopolisCity_Text_DoesThisMakeYourFearPokemon, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_SOOTOPOLIS_STEVEN, SootopolisCity_Movement_StevenWalkToCaveOfOrigin
-	applymovement LOCALID_PLAYER, SootopolisCity_Movement_PlayerWalkToCaveOfOrigin
-	waitmovement 0
-	delay 120
-	applymovement LOCALID_SOOTOPOLIS_EXPERT, SootopolisCity_Movement_ExpertMoveAside
-	waitmovement 0
-	applymovement LOCALID_SOOTOPOLIS_STEVEN, SootopolisCity_Movement_StevenArriveCaveEntrance
-	applymovement LOCALID_PLAYER, SootopolisCity_Movement_PlayerArriveCaveEntrance
-	waitmovement 0
-	msgbox SootopolisCity_Text_HereWereAreHelpWallace, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_STEVEN_GUIDES_TO_CAVE_OF_ORIGIN
-	applymovement LOCALID_PLAYER, SootopolisCity_Movement_PlayerEnterCaveOfOrigin
-	waitmovement 0
-	warp MAP_CAVE_OF_ORIGIN_ENTRANCE, 9, 20
-	waitstate
-	end
-
 SootopolisCity_EventScript_StartWalkToCaveOfOriginWest::
 	applymovement LOCALID_SOOTOPOLIS_STEVEN, SootopolisCity_Movement_StevenStartWalkToCaveOfOrigin
 	applymovement LOCALID_PLAYER, SootopolisCity_Movement_PlayerStartWalkToCaveOfOriginWest
@@ -1615,57 +1658,6 @@ SootopolisCity_Text_TryingMeaninglessToPokemon:
 	.string "Maybe what we were trying to do was\n"
 	.string "something small, even meaningless,\l"
 	.string "to POKéMON…$"
-
-SootopolisCity_Text_InvolvedWithCrisisComeWithMe:
-	.string "STEVEN: Those POKéMON fighting…\n"
-	.string "GROUDON… And KYOGRE…\p"
-	.string "The two super-ancient POKéMON\n"
-	.string "were awakened from a long sleep…\p"
-	.string "And now they are smashing each other\n"
-	.string "with their uncontrollable energy…\p"
-	.string "…{PLAYER}{KUN}.\p"
-	.string "You being here now I'll take to mean\n"
-	.string "that you're prepared to become\l"
-	.string "involved in this crisis.\p"
-	.string "Well, then, there's someone that\n"
-	.string "I'd like you to meet.\p"
-	.string "Come with me, please.$"
-
-SootopolisCity_Text_DoesThisMakeYourFearPokemon:
-	.string "STEVEN: Listen, {PLAYER}{KUN}.\p"
-	.string "Does seeing GROUDON and KYOGRE make\n"
-	.string "you think POKéMON are to be feared?\p"
-	.string "But that's not true.\n"
-	.string "POKéMON are really more…\p"
-	.string "…Why am I asking you this?\n"
-	.string "You already know.$"
-
-SootopolisCity_Text_HereWereAreHelpWallace:
-	.string "STEVEN: Okay, here we are!\p"
-	.string "Inside here you'll find someone named\n"
-	.string "WALLACE.\p"
-	.string "I think you have what's needed to\n"
-	.string "help him…$"
-
-SootopolisCity_Text_KnowWhatsNeededToHelpHim:
-	.string "STEVEN: I think you have what's\n"
-	.string "needed to help him…$"
-
-SootopolisCity_Text_NeverBeenToSkyPillar:
-	.string "STEVEN: The SKY PILLAR…\p"
-	.string "I've never been there.\n"
-	.string "I wonder where it could be?$"
-
-SootopolisCity_Text_SoThatsRayquaza:
-	.string "STEVEN: So that's RAYQUAZA…\p"
-	.string "It's incredible how the two rampaging\n"
-	.string "POKéMON would flee from it in fear…$"
-
-SootopolisCity_Text_MaxieArchieLeft:
-	.string "STEVEN: It looks like both MAXIE and\n"
-	.string "ARCHIE have gone away somewhere.\p"
-	.string "Perhaps they've gone to MT. PYRE to\n"
-	.string "return those ORBS…$"
 
 SootopolisCity_Text_HaventYouScaledSkyPillar:
 	.string "WALLACE: Oh?\n"

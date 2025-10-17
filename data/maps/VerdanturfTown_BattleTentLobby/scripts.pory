@@ -1,3 +1,19 @@
+text VerdanturfTown_BattleTentLobby_Text_ScottCanMeetToughTrainers {
+	"ANTHONY: Hello, hello, wazzup, wazzup!\n"
+	"Good to see ya! Huhuhuhu\p"
+	"These BATTLE TENTS are places\n"
+	"you can meet tough TRAINERS.\p"
+	"Each one has special rules for\n"
+	"how battles are waged, too.\p"
+	"{PLAYER}{KUN}, I expect you to do\n"
+	"the best you can!"
+}
+
+text VerdanturfTown_BattleTentLobby_Text_ScottVisitRegularly {
+	"ANTHONY: Hello, hello, wazzup, wazzup!\n"
+	"Good to see ya! Huhuhuhu"
+}
+
 raw `
 VerdanturfTown_BattleTentLobby_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, VerdanturfTown_BattleTentLobby_OnFrame
@@ -365,19 +381,4 @@ VerdanturfTown_BattleTentLobby_Text_TaughtWhatKindsOfMoves:
 	.string "I think you would give yourself\n"
 	.string "an advantage if they knew how to\l"
 	.string "heal or protect themselves.$"
-
-VerdanturfTown_BattleTentLobby_Text_ScottCanMeetToughTrainers:
-	.string "SCOTT: Hey there, {PLAYER}{KUN}!\n"
-	.string "I thought I might see you here.\p"
-	.string "A BATTLE TENT's a place where\n"
-	.string "you can meet tough TRAINERS.\p"
-	.string "It doesn't matter what the rules are,\n"
-	.string "or how battles are waged, either.\p"
-	.string "{PLAYER}{KUN}, I expect you to do\n"
-	.string "the best you can!$"
-
-VerdanturfTown_BattleTentLobby_Text_ScottVisitRegularly:
-	.string "SCOTT: I visit here regularly in hopes\n"
-	.string "of seeing tough TRAINERS in action\l"
-	.string "in whatever the situation.$"
 `

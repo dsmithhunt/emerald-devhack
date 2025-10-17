@@ -1,3 +1,53 @@
+script SeafloorCavern_NewArchie {
+	lockall
+	msgbox(format(
+		"ARCHIE: To think…\n"
+		"You, some kid, would be the one to stand against me at this date with destiny!\p"
+		"Yohoho! I knew you were a brave one!\n"
+		"My POKéMON once saved me from a watery grave!\l"
+		"Let's see if yours will do the same!"
+	))
+	trainerbattle_no_intro(TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieDefeat)
+	// After battle
+	msgbox(format(
+		"ARCHIE: Yarr…\n"
+		"You really are impressive.\p"
+		"I wish you could understand why this must be done…"
+	))
+	setweather(WEATHER_NONE)
+	doweather
+	special (Script_FadeOutMapMusic)
+	waitstate
+	msgbox (SeafloorCavern_Room9_Text_RedOrbShinesByItself, MSGBOX_DEFAULT)
+	special (WaitWeather)
+	waitstate
+	setvar (VAR_RESULT, 1)
+	playse (SE_M_DETECT)
+	dofieldeffectsparkle (16, 42, 0)
+	waitfieldeffect (FLDEFF_SPARKLE)
+	closemessage
+	msgbox(format(
+		"With this BLUE ORB, I call upon KYOGRE!\n"
+		"Arise! Restore balance to this world!"))
+	setvar (VAR_RESULT, 1)
+	playfanfare (MUS_AWAKEN_LEGEND)
+	playse (SE_ORB)
+	special (DoOrbEffect)
+	applymovement (VAR_0x8004, Common_Movement_WalkInPlaceFasterUp)
+	applymovement (LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
+	waitmovement (0)
+	delay (150)
+	removeobject (LOCALID_SEAFLOOR_CAVERN_KYOGRE_SLEEPING)
+	addobject (LOCALID_SEAFLOOR_CAVERN_KYOGRE)
+	waitstate
+	delay (60)
+	applymovement (LOCALID_SEAFLOOR_CAVERN_KYOGRE, SeafloorCavern_Room9_Movement_KyogreApproach)
+	waitmovement (0)
+	special (FadeOutOrbEffect)
+	waitstate
+
+}
+
 raw `
 SeafloorCavern_Room9_MapScripts::
 	.byte 0
@@ -253,7 +303,7 @@ SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
 	.string "With this RED ORB, I can make KYOGRE…$"
 
 SeafloorCavern_Room9_Text_RedOrbShinesByItself:
-	.string "The RED ORB suddenly began shining\n"
+	.string "The BLUE ORB suddenly began shining\n"
 	.string "by itself!$"
 
 SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo:

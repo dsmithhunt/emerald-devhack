@@ -126,6 +126,13 @@
       "elevation": 3,
       "dest_map": "MAP_NEW_MAUVILLE_ENTRANCE",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 31,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAUVILLE_ENTRANCE",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -218,6 +225,15 @@
       "var": "VAR_NEW_MAUVILLE_STATE",
       "var_value": "1",
       "script": "NewMauville_Inside_EventScript_RedButton"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_NEW_MAUVILLE_STATE",
+      "var_value": "2",
+      "script": "NewMauvillle_DeepWarp"
     }
   ],
   "bg_events": [

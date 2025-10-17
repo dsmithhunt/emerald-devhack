@@ -1,3 +1,39 @@
+script DesertRuins_EventScript_CaveEntranceMiddle {
+	lockall
+	goto_if_set (FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_BigHoleInWall)
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"LEFT, LEFT, DOWN, DOWN. THEN, USE ROCK SMASH."
+		))
+	} else {
+		braillemsgbox (DesertRuins_Braille_UseRockSmash)
+	}
+	releaseall
+}
+
+script DesertRuins_EventScript_BigHoleInWall {
+	msgbox (gText_BigHoleInTheWall, MSGBOX_DEFAULT)
+	releaseall
+}
+
+script DesertRuins_EventScript_CaveEntranceSide {
+	lockall
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"LEFT, LEFT, DOWN, DOWN. THEN, USE ROCK SMASH."
+		))
+	} else {
+		braillemsgbox (DesertRuins_Braille_UseRockSmash)
+	}
+	releaseall
+}
+
+
+
 raw `
 DesertRuins_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, DesertRuins_OnResume
@@ -36,24 +72,6 @@ DesertRuins_OnTransition:
 DesertRuins_EventScript_ShowRegirock::
 	clearflag FLAG_HIDE_REGIROCK
 	return
-
-DesertRuins_EventScript_CaveEntranceMiddle::
-	lockall
-	goto_if_set FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_BigHoleInWall
-	braillemsgbox DesertRuins_Braille_UseRockSmash
-	releaseall
-	end
-
-DesertRuins_EventScript_BigHoleInWall::
-	msgbox gText_BigHoleInTheWall, MSGBOX_DEFAULT
-	releaseall
-	end
-
-DesertRuins_EventScript_CaveEntranceSide::
-	lockall
-	braillemsgbox DesertRuins_Braille_UseRockSmash
-	releaseall
-	end
 
 DesertRuins_EventScript_Regirock::
 	lock

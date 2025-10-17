@@ -12,7 +12,7 @@ MagmaHideout_4F_EventScript_Maxie::
 	playse SE_M_DETECT
 	dofieldeffectsparkle 18, 42, 0
 	waitfieldeffect FLDEFF_SPARKLE
-	setvar VAR_RESULT, 1
+	setvar VAR_RESULT, 0
 	playfanfare MUS_AWAKEN_LEGEND
 	playse SE_ORB
 	special DoOrbEffect
@@ -122,7 +122,7 @@ MagmaHideout_4F_EventScript_Grunt13::
 	end
 
 MagmaHideout_4F_EventScript_Tabitha::
-	trainerbattle_single TRAINER_TABITHA_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat
+	trainerbattle_single TRAINER_SIDNEY_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat
 	msgbox MagmaHideout_4F_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -185,9 +185,9 @@ MagmaHideout_4F_Text_MaxieAwakenGroudon:
 	.string "MAXIE: GROUDON…\p"
 	.string "Nothing could awaken you from your\n"
 	.string "sleep bathed in magma…\p"
-	.string "This BLUE ORB is what you sought.\n"
+	.string "This RED ORB is what you sought.\n"
 	.string "Wasn't it?\p"
-	.string "I have brought you the BLUE ORB.\n"
+	.string "I have brought you the RED ORB.\n"
 	.string "Let its shine awaken you!\p"
 	.string "And show me…\n"
 	.string "Show me the full extent of your power!$"
@@ -195,7 +195,7 @@ MagmaHideout_4F_Text_MaxieAwakenGroudon:
 MagmaHideout_4F_Text_MaxieGroudonWhatsWrong:
 	.string "MAXIE: GROUDON!\n"
 	.string "What's wrong?\p"
-	.string "Wasn't the BLUE ORB the key?\p"
+	.string "Wasn't the RED ORB the key?\p"
 	.string "GROUDON!\n"
 	.string "Where have you gone…$"
 

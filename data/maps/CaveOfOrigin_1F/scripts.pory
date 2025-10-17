@@ -1,3 +1,20 @@
+script CaveOfOrigin_1F_Zinnia {
+	lock
+	msgbox(format(
+		"ZINNIA: In time, however, people came about and began to fight amongst themselves.\p"
+		"These people were blinded by their conflict, and their leaders stole the people's most sacred relics,\l"
+		"the eggs of the super-ancient POKéMON.\p"
+		"They used the eggs to force KYOGRE and GROUDON to fight for them, bringing about unimaginable devastation.\p"
+		"Although the POKéMON were being forced to fight,\p"
+		"each clash grew resentment towards the other until their violence was voluntary, beyond the will of their masters."
+	))
+	applymovement(1, moves(walk_up))
+	waitmovement(0)
+	removeobject (1)
+	playse (SE_EXIT)
+	release
+}
+
 raw `
 CaveOfOrigin_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CaveOfOrigin_1F_OnTransition

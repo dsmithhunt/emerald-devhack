@@ -1,3 +1,39 @@
+
+
+script SealedChamber_OuterRoom_EventScript_InnerRoomEntranceWall {
+	lockall
+	goto_if_set (FLAG_SYS_BRAILLE_DIG, SealedChamber_OuterRoom_EventScript_HoleInWall)
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"DIG HERE."
+		))
+	} else {
+		braillemsgbox (SealedChamber_OuterRoom_Braille_DigHere)
+	}
+	releaseall
+}
+
+script SealedChamber_OuterRoom_EventScript_HoleInWall {
+	msgbox (gText_BigHoleInTheWall, MSGBOX_DEFAULT)
+	releaseall
+}
+
+script SealedChamber_OuterRoom_EventScript_BrailleDigHere {
+	lockall
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"DIG HERE."
+		))
+	} else {
+		braillemsgbox (SealedChamber_OuterRoom_Braille_DigHere)
+	}
+	releaseall
+}
+
 raw `
 SealedChamber_OuterRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SealedChamber_OuterRoom_OnResume
@@ -86,23 +122,4 @@ SealedChamber_OuterRoom_EventScript_BrailleComma::
 	braillemsgbox SealedChamber_OuterRoom_Braille_Comma
 	releaseall
 	end
-
-SealedChamber_OuterRoom_EventScript_InnerRoomEntranceWall::
-	lockall
-	goto_if_set FLAG_SYS_BRAILLE_DIG, SealedChamber_OuterRoom_EventScript_HoleInWall
-	braillemsgbox SealedChamber_OuterRoom_Braille_DigHere
-	releaseall
-	end
-
-SealedChamber_OuterRoom_EventScript_HoleInWall::
-	msgbox gText_BigHoleInTheWall, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SealedChamber_OuterRoom_EventScript_BrailleDigHere::
-	lockall
-	braillemsgbox SealedChamber_OuterRoom_Braille_DigHere
-	releaseall
-	end
-
 `

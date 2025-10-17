@@ -9413,11 +9413,11 @@ Seviper
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TABITHA_MOSSDEEP ===
-Name: TABITHA
+=== TRAINER_COURTNEY_MOSSDEEP ===
+Name: COURTNEY
 Class: Magma Admin
 Pic: Magma Admin
-Gender: Male
+Gender: Female
 Music: Magma
 Double Battle: No
 AI: Check Bad Move
@@ -10977,13 +10977,13 @@ Poochyena
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TABITHA_MT_CHIMNEY ===
-Name: TABITHA
+=== TRAINER_COURTNEY_MT_CHIMNEY ===
+Name: COURTNEY
 Class: Magma Admin
 Pic: Magma Admin
-Gender: Male
+Gender: Female
 Music: Magma
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer
 
 Numel
@@ -13591,13 +13591,13 @@ Baltoy
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TABITHA_MAGMA_HIDEOUT ===
+=== TRAINER_SIDNEY_MAGMA_HIDEOUT ===
 Name: Sidney
 Class: Magma Admin
 Pic: Elite Four Sidney
 Gender: Male
 Music: Magma
-Double Battle: No
+Double Battle: Yes
 AI: Check Bad Move
 
 Gigalith

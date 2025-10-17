@@ -1,3 +1,17 @@
+script Underwater_SealedChamber_EventScript_Braille {
+	lockall
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"GO UP HERE."
+		))
+	} else {
+		braillemsgbox (Underwater_SealedChamber_Braille_GoUpHere)
+	}
+	releaseall
+}
+
 raw `
 Underwater_SealedChamber_MapScripts::
 	map_script MAP_SCRIPT_ON_DIVE_WARP, Underwater_SealedChamber_OnDive
@@ -15,12 +29,6 @@ Underwater_SealedChamber_EventScript_SurfaceRoute134::
 
 Underwater_SealedChamber_EventScript_SurfaceSealedChamber::
 	setdivewarp MAP_SEALED_CHAMBER_OUTER_ROOM, 10, 19
-	end
-
-Underwater_SealedChamber_EventScript_Braille::
-	lockall
-	braillemsgbox Underwater_SealedChamber_Braille_GoUpHere
-	releaseall
 	end
 
 `
