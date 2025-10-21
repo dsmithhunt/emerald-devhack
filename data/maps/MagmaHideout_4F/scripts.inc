@@ -27,7 +27,7 @@ MagmaHideout_4F_EventScript_Maxie::
 # 14 "data/maps/MagmaHideout_4F/scripts.pory"
 	waitfieldeffect FLDEFF_SPARKLE
 # 15 "data/maps/MagmaHideout_4F/scripts.pory"
-	setvar VAR_RESULT, 1
+	setvar VAR_RESULT, 0
 # 16 "data/maps/MagmaHideout_4F/scripts.pory"
 	playfanfare MUS_AWAKEN_LEGEND
 # 17 "data/maps/MagmaHideout_4F/scripts.pory"
@@ -373,11 +373,11 @@ MagmaHideout_4F_Text_MaxieAwakenGroudon:
 # 187 "data/maps/MagmaHideout_4F/scripts.pory"
 	.string "sleep bathed in magma…\p"
 # 188 "data/maps/MagmaHideout_4F/scripts.pory"
-	.string "This BLUE ORB is what you sought.\n"
+	.string "This RED ORB is what you sought.\n"
 # 189 "data/maps/MagmaHideout_4F/scripts.pory"
 	.string "Wasn't it?\p"
 # 190 "data/maps/MagmaHideout_4F/scripts.pory"
-	.string "I have brought you the BLUE ORB.\n"
+	.string "I have brought you the RED ORB.\n"
 # 191 "data/maps/MagmaHideout_4F/scripts.pory"
 	.string "Let its shine awaken you!\p"
 # 192 "data/maps/MagmaHideout_4F/scripts.pory"
@@ -393,7 +393,7 @@ MagmaHideout_4F_Text_MaxieGroudonWhatsWrong:
 # 197 "data/maps/MagmaHideout_4F/scripts.pory"
 	.string "What's wrong?\p"
 # 198 "data/maps/MagmaHideout_4F/scripts.pory"
-	.string "Wasn't the BLUE ORB the key?\p"
+	.string "Wasn't the RED ORB the key?\p"
 # 199 "data/maps/MagmaHideout_4F/scripts.pory"
 	.string "GROUDON!\n"
 # 200 "data/maps/MagmaHideout_4F/scripts.pory"

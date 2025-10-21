@@ -5,11 +5,11 @@ script MtChimney_Courtney {
 			"COURTNEY: Anticipated factor… Did you come all the way up here to see me again?\p"
 			"Your timing is once again opportune; the METEORITE has already been delivered!\p"
 			"Target acquired…\n"
-			"Interest levels peaking… ♪\l"
+			"Interest levels peaking… ~\l"
 			"Commencing… experiment…"), 
 		format("Result: unexpected…"))
 	msgbox (
-		format("COURTNEY: I knew it. You…\n""are interesting! …Haha. ♪"), 
+		format("COURTNEY: I knew it. You…\n""are interesting! …Haha. ~"), 
 		MSGBOX_AUTOCLOSE)
 	end
 }
@@ -19,13 +19,13 @@ text MtChimney_Text_CourtneyExamples {
 	"Ahahahaha! Ouch!"
 	"Ahahahaha! You're so darn strong. It's terribly disappointing that you're not a Team Magma member. You could have enjoyed the fabulous world our Boss has promised to one of our own…"
 
-	"As anticipated. Unanticipated. You. Target lock…completed. Commencing…experiment. You. Forever. Aha… ♪"
+	"As anticipated. Unanticipated. You. Target lock…completed. Commencing…experiment. You. Forever. Aha… ~"
 	"Returning home."
-	"…Again? That's unanticipated. …I knew it. You…are interesting! …Haha. ♪"
+	"…Again? That's unanticipated. …I knew it. You…are interesting! …Haha. ~"
 	"I'm looking forward to… I'm looking forward to… When we…can meet again."
-	"… …There's still more…work for me to do. …I must…stop you. …Until Leader Maxie…departs… …But… …Now…I just…want to… …With you… …I want to…engage… …You… …I want to…analyze. Ahahaha. ♪"
+	"… …There's still more…work for me to do. …I must…stop you. …Until Leader Maxie…departs… …But… …Now…I just…want to… …With you… …I want to…engage… …You… …I want to…analyze. Ahahaha. ~"
 
-	"…Leader Maxie… … …Mission… …Complete. …Leader Maxie…has departed. …For the development…of humanity. …For our…dreams… …To you…whom I had not foreseen. …I will give a hint. …So that you…may dream…the same dream as us. …Leader Maxie…is headed for…the sea stretching out from Lilycove. …In the depths of the sea…lies the Seafloor Cavern. …What are you…going to do? …Looking around…in seaside towns. …That might work. …Ahaha. ♪"
+	"…Leader Maxie… … …Mission… …Complete. …Leader Maxie…has departed. …For the development…of humanity. …For our…dreams… …To you…whom I had not foreseen. …I will give a hint. …So that you…may dream…the same dream as us. …Leader Maxie…is headed for…the sea stretching out from Lilycove. …In the depths of the sea…lies the Seafloor Cavern. …What are you…going to do? …Looking around…in seaside towns. …That might work. …Ahaha. ~"
 }
 
 script MtChimney_Maxie {

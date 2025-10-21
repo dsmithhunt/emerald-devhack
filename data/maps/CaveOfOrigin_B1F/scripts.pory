@@ -5,7 +5,7 @@ script CaveOfOrigin_ZinniaStory {
 		"This is where the SUPER-ANCIENT POKéMON were born and from where their eggs, the RED and BLUE ORBS were taken…"
 	))
 	closemessage
-	applymovement(LOCALID_CAVE_OF_ORIGIN_ZINNIA, Common_Movement_FacePlayer)
+	applymovement(LOCALID_CAVE_OF_ORIGIN_WALLACE, Common_Movement_FacePlayer)
 	waitmovement(0)
 	msgbox(format(
 		"This story, however, does not end with mutual destruction…\p"

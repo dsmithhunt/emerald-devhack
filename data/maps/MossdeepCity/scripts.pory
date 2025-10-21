@@ -14,10 +14,6 @@ text MossdeepCity_Text_ScottSomethingWrongWithTown {
 	)
 }
 
-
-		"SCOTT: {PLAYER}{KUN}, feeling good?\n"
-		"I'm doing great!\p"
-
 raw `
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition

@@ -1,4 +1,4 @@
-6#ifndef GUARD_CONSTANTS_FLAGS_H
+#ifndef GUARD_CONSTANTS_FLAGS_H
 #define GUARD_CONSTANTS_FLAGS_H
 
 #include "constants/opponents.h"
