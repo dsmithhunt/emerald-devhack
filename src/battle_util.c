@@ -3726,14 +3726,16 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
 
                 if (effect != 0)
                 {
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_ANTICIPATION;
+                    // gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_ANTICIPATION;
                     gSpecialStatuses[battler].switchInAbilityDone = TRUE;
-                    BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                    // BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
                     if (CompareStat(battler, STAT_EVASION, MAX_STAT_STAGE, CMP_LESS_THAN)){
                          gBattleScripting.savedBattler = gBattlerAttacker;
                          gBattlerAttacker = battler;
                          SET_STATCHANGER(STAT_EVASION, 1, FALSE);
+                         // gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_ANTICIPATION;
                          BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
+                         effect++;
                     }
                 }
             }
@@ -9626,6 +9628,14 @@ static inline void MulByTypeEffectiveness(struct DamageContext *ctx, uq4_12_t *m
     }
     else if ((ctx->moveType == TYPE_FIGHTING || ctx->moveType == TYPE_NORMAL) && defType == TYPE_GHOST
         && (ctx->abilityAtk == ABILITY_SCRAPPY || ctx->abilityAtk == ABILITY_MINDS_EYE)
+        && mod == UQ_4_12(0.0))
+    {
+        mod = UQ_4_12(1.0);
+        if (ctx->updateFlags)
+            RecordAbilityBattle(ctx->battlerAtk, ctx->abilityAtk);
+    }
+    else if ((ctx->moveType == TYPE_POISON) && defType == TYPE_STEEL
+        && (ctx->abilityAtk == ABILITY_CORROSION )
         && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(1.0);

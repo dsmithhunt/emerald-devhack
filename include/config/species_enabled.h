@@ -469,7 +469,7 @@
 #define P_FAMILY_BUZZWOLE                FALSE
 #define P_FAMILY_PHEROMOSA               FALSE
 #define P_FAMILY_XURKITREE               FALSE
-#define P_FAMILY_CELESTEELA              FALSE
+#define P_FAMILY_CELESTEELA              P_GEN_7_POKEMON
 #define P_FAMILY_KARTANA                 FALSE
 #define P_FAMILY_GUZZLORD                FALSE
 #define P_FAMILY_NECROZMA                FALSE
@@ -523,8 +523,8 @@
 #define P_FAMILY_ETERNATUS               FALSE
 #define P_FAMILY_KUBFU                   FALSE
 #define P_FAMILY_ZARUDE                  FALSE
-#define P_FAMILY_REGIELEKI               FALSE
-#define P_FAMILY_REGIDRAGO               FALSE
+#define P_FAMILY_REGIELEKI               P_GEN_8_POKEMON
+#define P_FAMILY_REGIDRAGO               P_GEN_8_POKEMON
 #define P_FAMILY_GLASTRIER               FALSE
 #define P_FAMILY_SPECTRIER               FALSE
 #define P_FAMILY_CALYREX                 FALSE
@@ -596,7 +596,7 @@
 #define P_FAMILY_OKIDOGI                 FALSE
 #define P_FAMILY_MUNKIDORI               FALSE
 #define P_FAMILY_FEZANDIPITI             FALSE
-#define P_FAMILY_OGERPON                 FALSE
+#define P_FAMILY_OGERPON                 P_GEN_9_POKEMON
 #define P_FAMILY_GOUGING_FIRE            FALSE
 #define P_FAMILY_RAGING_BOLT             FALSE
 #define P_FAMILY_IRON_BOULDER            FALSE

@@ -78,7 +78,6 @@ FarawayIsland_Interior_Movement_MewAppear:
 FarawayIsland_Interior_Movement_MewFloatUpNorth:
 	lock_facing_direction
 	walk_fast_up
-	walk_fast_up
 	unlock_facing_direction
 	walk_in_place_down
 	walk_in_place_down
@@ -86,8 +85,7 @@ FarawayIsland_Interior_Movement_MewFloatUpNorth:
 
 FarawayIsland_Interior_Movement_MewFloatUpSouth:
 	lock_facing_direction
-	walk_fast_up
-	walk_fast_up
+	walk_fast_down
 	unlock_facing_direction
 	walk_in_place_up
 	walk_in_place_up
@@ -95,8 +93,7 @@ FarawayIsland_Interior_Movement_MewFloatUpSouth:
 
 FarawayIsland_Interior_Movement_MewFloatUpWest:
 	lock_facing_direction
-	walk_fast_up
-	walk_fast_up
+	walk_fast_left
 	unlock_facing_direction
 	walk_in_place_right
 	walk_in_place_right
@@ -104,8 +101,7 @@ FarawayIsland_Interior_Movement_MewFloatUpWest:
 
 FarawayIsland_Interior_Movement_MewFloatUpEast:
 	lock_facing_direction
-	walk_fast_up
-	walk_fast_up
+	walk_fast_right
 	unlock_facing_direction
 	walk_in_place_left
 	walk_in_place_left
@@ -120,7 +116,7 @@ FarawayIsland_Interior_EventScript_Mew::
 	special SetMewAboveGrass
 	message FarawayIsland_Interior_Text_Mew
 	waitse
-	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_OGERPON, CRY_MODE_ENCOUNTER
 	call_if_eq VAR_FACING, DIR_NORTH, FarawayIsland_Interior_EventScript_FoundMewNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, FarawayIsland_Interior_EventScript_FoundMewSouth
 	call_if_eq VAR_FACING, DIR_WEST, FarawayIsland_Interior_EventScript_FoundMewWest
@@ -128,7 +124,7 @@ FarawayIsland_Interior_EventScript_Mew::
 	special DestroyMewEmergingGrassSprite
 	delay 40
 	waitmoncry
-	seteventmon SPECIES_MEW, 30
+	seteventmon SPECIES_OGERPON, 30
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
@@ -144,12 +140,12 @@ FarawayIsland_Interior_EventScript_Mew::
 
 FarawayIsland_Interior_EventScript_MewDefeated::
 	setflag FLAG_DEFEATED_MEW
-	setvar VAR_0x8004, SPECIES_MEW
+	setvar VAR_0x8004, SPECIES_OGERPON
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
 FarawayIsland_Interior_EventScript_PlayerOrMewRan::
-	setvar VAR_0x8004, SPECIES_MEW
+	setvar VAR_0x8004, SPECIES_OGERPON
 	goto Common_EventScript_LegendaryFlewAway
 	end
 

@@ -34,7 +34,7 @@ LittlerootTown_EventScript_Deoxys_Gift::
 # 20 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Deoxys_Gift_Text_0
 # 21 "data/maps/LittlerootTown/scripts.pory"
-	GiveMon SPECIES_MOLTIN, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT
+	givemon SPECIES_MOLTIN, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT
 # 22 "data/maps/LittlerootTown/scripts.pory"
 	removeobject 9
 # 23 "data/maps/LittlerootTown/scripts.pory"
@@ -54,7 +54,7 @@ LittlerootTown_EventScript_Deoxys::
 # 31 "data/maps/LittlerootTown/scripts.pory"
 	waitmoncry
 # 32 "data/maps/LittlerootTown/scripts.pory"
-	setwildbattle SPECIES_SWALOT, 12, ITEM_NONE
+	setwildbattle SPECIES_CROAGUNK, 12, ITEM_NONE
 # 34 "data/maps/LittlerootTown/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
 # 37 "data/maps/LittlerootTown/scripts.pory"
