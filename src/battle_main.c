@@ -5811,6 +5811,24 @@ u32 TrySetAteType(u32 move, u32 battlerAtk, u32 attackerAbility)
     case ABILITY_GALVANIZE:
         ateType = TYPE_ELECTRIC;
         break;
+    case ABILITY_REFRIGERATE:
+        ateType = TYPE_ICE;
+        break;
+    case ABILITY_VAPORIZE:
+        ateType = TYPE_WATER;
+        break;
+    case ABILITY_INCINERATE:
+        ateType = TYPE_FIRE;
+        break;
+    case ABILITY_MEMORIZE:
+        ateType = TYPE_PSYCHIC;
+        break;
+    case ABILITY_TENEBRATE:
+        ateType = TYPE_DARK;
+        break;
+    case ABILITY_FOLIATE:
+        ateType = TYPE_GRASS;
+        break;
     default:
         ateType = TYPE_NONE;
         break;

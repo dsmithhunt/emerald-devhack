@@ -1164,3 +1164,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Rustpetal_Park/scripts.inc"
 
 	.include "data/maps/PetalburgMansion_1F/scripts.inc"
+
+	.include "data/maps/PetalburgMansion_2F/scripts.inc"
+
+	.include "data/maps/PetalburgMansion_3F/scripts.inc"
+
+	.include "data/maps/TropicalIsland/scripts.inc"

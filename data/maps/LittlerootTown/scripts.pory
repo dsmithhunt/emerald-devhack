@@ -3,7 +3,7 @@ script Debug_Script_1 {
 	givemon(SPECIES_VENUSAUR, 100, , , , , , , , , , , , , , , , , , MOVE_CUT, MOVE_FLASH, MOVE_SEED_BOMB, MOVE_SLUDGE_BOMB)
 	givemon(SPECIES_BLASTOISE, 100, , , , , , , , , , , , , , , , , , MOVE_WATERFALL, MOVE_AURA_SPHERE, MOVE_SKULL_BASH, MOVE_PROTECT)
 	givemon(SPECIES_SNORLAX, 100, , , , , , , , , , , , , , , , , , MOVE_STRENGTH, MOVE_ROCK_SMASH, MOVE_BODY_SLAM, MOVE_EARTHQUAKE)
-	givemon(SPECIES_LAPRAS, 100, , , , , , , , , , , , , , , , , , MOVE_SURF, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TELEKINESIS)
+	givemon(SPECIES_LAPRAS, 100, , , , , , , , , , , , , , , , , , MOVE_SURF, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_KINESIS)
 	setflag(FLAG_BADGE01_GET)
 	setflag(FLAG_BADGE02_GET)
 	setflag(FLAG_BADGE03_GET)
@@ -18,7 +18,7 @@ script Debug_Script_1 {
 script LittlerootTown_EventScript_Deoxys_Gift {
 	lockall
 	msgbox("Here. You'll need this.")
-	givemon(SPECIES_MOLTIN, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT)
+	givemon(SPECIES_REGICE, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT)
 	removeobject(9)
 	releaseall
 }

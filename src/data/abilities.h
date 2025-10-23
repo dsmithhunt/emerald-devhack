@@ -2418,4 +2418,46 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_ABSOLUTE_ZERO] =
+    {
+        .name = _("Absolute Zero"),
+        .description = COMPOUND_STRING("Powers up Ice moves."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_VAPORIZE] =
+    {
+        .name = _("Vaporize"),
+        .description = COMPOUND_STRING("Normal moves become Water."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_INCINERATE] =
+    {
+        .name = _("Incinerate"),
+        .description = COMPOUND_STRING("Normal moves become Fire."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_MEMORIZE] =
+    {
+        .name = _("Memorize"),
+        .description = COMPOUND_STRING("Normal moves become Psychic."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_TENEBRATE] =
+    {
+        .name = _("Tenebrate"),
+        .description = COMPOUND_STRING("Normal moves become Dark."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_FOLIATE] =
+    {
+        .name = _("Foliate"),
+        .description = COMPOUND_STRING("Normal moves become Grass."),
+        .aiRating = 8,
+    },
 };

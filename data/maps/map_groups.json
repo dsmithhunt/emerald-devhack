@@ -625,6 +625,9 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_NewDungeons": [
-    "PetalburgMansion_1F"
+    "PetalburgMansion_1F",
+    "PetalburgMansion_2F",
+    "PetalburgMansion_3F",
+    "TropicalIsland"
   ]
 }

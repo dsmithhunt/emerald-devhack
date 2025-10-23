@@ -34,15 +34,15 @@
       "x": 12,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_FARAWAY_ISLAND_ENTRANCE",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_TROPICAL_ISLAND",
+      "dest_warp_id": "2"
     },
     {
       "x": 13,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_FARAWAY_ISLAND_ENTRANCE",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_TROPICAL_ISLAND",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

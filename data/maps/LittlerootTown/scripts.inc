@@ -8,7 +8,7 @@ Debug_Script_1::
 # 5 "data/maps/LittlerootTown/scripts.pory"
 	givemon SPECIES_SNORLAX, 100, , , , , , , , , , , , , , , , , , MOVE_STRENGTH, MOVE_ROCK_SMASH, MOVE_BODY_SLAM, MOVE_EARTHQUAKE
 # 6 "data/maps/LittlerootTown/scripts.pory"
-	givemon SPECIES_LAPRAS, 100, , , , , , , , , , , , , , , , , , MOVE_SURF, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TELEKINESIS
+	givemon SPECIES_LAPRAS, 100, , , , , , , , , , , , , , , , , , MOVE_SURF, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_KINESIS
 # 7 "data/maps/LittlerootTown/scripts.pory"
 	setflag FLAG_BADGE01_GET
 # 8 "data/maps/LittlerootTown/scripts.pory"
@@ -34,7 +34,7 @@ LittlerootTown_EventScript_Deoxys_Gift::
 # 20 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Deoxys_Gift_Text_0
 # 21 "data/maps/LittlerootTown/scripts.pory"
-	givemon SPECIES_MOLTIN, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT
+	givemon SPECIES_REGICE, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT
 # 22 "data/maps/LittlerootTown/scripts.pory"
 	removeobject 9
 # 23 "data/maps/LittlerootTown/scripts.pory"

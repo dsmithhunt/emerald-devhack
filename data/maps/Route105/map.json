@@ -138,10 +138,17 @@
   "warp_events": [
     {
       "x": 9,
-      "y": 20,
+      "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_ISLAND_CAVE",
+      "dest_map": "MAP_TROPICAL_ISLAND",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_TROPICAL_ISLAND",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

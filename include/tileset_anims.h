@@ -32,4 +32,8 @@ void InitTilesetAnim_EliteFour(void);
 void InitTilesetAnim_BattleDome(void);
 void InitTilesetAnim_BattlePyramid(void);
 
+// Custom tileset animations
+
+void InitTilesetAnim_Route104(void);
+
 #endif // GUARD_TILESET_ANIMS_H

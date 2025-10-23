@@ -207,7 +207,7 @@
       "width": 40,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_Route104",
       "border_filepath": "data/layouts/Route105/border.bin",
       "blockdata_filepath": "data/layouts/Route105/map.bin"
     },
@@ -4440,6 +4440,36 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/PetalburgMansion_1F/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgMansion_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_MANSION_2F",
+      "name": "PetalburgMansion_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/PetalburgMansion_2F/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgMansion_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_MANSION_3F",
+      "name": "PetalburgMansion_3F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/PetalburgMansion_3F/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgMansion_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TROPICAL_ISLAND",
+      "name": "TropicalIsland_Layout",
+      "width": 32,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/TropicalIsland/border.bin",
+      "blockdata_filepath": "data/layouts/TropicalIsland/map.bin"
     }
   ]
 }
