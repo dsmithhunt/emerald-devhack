@@ -5811,13 +5811,10 @@ u32 TrySetAteType(u32 move, u32 battlerAtk, u32 attackerAbility)
     case ABILITY_GALVANIZE:
         ateType = TYPE_ELECTRIC;
         break;
-    case ABILITY_REFRIGERATE:
-        ateType = TYPE_ICE;
-        break;
     case ABILITY_VAPORIZE:
         ateType = TYPE_WATER;
         break;
-    case ABILITY_INCINERATE:
+    case ABILITY_CONFLAGRATE:
         ateType = TYPE_FIRE;
         break;
     case ABILITY_MEMORIZE:

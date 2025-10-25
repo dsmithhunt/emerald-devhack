@@ -107,7 +107,7 @@ static u8 (*const sAcroBikeInputHandlers[])(u8 *, u16, u16) =
 };
 
 // used with bikeFrameCounter from mach bike
-static const u16 sMachBikeSpeeds[] = {PLAYER_SPEED_NORMAL, PLAYER_SPEED_FAST, PLAYER_SPEED_FASTEST};
+static const u16 sMachBikeSpeeds[] = {PLAYER_SPEED_FAST, PLAYER_SPEED_FASTER, PLAYER_SPEED_FASTEST};
 
 // this is a list of timers to compare against later, terminated with 0. the only timer being compared against is 4 frames in this list.
 static const u8 sAcroBikeJumpTimerList[] = {4, 0};
@@ -302,9 +302,9 @@ static u8 AcroBikeHandleInputNormal(u8 *newDirection, u16 newKeys, u16 heldKeys)
 {
     u8 direction = GetPlayerMovementDirection();
 
-    gPlayerAvatar.bikeFrameCounter = 0;
     if (*newDirection == DIR_NONE)
     {
+        gPlayerAvatar.bikeFrameCounter = 0;
         if (newKeys & B_BUTTON)
         {
             //We're standing still with the B button held.
@@ -564,27 +564,52 @@ static void AcroBikeTransition_Moving(u8 direction)
     u8 collision;
     struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
 
+    // If we can't face the intended direction, mirror Mach: slow down or face idle
     if (CanBikeFaceDirOnMetatile(direction, playerObjEvent->currentMetatileBehavior) == 0)
     {
+        // If we had speed, reduce it just like MachBikeTransition_TrySlowDown
+        if (gPlayerAvatar.bikeSpeed != PLAYER_SPEED_STANDING)
+            gPlayerAvatar.bikeFrameCounter = --gPlayerAvatar.bikeSpeed;
+
         AcroBikeTransition_FaceDirection(playerObjEvent->movementDirection);
         return;
     }
+
     collision = GetBikeCollision(direction);
     if (collision > 0 && collision < COLLISION_VERTICAL_RAIL)
     {
         if (collision == COLLISION_LEDGE_JUMP)
+        {
             PlayerJumpLedge(direction);
-        else if (collision == COLLISION_OBJECT_EVENT && IsPlayerCollidingWithFarawayIslandMew(direction))
-            PlayerOnBikeCollideWithFarawayIslandMew(direction);
-        else if (collision < COLLISION_STOP_SURFING || collision > COLLISION_ROTATING_GATE)
-            PlayerOnBikeCollide(direction);
+        }
+        else
+        {
+            // Mirror Mach: fully stop on solid collisions and run the same special handlers
+            Bike_SetBikeStill();
+
+            if (collision == COLLISION_OBJECT_EVENT && IsPlayerCollidingWithFarawayIslandMew(direction))
+                PlayerOnBikeCollideWithFarawayIslandMew(direction);
+            else if (collision < COLLISION_STOP_SURFING || collision > COLLISION_ROTATING_GATE)
+                PlayerOnBikeCollide(direction);
+        }
     }
     else
     {
+        // Free to move: match Mach's stair slowdown + counter/speed ramp,
+        // but keep Acro movement visuals.
+        if (ObjectMovingOnRockStairs(playerObjEvent, direction) && gPlayerAvatar.bikeFrameCounter > 1)
+            gPlayerAvatar.bikeFrameCounter--;
+
+        // Keep Acro visuals for movement
         if (ObjectMovingOnRockStairs(playerObjEvent, direction))
             PlayerWalkFast(direction);
         else
             PlayerRideWaterCurrent(direction);
+
+        // Same speed math as Mach (1.5x the frame counter), and same cap/increment
+        gPlayerAvatar.bikeSpeed = gPlayerAvatar.bikeFrameCounter + (gPlayerAvatar.bikeFrameCounter >> 1);
+        if (gPlayerAvatar.bikeFrameCounter < 2) // do not exceed last index of sMachBikeSpeeds
+            gPlayerAvatar.bikeFrameCounter++;
     }
 }
 
@@ -697,6 +722,8 @@ static void AcroBikeTransition_WheelieMoving(u8 direction)
         PlayerIdleWheelie(playerObjEvent->movementDirection);
         return;
     }
+    gPlayerAvatar.bikeFrameCounter = 0;
+
     collision = GetBikeCollision(direction);
     if (collision > 0 && collision < COLLISION_VERTICAL_RAIL)
     {
@@ -732,6 +759,8 @@ static void AcroBikeTransition_WheelieRisingMoving(u8 direction)
         PlayerStartWheelie(playerObjEvent->movementDirection);
         return;
     }
+    gPlayerAvatar.bikeFrameCounter = 0;
+
     collision = GetBikeCollision(direction);
     if (collision > 0 && collision < COLLISION_VERTICAL_RAIL)
     {
@@ -767,6 +796,8 @@ static void AcroBikeTransition_WheelieLoweringMoving(u8 direction)
         PlayerEndWheelie(playerObjEvent->movementDirection);
         return;
     }
+    gPlayerAvatar.bikeFrameCounter = 0;
+
     collision = GetBikeCollision(direction);
     if (collision > 0 && collision < COLLISION_VERTICAL_RAIL)
     {
@@ -1049,7 +1080,7 @@ s16 GetPlayerSpeed(void)
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
         return machSpeeds[gPlayerAvatar.bikeFrameCounter];
     else if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
-        return PLAYER_SPEED_FASTER;
+        return machSpeeds[gPlayerAvatar.bikeFrameCounter];
     else if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_DASH))
         return PLAYER_SPEED_FAST;
     else

@@ -2433,9 +2433,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 8,
     },
 
-    [ABILITY_INCINERATE] =
+    [ABILITY_CONFLAGRATE] =
     {
-        .name = _("Incinerate"),
+        .name = _("Conflagrate"),
         .description = COMPOUND_STRING("Normal moves become Fire."),
         .aiRating = 8,
     },

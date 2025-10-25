@@ -1,3 +1,39 @@
+script MauvilleCity_BikeShop_Rydel {
+	lock
+	faceplayer
+	if (flag(FLAG_RECEIVED_BIKE) == TRUE) {
+		msgbox(format(
+			"RYDEL: Hey there, {PLAYER}!\n"
+			"I hope you're enjoying your bike.\l"
+			"Interest is already picking up!"
+		))
+		release
+	} else {
+		msgbox(format(
+		"RYDEL: You're the kid from Littleroot?\n"
+		"Some bushy-haired guy was just in here saying you're the next big thing.\l"
+		"So, you need a bike?"
+		))
+		goto(MauvilleCity_BikeShop_MachroBike)
+	}
+}
+
+script MauvilleCity_BikeShop_MachroBike {
+	setflag(FLAG_RECEIVED_BIKE)
+	msgbox(format(
+		"Usually, I offer the Acro Bike for tricks and the Mach Bike for speed…\l"
+		"but with that recommendation, I think you'll be the spokesperson for the all-new Machro Bike!"
+	))
+	giveitem(ITEM_ACRO_BIKE)
+	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+	msgbox(format(
+		"The Machro Bike has all the best features in one versatile package!\p"
+		"Make sure to tell everyone how much\n"
+		"you love it!"
+	))
+	release
+}
+
 raw `
 MauvilleCity_BikeShop_MapScripts::
 	.byte 0

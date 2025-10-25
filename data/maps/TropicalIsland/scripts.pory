@@ -1,1 +1,6 @@
 mapscripts TropicalIsland_MapScripts {}
+
+script OgerponWarp {
+    warp(MAP_FARAWAY_ISLAND_INTERIOR, 13, 19)
+    waitstate
+}

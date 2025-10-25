@@ -252,6 +252,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sierra;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zinnia;
 
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParkBall;
+
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
@@ -523,6 +525,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SIERRA] =                   &gObjectEventGraphicsInfo_Sierra,
     [OBJ_EVENT_GFX_JANINE] =                   &gObjectEventGraphicsInfo_Janine,
     [OBJ_EVENT_GFX_ZINNIA] =                   &gObjectEventGraphicsInfo_Zinnia,
+
+    [OBJ_EVENT_GFX_ITEM_BALL_TM] =             &gObjectEventGraphicsInfo_ParkBall,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
