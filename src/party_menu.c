@@ -8,6 +8,7 @@
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
+#include "berry_pouch.h"
 #include "bg.h"
 #include "contest.h"
 #include "data.h"
@@ -33,6 +34,7 @@
 #include "international_string_util.h"
 #include "item.h"
 #include "item_menu.h"
+#include "item_pc_rg.h"
 #include "item_use.h"
 #include "caps.h"
 #include "link.h"
@@ -64,6 +66,7 @@
 #include "task.h"
 #include "text.h"
 #include "text_window.h"
+#include "tm_case.h"
 #include "trade.h"
 #include "union_room.h"
 #include "window.h"
@@ -345,8 +348,6 @@ static void SlidePartyMenuBoxOneStep(u8);
 static void Task_SlideSelectedSlotsOffscreen(u8);
 static void SwitchPartyMon(void);
 static void Task_SlideSelectedSlotsOnscreen(u8);
-static void CB2_SelectBagItemToGive(void);
-static void CB2_GiveHoldItem(void);
 static void CB2_WriteMailToGiveMon(void);
 static void Task_SwitchHoldItemsPrompt(u8);
 static void Task_GiveHoldItem(u8);
@@ -430,6 +431,7 @@ static void CB2_WriteMailToGiveMonFromBag(void);
 static void GiveItemToSelectedMon(u8);
 static void Task_UpdateHeldItemSpriteAndClosePartyMenu(u8);
 static void CB2_ReturnToPartyOrBagMenuFromWritingMail(void);
+static void RemoveItemToGiveFromBag(u16 item);
 static bool8 ReturnGiveItemToBagOrPC(u16);
 static void Task_DisplayGaveMailFromBagMessage(u8);
 static void Task_HandleSwitchItemsFromBagYesNoInput(u8);
@@ -3319,7 +3321,7 @@ static void CursorCb_Give(u8 taskId)
     Task_ClosePartyMenu(taskId);
 }
 
-static void CB2_SelectBagItemToGive(void)
+void CB2_SelectBagItemToGive(void)
 {
     if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
         GoToBagMenu(ITEMMENULOCATION_PARTY, POCKETS_COUNT, CB2_GiveHoldItem);
@@ -3327,7 +3329,7 @@ static void CB2_SelectBagItemToGive(void)
         GoToBattlePyramidBagMenu(PYRAMIDBAG_LOC_PARTY, CB2_GiveHoldItem);
 }
 
-static void CB2_GiveHoldItem(void)
+void CB2_GiveHoldItem(void)
 {
     if (gSpecialVar_ItemId == ITEM_NONE)
     {
@@ -4580,9 +4582,23 @@ void CB2_ShowPartyMenuForItemUse(void)
     InitPartyMenu(menuType, partyLayout, PARTY_ACTION_USE_ITEM, TRUE, msgId, task, callback);
 }
 
+static void CB2_ReturnToTMCaseMenu(void)
+{
+    InitTMCase(TMCASE_REOPENING, NULL, TMCASE_KEEP_PREV);
+}
+
+static void CB2_ReturnToBerryPouchMenu(void)
+{
+    InitBerryPouch(BERRYPOUCH_REOPENING, NULL, BERRYPOUCH_KEEP_PREV);
+}
+
 static void CB2_ReturnToBagMenu(void)
 {
-    if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
+    if (CheckIfInTMCase())
+        CB2_ReturnToTMCaseMenu();
+    else if (CheckIfInBerryPouch())
+        CB2_ReturnToBerryPouchMenu();
+    else if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
         GoToBagMenu(ITEMMENULOCATION_LAST, POCKETS_COUNT, NULL);
     else
         GoToBattlePyramidBagMenu(PYRAMIDBAG_LOC_PREV, gPyramidBagMenuState.exitCallback);
@@ -6844,9 +6860,25 @@ void CB2_PartyMenuFromStartMenu(void)
 // As opposted to by selecting Give in the party menu, which is handled by CursorCb_Give
 void CB2_ChooseMonToGiveItem(void)
 {
-    MainCallback callback = (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE) ? CB2_ReturnToBagMenu : CB2_ReturnToPyramidBagMenu;
+    MainCallback callback;
+
+    if (CheckIfInTMCase())
+        callback = CB2_ReturnToTMCaseMenu;
+    else if (CheckIfInBerryPouch())
+        callback = CB2_ReturnToBerryPouchMenu;
+    else if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
+        callback = CB2_ReturnToBagMenu;
+    else
+        callback = CB2_ReturnToPyramidBagMenu;
+
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_GIVE_ITEM, FALSE, PARTY_MSG_GIVE_TO_WHICH_MON, Task_HandleChooseMonInput, callback);
     gPartyMenu.bagItem = gSpecialVar_ItemId;
+}
+
+void CB2_ChooseMonToGiveItem_ItemPc_RG(void)
+{
+    InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_GIVE_PC_ITEM, FALSE, PARTY_MSG_GIVE_TO_WHICH_MON, Task_HandleChooseMonInput, CB2_ReturnToItemPcMenu_RG);
+    gPartyMenu.bagItem = ItemPc_RG_GetItemIdBySlotId(ItemPc_RG_GetCursorPosition());
 }
 
 static void TryGiveItemOrMailToSelectedMon(u8 taskId)
@@ -6871,7 +6903,7 @@ static void GiveItemOrMailToSelectedMon(u8 taskId)
 {
     if (ItemIsMail(gPartyMenu.bagItem))
     {
-        RemoveBagItem(gPartyMenu.bagItem, 1);
+        RemoveItemToGiveFromBag(gPartyMenu.bagItem);
         sPartyMenuInternal->exitCallback = CB2_WriteMailToGiveMonFromBag;
         Task_ClosePartyMenu(taskId);
     }
@@ -6890,7 +6922,7 @@ static void GiveItemToSelectedMon(u8 taskId)
         item = gPartyMenu.bagItem;
         DisplayGaveHeldItemMessage(&gPlayerParty[gPartyMenu.slotId], item, FALSE, 1);
         GiveItemToMon(&gPlayerParty[gPartyMenu.slotId], item);
-        RemoveBagItem(item, 1);
+        RemoveItemToGiveFromBag(item);
         gTasks[taskId].func = Task_UpdateHeldItemSpriteAndClosePartyMenu;
     }
 }
@@ -6969,7 +7001,7 @@ static void Task_HandleSwitchItemsFromBagYesNoInput(u8 taskId)
     {
     case 0: // Yes, switch items
         item = gPartyMenu.bagItem;
-        RemoveBagItem(item, 1);
+        RemoveItemToGiveFromBag(item);
         if (AddBagItem(sPartyMenuItemId, 1) == FALSE)
         {
             ReturnGiveItemToBagOrPC(item);
@@ -7003,6 +7035,14 @@ static void DisplayItemMustBeRemovedFirstMessage(u8 taskId)
     DisplayPartyMenuMessage(gText_RemoveMailBeforeItem, TRUE);
     ScheduleBgCopyTilemapToVram(2);
     gTasks[taskId].func = Task_UpdateHeldItemSpriteAndClosePartyMenu;
+}
+
+static void RemoveItemToGiveFromBag(u16 item)
+{
+    if (gPartyMenu.action == PARTY_ACTION_GIVE_PC_ITEM)
+        RemovePCItem(item, 1);
+    else
+        RemoveBagItem(item, 1);
 }
 
 // Returns FALSE if there was no space to return the item
@@ -7259,6 +7299,13 @@ void OpenPartyMenuInBattle(u8 partyAction)
 void ChooseMonForInBattleItem(void)
 {
     InitPartyMenu(PARTY_MENU_TYPE_IN_BATTLE, GetPartyLayoutFromBattleType(), PARTY_ACTION_USE_ITEM, FALSE, PARTY_MSG_USE_ON_WHICH_MON, Task_HandleChooseMonInput, CB2_ReturnToBagMenu);
+    ReshowBattleScreenDummy();
+    UpdatePartyToBattleOrder();
+}
+
+void ChooseMonForInBattleItem_BerryPouch(void)
+{
+    InitPartyMenu(PARTY_MENU_TYPE_IN_BATTLE, GetPartyLayoutFromBattleType(), PARTY_ACTION_USE_ITEM, FALSE, PARTY_MSG_USE_ON_WHICH_MON, Task_HandleChooseMonInput, CB2_ReturnToBerryPouchMenu);
     ReshowBattleScreenDummy();
     UpdatePartyToBattleOrder();
 }
