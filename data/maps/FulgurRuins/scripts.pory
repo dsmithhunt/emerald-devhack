@@ -1,0 +1,148 @@
+mapscripts FulgurRuins_MapScripts {
+	MAP_SCRIPT_ON_RESUME: FulgurRuins_OnResume
+	MAP_SCRIPT_ON_LOAD: FulgurRuins_OnLoad
+	MAP_SCRIPT_ON_TRANSITION: FulgurRuins_OnTransition
+}
+
+script FulgurRuins_OnResume {
+	call_if_set (FLAG_SYS_CTRL_OBJ_DELETE, FulgurRuins_TryRemoveRegieleki)
+}
+
+script FulgurRuins_TryRemoveRegieleki {
+	specialvar (VAR_RESULT, GetBattleOutcome)
+	goto_if_ne (VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn)
+	removeobject (VAR_LAST_TALKED)
+	return
+}
+
+script FulgurRuins_OnLoad {
+	call_if_unset (FLAG_SYS_BRAILLE_REGICE_COMPLETED, FulgurRuins_HideRegiEntrance)
+}
+
+script FulgurRuins_HideRegiEntrance {
+	setmetatile (7, 19, METATILE_Cave_EntranceCover, TRUE)
+	setmetatile (8, 19, METATILE_Cave_EntranceCover, TRUE)
+	setmetatile (9, 19, METATILE_Cave_EntranceCover, TRUE)
+	setmetatile (7, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE)
+	setmetatile (8, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE)
+	setmetatile (9, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE)
+	return
+}
+
+script FulgurRuins_OnTransition  {
+	setflag (FLAG_LANDMARK_ISLAND_CAVE)
+	call (IslandCave_EventScript_ClearSteps)
+	call_if_unset (FLAG_DEFEATED_REGICE, FulgurRuins_ShowRegieleki)
+}
+
+script FulgurRuins_ShowRegieleki {
+	clearflag (FLAG_HIDE_REGICE)
+	return
+}
+
+
+// Braille
+script FulgurRuins_CaveEntranceMiddle {
+	lockall
+	call_if_set (FLAG_TEMP_REGICE_PUZZLE_FAILED, IslandCave_EventScript_ClearSteps)
+	goto_if_set (FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_BigHoleInWall)
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"STAY CLOSE TO THE WALL. RUN AROUND ONE LAP."
+		))
+		setflag (FLAG_TEMP_REGICE_PUZZLE_STARTED)
+		special (ShouldDoBrailleRegicePuzzle)
+		releaseall
+	} else {
+		braillemessage (IslandCave_Braille_RunLapAroundWall)
+		setflag (FLAG_TEMP_REGICE_PUZZLE_STARTED)
+		special (ShouldDoBrailleRegicePuzzle)
+		goto (IslandCave_EventScript_CloseBrailleMsg)
+	}
+}
+
+script FulgurRuins_BigHoleInWall {
+	msgbox (gText_BigHoleInTheWall, MSGBOX_DEFAULT)
+	releaseall
+}
+
+script FulgurRuins_CaveEntranceSide {
+	lockall
+	call_if_set (FLAG_TEMP_REGICE_PUZZLE_FAILED, IslandCave_EventScript_ClearSteps)
+	checkitem(ITEM_ANCIENT_CYPHER)
+	if(var(VAR_RESULT) == TRUE) {
+		msgbox(format(
+			"You use the Ancient Cypher:\n"
+			"STAY CLOSE TO THE WALL. RUN AROUND ONE LAP."
+		))
+		if (flag (FLAG_SYS_BRAILLE_REGICE_COMPLETED)) {
+			releaseall
+		}
+		setflag (FLAG_TEMP_REGICE_PUZZLE_STARTED)
+		special (ShouldDoBrailleRegicePuzzle)
+		releaseall
+	} else {
+		braillemessage (IslandCave_Braille_RunLapAroundWall)
+		goto_if_set (FLAG_SYS_BRAILLE_REGICE_COMPLETED, FulgurRuins_CloseBrailleMsg)
+		setflag (FLAG_TEMP_REGICE_PUZZLE_STARTED)
+		special (ShouldDoBrailleRegicePuzzle)
+		goto (FulgurRuins_CloseBrailleMsg)
+	}
+}
+
+script FulgurRuins_CloseBrailleMsg {
+	waitbuttonpress
+	closebraillemessage
+	releaseall
+}
+
+// Regi Puzzle
+script FulgurRuins_PuzzleSwitch {
+    playse(SE_SWITCH)
+    addvar(VAR_TEMP_A, 1)
+    goto_if_eq(VAR_TEMP_A, 7, FulgurRuins_OpenRegiEntrance)
+}
+
+script FulgurRuins_OpenRegiEntrance {
+	setmetatile (7, 19, METATILE_Cave_SealedChamberEntrance_TopLeft, TRUE)
+	setmetatile (8, 19, METATILE_Cave_SealedChamberEntrance_TopMid, TRUE)
+	setmetatile (9, 19, METATILE_Cave_SealedChamberEntrance_TopRight, TRUE)
+	setmetatile (7, 20, METATILE_Cave_SealedChamberEntrance_BottomLeft, TRUE)
+	setmetatile (8, 20, METATILE_Cave_SealedChamberEntrance_BottomMid, FALSE)
+	setmetatile (9, 20, METATILE_Cave_SealedChamberEntrance_BottomRight, TRUE)
+	special (DrawWholeMapView)
+	playse (SE_BANG)
+	setflag (FLAG_SYS_BRAILLE_REGICE_COMPLETED)
+}
+
+script FulgurRuins_Regieleki {
+    lock
+	faceplayer
+	waitse
+	playmoncry (SPECIES_REGIELEKI, CRY_MODE_ENCOUNTER)
+	delay (40)
+	waitmoncry
+	setwildbattle (SPECIES_REGIELEKI, 40)
+	setflag (FLAG_SYS_CTRL_OBJ_DELETE)
+	special (StartRegiBattle)
+	waitstate
+	clearflag (FLAG_SYS_CTRL_OBJ_DELETE)
+	specialvar (VAR_RESULT, GetBattleOutcome)
+	goto_if_eq (VAR_RESULT, B_OUTCOME_WON, FulgurRuins_DefeatedRegieleki)
+	goto_if_eq (VAR_RESULT, B_OUTCOME_RAN, FulgurRuins_RanFromRegieleki)
+	goto_if_eq (VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FulgurRuins_RanFromRegieleki)
+	setflag (FLAG_DEFEATED_REGICE)
+	release
+}
+
+script FulgurRuins_DefeatedRegieleki {
+	setflag (FLAG_DEFEATED_REGICE)
+	goto (Common_EventScript_RemoveStaticPokemon)
+}
+
+script FulgurRuins_RanFromRegieleki {
+	setvar (VAR_0x8004, SPECIES_REGIELEKI)
+	goto (Common_EventScript_LegendaryFlewAway)
+}

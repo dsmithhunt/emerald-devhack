@@ -4,3 +4,27 @@ script OgerponWarp {
     warp(MAP_FARAWAY_ISLAND_INTERIOR, 13, 19)
     waitstate
 }
+
+script FarawayIsland_NinjaBoy { // Needs to be edited
+    trainerbattle_single(
+		TRAINER_PETALBURG_LYLE, 
+		format("I caught a whole bunch of POKéMON!\p""Go, go, go!\n""My bug POKéMON team!"), 
+		format("I have all these POKéMON,\n""but I couldn't win…")
+		)
+	msgbox(format("I caught a bunch of POKéMON.\n""Now I'm out of POKé BALLS."), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script FarawayIsland_Kecleon0 {
+	lock
+	faceplayer
+	setvar (VAR_0x8009, 8)
+	goto (EventScript_Kecleon)
+}
+
+script FishingRodTest {
+    lock
+    faceplayer
+    giveitem(ITEM_SUPER_ROD)
+    release
+}

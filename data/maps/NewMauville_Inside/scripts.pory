@@ -1,5 +1,5 @@
 script NewMauvillle_DeepWarp {
-	warp (MAP_NEW_MAUVILLE_INSIDE, 28, 6)
+	warp (MAP_NEW_MAUVILLE_ENTRANCE, 28, 6)
 	waitstate
 }
 
@@ -152,6 +152,7 @@ NewMauville_Inside_EventScript_RedButton::
 	playse SE_SWITCH
 	call NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
 	setvar VAR_NEW_MAUVILLE_STATE, 2
+	msgbox NewMauville_Inside_Text_Stairs, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -269,4 +270,7 @@ NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "… … … … … … … …\p"
 	.string "The generator appears to have\n"
 	.string "stopped…$"
+
+NewMauville_Inside_Text_Stairs:
+	.string "and a set of stairs opened up…$"
 `

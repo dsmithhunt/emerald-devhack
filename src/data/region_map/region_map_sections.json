@@ -1165,7 +1165,11 @@
     },
     {
       "id": "MAPSEC_FARAWAY_ISLAND",
-      "name": "FARAWAY ISLAND"
+      "name": "FARAWAY ISLAND",
+      "x": 0,
+      "y": 11,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ARTISAN_CAVE",
@@ -1236,6 +1240,14 @@
       "name": "TRAINER HILL",
       "x": 8,
       "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_FULGUR_RUINS",
+      "name": "FULGUR RUINS",
+      "x": 8,
+      "y": 7,
       "width": 1,
       "height": 1
     }

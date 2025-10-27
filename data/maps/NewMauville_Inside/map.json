@@ -121,7 +121,7 @@
   ],
   "warp_events": [
     {
-      "x": 32,
+      "x": 31,
       "y": 33,
       "elevation": 3,
       "dest_map": "MAP_NEW_MAUVILLE_ENTRANCE",

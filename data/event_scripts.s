@@ -1170,3 +1170,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PetalburgMansion_3F/scripts.inc"
 
 	.include "data/maps/TropicalIsland/scripts.inc"
+
+	.include "data/maps/FulgurRuins/scripts.inc"

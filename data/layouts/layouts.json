@@ -4464,12 +4464,22 @@
     {
       "id": "LAYOUT_TROPICAL_ISLAND",
       "name": "TropicalIsland_Layout",
-      "width": 40,
+      "width": 50,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/TropicalIsland/border.bin",
       "blockdata_filepath": "data/layouts/TropicalIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_FULGUR_RUINS",
+      "name": "FulgurRuins_Layout",
+      "width": 17,
+      "height": 33,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/FulgurRuins/border.bin",
+      "blockdata_filepath": "data/layouts/FulgurRuins/map.bin"
     }
   ]
 }
