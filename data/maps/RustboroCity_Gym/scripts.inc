@@ -356,20 +356,18 @@ RustboroCity_Gym_ChallengeSierra::
 	goto_if_lt RustboroCity_Gym_ChallengeSierra_1
 # 240 "data/maps/RustboroCity_Gym/scripts.pory"
 	applymovement LOCALID_PLAYER, RustboroCity_Gym_ChallengeSierra_Movement_2
-# 244 "data/maps/RustboroCity_Gym/scripts.pory"
+# 245 "data/maps/RustboroCity_Gym/scripts.pory"
 	applymovement 1, RustboroCity_Gym_ChallengeSierra_Movement_3
-# 248 "data/maps/RustboroCity_Gym/scripts.pory"
-	waitmovement 0
-# 249 "data/maps/RustboroCity_Gym/scripts.pory"
-	turnobject LOCALID_PLAYER, DIR_EAST
 # 250 "data/maps/RustboroCity_Gym/scripts.pory"
-	applymovement 1, RustboroCity_Gym_ChallengeSierra_Movement_4
-# 253 "data/maps/RustboroCity_Gym/scripts.pory"
 	waitmovement 0
-# 254 "data/maps/RustboroCity_Gym/scripts.pory"
+# 251 "data/maps/RustboroCity_Gym/scripts.pory"
 	special RemoveCameraObject
-# 255 "data/maps/RustboroCity_Gym/scripts.pory"
-	trainerbattle_double TRAINER_SIERRA, RustboroCity_Gym_ChallengeSierra_Text_2, RustboroCity_Gym_ChallengeSierra_Text_3, RustboroCity_Gym_ChallengeSierra_Text_4, RustboroCity_Gym_SierraDefeated, NO_MUSIC
+# 252 "data/maps/RustboroCity_Gym/scripts.pory"
+	msgbox RustboroCity_Gym_ChallengeSierra_Text_2
+# 253 "data/maps/RustboroCity_Gym/scripts.pory"
+	trainerbattle_no_intro TRAINER_SIERRA, RustboroCity_Gym_ChallengeSierra_Text_3
+# 265 "data/maps/RustboroCity_Gym/scripts.pory"
+	goto RustboroCity_Gym_SierraDefeated
 	return
 
 RustboroCity_Gym_ChallengeSierra_1:
@@ -1049,27 +1047,25 @@ RustboroCity_Gym_ChallengeSierra_Movement_2:
 	walk_up
 # 242 "data/maps/RustboroCity_Gym/scripts.pory"
 	walk_up
+# 243 "data/maps/RustboroCity_Gym/scripts.pory"
+	walk_in_place_fast_right
 	step_end
 
-# 244 "data/maps/RustboroCity_Gym/scripts.pory"
+# 245 "data/maps/RustboroCity_Gym/scripts.pory"
 RustboroCity_Gym_ChallengeSierra_Movement_3:
-# 245 "data/maps/RustboroCity_Gym/scripts.pory"
-	walk_right
-# 245 "data/maps/RustboroCity_Gym/scripts.pory"
-	walk_right
-# 245 "data/maps/RustboroCity_Gym/scripts.pory"
-	walk_right
-# 245 "data/maps/RustboroCity_Gym/scripts.pory"
+# 246 "data/maps/RustboroCity_Gym/scripts.pory"
 	walk_right
 # 246 "data/maps/RustboroCity_Gym/scripts.pory"
-	walk_down
+	walk_right
 # 246 "data/maps/RustboroCity_Gym/scripts.pory"
+	walk_right
+# 246 "data/maps/RustboroCity_Gym/scripts.pory"
+	walk_right
+# 247 "data/maps/RustboroCity_Gym/scripts.pory"
 	walk_down
-	step_end
-
-# 250 "data/maps/RustboroCity_Gym/scripts.pory"
-RustboroCity_Gym_ChallengeSierra_Movement_4:
-# 251 "data/maps/RustboroCity_Gym/scripts.pory"
+# 247 "data/maps/RustboroCity_Gym/scripts.pory"
+	walk_down
+# 248 "data/maps/RustboroCity_Gym/scripts.pory"
 	walk_in_place_fast_left
 	step_end
 
@@ -1132,20 +1128,16 @@ RustboroCity_Gym_ChallengeSierra_Text_1:
 	.string "right now.$"
 
 RustboroCity_Gym_ChallengeSierra_Text_2:
-# 257 "data/maps/RustboroCity_Gym/scripts.pory"
+# 252 "data/maps/RustboroCity_Gym/scripts.pory"
 	.string "Let's see if you can win against my\n"
 	.string "shockingly cute POKéMON!$"
 
 RustboroCity_Gym_ChallengeSierra_Text_3:
-# 259 "data/maps/RustboroCity_Gym/scripts.pory"
+# 258 "data/maps/RustboroCity_Gym/scripts.pory"
 	.string "Wow! You did it! By defeating a gym\n"
 	.string "leader, you earn a gym badge!\p"
 	.string "Please accept the official POKéMON\n"
 	.string "LEAGUE Shutter Badge.$"
-
-RustboroCity_Gym_ChallengeSierra_Text_4:
-# 262 "data/maps/RustboroCity_Gym/scripts.pory"
-	.string "N/A$"
 
 RustboroCity_Gym_SierraDefeated_Text_0:
 # 271 "data/maps/RustboroCity_Gym/scripts.pory"

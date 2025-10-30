@@ -240,29 +240,29 @@ script RustboroCity_Gym_ChallengeSierra {
 	applymovement(LOCALID_PLAYER, moves(
 		walk_left * 4
 		walk_up * 2
+		walk_in_place_fast_right
 	))
 	applymovement(1, moves(
 		walk_right * 4
 		walk_down * 2
-	))
-	waitmovement(0)
-	turnobject(LOCALID_PLAYER, DIR_EAST)
-	applymovement(1, moves(
 		walk_in_place_fast_left
 	))
 	waitmovement(0)
 	special(RemoveCameraObject)
-	trainerbattle_double(
+	msgbox(format("Let's see if you can win against my shockingly cute POKéMON!"))
+	trainerbattle_no_intro(
+	// trainerbattle_double(
 		TRAINER_SIERRA, 
-		format("Let's see if you can win against my shockingly cute POKéMON!"), 
+		// format("Let's see if you can win against my shockingly cute POKéMON!"), 
 		format(
 			"Wow! You did it! By defeating a gym leader, you earn a gym badge!\p"
 			"Please accept the official POKéMON\n"
 			"LEAGUE Shutter Badge."), 
-		format("N/A"), 
-		RustboroCity_Gym_SierraDefeated, 
-		NO_MUSIC
+		// format("N/A"), 
+		// RustboroCity_Gym_SierraDefeated, 
+		// NO_MUSIC
 	)
+	goto(RustboroCity_Gym_SierraDefeated)
 	}
 }
 
