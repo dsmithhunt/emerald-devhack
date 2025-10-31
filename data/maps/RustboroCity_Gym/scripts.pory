@@ -1,5 +1,9 @@
 mapscripts RustboroCity_Gym_MapScripts {
 	MAP_SCRIPT_ON_LOAD: RustboroCity_Gym_OnLoad
+	MAP_SCRIPT_ON_FRAME_TABLE[
+		VAR_UNUSED_0x404E, 1: RustboroCity_Gym_Increment
+		VAR_UNUSED_0x404E, 2: RustboroCity_Gym_CheckBadge
+	] 
 	}
 
 script RustboroCity_Gym_OnLoad {
@@ -200,24 +204,34 @@ script RustboroCity_Gym_Damien {
 	waitmessage
 }
 
+script RustboroCity_Gym_Warp {
+	setvar(VAR_UNUSED_0x404E, 1)
+	warp(MAP_RUSTBORO_CITY_GYM, 25, 19)
+	waitstate
+}
+
+script RustboroCity_Gym_Increment {
+	setvar(VAR_UNUSED_0x404E, 2)
+}
+
 script RustboroCity_Gym_CheckBadge {
-	if(flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
-		end
-	}
-	else {
+	setvar(VAR_UNUSED_0x404E, 0)
+	if(!flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
 		call(RustboroCity_Gym_ChallengeSierra)
 	}
 }
 
 script RustboroCity_Gym_ChallengeSierra {
 	lock
+	applymovement(LOCALID_PLAYER, moves(
+		walk_up
+	))
+	waitmovement(0)
 	special(SpawnCameraObject)
-	special(HealPlayerParty)
 	applymovement(LOCALID_CAMERA, moves(
 		walk_up * 2
 	))
 	waitmovement(0)
-	getpartysize
 	delay(20)
 	msgbox(format(
 		"SIERRA: I knew I'd see you again.\p"
@@ -226,17 +240,6 @@ script RustboroCity_Gym_ChallengeSierra {
 	))
 	waitmessage
 	closemessage
-	if(var(VAR_RESULT) < 2) {
-		msgbox(format("Oh… I'm sorry, all official gym challenges are double battles. You don't have enough POKéMON for that right now."))
-		waitmessage
-		applymovement(LOCALID_CAMERA, moves(
-			walk_down * 2
-		))
-		waitmovement(0)
-		special(RemoveCameraObject)
-		release
-	}
-	else {
 	applymovement(LOCALID_PLAYER, moves(
 		walk_left * 4
 		walk_up * 2
@@ -251,19 +254,13 @@ script RustboroCity_Gym_ChallengeSierra {
 	special(RemoveCameraObject)
 	msgbox(format("Let's see if you can win against my shockingly cute POKéMON!"))
 	trainerbattle_no_intro(
-	// trainerbattle_double(
 		TRAINER_SIERRA, 
-		// format("Let's see if you can win against my shockingly cute POKéMON!"), 
 		format(
 			"Wow! You did it! By defeating a gym leader, you earn a gym badge!\p"
 			"Please accept the official POKéMON\n"
 			"LEAGUE Shutter Badge."), 
-		// format("N/A"), 
-		// RustboroCity_Gym_SierraDefeated, 
-		// NO_MUSIC
 	)
 	goto(RustboroCity_Gym_SierraDefeated)
-	}
 }
 
 script RustboroCity_Gym_SierraDefeated {

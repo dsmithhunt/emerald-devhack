@@ -149,7 +149,7 @@
     },
     {
       "x": 5,
-      "y": 1,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_RUSTBORO_CITY_GYM",
       "dest_warp_id": "3"
@@ -201,12 +201,12 @@
     },
     {
       "type": "trigger",
-      "x": 25,
-      "y": 18,
+      "x": 5,
+      "y": 1,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_UNUSED_0x404E",
       "var_value": "0",
-      "script": "RustboroCity_Gym_CheckBadge"
+      "script": "RustboroCity_Gym_Warp"
     }
   ],
   "bg_events": [
