@@ -216,3 +216,6 @@ const u16 gMetatileAttributes_PorytilesGeneral[] = INCBIN_U16("data/tilesets/pri
 
 const u16 gMetatiles_PetalburgWoods[] = INCBIN_U16("data/tilesets/secondary/petalburg_woods/metatiles.bin");
 const u16 gMetatileAttributes_PetalburgWoods[] = INCBIN_U16("data/tilesets/secondary/petalburg_woods/metatile_attributes.bin");
+
+const u16 gMetatiles_DewfordGymNew[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/metatiles.bin");
+const u16 gMetatileAttributes_DewfordGymNew[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/metatile_attributes.bin");

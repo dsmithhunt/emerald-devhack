@@ -9040,6 +9040,8 @@ static uq4_12_t GetWeatherDamageModifier(struct DamageContext *ctx)
         return UQ_4_12(1.0);
     if (GetMoveEffect(ctx->move) == EFFECT_HYDRO_STEAM && (ctx->weather & B_WEATHER_SUN) && ctx->holdEffectAtk != HOLD_EFFECT_UTILITY_UMBRELLA)
         return UQ_4_12(1.5);
+    if (GetMoveEffect(ctx->move) == EFFECT_DESERT_STRIKE && (ctx->weather & B_WEATHER_SANDSTORM) && ctx->holdEffectAtk != HOLD_EFFECT_UTILITY_UMBRELLA)
+        return UQ_4_12(1.5);
     if (ctx->holdEffectDef == HOLD_EFFECT_UTILITY_UMBRELLA)
         return UQ_4_12(1.0);
 

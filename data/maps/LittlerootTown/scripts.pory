@@ -18,7 +18,7 @@ script Debug_Script_1 {
 script LittlerootTown_EventScript_Deoxys_Gift {
 	lockall
 	msgbox("Here. You'll need this.")
-	givemon(SPECIES_REGICE, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PSYCHO_BOOST, MOVE_NIGHT_SLASH, MOVE_EXTREME_SPEED, MOVE_PROTECT)
+	givemon(SPECIES_CHESPIN, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_BULLET_SEED, MOVE_NIGHT_SLASH, MOVE_BULLET_PUNCH, MOVE_PROTECT)
 	removeobject(9)
 	releaseall
 }
@@ -29,7 +29,7 @@ script LittlerootTown_EventScript_Deoxys {
 	playmoncry(SPECIES_DEOXYS, CRY_MODE_ENCOUNTER)
 	delay(40)
 	waitmoncry
-	setwildbattle(SPECIES_CROAGUNK, 12, ITEM_NONE)
+	setwildbattle(SPECIES_SWALOT, 12, ITEM_NONE)
 
 	special(BattleSetup_StartLegendaryBattle)
 

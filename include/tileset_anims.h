@@ -35,5 +35,6 @@ void InitTilesetAnim_BattlePyramid(void);
 // Custom tileset animations
 
 void InitTilesetAnim_Route104(void);
+void InitTilesetAnim_DewfordGymNew(void);
 
 #endif // GUARD_TILESET_ANIMS_H

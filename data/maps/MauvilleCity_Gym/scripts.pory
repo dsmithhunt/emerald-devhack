@@ -1,8 +1,13 @@
-raw `
-MauvilleCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, MauvilleCity_Gym_OnLoad
-	.byte 0
+mapscripts MauvilleCity_Gym_MapScripts {
+	MAP_SCRIPT_ON_LOAD: MauvilleCity_Gym_OnLoad
+	MAP_SCRIPT_ON_TRANSITION: MauvilleCity_Gym_OnTransition
+}
 
+script MauvilleCity_Gym_OnTransition {
+	end
+}
+
+raw `
 MauvilleCity_Gym_OnLoad:
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_DeactivatePuzzle
 	switch VAR_RUSTBORO_GYM_STATE

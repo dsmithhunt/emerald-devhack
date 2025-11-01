@@ -1,3 +1,25 @@
+script MauvilleCity_EventScript_BattleWally {
+	msgbox (MauvilleCity_Text_WallyHereICome)
+	switch(var(VAR_STARTER_MON)){
+		case 0:
+			trainerbattle_no_intro(TRAINER_WALLY_MAUVILLE_CHESPIN, MauvilleCity_Text_WallyDefeat)
+		case 1:
+			trainerbattle_no_intro (TRAINER_WALLY_MAUVILLE_TEPIG, MauvilleCity_Text_WallyDefeat)
+		case 2:
+			trainerbattle_no_intro (TRAINER_WALLY_MAUVILLE_SOBBLE, MauvilleCity_Text_WallyDefeat)
+	}
+	applymovement (LOCALID_MAUVILLE_WALLY, Common_Movement_WalkInPlaceFasterRight)
+	waitmovement (0)
+	msgbox (MauvilleCity_Text_WallyIllGoBackToVerdanturf)
+	applymovement (LOCALID_MAUVILLE_WALLY, Common_Movement_FacePlayer)
+	waitmovement (0)
+	msgbox (MauvilleCity_Text_ThankYouNotEnoughToBattle)
+	applymovement (LOCALID_MAUVILLE_WALLY, Common_Movement_WalkInPlaceFasterRight)
+	waitmovement (0)
+	msgbox (MauvilleCity_Text_UncleNoNeedToBeDown)
+	return
+}
+
 text MauvilleCity_Text_ScottYouDidntHoldBack {
 	format(
 	"ANTHONY: Hello, hello, wazzup, wazzup!\n"
@@ -208,20 +230,6 @@ MauvilleCity_EventScript_ScottExitEast::
 	applymovement LOCALID_PLAYER, MauvilleCity_Movement_PlayerWatchScottExitEast
 	applymovement LOCALID_MAUVILLE_SCOTT, MauvilleCity_Movement_ScottExitEast
 	waitmovement 0
-	return
-
-MauvilleCity_EventScript_BattleWally::
-	msgbox MauvilleCity_Text_WallyHereICome, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_WALLY_MAUVILLE, MauvilleCity_Text_WallyDefeat
-	applymovement LOCALID_MAUVILLE_WALLY, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	msgbox MauvilleCity_Text_WallyIllGoBackToVerdanturf, MSGBOX_DEFAULT
-	applymovement LOCALID_MAUVILLE_WALLY, Common_Movement_FacePlayer
-	waitmovement 0
-	msgbox MauvilleCity_Text_ThankYouNotEnoughToBattle, MSGBOX_DEFAULT
-	applymovement LOCALID_MAUVILLE_WALLY, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	msgbox MauvilleCity_Text_UncleNoNeedToBeDown, MSGBOX_DEFAULT
 	return
 
 MauvilleCity_EventScript_DeclineWallyBattle::

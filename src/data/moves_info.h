@@ -21135,6 +21135,24 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
 
+    // Custom Moves
+    [MOVE_DESERT_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Desert Strike"),
+        .description = COMPOUND_STRING(
+            "This move's power increases\n"
+            "during sandstorm."),
+        .effect = EFFECT_DESERT_STRIKE,
+        .power = 70,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_StoneAxe,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

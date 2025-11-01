@@ -1186,3 +1186,67 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
             sSecondaryTilesetAnimCallback = NULL;
     }
 }
+
+
+// Custom Tileset Animations Below
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/00.4bpp");
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/01.4bpp");
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/02.4bpp");
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame3[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/03.4bpp");
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame4[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/04.4bpp");
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame5[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/05.4bpp");
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame6[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/06.4bpp");
+const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame7[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/07.4bpp");
+
+const u16 *const gTilesetAnims_DewfordGymNew_WaterCurrents[] = {
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame0,
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame1,
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame2,
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame3,
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame4,
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame5,
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame6,
+    gTilesetAnims_DewfordGymNew_WaterCurrents_Frame7
+};
+
+// Order matches your 2×4 frame layout: left→right, top→bottom.
+static const u16 sWaterCurrentsDestTiles[8] = {
+    518, 519, 552, 553,
+    550, 551, 520, 521
+};
+
+#define TILES_PER_FRAME 8
+#define TILE_WORDS_4BPP (TILE_SIZE_4BPP / 2)  // u16s per 8×8 tile
+
+// === REPLACE your old QueueAnimTiles_* with this ===
+static void QueueAnimTiles_DewfordGymNew_WaterCurrents(u16 timer)
+{
+    u16 frameIndex = timer % ARRAY_COUNT(gTilesetAnims_DewfordGymNew_WaterCurrents);
+    const u16 *frame = gTilesetAnims_DewfordGymNew_WaterCurrents[frameIndex];
+
+    // Copy each 8×8 from the frame into its destination VRAM slot.
+    for (int t = 0; t < TILES_PER_FRAME; t++)
+    {
+        const u16 *srcTile = frame + t * TILE_WORDS_4BPP;
+        u16 destIndex = sWaterCurrentsDestTiles[t];
+        AppendTilesetAnimToBuffer(
+            srcTile,
+            (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(destIndex)),
+            TILE_SIZE_4BPP
+        );
+    }
+}
+
+// === REPLACE your TilesetAnim_* with this (same cadence as before) ===
+static void TilesetAnim_DewfordGymNew(u16 timer)
+{
+    if (timer % 16 == 1)      // advance every 16 ticks
+        QueueAnimTiles_DewfordGymNew_WaterCurrents(timer / 16);
+}
+
+void InitTilesetAnim_DewfordGymNew(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_DewfordGymNew;
+}

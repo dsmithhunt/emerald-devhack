@@ -434,7 +434,7 @@ $(OBJEVENTGFXDIR)/people/lady.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/aroma_lady.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/traithlete_f.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/triathlete_f.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/gym_leaders/sierra.4bpp: %.4bpp: %.png

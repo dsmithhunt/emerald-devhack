@@ -644,10 +644,10 @@
     {
       "id": "LAYOUT_DEWFORD_TOWN_GYM",
       "name": "DewfordTown_Gym_Layout",
-      "width": 18,
+      "width": 51,
       "height": 28,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_DewfordGym",
+      "secondary_tileset": "gTileset_DewfordGymNew",
       "border_filepath": "data/layouts/DewfordTown_Gym/border.bin",
       "blockdata_filepath": "data/layouts/DewfordTown_Gym/map.bin"
     },

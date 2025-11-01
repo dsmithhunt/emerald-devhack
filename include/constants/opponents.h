@@ -659,9 +659,9 @@
 #define TRAINER_RILEY                       653
 #define TRAINER_FLINT                       654
 #define TRAINER_ASHLEY                      655
-#define TRAINER_WALLY_MAUVILLE              656
-#define TRAINER_WALLY_VR_2                  657
-#define TRAINER_WALLY_VR_3                  658
+#define TRAINER_WALLY_MAUVILLE_CHESPIN              656
+#define TRAINER_WALLY_MAUVILLE_TEPIG                  657
+#define TRAINER_WALLY_MAUVILLE_SOBBLE                  658
 #define TRAINER_WALLY_VR_4                  659
 #define TRAINER_WALLY_VR_5                  660
 #define TRAINER_BRENDAN_LILYCOVE_MUDKIP     661
