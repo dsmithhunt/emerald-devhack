@@ -143,7 +143,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         )
         .levelUpLearnset = sQuilladinLevelUpLearnset,
         .teachableLearnset = sQuilladinTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_CHESNAUGHT}),
+        .evolutions = EVOLUTION({EVO_NONE, 0, SPECIES_CHESNAUGHT},
+                                {EVO_LEVEL, 36, SPECIES_CHESNAUGHT_HOENN}),
     },
 
     [SPECIES_CHESNAUGHT] =
@@ -154,7 +155,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpeed     = 64,
         .baseSpAttack  = 74,
         .baseSpDefense = 75,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
         .evYield_Defense = 3,
@@ -211,6 +212,77 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         )
         .levelUpLearnset = sChesnaughtLevelUpLearnset,
         .teachableLearnset = sChesnaughtTeachableLearnset,
+        .formSpeciesIdTable = sChesnaughtFormSpeciesIdTable,
+    },
+
+    [SPECIES_CHESNAUGHT_HOENN] =
+    {
+        .baseHP        = 84,
+        .baseAttack    = 102,
+        .baseDefense   = 95,
+        .baseSpeed     = 107,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 72,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_STEEL),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+        .evYield_Attack = 1,
+        .evYield_Defense = 1,
+        .evYield_Speed = 1,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_BULLETPROOF },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("Chesnaught"),
+        .cryId = CRY_CHESNAUGHT,
+        .natDexNum = NATIONAL_DEX_CHESNAUGHT,
+        .categoryName = _("Spiny Spear"),
+        .height = 14,
+        .weight = 720,
+        .description = COMPOUND_STRING(
+            "It shields its allies from danger with\n"
+            "its own body. When it takes a defensive\n"
+            "posture with its fists guarding its face,\n"
+            "it can withstand a bomb blast."),
+        .pokemonScale = 259,
+        .pokemonOffset = 1,
+        .trainerScale = 296,
+        .trainerOffset = 1,
+        .frontPic = gMonFrontPic_Chesnaught,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 4,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 50),
+            ANIMCMD_FRAME(1, 40),
+            ANIMCMD_FRAME(0, 10),
+        ),
+        .frontAnimId = ANIM_GROW_IN_STAGES,
+        .backPic = gMonBackPic_Chesnaught,
+        .backPicSize = MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = 10,
+        .backAnimId = BACK_ANIM_V_SHAKE_LOW,
+        .palette = gMonPalette_Chesnaught,
+        .shinyPalette = gMonShinyPalette_Chesnaught,
+        .iconSprite = gMonIcon_Chesnaught,
+        .iconPalIndex = 1,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(4, 10, SHADOW_SIZE_L)
+        FOOTPRINT(Chesnaught)
+        OVERWORLD(
+            sPicTable_Chesnaught,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Chesnaught,
+            gShinyOverworldPalette_Chesnaught
+        )
+        .levelUpLearnset = sChesnaughtHoennLevelUpLearnset,
+        .teachableLearnset = sChesnaughtTeachableLearnset,
+        .formSpeciesIdTable = sChesnaughtFormSpeciesIdTable,
     },
 #endif //P_FAMILY_CHESPIN
 
@@ -4442,8 +4514,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sGoomyLevelUpLearnset,
         .teachableLearnset = sGoomyTeachableLearnset,
         .eggMoveLearnset = sGoomyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SLIGGOO},
-                                {EVO_NONE, 40, SPECIES_SLIGGOO_HISUI}),
+        .evolutions = EVOLUTION({EVO_NONE, 0, SPECIES_SLIGGOO},
+                                {EVO_LEVEL, 40, SPECIES_SLIGGOO_HISUI}),
     },
 
     [SPECIES_SLIGGOO] =

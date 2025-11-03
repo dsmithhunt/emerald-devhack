@@ -1142,6 +1142,14 @@ static const u16 sArceusFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_ARCEUS
 
+#if P_FAMILY_TEPIG
+static const u16 sEmboarFormSpeciesIdTable[] = {
+    SPECIES_EMBOAR,
+    SPECIES_EMBOAR_HOENN,
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_TEPIG
+
 #if P_FAMILY_OSHAWOTT
 static const u16 sSamurottFormSpeciesIdTable[] = {
     SPECIES_SAMUROTT,
@@ -1342,6 +1350,14 @@ static const u16 sGenesectFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_GENESECT
+
+#if P_FAMILY_CHESPIN
+static const u16 sChesnaughtFormSpeciesIdTable[] = {
+    SPECIES_CHESNAUGHT,
+    SPECIES_CHESNAUGHT_HOENN,
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_CHESPIN
 
 #if P_FAMILY_FROAKIE
 static const u16 sGreninjaFormSpeciesIdTable[] = {
@@ -1785,6 +1801,7 @@ static const u16 sCinderaceFormSpeciesIdTable[] = {
 #if P_FAMILY_SOBBLE
 static const u16 sInteleonFormSpeciesIdTable[] = {
     SPECIES_INTELEON,
+    SPECIES_INTELEON_HOENN,
 #if P_GIGANTAMAX_FORMS
     SPECIES_INTELEON_GMAX,
 #endif

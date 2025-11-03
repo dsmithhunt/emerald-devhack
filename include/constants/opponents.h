@@ -269,7 +269,7 @@
 #define TRAINER_GLACIA                      263
 #define TRAINER_DRAKE                       264
 #define TRAINER_SIERRA                      265
-#define TRAINER_BRAWLY_1                    266
+#define TRAINER_BRAWLY                    266
 #define TRAINER_WATTSON_1                   267
 #define TRAINER_FLANNERY_1                  268
 #define TRAINER_NORMAN_1                    269

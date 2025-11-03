@@ -436,7 +436,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 65,
         .baseSpAttack  = 100,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
         .evYield_Attack = 3,
@@ -513,6 +513,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         )
         .levelUpLearnset = sEmboarLevelUpLearnset,
         .teachableLearnset = sEmboarTeachableLearnset,
+        .formSpeciesIdTable = sEmboarFormSpeciesIdTable
     },
 #endif //P_FAMILY_TEPIG
 

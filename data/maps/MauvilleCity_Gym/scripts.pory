@@ -1,84 +1,175 @@
 mapscripts MauvilleCity_Gym_MapScripts {
-	MAP_SCRIPT_ON_LOAD: MauvilleCity_Gym_OnLoad
 	MAP_SCRIPT_ON_TRANSITION: MauvilleCity_Gym_OnTransition
 }
 
 script MauvilleCity_Gym_OnTransition {
-	end
+	call (MauvilleGym_SetFlashLevel)
+}
+
+script MauvilleGym_SetFlashLevel {
+	goto_if_defeated (TRAINER_BRAWLY, MauvilleGym_SetLightsOn)
+	call (MauvilleGym_CountTrainersDefeated)
+	copyvar (VAR_0x8001, VAR_0x8000)
+	switch (var(VAR_0x8000)) {
+		case 0: call(MauvilleGym_SetFlashLevel7)
+		case 1: call(MauvilleGym_SetFlashLevel6)
+		case 2: call(MauvilleGym_SetFlashLevel5)
+		case 3: call(MauvilleGym_SetFlashLevel4)
+		case 4: call(MauvilleGym_SetFlashLevel3)
+		case 5: call(MauvilleGym_SetFlashLevel2)
+		default: call(MauvilleGym_SetFlashLevel1)
+	}
+}
+
+script MauvilleGym_SetLightsOn {
+	setflashlevel (0)
+	return
+}
+
+// Brightest
+script MauvilleGym_SetFlashLevel1 {
+	setflashlevel (1)
+	return
+}
+
+script MauvilleGym_SetFlashLevel2 {
+	setflashlevel (2)
+	return
+}
+
+script MauvilleGym_SetFlashLevel3 {
+	setflashlevel (3)
+	return
+}
+
+
+script MauvilleGym_SetFlashLevel4 {
+	setflashlevel (4)
+	return
+}
+
+script MauvilleGym_SetFlashLevel5 {
+	setflashlevel (5)
+	return
+}
+
+script MauvilleGym_SetFlashLevel6 {
+	setflashlevel (6)
+	return
+}
+
+// Darkest
+script MauvilleGym_SetFlashLevel7 {
+	setflashlevel (7)
+	return
+}
+
+script MauvilleGym_BrightenRoom {
+	call (MauvilleGym_CountTrainersDefeated)
+	nop1
+	goto_if_eq (VAR_0x8000, VAR_0x8001, MauvilleGym_NoLightChange)
+	copyvar (VAR_0x8001, VAR_0x8000)
+	switch (var(VAR_0x8000)) {
+		case 1: call(MauvilleGym_AnimateFlash1Trainer)
+		case 2: call(MauvilleGym_AnimateFlash2Trainers)
+		case 3: call(MauvilleGym_AnimateFlash3Trainers)
+		case 4: call(MauvilleGym_AnimateFlash4Trainers)
+		case 5: call(MauvilleGym_AnimateFlash5Trainers)
+		case 6: call(MauvilleGym_AnimateFlash6Trainers)
+	}
+}
+
+script MauvilleGym_NoLightChange {
+	return
+}
+
+// NOTE: A little confusingly, a larger animateflash param value is a smaller flash radius
+script MauvilleGym_AnimateFlash1Trainer {
+	playse (SE_SWITCH)
+	animateflash (6)
+	call (MauvilleGym_SetFlashLevel)
+	return
+}
+
+script MauvilleGym_AnimateFlash2Trainers {
+	playse (SE_SWITCH)
+	animateflash (5)
+	call (MauvilleGym_SetFlashLevel)
+	return
+}
+
+script MauvilleGym_AnimateFlash3Trainers {
+	playse (SE_SWITCH)
+	animateflash (4)
+	call (MauvilleGym_SetFlashLevel)
+	return
+}
+
+script MauvilleGym_AnimateFlash4Trainers {
+	playse (SE_SWITCH)
+	animateflash (3)
+	call (MauvilleGym_SetFlashLevel)
+	return
+}
+
+script MauvilleGym_AnimateFlash5Trainers {
+	playse (SE_SWITCH)
+	animateflash (2)
+	call (MauvilleGym_SetFlashLevel)
+	return
+}
+
+script MauvilleGym_AnimateFlash6Trainers {
+	playse (SE_SWITCH)
+	animateflash (1)
+	call (MauvilleGym_SetFlashLevel)
+	return
+}
+
+script MauvilleGym_AnimateFlashFullBrightness {
+	playse (SE_SWITCH)
+	animateflash (0)
+	call (MauvilleGym_SetFlashLevel)
+	return
+}
+
+script MauvilleGym_CountTrainersDefeated {
+	setvar (VAR_0x8000, 0)
+	goto_if_not_defeated (TRAINER_TAKAO, MauvilleGym_CheckJocelyn)
+	addvar (VAR_0x8000, 1)
+}
+script MauvilleGym_CheckJocelyn {
+	goto_if_not_defeated (TRAINER_JOCELYN, MauvilleGym_CheckLaura)
+	addvar (VAR_0x8000, 1)
+}
+script MauvilleGym_CheckLaura {
+	goto_if_not_defeated (TRAINER_LAURA, MauvilleGym_CheckBrenden)
+	addvar (VAR_0x8000, 1)
+}
+script MauvilleGym_CheckBrenden {
+	goto_if_not_defeated (TRAINER_BRENDEN, MauvilleGym_CheckCristian)
+	addvar (VAR_0x8000, 1)
+}
+script MauvilleGym_CheckCristian {
+	goto_if_not_defeated (TRAINER_CRISTIAN, MauvilleGym_CheckLilith)
+	addvar (VAR_0x8000, 1)
+}
+script MauvilleGym_CheckLilith {
+	goto_if_not_defeated (TRAINER_LILITH, MauvilleGym_StopCountingTrainers)
+	addvar (VAR_0x8000, 1)
+}
+script MauvilleGym_StopCountingTrainers {
+	return
+}
+
+script MauvilleGym_Brawly {
+	trainerbattle_single (TRAINER_BRAWLY, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, NULL, NO_MUSIC)
+	specialvar (VAR_RESULT, ShouldTryRematchBattle)
+	msgbox (DewfordTown_Gym_Text_BrawlyPostBattle, MSGBOX_DEFAULT)
+	release
 }
 
 raw `
-MauvilleCity_Gym_OnLoad:
-	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_DeactivatePuzzle
-	switch VAR_RUSTBORO_GYM_STATE
-	case 0, MauvilleCity_Gym_EventScript_UpdateBarriers
-	case 1, MauvilleCity_Gym_EventScript_Switch1Pressed
-	case 2, MauvilleCity_Gym_EventScript_Switch2Pressed
-	case 3, MauvilleCity_Gym_EventScript_Switch3Pressed
-	case 4, MauvilleCity_Gym_EventScript_Switch4Pressed
-	end
-
-MauvilleCity_Gym_EventScript_UpdateBarriers::
-	goto_if_set FLAG_RUSTBORO_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_SetAltBarriers
-	end
-
-MauvilleCity_Gym_EventScript_SetAltBarriers::
-	setmetatile 3, 11, METATILE_MauvilleGym_RedBeamV1_On, TRUE
-	setmetatile 3, 12, METATILE_MauvilleGym_RedBeamV2_On, TRUE
-	setmetatile 3, 13, METATILE_MauvilleGym_PoleTop_On, TRUE
-	setmetatile 4, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE
-	setmetatile 5, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE
-	setmetatile 4, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE
-	setmetatile 5, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE
-	setmetatile 7, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE
-	setmetatile 8, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE
-	setmetatile 7, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE
-	setmetatile 8, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE
-	setmetatile 4, 13, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 5, 13, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 4, 14, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 5, 14, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	setmetatile 1, 10, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 2, 10, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 1, 11, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 2, 11, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	setmetatile 6, 8, METATILE_MauvilleGym_PoleBottom_On, TRUE
-	setmetatile 6, 9, METATILE_MauvilleGym_FloorTile, FALSE
-	setmetatile 6, 10, METATILE_MauvilleGym_PoleTop_Off, FALSE
-	setmetatile 4, 6, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 5, 6, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 4, 7, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 5, 7, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	end
-
-MauvilleCity_Gym_EventScript_Switch1Pressed::
-	setvar VAR_0x8004, 0
-	special MauvilleGymPressSwitch
-	goto MauvilleCity_Gym_EventScript_UpdateBarriers
-	end
-
-MauvilleCity_Gym_EventScript_Switch2Pressed::
-	setvar VAR_0x8004, 1
-	special MauvilleGymPressSwitch
-	goto MauvilleCity_Gym_EventScript_UpdateBarriers
-	end
-
-MauvilleCity_Gym_EventScript_Switch3Pressed::
-	setvar VAR_0x8004, 2
-	special MauvilleGymPressSwitch
-	goto MauvilleCity_Gym_EventScript_UpdateBarriers
-	end
-
-MauvilleCity_Gym_EventScript_Switch4Pressed::
-	setvar VAR_0x8004, 3
-	special MauvilleGymPressSwitch
-	goto MauvilleCity_Gym_EventScript_UpdateBarriers
-	end
-
-MauvilleCity_Gym_EventScript_DeactivatePuzzle::
-	special MauvilleGymDeactivatePuzzle
-	end
-
 MauvilleCity_Gym_EventScript_Wattson::
 	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -140,66 +231,6 @@ MauvilleCity_Gym_EventScript_CompletedNewMauville::
 MauvilleCity_Gym_EventScript_WattsonRematch::
 	trainerbattle_rematch_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
 	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
-	end
-
-MauvilleCity_Gym_EventScript_Switch1::
-	lockall
-	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_RUSTBORO_GYM_STATE, 1, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_RUSTBORO_GYM_STATE, 1
-	setvar VAR_0x8004, 0
-	goto MauvilleCity_Gym_EventScript_PressFloorSwitch
-	end
-
-MauvilleCity_Gym_EventScript_Switch2::
-	lockall
-	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_RUSTBORO_GYM_STATE, 2, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_RUSTBORO_GYM_STATE, 2
-	setvar VAR_0x8004, 1
-	goto MauvilleCity_Gym_EventScript_PressFloorSwitch
-	end
-
-MauvilleCity_Gym_EventScript_Switch3::
-	lockall
-	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_RUSTBORO_GYM_STATE, 3, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_RUSTBORO_GYM_STATE, 3
-	setvar VAR_0x8004, 2
-	goto MauvilleCity_Gym_EventScript_PressFloorSwitch
-	end
-
-MauvilleCity_Gym_EventScript_Switch4::
-	lockall
-	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_RUSTBORO_GYM_STATE, 4, MauvilleCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_RUSTBORO_GYM_STATE, 4
-	setvar VAR_0x8004, 3
-	goto MauvilleCity_Gym_EventScript_PressFloorSwitch
-	end
-
-MauvilleCity_Gym_EventScript_PressFloorSwitch::
-	special MauvilleGymSetDefaultBarriers
-	special MauvilleGymPressSwitch
-	special DrawWholeMapView
-	playse SE_UNLOCK
-	goto_if_set FLAG_RUSTBORO_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_ClearBarriersAltState
-	goto_if_unset FLAG_RUSTBORO_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_SetBarriersAltState
-	releaseall
-	end
-
-MauvilleCity_Gym_EventScript_SwitchDoNothing::
-	releaseall
-	end
-
-MauvilleCity_Gym_EventScript_SetBarriersAltState::
-	setflag FLAG_RUSTBORO_GYM_BARRIERS_STATE
-	releaseall
-	end
-
-MauvilleCity_Gym_EventScript_ClearBarriersAltState::
-	clearflag FLAG_RUSTBORO_GYM_BARRIERS_STATE
-	releaseall
 	end
 
 MauvilleCity_Gym_EventScript_Kirk::

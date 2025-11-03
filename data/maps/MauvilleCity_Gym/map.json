@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WATTSON",
-      "x": 5,
-      "y": 2,
+      "x": 25,
+      "y": 31,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -28,61 +28,61 @@
       "flag": "FLAG_HIDE_MAUVILLE_GYM_WATTSON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GUITARIST",
-      "x": 7,
-      "y": 8,
+      "graphics_id": "OBJ_EVENT_GFX_BUG_MANIAC",
+      "x": 27,
+      "y": 29,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
-      "script": "MauvilleCity_Gym_EventScript_Shawn",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 1,
-      "y": 16,
-      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
-      "script": "MauvilleCity_Gym_EventScript_Vivian",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "MauvilleCity_Gym_EventScript_Shawn",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 5,
-      "y": 10,
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 20,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
-      "script": "MauvilleCity_Gym_EventScript_Ben",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "MauvilleCity_Gym_EventScript_Vivian",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GUITARIST",
-      "x": 1,
-      "y": 13,
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 3,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "MauvilleCity_Gym_EventScript_Ben",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 3,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "MauvilleCity_Gym_EventScript_Kirk",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 7,
-      "y": 20,
+      "x": 19,
+      "y": 31,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -93,86 +93,62 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 7,
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 16,
       "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "MauvilleCity_Gym_EventScript_Angelo",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NULL",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 4,
-      "y": 20,
+      "x": 16,
+      "y": 31,
       "elevation": 0,
       "dest_map": "MAP_MAUVILLE_CITY",
       "dest_warp_id": "0"
     },
     {
-      "x": 5,
-      "y": 20,
+      "x": 17,
+      "y": 31,
       "elevation": 0,
       "dest_map": "MAP_MAUVILLE_CITY",
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 12,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "MauvilleCity_Gym_EventScript_Switch2"
-    },
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 9,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "MauvilleCity_Gym_EventScript_Switch3"
-    },
-    {
-      "type": "trigger",
-      "x": 0,
-      "y": 15,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "MauvilleCity_Gym_EventScript_Switch1"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 9,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "MauvilleCity_Gym_EventScript_Switch4"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 3,
-      "y": 18,
+      "x": 15,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_Gym_EventScript_LeftGymStatue"
     },
     {
       "type": "sign",
-      "x": 6,
-      "y": 18,
+      "x": 18,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_Gym_EventScript_RightGymStatue"

@@ -26,11 +26,11 @@ text MauvilleCity_Text_ScottYouDidntHoldBack {
 	"Good to see ya! Huhuhuhu\p"
 	"I was watching that match!\n"
 	"It's good you didn't hold back.\p"
-	"Wally is a step behind you, but not taking him seriously would be a disservice to you both.\p"
+	"Wally is a step behind you, but not taking him seriously would be\l"
+	"a disservice to you both.\p"
 	"Even though he lost, you can see Wally is inspired to become stronger.\p"
 	"Yeah! That's what a real POKéMON\n"
 	"battle is all about!\p"
-	"… … … … … …\n"
 	"I'll be cheering for you two!"
 	)
 }
