@@ -21153,6 +21153,27 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_StoneAxe,
     },
 
+    [MOVE_BAUBLE_BOBBLE] =
+    {
+        .name = COMPOUND_STRING("Bauble Bobble"),
+        .description = COMPOUND_STRING(
+            "Knocks down the foe's held\n"
+            "item to prevent its use."),
+        .effect = EFFECT_KNOCK_OFF,
+        .power = 65,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_FAKE_OUT},
+        .battleAnimScript = gBattleAnimMove_Poltergeist,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

@@ -4870,32 +4870,49 @@ Pic: Leader Brawly
 Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer
+Mugshot: Blue
 
-Machop
-Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Karate Chop
-- Low Kick
-- Seismic Toss
-- Bulk Up
+Wingull  
+Ability: Keen Eye  
+Level: 23  
+Tera Type: Water  
+EVs: 44 HP / 20 Atk / 100 SpA / 172 Spe  
+Jolly Nature  
+- Surf  
+- Aerial Ace  
 
-Meditite
-Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Bulk Up
+Sandygast  
+Ability: Water Compaction  
+Level: 23  
+Tera Type: Ghost  
+- Bulldoze  
 
-Makuhita @ Sitrus Berry
-Level: 19
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Arm Thrust
-- Vital Throw
-- Reversal
-- Bulk Up
+Crabrawler  
+Ability: Hyper Cutter  
+Level: 23  
+Tera Type: Fighting  
+IVs: 0 Atk  
+
+Pikachu  
+Ability: Static  
+Level: 24  
+Tera Type: Electric  
+IVs: 0 Atk  
+
+Crawdaunt  
+Ability: Hyper Cutter  
+Level: 24  
+Tera Type: Water  
+IVs: 0 Atk  
+
+Conkeldurr  
+Ability: Guts  
+Level: 25  
+Tera Type: Fighting  
+IVs: 0 Atk  
+
 
 === TRAINER_WATTSON_1 ===
 Name: WATTSON

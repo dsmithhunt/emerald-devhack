@@ -7236,6 +7236,72 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sHoundoomTeachableLearnset,
         .formSpeciesIdTable = sHoundoomFormSpeciesIdTable,
         .formChangeTable = sHoundoomFormChangeTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_HOUNDIABLO}),
+    },
+
+    [SPECIES_HOUNDIABLO] =
+    {
+        .baseHP        = 90,
+        .baseAttack    = 90,
+        .baseDefense   = 55,
+        .baseSpeed     = 105,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 80,
+        .types = MON_TYPES(TYPE_DARK, TYPE_FIRE),
+        .catchRate = 45,
+        .expYield = 210,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE, ABILITY_UNNERVE },
+        .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Houndiablo"),
+        .cryId = CRY_HOUNDOOM_MEGA,
+        .natDexNum = NATIONAL_DEX_HOUNDIABLO,
+        .categoryName = _("Dark"),
+        .height = 19,
+        .weight = 495,
+        .description = COMPOUND_STRING(
+            "Its red claws and the tips of its tail are\n"
+            "melting from high internal temperatures\n"
+            "that are painful to Houndiablo itself.\n"),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 336,
+        .trainerOffset = 7,
+        .frontPic = gMonFrontPic_Houndiablo,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 40),
+            ANIMCMD_FRAME(0, 30),
+        ),
+        .frontAnimId = ANIM_V_SHAKE,
+        .backPic = gMonBackPic_HoundoomMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_V_SHAKE,
+        .palette = gMonPalette_HoundoomMega,
+        .shinyPalette = gMonShinyPalette_HoundoomMega,
+        .iconSprite = gMonIcon_HoundoomMega,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(1, 15, SHADOW_SIZE_L)
+        FOOTPRINT(Houndoom)
+        OVERWORLD(
+            sPicTable_HoundoomMega,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_HoundoomMega,
+            gShinyOverworldPalette_HoundoomMega
+        )
+        .levelUpLearnset = sHoundoomLevelUpLearnset,
+        .teachableLearnset = sHoundoomTeachableLearnset,
     },
 
 #if P_MEGA_EVOLUTIONS

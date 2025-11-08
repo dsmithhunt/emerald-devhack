@@ -34,7 +34,7 @@ LittlerootTown_EventScript_Deoxys_Gift::
 # 20 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Deoxys_Gift_Text_0
 # 21 "data/maps/LittlerootTown/scripts.pory"
-	givemon SPECIES_CHESPIN, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_BULLET_SEED, MOVE_NIGHT_SLASH, MOVE_BULLET_PUNCH, MOVE_PROTECT
+	givemon SPECIES_HOUNDOUR, 10, ITEM_NONE, ITEM_GREAT_BALL, 3, 0, 1, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_BULLET_SEED, MOVE_NIGHT_SLASH, MOVE_BULLET_PUNCH, MOVE_PROTECT
 # 22 "data/maps/LittlerootTown/scripts.pory"
 	removeobject 9
 # 23 "data/maps/LittlerootTown/scripts.pory"

@@ -13002,8 +13002,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sExeggcuteLevelUpLearnset,
         .teachableLearnset = sExeggcuteTeachableLearnset,
         .eggMoveLearnset = sExeggcuteEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_EXEGGUTOR},
-                                {EVO_NONE, 0, SPECIES_EXEGGUTOR_ALOLA}),
+        .evolutions = EVOLUTION({EVO_NONE, 0, SPECIES_EXEGGUTOR},
+                                {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_EXEGGUTOR_ALOLA}),
     },
 
 #if P_UPDATED_EXP_YIELDS >= GEN_7
@@ -13116,14 +13116,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 109,
         .weight = 4156,
         .description = COMPOUND_STRING(
-            "Alola is the best environment for\n"
+            "Tropics are the best environment for\n"
             "this Pokémon. Local people take pride\n"
             "in its appearance, saying this is how\n"
             "Exeggutor ought to look."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 309,
-        .trainerOffset = 5,
+        .trainerScale = 576,
+        .trainerOffset = 16,
         .frontPic = gMonFrontPic_ExeggutorAlola,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
@@ -15757,9 +15757,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_SWARM, ABILITY_TECHNICIAN, ABILITY_STEADFAST },
+        .abilities = { ABILITY_SWARM, ABILITY_SHARPNESS, ABILITY_STEADFAST },
     #else
-        .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_STEADFAST },
+        .abilities = { ABILITY_SWARM, ABILITY_TECHNICIAN ABILITY_STEADFAST },
     #endif
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Scyther"),

@@ -1643,10 +1643,10 @@
 #define SPECIES_EMBOAR_HOENN                            1525
 #define SPECIES_INTELEON_HOENN                          1526
 #define SPECIES_MOLTIN                                  1527
-#define SPECIES_PIRROT                                  1528
+#define SPECIES_HOUNDIABLO                               1528
 #define SPECIES_GEMLIN                                  1529
-#define SPECIES_DUAWILE                                 1530
-#define SPECIES_HOWLECTRIC                              1530
+#define SPECIES_MAWDEUCE                                1530
+#define SPECIES_HOWLECTRIC                              1531
 #define SPECIES_VOODOLL                                 1532
 #define SPECIES_SERENIMBUS                              1533
 #define SPECIES_ZENLIGHTEN                              1534
@@ -1654,9 +1654,12 @@
 #define SPECIES_SUBMAWRINE                              1536
 #define SPECIES_FLATTATA                                1537
 #define SPECIES_FLATICATE                               1538
-#define SPECIES_MASTERMIME                              1539
-#define SPECIES_IDPHYRA                                 1540
-#define SPECIES_RAGNAROCTO                              1541
+#define SPECIES_MR_MIME_HOENN                           1539
+#define SPECIES_MASTERMIME                              1540
+#define SPECIES_PIRROT                                  1541
+#define SPECIES_IDPHYRA                                 1542
+#define SPECIES_ABSAVE                                  1543
+#define SPECIES_RAGNAROCTO                              1544
 
 #define SPECIES_EGG                                     (SPECIES_RAGNAROCTO + 1)
 

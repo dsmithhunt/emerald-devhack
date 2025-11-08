@@ -4372,12 +4372,12 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #if P_FAMILY_CARBINK
     [SPECIES_CARBINK] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 50,
-        .baseDefense   = 150,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 150,
+        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 80 : 50,
+        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 50 : 50,
+        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 90 : 150,
+        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 20 : 50,
+        .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 50 : 50,
+        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 90 : 150,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FAIRY),
         .catchRate = 60,
         .expYield = 100,
@@ -4443,6 +4443,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         )
         .levelUpLearnset = sCarbinkLevelUpLearnset,
         .teachableLearnset = sCarbinkTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_DIANCIE}),
     },
 #endif //P_FAMILY_CARBINK
 
@@ -6450,12 +6451,12 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #if P_FAMILY_DIANCIE
     [SPECIES_DIANCIE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 100,
-        .baseDefense   = 150,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 100,
-        .baseSpDefense = 150,
+        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 50,
+        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 75 : 100,
+        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 110 : 150,
+        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 30 : 50,
+        .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 75 : 100,
+        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 110 : 150,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FAIRY),
         .catchRate = 3,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,

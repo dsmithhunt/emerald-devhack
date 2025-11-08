@@ -9061,6 +9061,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Houndoom[] = INCBIN_U16("graphics/pokemon/houndoom/normal.gbapal");
     const u32 gMonBackPic_Houndoom[] = INCBIN_U32("graphics/pokemon/houndoom/back.4bpp.smol");
     const u16 gMonShinyPalette_Houndoom[] = INCBIN_U16("graphics/pokemon/houndoom/shiny.gbapal");
+    const u32 gMonFrontPic_Houndiablo[] = INCBIN_U32("graphics/pokemon/houndoom/mega/anim_front.4bpp.smol");
 #else
     const u32 gMonFrontPic_Houndoom[] = INCBIN_U32("graphics/pokemon/houndoom/anim_front_gba.4bpp.smol");
     const u16 gMonPalette_Houndoom[] = INCBIN_U16("graphics/pokemon/houndoom/normal_gba.gbapal");
@@ -11141,6 +11142,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Sableye[] = INCBIN_U16("graphics/pokemon/sableye/normal.gbapal");
     const u32 gMonBackPic_Sableye[] = INCBIN_U32("graphics/pokemon/sableye/back.4bpp.smol");
     const u16 gMonShinyPalette_Sableye[] = INCBIN_U16("graphics/pokemon/sableye/shiny.gbapal");
+    const u32 gMonFrontPic_Gemlin[] = INCBIN_U32("graphics/pokemon/sableye/mega/anim_front.4bpp.smol");
 #else
     const u32 gMonFrontPic_Sableye[] = INCBIN_U32("graphics/pokemon/sableye/anim_front_gba.4bpp.smol");
     const u16 gMonPalette_Sableye[] = INCBIN_U16("graphics/pokemon/sableye/normal_gba.gbapal");
