@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_NewDungeons"
+    "gMapGroup_NewDungeons",
+    "gMapGroup_NewOutdoors"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -629,6 +630,11 @@
     "PetalburgMansion_2F",
     "PetalburgMansion_3F",
     "TropicalIsland",
-    "FulgurRuins"
+    "FulgurRuins",
+    "DesertPass_1F",
+    "DesertRuinsExterior"
+  ],
+  "gMapGroup_NewOutdoors": [
+    "FrozenResearchExterior"
   ]
 }

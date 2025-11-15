@@ -1,8 +1,8 @@
 mapscripts RustboroCity_Gym_MapScripts {
 	MAP_SCRIPT_ON_LOAD: RustboroCity_Gym_OnLoad
 	MAP_SCRIPT_ON_FRAME_TABLE[
-		VAR_UNUSED_0x404E, 1: RustboroCity_Gym_Increment
-		VAR_UNUSED_0x404E, 2: RustboroCity_Gym_CheckBadge
+		VAR_GYM_WARP, 1: RustboroCity_Gym_Increment
+		VAR_GYM_WARP, 2: RustboroCity_Gym_CheckBadge
 	] 
 	}
 
@@ -205,17 +205,17 @@ script RustboroCity_Gym_Damien {
 }
 
 script RustboroCity_Gym_Warp {
-	setvar(VAR_UNUSED_0x404E, 1)
+	setvar(VAR_GYM_WARP, 1)
 	warp(MAP_RUSTBORO_CITY_GYM, 25, 19)
 	waitstate
 }
 
 script RustboroCity_Gym_Increment {
-	setvar(VAR_UNUSED_0x404E, 2)
+	setvar(VAR_GYM_WARP, 2)
 }
 
 script RustboroCity_Gym_CheckBadge {
-	setvar(VAR_UNUSED_0x404E, 0)
+	setvar(VAR_GYM_WARP, 0)
 	if(!flag(FLAG_DEFEATED_RUSTBORO_GYM)) {
 		call(RustboroCity_Gym_ChallengeSierra)
 	}

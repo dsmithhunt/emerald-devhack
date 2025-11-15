@@ -4480,6 +4480,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/FulgurRuins/border.bin",
       "blockdata_filepath": "data/layouts/FulgurRuins/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESERT_PASS_1F",
+      "name": "DesertPass_1F_Layout",
+      "width": 57,
+      "height": 37,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DesertPass_1F/border.bin",
+      "blockdata_filepath": "data/layouts/DesertPass_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FROZEN_RESEARCH_EXTERIOR",
+      "name": "FrozenResearchExterior_Layout",
+      "width": 29,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_frozen",
+      "border_filepath": "data/layouts/FrozenResearchExterior/border.bin",
+      "blockdata_filepath": "data/layouts/FrozenResearchExterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESERT_RUINS_EXTERIOR",
+      "name": "DesertRuinsExterior_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DesertRuins",
+      "border_filepath": "data/layouts/DesertRuinsExterior/border.bin",
+      "blockdata_filepath": "data/layouts/DesertRuinsExterior/map.bin"
     }
   ]
 }

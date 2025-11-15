@@ -36,5 +36,6 @@ void InitTilesetAnim_BattlePyramid(void);
 
 void InitTilesetAnim_Route104(void);
 void InitTilesetAnim_DewfordGymNew(void);
+void InitTilesetAnim_frozen(void);
 
 #endif // GUARD_TILESET_ANIMS_H

@@ -1,0 +1,30 @@
+mapscripts DesertPass_1F_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE: CaveHole_CheckFallDownHole
+    MAP_SCRIPT_ON_TRANSITION: CaveHole_FixCrackedGround
+    MAP_SCRIPT_ON_RESUME: GraniteCave_B1F_SetHoleWarp
+}
+
+script DesertPass_1F_SetHoleWarp {
+	setstepcallback (STEP_CB_CRACKED_FLOOR)
+	setholewarp (MAP_GRANITE_CAVE_B2F)
+}
+
+script DesertPass_1F_StuckGuy {
+	trainerbattle_single(
+		TRAINER_PETALBURG_JAMES, 
+		format("I got trapped by these rocks.\N""We can battle to pass the time!"), 
+		format("I can't be popular if I lose.")
+		)
+	msgbox(format("You moved the rocks so I can escape,\N""but I kinda like it here now…"), MSGBOX_AUTOCLOSE)
+	waitmessage
+}
+
+script DesertPass_1F_CantCrossGuy {
+	lock
+    faceplayer
+    msgbox(format("I feel like I could cross the rocks if I tried.\N""But I don't want to get all dirty."))
+	closemessage
+	applymovement(6, Common_Movement_FaceOriginalDirection)
+	waitmovement(0)
+	release
+}

@@ -874,3 +874,25 @@ const struct Tileset gTileset_DewfordGymNew =
     .metatileAttributes = gMetatileAttributes_DewfordGymNew,
     .callback = InitTilesetAnim_DewfordGymNew,
 };
+
+const struct Tileset gTileset_frozen =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_frozen,
+    .palettes = gTilesetPalettes_frozen,
+    .metatiles = gMetatiles_frozen,
+    .metatileAttributes = gMetatileAttributes_frozen,
+    .callback = InitTilesetAnim_frozen,
+};
+
+const struct Tileset gTileset_DesertRuins =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DesertRuins,
+    .palettes = gTilesetPalettes_DesertRuins,
+    .metatiles = gMetatiles_DesertRuins,
+    .metatileAttributes = gMetatileAttributes_DesertRuins,
+    .callback = NULL,
+};

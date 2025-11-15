@@ -1,0 +1,28 @@
+{
+  "id": "MAP_DESERT_RUINS_EXTERIOR",
+  "name": "DesertRuinsExterior",
+  "layout": "LAYOUT_DESERT_RUINS_EXTERIOR",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_DESERT_RUINS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_RUINS_EXTERIOR",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

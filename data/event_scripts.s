@@ -1172,3 +1172,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TropicalIsland/scripts.inc"
 
 	.include "data/maps/FulgurRuins/scripts.inc"
+
+	.include "data/maps/DesertPass_1F/scripts.inc"
+
+	.include "data/maps/FrozenResearchExterior/scripts.inc"
+
+	.include "data/maps/DesertRuinsExterior/scripts.inc"

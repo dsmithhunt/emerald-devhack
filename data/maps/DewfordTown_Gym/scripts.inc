@@ -5,15 +5,15 @@ DewfordTown_Gym_MapScripts::
 
 DewfordTown_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 3 "data/maps/DewfordTown_Gym/scripts.pory"
-	map_script_2 VAR_UNUSED_0x404E, 1, DewfordGym_Increment
+	map_script_2 VAR_GYM_WARP, 1, DewfordGym_Increment
 # 4 "data/maps/DewfordTown_Gym/scripts.pory"
-	map_script_2 VAR_UNUSED_0x404E, 2, DewfordGym_CheckBadge
+	map_script_2 VAR_GYM_WARP, 2, DewfordGym_CheckBadge
 	.2byte 0
 
 
 DewfordGym_Warp::
 # 9 "data/maps/DewfordTown_Gym/scripts.pory"
-	setvar VAR_UNUSED_0x404E, 1
+	setvar VAR_GYM_WARP, 1
 # 10 "data/maps/DewfordTown_Gym/scripts.pory"
 	warp MAP_DEWFORD_TOWN_GYM, 43, 8
 # 11 "data/maps/DewfordTown_Gym/scripts.pory"
@@ -23,13 +23,13 @@ DewfordGym_Warp::
 
 DewfordGym_Increment::
 # 15 "data/maps/DewfordTown_Gym/scripts.pory"
-	setvar VAR_UNUSED_0x404E, 2
+	setvar VAR_GYM_WARP, 2
 	return
 
 
 DewfordGym_CheckBadge::
 # 19 "data/maps/DewfordTown_Gym/scripts.pory"
-	setvar VAR_UNUSED_0x404E, 0
+	setvar VAR_GYM_WARP, 0
 # 20 "data/maps/DewfordTown_Gym/scripts.pory"
 	goto_if_unset FLAG_DEFEATED_DEWFORD_GYM, DewfordGym_CheckBadge_1
 	return

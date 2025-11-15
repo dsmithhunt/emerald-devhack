@@ -21153,6 +21153,27 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_StoneAxe,
     },
 
+    [MOVE_PINPOINT_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Pinpoint Strike"),
+        .description = COMPOUND_STRING(
+            "Deals better of physical and\n"
+            "special damage."),
+        .effect = EFFECT_SHELL_SIDE_ARM,
+        .power = 70,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_ShellSideArm,
+    },
+
     [MOVE_BAUBLE_BOBBLE] =
     {
         .name = COMPOUND_STRING("Bauble Bobble"),

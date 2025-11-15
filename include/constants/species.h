@@ -1643,7 +1643,7 @@
 #define SPECIES_EMBOAR_HOENN                            1525
 #define SPECIES_INTELEON_HOENN                          1526
 #define SPECIES_MOLTIN                                  1527
-#define SPECIES_HOUNDIABLO                               1528
+#define SPECIES_HOUNDIABLO                              1528
 #define SPECIES_GEMLIN                                  1529
 #define SPECIES_MAWDEUCE                                1530
 #define SPECIES_HOWLECTRIC                              1531

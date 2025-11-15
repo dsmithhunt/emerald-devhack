@@ -1188,6 +1188,50 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
 }
 
 
+// Custom Water Anim
+const u16 gTilesetAnims_frozen_Water_Frame0[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/0.4bpp");
+const u16 gTilesetAnims_frozen_Water_Frame1[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/1.4bpp");
+const u16 gTilesetAnims_frozen_Water_Frame2[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/2.4bpp");
+const u16 gTilesetAnims_frozen_Water_Frame3[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/3.4bpp");
+const u16 gTilesetAnims_frozen_Water_Frame4[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/4.4bpp");
+const u16 gTilesetAnims_frozen_Water_Frame5[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/5.4bpp");
+const u16 gTilesetAnims_frozen_Water_Frame6[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/6.4bpp");
+const u16 gTilesetAnims_frozen_Water_Frame7[] = INCBIN_U16("data/tilesets/secondary/frozen/anim/water/7.4bpp");
+
+const u16 *const gTilesetAnims_frozen_Water[] = {
+    gTilesetAnims_frozen_Water_Frame0,
+    gTilesetAnims_frozen_Water_Frame1,
+    gTilesetAnims_frozen_Water_Frame2,
+    gTilesetAnims_frozen_Water_Frame3,
+    gTilesetAnims_frozen_Water_Frame4,
+    gTilesetAnims_frozen_Water_Frame5,
+    gTilesetAnims_frozen_Water_Frame6,
+    gTilesetAnims_frozen_Water_Frame7
+};
+
+static void QueueAnimTiles_frozen_Water(u16 timer)
+{
+    u8 i = timer % ARRAY_COUNT(gTilesetAnims_frozen_Water);
+    AppendTilesetAnimToBuffer(gTilesetAnims_frozen_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 0)), 4 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_frozen(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_frozen_Water(timer / 16);
+    }
+}
+
+void InitTilesetAnim_frozen(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_General;
+    sSecondaryTilesetAnimCounter = -1;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_frozen;
+}
+
 // Custom Tileset Animations Below
 const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/00.4bpp");
 const u16 gTilesetAnims_DewfordGymNew_WaterCurrents_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/anim/water_currents/01.4bpp");
@@ -1209,43 +1253,24 @@ const u16 *const gTilesetAnims_DewfordGymNew_WaterCurrents[] = {
     gTilesetAnims_DewfordGymNew_WaterCurrents_Frame7
 };
 
-// Order matches your 2×4 frame layout: left→right, top→bottom.
-static const u16 sWaterCurrentsDestTiles[8] = {
-    518, 519, 552, 553,
-    550, 551, 520, 521
-};
-
-#define TILES_PER_FRAME 8
-#define TILE_WORDS_4BPP (TILE_SIZE_4BPP / 2)  // u16s per 8×8 tile
-
-// === REPLACE your old QueueAnimTiles_* with this ===
 static void QueueAnimTiles_DewfordGymNew_WaterCurrents(u16 timer)
 {
-    u16 frameIndex = timer % ARRAY_COUNT(gTilesetAnims_DewfordGymNew_WaterCurrents);
-    const u16 *frame = gTilesetAnims_DewfordGymNew_WaterCurrents[frameIndex];
-
-    // Copy each 8×8 from the frame into its destination VRAM slot.
-    for (int t = 0; t < TILES_PER_FRAME; t++)
-    {
-        const u16 *srcTile = frame + t * TILE_WORDS_4BPP;
-        u16 destIndex = sWaterCurrentsDestTiles[t];
-        AppendTilesetAnimToBuffer(
-            srcTile,
-            (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(destIndex)),
-            TILE_SIZE_4BPP
-        );
-    }
+    u8 i = timer % ARRAY_COUNT(gTilesetAnims_DewfordGymNew_WaterCurrents);
+    AppendTilesetAnimToBuffer(gTilesetAnims_DewfordGymNew_WaterCurrents[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 3)), 8 * TILE_SIZE_4BPP);
 }
 
-// === REPLACE your TilesetAnim_* with this (same cadence as before) ===
 static void TilesetAnim_DewfordGymNew(u16 timer)
 {
-    if (timer % 16 == 1)      // advance every 16 ticks
+    if (timer % 16 == 0) {
         QueueAnimTiles_DewfordGymNew_WaterCurrents(timer / 16);
+    }
 }
 
 void InitTilesetAnim_DewfordGymNew(void)
 {
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_Building;
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = 256;
     sSecondaryTilesetAnimCallback = TilesetAnim_DewfordGymNew;

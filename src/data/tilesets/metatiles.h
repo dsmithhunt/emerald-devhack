@@ -219,3 +219,9 @@ const u16 gMetatileAttributes_PetalburgWoods[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_DewfordGymNew[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/metatiles.bin");
 const u16 gMetatileAttributes_DewfordGymNew[] = INCBIN_U16("data/tilesets/secondary/dewford_gym_new/metatile_attributes.bin");
+
+const u16 gMetatiles_frozen[] = INCBIN_U16("data/tilesets/secondary/frozen/metatiles.bin");
+const u16 gMetatileAttributes_frozen[] = INCBIN_U16("data/tilesets/secondary/frozen/metatile_attributes.bin");
+
+const u16 gMetatiles_DesertRuins[] = INCBIN_U16("data/tilesets/secondary/desert_ruins/metatiles.bin");
+const u16 gMetatileAttributes_DesertRuins[] = INCBIN_U16("data/tilesets/secondary/desert_ruins/metatile_attributes.bin");

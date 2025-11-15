@@ -482,7 +482,7 @@
     },
     {
       "id": "MAPSEC_PETALBURG_WOODS",
-      "name": "PETALBURG MANSION",
+      "name": "PETALBURG WOODS",
       "x": 0,
       "y": 8,
       "width": 1,
@@ -1250,6 +1250,18 @@
       "y": 7,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_DESERT_PASS",
+      "name": "DESERT PASS",
+      "x": 9,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PETALBURG_MANSION",
+      "name": "PETALBURG MANSION"
     }
   ]
 }

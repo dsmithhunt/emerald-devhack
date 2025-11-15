@@ -18683,7 +18683,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 
     // Moltin
     const u32 gMonFrontPic_Moltin[] = INCBIN_U32("graphics/pokemon/moltin/anim_front.4bpp.smol");
-    const u16 gMonPalette_Moltin[] = INCBIN_U16("graphics/pokemon/moltin/normal.gbapal");
+    const u16 gMonPalette_Moltin[] = INCBIN_U16("graphics/pokemon/moltin/anim_front.gbapal");
     const u32 gMonBackPic_Moltin[] = INCBIN_U32("graphics/pokemon/moltin/back.4bpp.smol");
     const u16 gMonShinyPalette_Moltin[] = INCBIN_U16("graphics/pokemon/moltin/shiny.gbapal");
     const u8 gMonIcon_Moltin[] = INCBIN_U8("graphics/pokemon/moltin/icon.4bpp");

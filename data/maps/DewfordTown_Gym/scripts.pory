@@ -1,22 +1,22 @@
 mapscripts DewfordTown_Gym_MapScripts {
 	MAP_SCRIPT_ON_FRAME_TABLE[
-		VAR_UNUSED_0x404E, 1: DewfordGym_Increment
-		VAR_UNUSED_0x404E, 2: DewfordGym_CheckBadge
+		VAR_GYM_WARP, 1: DewfordGym_Increment
+		VAR_GYM_WARP, 2: DewfordGym_CheckBadge
 	] 
 	}
 
 script DewfordGym_Warp {
-	setvar(VAR_UNUSED_0x404E, 1)
+	setvar(VAR_GYM_WARP, 1)
 	warp(MAP_DEWFORD_TOWN_GYM, 43, 8)
 	waitstate
 }
 
 script DewfordGym_Increment {
-	setvar(VAR_UNUSED_0x404E, 2)
+	setvar(VAR_GYM_WARP, 2)
 }
 
 script DewfordGym_CheckBadge {
-	setvar(VAR_UNUSED_0x404E, 0)
+	setvar(VAR_GYM_WARP, 0)
 	if(!flag(FLAG_DEFEATED_DEWFORD_GYM)) {
 		call(DewfordGym_ChallengeLeader)
 	}

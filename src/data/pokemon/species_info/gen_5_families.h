@@ -12070,24 +12070,22 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Moltin appeared, it would have to be\n"
             "appeased with offerings so the sun\n"
             "would rise again."),
-        .pokemonScale = 320,
-        .pokemonOffset = 10,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Moltin,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 0,
+        .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(1, 7),
             ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(1, 7),
             ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(1, 7),
             ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
+            ANIMCMD_FRAME(1, 7),
             ANIMCMD_FRAME(0, 5),
         ),
         .frontAnimId = ANIM_GLOW_ORANGE,
@@ -12100,7 +12098,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .iconSprite = gMonIcon_Moltin,
         .iconPalIndex = 1,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(-5, 13, SHADOW_SIZE_M)
+        SHADOW(-2, 7, SHADOW_SIZE_M)
         FOOTPRINT(Moltin)
         OVERWORLD(
             sPicTable_Moltin,
