@@ -225,3 +225,6 @@ const u16 gMetatileAttributes_frozen[] = INCBIN_U16("data/tilesets/secondary/fro
 
 const u16 gMetatiles_DesertRuins[] = INCBIN_U16("data/tilesets/secondary/desert_ruins/metatiles.bin");
 const u16 gMetatileAttributes_DesertRuins[] = INCBIN_U16("data/tilesets/secondary/desert_ruins/metatile_attributes.bin");
+
+const u16 gMetatiles_SpaceMeteor[] = INCBIN_U16("data/tilesets/secondary/space_meteor/metatiles.bin");
+const u16 gMetatileAttributes_SpaceMeteor[] = INCBIN_U16("data/tilesets/secondary/space_meteor/metatile_attributes.bin");

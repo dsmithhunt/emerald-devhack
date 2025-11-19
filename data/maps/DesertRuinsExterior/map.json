@@ -2,7 +2,7 @@
   "id": "MAP_DESERT_RUINS_EXTERIOR",
   "name": "DesertRuinsExterior",
   "layout": "LAYOUT_DESERT_RUINS_EXTERIOR",
-  "music": "MUS_DUMMY",
+  "music": "MUS_B_PYRAMID",
   "region_map_section": "MAPSEC_DESERT_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,7 +17,7 @@
   "warp_events": [
     {
       "x": 17,
-      "y": 30,
+      "y": 70,
       "elevation": 0,
       "dest_map": "MAP_DESERT_RUINS_EXTERIOR",
       "dest_warp_id": "0"

@@ -2,7 +2,7 @@
   "id": "MAP_BIRTH_ISLAND_EXTERIOR",
   "name": "BirthIsland_Exterior",
   "layout": "LAYOUT_BIRTH_ISLAND_EXTERIOR",
-  "music": "MUS_NONE",
+  "music": "MUS_B_PYRAMID_TOP",
   "region_map_section": "MAPSEC_BIRTH_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -30,7 +30,7 @@
     },
     {
       "local_id": "LOCALID_BIRTH_ISLAND_DEOXYS",
-      "graphics_id": "OBJ_EVENT_GFX_DEOXYS",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DEOXYS)",
       "x": 15,
       "y": 3,
       "elevation": 0,
@@ -46,7 +46,7 @@
   "warp_events": [
     {
       "x": 15,
-      "y": 24,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_BIRTH_ISLAND_HARBOR",
       "dest_warp_id": "0"

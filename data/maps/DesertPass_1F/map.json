@@ -237,6 +237,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE119",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 47,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_PASS_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

@@ -4037,7 +4037,7 @@
       "width": 30,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_SpaceMeteor",
       "border_filepath": "data/layouts/BirthIsland_Exterior/border.bin",
       "blockdata_filepath": "data/layouts/BirthIsland_Exterior/map.bin"
     },
@@ -4504,8 +4504,8 @@
     {
       "id": "LAYOUT_DESERT_RUINS_EXTERIOR",
       "name": "DesertRuinsExterior_Layout",
-      "width": 50,
-      "height": 40,
+      "width": 64,
+      "height": 80,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_DesertRuins",
       "border_filepath": "data/layouts/DesertRuinsExterior/border.bin",

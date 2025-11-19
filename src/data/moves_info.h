@@ -6291,15 +6291,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Hidden Power"),
         .description = COMPOUND_STRING(
         #if B_HIDDEN_POWER_DMG >= GEN_6
-            "The type varies\n"
-            "with the user."),
+            "Deals better of physical and\n"
+            "special damage."),
         #else
             "The type and effectiveness\n"
             "vary with the user."),
         #endif
-        .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 60 : 1,
-        .effect = EFFECT_HIDDEN_POWER,
-        .type = TYPE_NORMAL,
+        .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 120 : 1,
+        .effect = EFFECT_SHELL_SIDE_ARM,
+        .type = TYPE_NONE,
         .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
